@@ -62,13 +62,26 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
     new Set(["confirmed", "speculated", "leaked"]),
   );
   const [mapReady, setMapReady] = useState(false);
+  // 容器尺寸就绪重试计数（SSR 后首帧容器宽度可能为 0，需重试）
+  const [containerReady, setContainerReady] = useState(0);
 
   // 初始化地图
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
+    // 等容器有真实尺寸再初始化（防止 SSR 后布局未完成导致 canvas 宽度为 0）
+    const container = containerRef.current;
+    const initWidth = container.clientWidth;
+    if (initWidth === 0) {
+      // 容器宽度还是 0，等下一帧再试（递增计数触发 effect 重运行）
+      const raf = requestAnimationFrame(() => {
+        setContainerReady((n) => n + 1);
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+
     const map = new maplibregl.Map({
-      container: containerRef.current,
+      container,
       style: SIMPLE_STYLE,
       center: [25.79, -80.2],
       zoom: 9,
@@ -89,13 +102,21 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
       addGridLayer(map);
     });
 
+    // 监听容器尺寸变化，强制 map resize（修复移动端 / SSR 初始化尺寸不对的问题）
+    const resizeObserver = new ResizeObserver(() => {
+      map.resize();
+    });
+    resizeObserver.observe(container);
+
     return () => {
+      resizeObserver.disconnect();
       markersRef.current.forEach(({ marker }) => marker.remove());
       markersRef.current = [];
       map.remove();
       mapRef.current = null;
     };
-  }, []);
+    // 依赖 containerReady：容器宽度为 0 时重试会重新运行 effect
+  }, [containerReady]);
 
   // 渲染 markers
   useEffect(() => {
