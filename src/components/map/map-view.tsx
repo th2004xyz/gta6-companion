@@ -1,13 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import maplibregl, {
-  type Map as MapType,
-  type Marker as MarkerTypeLib,
-  type Popup as PopupType,
-  type StyleSpecification,
-} from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import {
   type MapMarker,
   type MarkerType,
@@ -15,30 +10,6 @@ import {
   STATUS_STYLES,
   TYPE_ICONS,
 } from "@/lib/map";
-
-// 简洁自绘底图样式（不依赖外部瓦片服务）
-// 海洋深色背景 + 网格参考线，P1 阶段预览地图够用
-const SIMPLE_STYLE: StyleSpecification = {
-  version: 8,
-  name: "GTA6 Companion Preview",
-  // 无 sources：纯背景色 + 通过 background layer 绘制
-  sources: {
-    "simple-tiles": {
-      type: "raster",
-      tiles: [],
-      tileSize: 256,
-    },
-  },
-  layers: [
-    {
-      id: "background",
-      type: "background",
-      paint: {
-        "background-color": "#0a1628",
-      },
-    },
-  ],
-};
 
 interface MapViewProps {
   markers: MapMarker[];
@@ -53,203 +24,163 @@ interface MapViewProps {
 
 export default function MapView({ markers, locale, labels }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<MapType | null>(null);
-  const markersRef = useRef<{ marker: MarkerTypeLib; popup: PopupType; data: MapMarker }[]>([]);
+  const mapRef = useRef<L.Map | null>(null);
+  const layerRef = useRef<L.LayerGroup | null>(null);
   const [activeTypes, setActiveTypes] = useState<Set<MarkerType>>(
     new Set(["landmark", "activity", "asset", "shop", "vehicle", "poi"]),
   );
-  const [activeStatuses, setActiveStatuses] = useState<Set<MarkerStatus>>(
-    new Set(["confirmed", "speculated", "leaked"]),
+  const [activeStatuses, setActiveStatuses] = useState<MarkerStatus[]>(
+    ["confirmed", "speculated", "leaked"],
   );
-  const [mapReady, setMapReady] = useState(false);
-  // 容器尺寸就绪重试计数（SSR 后首帧容器宽度可能为 0，需重试）
-  const [containerReady, setContainerReady] = useState(0);
 
   // 初始化地图
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
-    // 等容器有真实尺寸再初始化（防止 SSR 后布局未完成导致 canvas 宽度为 0）
-    const container = containerRef.current;
-    const initWidth = container.clientWidth;
-    if (initWidth === 0) {
-      // 容器宽度还是 0，等下一帧再试（递增计数触发 effect 重运行）
-      const raf = requestAnimationFrame(() => {
-        setContainerReady((n) => n + 1);
-      });
-      return () => cancelAnimationFrame(raf);
-    }
-
-    const map = new maplibregl.Map({
-      container,
-      style: SIMPLE_STYLE,
+    // 自绘底图：纯色背景的 Simple CRS 地图（不依赖外部瓦片）
+    // 使用 CRS.Simple + 一个覆盖全图的矩形作为"海洋"背景
+    const map = L.map(containerRef.current, {
       center: [25.79, -80.2],
       zoom: 9,
       minZoom: 6,
       maxZoom: 16,
-      // 移动端手势优化配置
-      dragRotate: false, // 禁用旋转，移动端更直觉
-      touchZoomRotate: true, // 启用双指缩放
-      touchPitch: false,
+      zoomControl: true,
       attributionControl: false,
+      // 禁用旋转相关（Leaflet 本来就不支持旋转，移动端体验更直觉）
+      dragging: true,
+      touchZoom: true,
+      scrollWheelZoom: true,
+      doubleClickZoom: true,
+      keyboard: false,
     });
 
+    // 纯色背景层：用一个覆盖大范围的矩形作为底图
+    // Ocean 深色背景
+    const bgLayer = L.rectangle(
+      [
+        [20, -85],
+        [30, -75],
+      ],
+      {
+        color: "transparent",
+        fillColor: "#0a1628",
+        fillOpacity: 1,
+        weight: 0,
+        interactive: false,
+      },
+    ).addTo(map);
+
+    // 网格参考线层（伪瓦片效果）
+    const gridLines: [number, number][][] = [];
+    for (let lat = 24; lat <= 27; lat += 0.5) {
+      gridLines.push([
+        [lat, -81.5],
+        [lat, -79.5],
+      ]);
+    }
+    for (let lng = -81.5; lng <= -79.5; lng += 0.5) {
+      gridLines.push([
+        [24, lng],
+        [27, lng],
+      ]);
+    }
+    gridLines.forEach((line) => {
+      L.polyline(line, {
+        color: "#1e3a5f",
+        weight: 0.5,
+        opacity: 0.5,
+        interactive: false,
+      }).addTo(map);
+    });
+
+    // markers 容器层
+    const markersLayer = L.layerGroup().addTo(map);
+    layerRef.current = markersLayer;
     mapRef.current = map;
 
-    map.on("load", () => {
-      setMapReady(true);
-      // 添加网格参考层（伪瓦片效果）
-      addGridLayer(map);
-    });
-
-    // 监听容器尺寸变化，强制 map resize（修复移动端 / SSR 初始化尺寸不对的问题）
+    // 监听容器尺寸变化，强制 map invalidateSize（修复初始化尺寸不对的问题）
     const resizeObserver = new ResizeObserver(() => {
-      map.resize();
+      map.invalidateSize();
     });
-    resizeObserver.observe(container);
+    resizeObserver.observe(containerRef.current);
+
+    // 初始化后延迟 invalidateSize 一次（确保容器尺寸已稳定）
+    const timer = setTimeout(() => map.invalidateSize(), 100);
 
     return () => {
+      clearTimeout(timer);
       resizeObserver.disconnect();
-      markersRef.current.forEach(({ marker }) => marker.remove());
-      markersRef.current = [];
       map.remove();
       mapRef.current = null;
+      layerRef.current = null;
     };
-    // 依赖 containerReady：容器宽度为 0 时重试会重新运行 effect
-  }, [containerReady]);
+  }, []);
 
   // 渲染 markers
   useEffect(() => {
-    if (!mapReady || !mapRef.current) return;
+    if (!mapRef.current || !layerRef.current) return;
 
-    // 清除旧 markers
-    markersRef.current.forEach(({ marker }) => marker.remove());
-    markersRef.current = [];
-
-    const map = mapRef.current;
+    layerRef.current.clearLayers();
 
     markers.forEach((data) => {
-      // 根据过滤器决定是否显示
-      if (!activeTypes.has(data.type) || !activeStatuses.has(data.status)) {
+      if (!activeTypes.has(data.type) || !activeStatuses.includes(data.status)) {
         return;
       }
 
       const style = STATUS_STYLES[data.status];
 
-      // 创建 marker DOM 元素（三态颜色 + 类型图标）
-      const el = document.createElement("div");
-      el.className = "map-marker";
-      el.style.cssText = `
-        width: 28px;
-        height: 28px;
-        border-radius: 50% 50% 50% 0;
-        background: ${style.color};
-        border: 2px solid #fff;
-        transform: rotate(-45deg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      // 创建三态水滴形 marker 图标（HTML）
+      const iconHtml = `
+        <div style="
+          width: 28px;
+          height: 28px;
+          border-radius: 50% 50% 50% 0;
+          background: ${style.color};
+          border: 2px solid #fff;
+          transform: rotate(-45deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        ">
+          <span style="transform: rotate(45deg); font-size: 12px;">${TYPE_ICONS[data.type]}</span>
+        </div>
       `;
-      const icon = document.createElement("span");
-      icon.style.cssText = "transform: rotate(45deg); font-size: 12px;";
-      icon.textContent = TYPE_ICONS[data.type];
-      el.appendChild(icon);
 
-      // 创建 popup 内容
-      const popupContent = document.createElement("div");
-      popupContent.style.cssText = "padding: 4px; max-width: 240px;";
-      const title = document.createElement("div");
-      title.style.cssText = "font-weight: 600; font-size: 14px; margin-bottom: 4px;";
-      title.textContent = locale === "zh" ? data.name : data.name_en;
-      const statusBadge = document.createElement("div");
-      statusBadge.style.cssText = `display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 10px; font-weight: 500; background: ${style.color}22; color: ${style.color}; margin-bottom: 6px;`;
-      statusBadge.textContent = labels.status[data.status];
-      const desc = document.createElement("div");
-      desc.style.cssText = "font-size: 12px; color: #666; margin-bottom: 6px;";
-      desc.textContent = locale === "zh" ? data.description : data.description_en;
-      const sourcesHeader = document.createElement("div");
-      sourcesHeader.style.cssText = "font-size: 10px; font-weight: 600; color: #999; text-transform: uppercase;";
-      sourcesHeader.textContent = labels.sources;
-      popupContent.appendChild(title);
-      popupContent.appendChild(statusBadge);
-      popupContent.appendChild(desc);
-      popupContent.appendChild(sourcesHeader);
-      data.sources.forEach((source) => {
-        const link = document.createElement("a");
-        link.href = source.url;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        link.style.cssText = "display: block; font-size: 11px; color: #10b981; margin-top: 2px;";
-        link.textContent = source.label;
-        popupContent.appendChild(link);
+      const icon = L.divIcon({
+        html: iconHtml,
+        className: "gta6-map-marker",
+        iconSize: [28, 28],
+        iconAnchor: [14, 28],
+        popupAnchor: [0, -28],
       });
 
-      const popup = new maplibregl.Popup({ offset: 25, maxWidth: "280px" }).setDOMContent(
-        popupContent,
-      );
+      // popup 内容
+      const name = locale === "zh" ? data.name : data.name_en;
+      const desc = locale === "zh" ? data.description : data.description_en;
+      const sourcesHtml = data.sources
+        .map(
+          (s) =>
+            `<a href="${s.url}" target="_blank" rel="noopener noreferrer" style="display:block;font-size:11px;color:#10b981;margin-top:2px;">${s.label}</a>`,
+        )
+        .join("");
+      const popupHtml = `
+        <div style="padding:4px;max-width:240px;">
+          <div style="font-weight:600;font-size:14px;margin-bottom:4px;">${name}</div>
+          <div style="display:inline-block;padding:2px 8px;border-radius:9999px;font-size:10px;font-weight:500;background:${style.color}22;color:${style.color};margin-bottom:6px;">${labels.status[data.status]}</div>
+          <div style="font-size:12px;color:#666;margin-bottom:6px;">${desc}</div>
+          <div style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;">${labels.sources}</div>
+          ${sourcesHtml}
+        </div>
+      `;
 
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([data.coordinates.lng, data.coordinates.lat])
-        .setPopup(popup)
-        .addTo(map);
+      const marker = L.marker([data.coordinates.lat, data.coordinates.lng], {
+        icon,
+      }).bindPopup(popupHtml, { maxWidth: 280 });
 
-      markersRef.current.push({ marker, popup, data });
+      layerRef.current!.addLayer(marker);
     });
-  }, [markers, activeTypes, activeStatuses, mapReady, locale, labels]);
-
-  // 添加网格参考层
-  const addGridLayer = (map: MapType) => {
-    // 简单的经纬度网格线，作为参考
-    const gridLines: GeoJSON.FeatureCollection = {
-      type: "FeatureCollection",
-      features: [],
-    };
-    // 生成网格线
-    for (let lat = 24; lat <= 27; lat += 0.5) {
-      gridLines.features.push({
-        type: "Feature",
-        properties: { type: "grid" },
-        geometry: {
-          type: "LineString",
-          coordinates: [
-            [-81.5, lat],
-            [-79.5, lat],
-          ],
-        },
-      });
-    }
-    for (let lng = -81.5; lng <= -79.5; lng += 0.5) {
-      gridLines.features.push({
-        type: "Feature",
-        properties: { type: "grid" },
-        geometry: {
-          type: "LineString",
-          coordinates: [
-            [lng, 24],
-            [lng, 27],
-          ],
-        },
-      });
-    }
-
-    map.addSource("grid", {
-      type: "geojson",
-      data: gridLines,
-    });
-
-    map.addLayer({
-      id: "grid-lines",
-      type: "line",
-      source: "grid",
-      paint: {
-        "line-color": "#1e3a5f",
-        "line-width": 0.5,
-        "line-opacity": 0.5,
-      },
-    });
-  };
+  }, [markers, activeTypes, activeStatuses, locale, labels]);
 
   const toggleType = (type: MarkerType) => {
     setActiveTypes((prev) => {
@@ -264,15 +195,11 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
   };
 
   const toggleStatus = (status: MarkerStatus) => {
-    setActiveStatuses((prev) => {
-      const next = new Set(prev);
-      if (next.has(status)) {
-        next.delete(status);
-      } else {
-        next.add(status);
-      }
-      return next;
-    });
+    setActiveStatuses((prev) =>
+      prev.includes(status)
+        ? prev.filter((s) => s !== status)
+        : [...prev, status],
+    );
   };
 
   const typeOptions: { value: MarkerType; label: string }[] = [
@@ -291,12 +218,12 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
   ];
 
   return (
-    <div className="relative h-[calc(100vh-3.5rem-3.5rem)] w-full sm:h-[calc(100vh-3.5rem)]">
+    <div className="relative h-[calc(100vh-3.5rem-3.5rem)] w-full bg-[#0a1628] sm:h-[calc(100vh-3.5rem)]">
       {/* 地图容器 */}
       <div ref={containerRef} className="h-full w-full" />
 
       {/* 图层过滤面板（桌面端浮于右上） */}
-      <div className="absolute right-3 top-3 z-10 w-56 rounded-xl border border-zinc-200 bg-white/95 p-3 shadow-lg backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95 sm:right-4 sm:top-4">
+      <div className="absolute right-3 top-3 z-[1000] w-56 rounded-xl border border-zinc-200 bg-white/95 p-3 shadow-lg backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95 sm:right-4 sm:top-4">
         {/* 类型过滤 */}
         <div className="mb-3">
           <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
@@ -330,7 +257,7 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
                 key={opt.value}
                 onClick={() => toggleStatus(opt.value)}
                 className={`flex w-full items-center gap-2 rounded px-2 py-1 text-left text-xs transition ${
-                  activeStatuses.has(opt.value)
+                  activeStatuses.includes(opt.value)
                     ? "text-zinc-700 dark:text-zinc-200"
                     : "text-zinc-400 line-through dark:text-zinc-500"
                 }`}
@@ -347,7 +274,7 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
       </div>
 
       {/* 移动端提示：双指缩放 */}
-      <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-zinc-900/80 px-3 py-1 text-xs text-white opacity-70 sm:hidden">
+      <div className="pointer-events-none absolute bottom-4 left-1/2 z-[1000] -translate-x-1/2 rounded-full bg-zinc-900/80 px-3 py-1 text-xs text-white opacity-70 sm:hidden">
         {locale === "zh" ? "双指缩放 · 单指拖动" : "Pinch to zoom · Drag to pan"}
       </div>
     </div>

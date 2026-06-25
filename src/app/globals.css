@@ -26,28 +26,39 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* MapLibre marker 优化 */
-.maplibregl-marker {
-  z-index: 1;
+/* Leaflet 暗色底图适配 */
+.leaflet-container {
+  background: #0a1628;
+  font-family: inherit;
 }
 
 /* Popup 样式覆盖 */
-.maplibregl-popup-content {
+.leaflet-popup-content-wrapper {
   border-radius: 12px;
-  padding: 12px;
+  padding: 4px;
 }
 
-.maplibregl-popup-tip {
-  border-top-color: #fff;
+.leaflet-popup-tip {
+  background: #fff;
 }
 
 /* 暗色模式下 popup 背景适配 */
 @media (prefers-color-scheme: dark) {
-  .maplibregl-popup-content {
+  .leaflet-popup-content-wrapper {
     background: #18181b;
     color: #fafafa;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
   }
-  .maplibregl-popup-tip {
-    border-top-color: #18181b;
+  .leaflet-popup-tip {
+    background: #18181b;
   }
+  .leaflet-container a.leaflet-popup-close-button {
+    color: #fafafa;
+  }
+}
+
+/* 自定义 marker 容器（清除 Leaflet 默认样式） */
+.gta6-map-marker {
+  background: transparent;
+  border: none;
 }
