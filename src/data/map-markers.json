@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "last_updated": "2026-06-25",
+    "disclaimer": "本地图数据基于公开信息与预告片帧分析，严格三态标注。发售日（2026-11-19）后将快速校正并铺满已确认数据。"
+  },
+  "markers": [
+    {
+      "id": "vc-downtown",
+      "name": "罪恶城 Downtown",
+      "name_en": "Vice City Downtown",
+      "coordinates": { "lat": 25.77, "lng": -80.19 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.95,
+      "description": "罪恶城核心商业区，GTA6 主要城区之一。",
+      "description_en": "Core commercial district of Vice City, one of GTA6's main urban areas.",
+      "sources": [
+        { "label": "Trailer 1 (2023-12)", "url": "https://www.rockstargames.com/newswire" },
+        { "label": "Trailer 2 (2025-05)", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "vc-beach",
+      "name": "罪恶城海滩",
+      "name_en": "Vice City Beach",
+      "coordinates": { "lat": 25.79, "lng": -80.13 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.9,
+      "description": "标志性海滩区，预告片中多次出现。",
+      "description_en": "Iconic beach area, featured multiple times in trailers.",
+      "sources": [
+        { "label": "Trailer 1", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "everglades-grass-river",
+      "name": "草河沼泽",
+      "name_en": "Grass River",
+      "coordinates": { "lat": 25.85, "lng": -80.9 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "description": "佛罗里达原型大沼泽地，Jason 与 Lucia 的藏身处之一，沼泽走私任务区域。",
+      "description_en": "Florida-inspired great swamp, one of Jason & Lucia's hideouts, smuggling mission area.",
+      "sources": [
+        { "label": "Trailer 2", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "mount-kalaga",
+      "name": "卡拉加山",
+      "name_en": "Mount Kalaga",
+      "coordinates": { "lat": 26.1, "lng": -81.2 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "description": "越野活动区域，Vapid Dominator Buggy 的设计目标地形。",
+      "description_en": "Off-road activity area, target terrain for the Vapid Dominator Buggy.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "leonida-keys",
+      "name": "莱昂尼达群岛",
+      "name_en": "Leonida Keys",
+      "coordinates": { "lat": 24.7, "lng": -80.9 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "description": "佛罗里达群岛原型，潜水与水上活动区域。",
+      "description_en": "Florida Keys-inspired archipelago, diving and water activity area.",
+      "sources": [
+        { "label": "Trailer 1", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "port-gellhorn",
+      "name": "Port Gellhorn",
+      "name_en": "Port Gellhorn",
+      "coordinates": { "lat": 26.0, "lng": -80.4 },
+      "type": "landmark",
+      "status": "speculated",
+      "confidence": 0.5,
+      "description": "推测的工业港口区域，具体位置与规模待发售日确认。",
+      "description_en": "Speculated industrial port area, exact location and scale pending confirmation on release day.",
+      "sources": [
+        { "label": "社区帧分析（推测）", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "fishing-gambit-bay",
+      "name": "Gambit Bay 钓点",
+      "name_en": "Gambit Bay Fishing Spot",
+      "coordinates": { "lat": 25.82, "lng": -80.3 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.9,
+      "description": "Shitzu Squalo 官方描述中的钓鱼地点。",
+      "description_en": "Fishing location mentioned in Shitzu Squalo's official description.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页 - Shitzu Squalo", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "country-club",
+      "name": "乡村俱乐部（高尔夫）",
+      "name_en": "Country Club (Golf)",
+      "coordinates": { "lat": 25.75, "lng": -80.22 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "description": "18 洞高尔夫球场所在地。",
+      "description_en": "Location of the 18-hole golf course.",
+      "sources": [
+        { "label": "Trailer 帧分析", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "pitt-youngins",
+      "name": "Pitt Youngin$ 帮派据点",
+      "name_en": "Pitt Youngin$ Gang Compound",
+      "coordinates": { "lat": 25.76, "lng": -80.21 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "description": "南赛德 Vice City 的帮派据点，可突袭获取违禁品。",
+      "description_en": "Gang compound in South Side Vice City, raidable for contraband.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页 - Pitt Youngin$", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "paradise-garage",
+      "name": "Paradise Garage（销赃）",
+      "name_en": "Paradise Garage (Fence)",
+      "coordinates": { "lat": 25.78, "lng": -80.17 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "description": "沃森湾的销赃安全场所，Vapid Dominator Buggy 存放地。",
+      "description_en": "Fencing safehouse in Watson Bay, storage for Vapid Dominator Buggy.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "airport-speculated",
+      "name": "国际机场（推测）",
+      "name_en": "International Airport (Speculated)",
+      "coordinates": { "lat": 25.7, "lng": -80.27 },
+      "type": "landmark",
+      "status": "speculated",
+      "confidence": 0.4,
+      "description": "推测的机场位置，沿用 GTA Vice City 设定，待确认。",
+      "description_en": "Speculated airport location, following GTA Vice City convention, pending confirmation.",
+      "sources": [
+        { "label": "社区推测", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    }
+  ]
+}

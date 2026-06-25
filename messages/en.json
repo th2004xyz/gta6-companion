@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "title": "GTA6 Companion - Vice City Interactive Map & Guide",
+    "description": "Second-screen companion for GTA6 players: release countdown, Leonida interactive map, character & vehicle database, 22 activity guides. Mobile-first, cross-device sync.",
+    "keywords": "GTA6, GTA6 map, GTA6 guide, Vice City, Leonida, GTA6 release date, GTA6 characters, GTA6 activities"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "characters": "Characters",
+    "vehicles": "Vehicles",
+    "activities": "Activities",
+    "news": "News",
+    "subscribe": "Subscribe",
+    "language": "Language"
+  },
+  "home": {
+    "releaseCountdown": "Release Countdown",
+    "preorderLive": "Pre-order Live",
+    "preorderUpcoming": "Pre-order Coming Soon",
+    "preorderLiveDesc": "Global pre-order opens June 25, 2026",
+    "released": "Available Now",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "releaseDate": "November 19, 2026",
+    "heroTitle": "The second-screen companion for GTA6 players",
+    "heroSubtitle": "An authoritative info hub before launch, the ultimate interactive map and progress tracker after launch. Mobile-first, cross-device sync.",
+    "exploreMap": "Explore Map",
+    "browseCharacters": "Browse Characters",
+    "browseActivities": "Browse Activities",
+    "features": {
+      "mapTitle": "Ultimate Interactive Map",
+      "mapDesc": "Mobile-first interactive map of Leonida with three-state data labeling (confirmed/speculated/leaked) and layer filtering.",
+      "syncTitle": "Cross-Device Sync",
+      "syncDesc": "Progress and markers sync to all devices. Play on TV, check map on phone.",
+      "seoTitle": "Authoritative Info Hub",
+      "seoDesc": "Aggregates Rockstar official info and community findings. SEO authority before launch."
+    },
+    "cta": {
+      "subscribe": "Subscribe for Launch Alert",
+      "subscribeDesc": "Get notified on release day and be the first to access the full interactive map.",
+      "exploreMap": "Explore Preview Map"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "disclaimer": "This is a fan-made unofficial companion tool. GTA and Grand Theft Auto are trademarks of Rockstar Games. This site is not affiliated with Rockstar Games.",
+    "links": {
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "common": {
+    "status": {
+      "confirmed": "Confirmed",
+      "speculated": "Speculated",
+      "leaked": "Leaked"
+    },
+    "loading": "Loading...",
+    "lastUpdated": "Last updated",
+    "sources": "Sources",
+    "backToList": "Back to list",
+    "noContent": "No content yet",
+    "abilities": "Abilities",
+    "features": "Features",
+    "background": "Background",
+    "category": "Category",
+    "brand": "Brand",
+    "type": "Type",
+    "date": "Date",
+    "author": "Author"
+  },
+  "pages": {
+    "characters": {
+      "title": "Characters",
+      "subtitle": "GTA6 dual protagonists and supporting cast",
+      "protagonist": "Protagonist",
+      "supporting": "Supporting"
+    },
+    "vehicles": {
+      "title": "Vehicles",
+      "subtitle": "Confirmed vehicle database",
+      "categories": {
+        "car": "Car",
+        "motorcycle": "Motorcycle",
+        "boat": "Boat",
+        "aircraft": "Aircraft",
+        "special": "Special"
+      }
+    },
+    "activities": {
+      "title": "Activities",
+      "subtitle": "22 confirmed side activities in GTA6",
+      "categories": {
+        "sports": "Sports",
+        "water": "Water",
+        "nightlife": "Nightlife",
+        "gambling": "Gambling",
+        "criminal": "Criminal",
+        "social": "Social"
+      }
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Daily digest of Rockstar official info and community findings"
+    },
+    "map": {
+      "title": "Interactive Map",
+      "subtitle": "Leonida preview map (three-state labeling)",
+      "legend": "Legend",
+      "layerFilter": "Layer filter",
+      "noMarkers": "No markers",
+      "comingSoon": "Full interactive map launches on release day, Nov 19"
+    },
+    "subscribe": {
+      "title": "Subscribe for Launch Alert",
+      "subtitle": "Get notified on release day and be the first to access the full interactive map.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "submitButton": "Subscribe",
+      "submitting": "Submitting...",
+      "success": "Subscribed! You'll be notified on release day.",
+      "error": "Subscription failed, please try again later."
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "When does GTA6 release?",
+        "answer": "GTA6 launches globally on November 19, 2026, first on PlayStation 5 and Xbox Series X|S. PC version is expected in late 2027."
+      },
+      {
+        "question": "Is this an official website?",
+        "answer": "No. This is a fan-made unofficial companion tool. GTA and Grand Theft Auto are trademarks of Rockstar Games. This site is not affiliated with Rockstar Games."
+      },
+      {
+        "question": "Is the data on the preview map accurate?",
+        "answer": "Preview map data is based on public information and trailer frame analysis, with strict three-state labeling (confirmed/speculated/leaked). Each marker includes data sources and a confidence score. On release day (Nov 19), data will be quickly corrected and populated with confirmed entries."
+      },
+      {
+        "question": "When will the full interactive map launch?",
+        "answer": "The full interactive map launches on release day, November 19, 2026, featuring all collectibles, missions, assets and other markers, with progress tracking and cross-device sync."
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "title": "GTA6 伴侣 - 罪恶城互动地图与攻略",
+    "description": "GTA6 玩家的第二屏伴侣：发售倒计时、莱昂尼达州互动地图、角色载具数据库、22 项活动解析。移动优先，跨设备同步。",
+    "keywords": "GTA6, GTA6 地图, GTA6 攻略, 罪恶城, 莱昂尼达, GTA6 发售日, GTA6 角色数据库, GTA6 活动"
+  },
+  "nav": {
+    "home": "首页",
+    "map": "地图",
+    "characters": "角色",
+    "vehicles": "载具",
+    "activities": "活动",
+    "news": "新闻",
+    "subscribe": "订阅",
+    "language": "语言"
+  },
+  "home": {
+    "releaseCountdown": "发售倒计时",
+    "preorderLive": "预购已开启",
+    "preorderUpcoming": "预购即将开启",
+    "preorderLiveDesc": "全球预购通道于 2026 年 6 月 25 日开启",
+    "released": "现已发售",
+    "days": "天",
+    "hours": "时",
+    "minutes": "分",
+    "seconds": "秒",
+    "releaseDate": "2026 年 11 月 19 日",
+    "heroTitle": "GTA6 玩家的第二屏伴侣",
+    "heroSubtitle": "发售前是权威信息枢纽，发售后是终极互动地图 + 进度追踪器，移动优先，跨设备同步。",
+    "exploreMap": "探索地图",
+    "browseCharacters": "浏览角色",
+    "browseActivities": "浏览活动",
+    "features": {
+      "mapTitle": "终极互动地图",
+      "mapDesc": "移动优先的莱昂尼达州互动地图，三态数据标注（确认/推测/泄漏），图层过滤。",
+      "syncTitle": "跨设备同步",
+      "syncDesc": "进度与标记云同步到所有设备，电视上玩、手机上查。",
+      "seoTitle": "权威信息枢纽",
+      "seoDesc": "整合 Rockstar 官方信息与社区发现，发售前抢占 SEO 权威性。"
+    },
+    "cta": {
+      "subscribe": "订阅发售提醒",
+      "subscribeDesc": "发售日第一时间收到推送，抢先体验完整互动地图。",
+      "exploreMap": "探索预览地图"
+    }
+  },
+  "footer": {
+    "rights": "保留所有权利",
+    "disclaimer": "本站为玩家自制非官方伴侣工具，GTA 与 Grand Theft Auto 为 Rockstar Games 商标，本站不隶属 Rockstar Games。",
+    "links": {
+      "about": "关于",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    }
+  },
+  "common": {
+    "status": {
+      "confirmed": "已确认",
+      "speculated": "推测",
+      "leaked": "泄漏"
+    },
+    "loading": "加载中...",
+    "lastUpdated": "最后更新",
+    "sources": "数据来源",
+    "backToList": "返回列表",
+    "noContent": "暂无内容",
+    "abilities": "能力",
+    "features": "特性",
+    "background": "背景",
+    "category": "类别",
+    "brand": "品牌",
+    "type": "类型",
+    "date": "日期",
+    "author": "作者"
+  },
+  "pages": {
+    "characters": {
+      "title": "角色",
+      "subtitle": "GTA6 双主角与 supporting 角色",
+      "protagonist": "主角",
+      "supporting": "配角"
+    },
+    "vehicles": {
+      "title": "载具",
+      "subtitle": "已确认载具数据库",
+      "categories": {
+        "car": "汽车",
+        "motorcycle": "摩托车",
+        "boat": "船只",
+        "aircraft": "飞行器",
+        "special": "特殊"
+      }
+    },
+    "activities": {
+      "title": "活动",
+      "subtitle": "GTA6 22 项已确认支线活动",
+      "categories": {
+        "sports": "运动",
+        "water": "水域",
+        "nightlife": "夜生活",
+        "gambling": "博彩",
+        "criminal": "犯罪",
+        "social": "社交"
+      }
+    },
+    "news": {
+      "title": "新闻",
+      "subtitle": "每日编译 Rockstar 官方信息与社区发现"
+    },
+    "map": {
+      "title": "互动地图",
+      "subtitle": "莱昂尼达州预览地图（三态标注）",
+      "legend": "图例",
+      "layerFilter": "图层过滤",
+      "noMarkers": "暂无标记点",
+      "comingSoon": "完整互动地图将于 11 月 19 日发售日上线"
+    },
+    "subscribe": {
+      "title": "订阅发售提醒",
+      "subtitle": "发售日第一时间收到推送，抢先体验完整互动地图。",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "your@email.com",
+      "submitButton": "订阅",
+      "submitting": "提交中...",
+      "success": "订阅成功！发售日将收到推送。",
+      "error": "订阅失败，请稍后重试。"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "GTA6 什么时候发售？",
+        "answer": "GTA6 于 2026 年 11 月 19 日全球发售，首发仅登陆 PlayStation 5 与 Xbox Series X|S。PC 版预计 2027 年底推出。"
+      },
+      {
+        "question": "这个网站是官方的吗？",
+        "answer": "不是。本站为玩家自制的非官方伴侣工具，GTA 与 Grand Theft Auto 为 Rockstar Games 商标，本站不隶属 Rockstar Games。"
+      },
+      {
+        "question": "预览地图上的数据准确吗？",
+        "answer": "预览地图数据基于公开信息与预告片帧分析，严格三态标注（已确认/推测/泄漏）。每个标记点附数据来源与可信度评分。发售日（11月19日）后将快速校正并铺满已确认数据。"
+      },
+      {
+        "question": "完整互动地图什么时候上线？",
+        "answer": "完整互动地图将于 2026 年 11 月 19 日发售日当天上线，届时将包含全部收集品、任务、资产等标记点，并支持进度勾选与跨设备同步。"
+      }
+    ]
+  }
+}
