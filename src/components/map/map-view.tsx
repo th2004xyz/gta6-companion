@@ -1,7 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import maplibregl, { Map, Marker, Popup } from "maplibre-gl";
+import maplibregl, {
+  type Map as MapType,
+  type Marker as MarkerTypeLib,
+  type Popup as PopupType,
+  type StyleSpecification,
+} from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import {
   type MapMarker,
@@ -13,7 +18,7 @@ import {
 
 // 简洁自绘底图样式（不依赖外部瓦片服务）
 // 海洋深色背景 + 网格参考线，P1 阶段预览地图够用
-const SIMPLE_STYLE: maplibregl.StyleSpecification = {
+const SIMPLE_STYLE: StyleSpecification = {
   version: 8,
   name: "GTA6 Companion Preview",
   // 无 sources：纯背景色 + 通过 background layer 绘制
@@ -48,8 +53,8 @@ interface MapViewProps {
 
 export default function MapView({ markers, locale, labels }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<Map | null>(null);
-  const markersRef = useRef<{ marker: Marker; popup: Popup; data: MapMarker }[]>([]);
+  const mapRef = useRef<MapType | null>(null);
+  const markersRef = useRef<{ marker: MarkerTypeLib; popup: PopupType; data: MapMarker }[]>([]);
   const [activeTypes, setActiveTypes] = useState<Set<MarkerType>>(
     new Set(["landmark", "activity", "asset", "shop", "vehicle", "poi"]),
   );
@@ -160,11 +165,11 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
         popupContent.appendChild(link);
       });
 
-      const popup = new Popup({ offset: 25, maxWidth: "280px" }).setDOMContent(
+      const popup = new maplibregl.Popup({ offset: 25, maxWidth: "280px" }).setDOMContent(
         popupContent,
       );
 
-      const marker = new Marker({ element: el })
+      const marker = new maplibregl.Marker({ element: el })
         .setLngLat([data.coordinates.lng, data.coordinates.lat])
         .setPopup(popup)
         .addTo(map);
@@ -174,7 +179,7 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
   }, [markers, activeTypes, activeStatuses, mapReady, locale, labels]);
 
   // 添加网格参考层
-  const addGridLayer = (map: Map) => {
+  const addGridLayer = (map: MapType) => {
     // 简单的经纬度网格线，作为参考
     const gridLines: GeoJSON.FeatureCollection = {
       type: "FeatureCollection",
