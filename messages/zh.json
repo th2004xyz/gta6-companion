@@ -124,6 +124,49 @@
       "submitting": "提交中...",
       "success": "订阅成功！发售日将收到推送。",
       "error": "订阅失败，请稍后重试。"
+    },
+    "about": {
+      "title": "关于我们",
+      "subtitle": "GTA6 伴侣的使命与定位",
+      "missionTitle": "我们的使命",
+      "mission": "为 GTA6 玩家打造终极第二屏伴侣——发售前是权威信息枢纽，发售后是终极互动地图与进度追踪器。",
+      "whatWeDoTitle": "我们做什么",
+      "feature1": "整合 Rockstar 官方信息与社区发现，三态标注（已确认/推测/泄漏）",
+      "feature2": "移动优先的莱昂尼达州互动地图，支持图层过滤",
+      "feature3": "角色、载具、活动数据库，持续更新",
+      "feature4": "发售日提醒与 Pro 功能订阅",
+      "disclaimerTitle": "免责声明",
+      "disclaimer": "本站为玩家自制非官方伴侣工具，GTA 与 Grand Theft Auto 为 Rockstar Games 商标，本站不隶属 Rockstar Games。所有内容仅供参考，不保证 100% 准确。"
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "subtitle": "我们如何收集、使用与保护你的数据",
+      "collectTitle": "我们收集什么",
+      "collect": "我们仅收集你主动提供的邮箱地址（用于发售提醒订阅）。我们不使用 Cookie 跟踪你的浏览行为，不收集个人身份信息。",
+      "useTitle": "如何使用",
+      "use": "你的邮箱仅用于发送 GTA6 发售提醒与产品更新通知。我们不会发送垃圾邮件，你可以随时退订。",
+      "shareTitle": "是否分享给第三方",
+      "share": "绝不。我们不会出售、出租或分享你的邮箱给任何第三方。邮件订阅服务由 Resend 托管，仅用于发送邮件。",
+      "retainTitle": "数据保留",
+      "retain": "你的邮箱将保留至你主动退订。退订后，我们会在 30 天内从邮件列表中删除你的邮箱。",
+      "rightsTitle": "你的权利",
+      "rights": "你可以随时退订、查看或删除你的数据。如有需求，请通过 GitHub 仓库联系我们。",
+      "contactTitle": "联系我们",
+      "contact": "如有隐私相关问题，请在 GitHub 仓库 th2004xyz/gta6-companion 提交 Issue。"
+    },
+    "terms": {
+      "title": "服务条款",
+      "subtitle": "使用本站需遵守的条款",
+      "acceptTitle": "条款接受",
+      "accept": "访问或使用本站即表示你同意本服务条款。如不同意，请停止使用本站。",
+      "serviceTitle": "服务说明",
+      "service": "本站提供 GTA6 非官方信息与工具，包括互动地图、角色载具数据库、发售提醒等。服务按现状提供，不保证持续可用或无错误。",
+      "ipTitle": "知识产权",
+      "ip": "GTA、Grand Theft Auto 及所有相关商标、角色、地名均为 Rockstar Games 的知识产权。本站内容为玩家自制，不主张任何官方内容的所有权。",
+      "limitationTitle": "责任限制",
+      "limitation": "本站为信息提供者，不对任何基于本站内容的行为承担责任。游戏内容以 Rockstar Games 官方发布为准。",
+      "changesTitle": "条款变更",
+      "changes": "我们可能随时更新本条款。继续使用本站即表示接受更新后的条款。"
     }
   },
   "faq": {

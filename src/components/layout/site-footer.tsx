@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
 export default async function SiteFooter() {
@@ -19,12 +20,26 @@ export default async function SiteFooter() {
             </p>
           </div>
 
-          {/* 注：about/privacy/terms 页面尚未创建，先以纯文本展示，避免 Next.js prefetch 不存在的 RSC 路由导致 404 中断 hydration */}
-          <div className="flex flex-col gap-2 text-sm text-zinc-400 dark:text-zinc-500">
-            <span>{t("links.about")}</span>
-            <span>{t("links.privacy")}</span>
-            <span>{t("links.terms")}</span>
-          </div>
+          <nav className="flex flex-col gap-2 text-sm">
+            <Link
+              href="/about"
+              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              {t("links.about")}
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              {t("links.privacy")}
+            </Link>
+            <Link
+              href="/terms"
+              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              {t("links.terms")}
+            </Link>
+          </nav>
         </div>
 
         <div className="mt-8 border-t border-zinc-200 pt-6 text-xs text-zinc-400 dark:border-zinc-800">

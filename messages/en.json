@@ -124,6 +124,49 @@
       "submitting": "Submitting...",
       "success": "Subscribed! You'll be notified on release day.",
       "error": "Subscription failed, please try again later."
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "The mission behind GTA6 Companion",
+      "missionTitle": "Our Mission",
+      "mission": "To build the ultimate second-screen companion for GTA6 players — an authoritative information hub before launch, and the ultimate interactive map and progress tracker after launch.",
+      "whatWeDoTitle": "What We Do",
+      "feature1": "Aggregate Rockstar official info and community findings with three-state labeling (confirmed/speculated/leaked)",
+      "feature2": "Mobile-first interactive map of Leonida with layer filtering",
+      "feature3": "Characters, vehicles, and activities database, continuously updated",
+      "feature4": "Launch day alerts and Pro feature subscriptions",
+      "disclaimerTitle": "Disclaimer",
+      "disclaimer": "This is a fan-made unofficial companion tool. GTA and Grand Theft Auto are trademarks of Rockstar Games. This site is not affiliated with Rockstar Games. All content is for reference only and not guaranteed to be 100% accurate."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect your data",
+      "collectTitle": "What We Collect",
+      "collect": "We only collect the email address you voluntarily provide (for launch alert subscriptions). We do not use cookies to track your browsing behavior, nor do we collect personally identifiable information.",
+      "useTitle": "How We Use It",
+      "use": "Your email is used solely for sending GTA6 launch alerts and product update notifications. We will never send spam, and you can unsubscribe at any time.",
+      "shareTitle": "Do We Share with Third Parties",
+      "share": "Never. We will not sell, rent, or share your email with any third party. The email service is hosted by Resend and used only for sending emails.",
+      "retainTitle": "Data Retention",
+      "retain": "Your email is retained until you unsubscribe. After unsubscribing, we will remove your email from our mailing list within 30 days.",
+      "rightsTitle": "Your Rights",
+      "rights": "You can unsubscribe, view, or delete your data at any time. To do so, contact us via the GitHub repository.",
+      "contactTitle": "Contact Us",
+      "contact": "For privacy-related questions, please open an issue on the GitHub repository th2004xyz/gta6-companion."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "subtitle": "Terms for using this site",
+      "acceptTitle": "Acceptance of Terms",
+      "accept": "By accessing or using this site, you agree to these terms of service. If you do not agree, please stop using the site.",
+      "serviceTitle": "Service Description",
+      "service": "This site provides unofficial GTA6 information and tools, including an interactive map, character/vehicle database, and launch alerts. The service is provided as-is, with no guarantee of continuous availability or error-free operation.",
+      "ipTitle": "Intellectual Property",
+      "ip": "GTA, Grand Theft Auto, and all related trademarks, characters, and place names are the intellectual property of Rockstar Games. Site content is fan-made and does not claim ownership of any official content.",
+      "limitationTitle": "Limitation of Liability",
+      "limitation": "This site is an information provider and is not liable for any actions taken based on its content. Game content is subject to Rockstar Games' official releases.",
+      "changesTitle": "Changes to Terms",
+      "changes": "We may update these terms at any time. Continued use of the site constitutes acceptance of the updated terms."
     }
   },
   "faq": {
