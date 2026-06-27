@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // 列表页通用页头：标题 + 副标题
 // 用于角色/载具/活动/新闻等列表页统一头部样式
 export function PageHeader({
@@ -23,26 +25,26 @@ export function PageHeader({
   );
 }
 
-// 详情页通用面包屑
+// 详情页通用面包屑（使用 next/link 避免全页面刷新）
 export function DetailBreadcrumb({
   items,
 }: {
   items: { label: string; href?: string }[];
 }) {
   return (
-    <nav className="flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400">
+    <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400">
       {items.map((item, idx) => (
         <span key={idx} className="flex items-center gap-1">
           {idx > 0 && <span className="text-zinc-300 dark:text-zinc-600">/</span>}
           {item.href ? (
-            <a
+            <Link
               href={item.href}
               className="hover:text-zinc-900 dark:hover:text-zinc-100"
             >
               {item.label}
-            </a>
+            </Link>
           ) : (
-            <span className="text-zinc-900 dark:text-zinc-100">{item.label}</span>
+            <span className="text-zinc-900 dark:text-zinc-100" aria-current="page">{item.label}</span>
           )}
         </span>
       ))}

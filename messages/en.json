@@ -123,7 +123,14 @@
       "submitButton": "Subscribe",
       "submitting": "Submitting...",
       "success": "Subscribed! You'll be notified on release day.",
-      "error": "Subscription failed, please try again later."
+      "error": "Subscription failed, please try again later.",
+      "benefitsTitle": "Subscriber Benefits",
+      "benefit1": "Release day notification the moment it drops",
+      "benefit2": "Alert when the full interactive map goes live",
+      "benefit3": "Early preview and discounts for Pro features",
+      "benefit4": "Unsubscribe anytime, no spam",
+      "invalidEmail": "Please enter a valid email address",
+      "privacyNote": "We respect your privacy. Your email is used only for launch alerts and never shared with third parties."
     },
     "about": {
       "title": "About",

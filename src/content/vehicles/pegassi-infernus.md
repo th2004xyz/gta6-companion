@@ -10,7 +10,7 @@ summary_en: Bright yellow scissor-door supercar inspired by the Lamborghini Aven
 features:
   - 剪刀门
   - 亮黄色涂装
-  - 剪刀门设计
+  - 兰博基尼埃文塔多灵感设计
 sources:
   - label: Rockstar 官方封面公布 (2026-06-19)
     url: https://www.rockstargames.com/newswire

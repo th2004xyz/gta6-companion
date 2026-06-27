@@ -38,7 +38,7 @@ export default async function NewsPage({
             {news.map((item) => (
               <Link
                 key={item.slug}
-                href={`/news/${item.slug}`}
+                href={`/${locale}/news/${item.slug}`}
                 className="group block rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
               >
                 <div className="flex items-start justify-between gap-3">

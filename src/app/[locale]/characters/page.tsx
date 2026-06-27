@@ -37,7 +37,7 @@ export default async function CharactersPage({
             {characters.map((char) => (
               <Link
                 key={char.slug}
-                href={`/characters/${char.slug}`}
+                href={`/${locale}/characters/${char.slug}`}
                 className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
               >
                 <div className="flex items-start justify-between gap-3">

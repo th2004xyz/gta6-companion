@@ -36,7 +36,7 @@ export default async function VehiclesPage({
             {vehicles.map((vehicle) => (
               <Link
                 key={vehicle.slug}
-                href={`/vehicles/${vehicle.slug}`}
+                href={`/${locale}/vehicles/${vehicle.slug}`}
                 className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
               >
                 <div className="flex items-start justify-between gap-3">

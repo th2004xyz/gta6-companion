@@ -1,0 +1,4662 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: **/dist/**, package-lock.json, **/*.svg, **/*.png, **/*.jpg, **/.env*
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.env.example
+.gitignore
+AGENTS.md
+CLAUDE.md
+messages/en.json
+messages/zh.json
+next.config.ts
+open-next.config.ts
+package.json
+postcss.config.mjs
+public/manifest.json
+README.md
+src/app/[locale]/_components/countdown.tsx
+src/app/[locale]/about/page.tsx
+src/app/[locale]/activities/[slug]/page.tsx
+src/app/[locale]/activities/page.tsx
+src/app/[locale]/characters/[slug]/page.tsx
+src/app/[locale]/characters/page.tsx
+src/app/[locale]/layout.tsx
+src/app/[locale]/map/page.tsx
+src/app/[locale]/news/[slug]/page.tsx
+src/app/[locale]/news/page.tsx
+src/app/[locale]/page.tsx
+src/app/[locale]/privacy/page.tsx
+src/app/[locale]/subscribe/page.tsx
+src/app/[locale]/terms/page.tsx
+src/app/[locale]/vehicles/[slug]/page.tsx
+src/app/[locale]/vehicles/page.tsx
+src/app/api/subscribe/route.ts
+src/app/favicon.ico
+src/app/globals.css
+src/app/layout.tsx
+src/app/robots.ts
+src/app/sitemap.ts
+src/components/content/markdown-content.tsx
+src/components/content/page-header.tsx
+src/components/content/status-badge.tsx
+src/components/layout/language-switcher.tsx
+src/components/layout/mobile-tab-bar-wrapper.tsx
+src/components/layout/mobile-tab-bar.tsx
+src/components/layout/site-footer.tsx
+src/components/layout/site-header.tsx
+src/components/map/map-view-client.tsx
+src/components/map/map-view.tsx
+src/components/seo/json-ld.tsx
+src/components/subscribe/subscribe-form.tsx
+src/content/activities/darts.md
+src/content/activities/fishing.md
+src/content/activities/gang-compound.md
+src/content/activities/golf.md
+src/content/activities/heists.md
+src/content/activities/hunting.md
+src/content/activities/nightlife.md
+src/content/activities/pool.md
+src/content/activities/street-racing.md
+src/content/characters/boobie-ike.md
+src/content/characters/brian-heder.md
+src/content/characters/jason.md
+src/content/characters/lucia.md
+src/content/characters/raul-bautista.md
+src/content/news/2026-06-24-preorders-live.md
+src/content/news/2026-06-25-release-date-confirmed.md
+src/content/vehicles/pegassi-cheetah.md
+src/content/vehicles/pegassi-infernus.md
+src/content/vehicles/sea-sparrow.md
+src/content/vehicles/shitzu-squalo.md
+src/content/vehicles/vapid-dominator-buggy.md
+src/data/map-markers.json
+src/i18n/request.ts
+src/i18n/routing.ts
+src/lib/content.ts
+src/lib/map.ts
+src/middleware.ts
+tsconfig.json
+wrangler.jsonc
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".env.example">
+# Resend 邮件服务配置（P1 阶段邮件订阅）
+# 获取地址：https://resend.com/api-keys
+# 开发环境留空即可（API 会模拟成功）
+RESEND_API_KEY=
+RESEND_AUDIENCE_ID=
+
+# 站点 URL（用于 SEO metadataBase，部署时替换为真实域名）
+# NEXT_PUBLIC_SITE_URL=https://gta6-companion.example.com
+
+# ─── Cloudflare 部署环境变量说明 ───────────────────────────
+# 本项目通过 @opennextjs/cloudflare 部署到 Cloudflare Workers。
+# 两类环境变量的配置方式不同：
+#
+# 1) 服务端密钥（运行时读取，构建时不可见）：
+#    RESEND_API_KEY、RESEND_AUDIENCE_ID
+#    在 Cloudflare Dashboard → Workers & Pages → 选中项目 →
+#    Settings → Variables and Secrets 中以 “Secret” 类型添加；
+#    或本地用 `npx wrangler secret put RESEND_API_KEY` 写入。
+#    本地预览（npm run preview:cf）时把同名变量放进 .dev.vars。
+#
+# 2) 构建期变量（Next.js 在构建时内联，必须构建前就绪）：
+#    NEXT_PUBLIC_SITE_URL
+#    在 Cloudflare Dashboard → Workers Builds → Settings →
+#    Build environment variables 中添加（明文即可，非 Secret）。
+#    本地构建前写入 .env.local。
+#
+# .dev.vars 已在 .gitignore 中，勿提交真实密钥。
+</file>
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# cloudflare / opennext
+.open-next
+.wrangler
+.dev.vars
+.dev.vars.*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+</file>
+
+<file path="AGENTS.md">
+<!-- BEGIN:nextjs-agent-rules -->
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+<!-- END:nextjs-agent-rules -->
+</file>
+
+<file path="CLAUDE.md">
+@AGENTS.md
+</file>
+
+<file path="next.config.ts">
+import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+import withPWAInit from "@ducanh2912/next-pwa";
+
+// next-intl 插件：自动配置 Next.js 以支持国际化路由与 message 加载
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+
+// PWA 插件：生成 Service Worker、离线缓存策略
+// - disable: 开发环境禁用（避免热更新冲突）
+// - dest: SW 输出目录
+// - cacheOnFrontEndNav: 前端导航时缓存页面
+// - aggressiveFrontEndNavCaching: 移动端体验优化
+const withPWA = withPWAInit({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  cacheOnFrontEndNav: true,
+  aggressiveFrontEndNavCaching: true,
+  reloadOnOnline: true,
+  // 自定义缓存策略：优先网络、回退缓存
+  workboxOptions: {
+    disableDevLogs: true,
+  },
+});
+
+const nextConfig: NextConfig = {
+  // P1 阶段无需额外配置
+  // 后续图片优化等配置在引入对应依赖后追加
+};
+
+export default withPWA(withNextIntl(nextConfig));
+</file>
+
+<file path="open-next.config.ts">
+import { defineCloudflareConfig } from "@opennextjs/cloudflare";
+
+// OpenNext Cloudflare 适配器配置
+//
+// 本项目为纯 SSG 静态站点（52 个预渲染页面）+ 单个无状态 POST API（/api/subscribe）：
+//   - 无 ISR / 无 on-demand revalidation
+//   - 无 next/image 优化（地图瓦片与 OG 图均为静态资源）
+//   - 无缓存失效需求
+//
+// 因此使用默认配置：incrementalCache / tagCache / queue / cdnInvalidation 均为
+// 内置的 "dummy" no-op 实现，部署时无需创建 R2 存储桶，也无需启用 Cloudflare Images。
+// middleware 使用 next-intl 的 Edge Runtime 中间件（middleware.ts），被 OpenNext 支持。
+export default defineCloudflareConfig({});
+</file>
+
+<file path="postcss.config.mjs">
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+
+export default config;
+</file>
+
+<file path="public/manifest.json">
+{
+  "name": "GTA6 Companion - Vice City Interactive Map & Guide",
+  "short_name": "GTA6 Companion",
+  "description": "Second-screen companion for GTA6 players: interactive map, progress tracker, character & vehicle database.",
+  "lang": "en",
+  "start_url": "/en",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#10b981",
+  "categories": ["games", "utilities", "reference"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Map",
+      "short_name": "Map",
+      "description": "Open the interactive Leonida map",
+      "url": "/en/map",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Characters",
+      "short_name": "Characters",
+      "description": "Browse GTA6 characters",
+      "url": "/en/characters",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
+</file>
+
+<file path="README.md">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</file>
+
+<file path="src/app/[locale]/_components/countdown.tsx">
+"use client";
+
+import { useEffect, useState } from "react";
+
+// 关键时间节点
+// 预购开启日：2026-06-25（已过则显示"已开启"状态）
+// 发售日：2026-11-19
+const PREORDER_DATE = new Date("2026-06-25T00:00:00");
+const RELEASE_DATE = new Date("2026-11-19T00:00:00");
+
+interface CountdownLabels {
+  // 预购状态标签
+  preorderLive: string;
+  preorderUpcoming: string;
+  // 发售倒计时标签
+  releaseCountdown: string;
+  released: string;
+  // 时间单位
+  days: string;
+  hours: string;
+  minutes: string;
+  seconds: string;
+}
+
+export default function Countdown({ labels }: { labels: CountdownLabels }) {
+  const [now, setNow] = useState<number | null>(null);
+
+  useEffect(() => {
+    setNow(Date.now());
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  // 服务端渲染与首次客户端渲染前使用占位，避免 hydration mismatch
+  if (now === null) {
+    return <div className="h-32" aria-hidden />;
+  }
+
+  const preorderStarted = now >= PREORDER_DATE.getTime();
+  const released = now >= RELEASE_DATE.getTime();
+  const remaining = calcRemaining(RELEASE_DATE.getTime() - now);
+
+  return (
+    <div className="mt-4 flex flex-col gap-4">
+      {/* 预购状态徽章 */}
+      <div
+        className={`inline-flex w-fit items-center gap-2 rounded-full px-3 py-1 text-sm font-medium ring-1 ${
+          preorderStarted
+            ? "bg-emerald-500/15 text-emerald-400 ring-emerald-500/30"
+            : "bg-amber-500/15 text-amber-400 ring-amber-500/30"
+        }`}
+      >
+        <span
+          className={`h-2 w-2 rounded-full ${
+            preorderStarted ? "animate-pulse bg-emerald-400" : "bg-amber-400"
+          }`}
+        />
+        {preorderStarted ? labels.preorderLive : labels.preorderUpcoming}
+      </div>
+
+      {/* 发售倒计时 */}
+      <div>
+        <div className="text-sm font-medium text-zinc-400">
+          {labels.releaseCountdown}
+        </div>
+        {released ? (
+          <div className="mt-2 text-2xl font-bold text-emerald-400">
+            {labels.released}
+          </div>
+        ) : (
+          <div className="mt-2 flex gap-3 sm:gap-4">
+            <TimeUnit value={remaining.days} label={labels.days} />
+            <TimeUnit value={remaining.hours} label={labels.hours} />
+            <TimeUnit value={remaining.minutes} label={labels.minutes} />
+            <TimeUnit value={remaining.seconds} label={labels.seconds} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function TimeUnit({ value, label }: { value: number; label: string }) {
+  return (
+    <div className="flex flex-col items-center">
+      <div className="min-w-[3rem] rounded-lg bg-zinc-800/80 px-3 py-2 text-center text-2xl font-bold tabular-nums text-white sm:text-3xl">
+        {value.toString().padStart(2, "0")}
+      </div>
+      <div className="mt-1 text-xs text-zinc-400">{label}</div>
+    </div>
+  );
+}
+
+interface TimeRemaining {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+function calcRemaining(diff: number): TimeRemaining {
+  if (diff <= 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+  return {
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((diff / (1000 * 60)) % 60),
+    seconds: Math.floor((diff / 1000) % 60),
+  };
+}
+</file>
+
+<file path="src/app/[locale]/about/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/content/page-header";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.about" });
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+  };
+}
+
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "pages.about" });
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+        <article className="prose prose-zinc max-w-none dark:prose-invert">
+          <h2>{t("missionTitle")}</h2>
+          <p>{t("mission")}</p>
+
+          <h2>{t("whatWeDoTitle")}</h2>
+          <ul>
+            <li>{t("feature1")}</li>
+            <li>{t("feature2")}</li>
+            <li>{t("feature3")}</li>
+            <li>{t("feature4")}</li>
+          </ul>
+
+          <h2>{t("disclaimerTitle")}</h2>
+          <p>{t("disclaimer")}</p>
+        </article>
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/activities/[slug]/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getEntry, getAllEntries, type ActivityFrontmatter } from "@/lib/content";
+import { StatusBadge, SourceList, LastUpdated } from "@/components/content/status-badge";
+import { DetailBreadcrumb } from "@/components/content/page-header";
+import { MarkdownContent } from "@/components/content/markdown-content";
+
+export function generateStaticParams() {
+  const entries = getAllEntries<ActivityFrontmatter>("activities");
+  return [
+    ...entries.map((e) => ({ locale: "zh", slug: e.slug })),
+    ...entries.map((e) => ({ locale: "en", slug: e.slug })),
+  ];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = getEntry<ActivityFrontmatter>("activities", slug);
+  if (!entry) return {};
+
+  return {
+    title: entry.frontmatter.title,
+    description: entry.frontmatter.summary,
+  };
+}
+
+export default async function ActivityDetailPage({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.activities");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const entry = getEntry<ActivityFrontmatter>("activities", slug);
+  if (!entry) notFound();
+
+  const fm = entry.frontmatter;
+  const title = locale === "zh" ? fm.title : fm.title_en;
+
+  return (
+    <main className="flex-1">
+      <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+        <DetailBreadcrumb
+          items={[
+            { label: t("title"), href: `/${locale}/activities` },
+            { label: title },
+          ]}
+        />
+
+        <header className="mt-6">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                {t(`categories.${fm.category}`)}
+              </div>
+              <h1 className="mt-1 text-3xl font-bold tracking-tight">{title}</h1>
+            </div>
+            <StatusBadge status={fm.status} labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }} />
+          </div>
+
+          <p className="mt-4 text-base text-zinc-700 dark:text-zinc-300">
+            {locale === "zh" ? fm.summary : fm.summary_en || fm.summary}
+          </p>
+
+          <LastUpdated date={fm.last_updated} label={tCommon("lastUpdated")} />
+        </header>
+
+        <MarkdownContent content={entry.content} />
+
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+
+        <div className="mt-8">
+          <Link
+            href={`/${locale}/activities`}
+            className="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400"
+          >
+            ← {tCommon("backToList")}
+          </Link>
+        </div>
+      </article>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/activities/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getAllEntries, type ActivityFrontmatter } from "@/lib/content";
+import { PageHeader } from "@/components/content/page-header";
+import { StatusBadge } from "@/components/content/status-badge";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export default async function ActivitiesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.activities");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const activities = getAllEntries<ActivityFrontmatter>("activities");
+
+  // 按类别分组以便浏览
+  const categories = ["sports", "water", "nightlife", "gambling", "criminal", "social"] as const;
+  const grouped = categories.map((cat) => ({
+    category: cat,
+    label: t(`categories.${cat}`),
+    items: activities.filter((a) => a.frontmatter.category === cat),
+  }));
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+        {activities.length === 0 ? (
+          <p className="text-zinc-500 dark:text-zinc-400">
+            {tCommon("noContent")}
+          </p>
+        ) : (
+          <div className="space-y-10">
+            {grouped.map(
+              (group) =>
+                group.items.length > 0 && (
+                  <section key={group.category}>
+                    <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                      {group.label}
+                    </h2>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      {group.items.map((activity) => (
+                        <Link
+                          key={activity.slug}
+                          href={`/activities/${activity.slug}`}
+                          className="group rounded-2xl border border-zinc-200 bg-white p-5 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+                        >
+                          <div className="flex items-start justify-between gap-3">
+                            <h3 className="font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                              {locale === "zh"
+                                ? activity.frontmatter.title
+                                : activity.frontmatter.title_en}
+                            </h3>
+                            <StatusBadge
+                              status={activity.frontmatter.status}
+                              labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }}
+                            />
+                          </div>
+                          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-2">
+                            {locale === "zh"
+                              ? activity.frontmatter.summary
+                              : activity.frontmatter.summary_en || activity.frontmatter.summary}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  </section>
+                ),
+            )}
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/characters/[slug]/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getEntry, getAllEntries, type CharacterFrontmatter } from "@/lib/content";
+import { StatusBadge, SourceList, LastUpdated } from "@/components/content/status-badge";
+import { DetailBreadcrumb } from "@/components/content/page-header";
+import { MarkdownContent } from "@/components/content/markdown-content";
+
+// 预生成所有角色详情页
+export function generateStaticParams() {
+  const entries = getAllEntries<CharacterFrontmatter>("characters");
+  return [
+    ...entries.map((e) => ({ locale: "zh", slug: e.slug })),
+    ...entries.map((e) => ({ locale: "en", slug: e.slug })),
+  ];
+}
+
+// 动态 SEO metadata：每个角色独立标题描述
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = getEntry<CharacterFrontmatter>("characters", slug);
+  if (!entry) return {};
+
+  return {
+    title: entry.frontmatter.title,
+    description: entry.frontmatter.summary,
+  };
+}
+
+export default async function CharacterDetailPage({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.characters");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const entry = getEntry<CharacterFrontmatter>("characters", slug);
+  if (!entry) notFound();
+
+  const fm = entry.frontmatter;
+  const title = locale === "zh" ? fm.title : fm.title_en;
+
+  return (
+    <main className="flex-1">
+      <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+        <DetailBreadcrumb
+          items={[
+            { label: t("title"), href: `/${locale}/characters` },
+            { label: title },
+          ]}
+        />
+
+        <header className="mt-6">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                {fm.type === "protagonist"
+                  ? t("protagonist")
+                  : t("supporting")}
+              </div>
+              <h1 className="mt-1 text-3xl font-bold tracking-tight">{title}</h1>
+            </div>
+            <StatusBadge status={fm.status} labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }} />
+          </div>
+
+          <p className="mt-4 text-base text-zinc-700 dark:text-zinc-300">
+            {locale === "zh" ? fm.summary : fm.summary_en || fm.summary}
+          </p>
+
+          {/* 能力列表 */}
+          {fm.abilities && fm.abilities.length > 0 && (
+            <div className="mt-6">
+              <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                {tCommon("abilities")}
+              </div>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {fm.abilities.map((ability) => (
+                  <span
+                    key={ability}
+                    className="rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                  >
+                    {ability}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <LastUpdated date={fm.last_updated} label={tCommon("lastUpdated")} />
+        </header>
+
+        <MarkdownContent content={entry.content} />
+
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+
+        <div className="mt-8">
+          <Link
+            href={`/${locale}/characters`}
+            className="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400"
+          >
+            ← {tCommon("backToList")}
+          </Link>
+        </div>
+      </article>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/characters/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getAllEntries, type CharacterFrontmatter } from "@/lib/content";
+import { PageHeader } from "@/components/content/page-header";
+import { StatusBadge } from "@/components/content/status-badge";
+
+// 预生成所有 locale 的静态列表页
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export default async function CharactersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.characters");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const characters = getAllEntries<CharacterFrontmatter>("characters");
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+        {characters.length === 0 ? (
+          <p className="text-zinc-500 dark:text-zinc-400">
+            {tCommon("noContent")}
+          </p>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {characters.map((char) => (
+              <Link
+                key={char.slug}
+                href={`/characters/${char.slug}`}
+                className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1">
+                    <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                      {char.frontmatter.type === "protagonist"
+                        ? t("protagonist")
+                        : t("supporting")}
+                    </div>
+                    <h2 className="mt-1 text-lg font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                      {locale === "zh"
+                        ? char.frontmatter.title
+                        : char.frontmatter.title_en}
+                    </h2>
+                    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      {locale === "zh"
+                        ? char.frontmatter.summary
+                        : char.frontmatter.summary_en || char.frontmatter.summary}
+                    </p>
+                  </div>
+                  <StatusBadge
+                    status={char.frontmatter.status}
+                    labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/layout.tsx">
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import SiteHeader from "@/components/layout/site-header";
+import SiteFooter from "@/components/layout/site-footer";
+import MobileTabBarWrapper from "@/components/layout/mobile-tab-bar-wrapper";
+import "../globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap", // FOIT 避免，提升 LCP
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+// 预生成所有 locale 的静态页面，利于 SEO
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+// 动态 metadata：根据 locale 渲染对应语言的标题与描述
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://gta6-companion.example.com"),
+    manifest: "/manifest.json",
+    icons: {
+      icon: "/icons/icon-192.png",
+      apple: "/apple-touch-icon.png",
+    },
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "black-translucent",
+      title: "GTA6 Companion",
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
+      images: ["/og/default.jpg"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og/default.jpg"],
+    },
+  };
+}
+
+// viewport 配置：themeColor 移至此处（Next.js 16 要求）
+export const viewport: Viewport = {
+  themeColor: "#10b981",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  // 校验 locale 合法性，非法则 404
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  // 启用静态渲染，告知当前 locale
+  setRequestLocale(locale);
+
+  return (
+    <html
+      lang={locale}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        <NextIntlClientProvider>
+          <SiteHeader locale={locale} />
+          <div className="flex flex-1 flex-col pb-14 sm:pb-0">{children}</div>
+          <SiteFooter />
+          <MobileTabBarWrapper locale={locale} />
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/map/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import mapMarkersData from "@/data/map-markers.json";
+import { type MapMarker } from "@/lib/map";
+import MapView from "@/components/map/map-view-client";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.map" });
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+  };
+}
+
+export default async function MapPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "pages.map" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  // 转换 JSON 数据为 MapMarker 类型
+  const markers = mapMarkersData.markers as unknown as MapMarker[];
+
+  return (
+    <main className="flex-1">
+      {/* 地图页头（紧凑型） */}
+      <div className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6">
+          <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
+            {t("title")}
+          </h1>
+          <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400 sm:text-sm">
+            {t("subtitle")}
+          </p>
+        </div>
+      </div>
+
+      {/* 地图主体 */}
+      <MapView
+        markers={markers}
+        locale={locale}
+        labels={{
+          legend: t("legend"),
+          noMarkers: t("noMarkers"),
+          sources: tCommon("sources"),
+          status: {
+            confirmed: tStatus("confirmed"),
+            speculated: tStatus("speculated"),
+            leaked: tStatus("leaked"),
+          },
+        }}
+      />
+
+      {/* 发售日预告条 */}
+      <div className="border-t border-zinc-200 bg-zinc-50 px-4 py-3 text-center text-xs text-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-400">
+        {t("comingSoon")}
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/news/[slug]/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getEntry, getAllEntries, type NewsFrontmatter } from "@/lib/content";
+import { StatusBadge, SourceList } from "@/components/content/status-badge";
+import { DetailBreadcrumb } from "@/components/content/page-header";
+import { MarkdownContent } from "@/components/content/markdown-content";
+
+export function generateStaticParams() {
+  const entries = getAllEntries<NewsFrontmatter>("news");
+  return [
+    ...entries.map((e) => ({ locale: "zh", slug: e.slug })),
+    ...entries.map((e) => ({ locale: "en", slug: e.slug })),
+  ];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = getEntry<NewsFrontmatter>("news", slug);
+  if (!entry) return {};
+
+  return {
+    title: entry.frontmatter.title,
+    description: entry.frontmatter.summary,
+    // 新闻类页面标记为 article 类型，利于搜索引擎与社交分享
+    openGraph: {
+      type: "article",
+      title: entry.frontmatter.title,
+      description: entry.frontmatter.summary,
+      publishedTime: entry.frontmatter.date,
+      authors: entry.frontmatter.author ? [entry.frontmatter.author] : undefined,
+    },
+  };
+}
+
+export default async function NewsDetailPage({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.news");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const entry = getEntry<NewsFrontmatter>("news", slug);
+  if (!entry) notFound();
+
+  const fm = entry.frontmatter;
+  const title = locale === "zh" ? fm.title : fm.title_en;
+
+  return (
+    <main className="flex-1">
+      <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+        <DetailBreadcrumb
+          items={[
+            { label: t("title"), href: `/${locale}/news` },
+            { label: title },
+          ]}
+        />
+
+        <header className="mt-6">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+                <time dateTime={fm.date}>{fm.date}</time>
+                {fm.author && (
+                  <span>· {fm.author}</span>
+                )}
+              </div>
+              <h1 className="mt-2 text-3xl font-bold tracking-tight">{title}</h1>
+            </div>
+            <StatusBadge status={fm.status} labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }} />
+          </div>
+
+          <p className="mt-4 text-base text-zinc-700 dark:text-zinc-300">
+            {locale === "zh" ? fm.summary : fm.summary_en || fm.summary}
+          </p>
+        </header>
+
+        <MarkdownContent content={entry.content} />
+
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+
+        <div className="mt-8">
+          <Link
+            href={`/${locale}/news`}
+            className="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400"
+          >
+            ← {tCommon("backToList")}
+          </Link>
+        </div>
+      </article>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/news/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getAllEntries, type NewsFrontmatter } from "@/lib/content";
+import { PageHeader } from "@/components/content/page-header";
+import { StatusBadge } from "@/components/content/status-badge";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export default async function NewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.news");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const news = getAllEntries<NewsFrontmatter>("news").sort((a, b) =>
+    b.frontmatter.date.localeCompare(a.frontmatter.date),
+  );
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+        {news.length === 0 ? (
+          <p className="text-zinc-500 dark:text-zinc-400">
+            {tCommon("noContent")}
+          </p>
+        ) : (
+          <div className="space-y-4">
+            {news.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/news/${item.slug}`}
+                className="group block rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+                      <time dateTime={item.frontmatter.date}>
+                        {item.frontmatter.date}
+                      </time>
+                      {item.frontmatter.author && (
+                        <span>· {item.frontmatter.author}</span>
+                      )}
+                    </div>
+                    <h2 className="mt-1 text-lg font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                      {locale === "zh"
+                        ? item.frontmatter.title
+                        : item.frontmatter.title_en}
+                    </h2>
+                    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      {locale === "zh"
+                        ? item.frontmatter.summary
+                        : item.frontmatter.summary_en || item.frontmatter.summary}
+                    </p>
+                  </div>
+                  <StatusBadge
+                    status={item.frontmatter.status}
+                    labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import Countdown from "./_components/countdown";
+import { VideoGameJsonLd, FaqJsonLd } from "@/components/seo/json-ld";
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("home");
+  const tFaq = await getTranslations({ locale, namespace: "faq" });
+
+  // FAQ 内容用于结构化数据与页面渲染
+  const faqItems = tFaq.raw("items") as { question: string; answer: string }[];
+
+  return (
+    <main className="flex-1">
+      <VideoGameJsonLd />
+      <FaqJsonLd faqs={faqItems} />
+      {/* Hero 区块 */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 to-zinc-950 text-white">
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+          <div className="flex flex-col gap-6">
+            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl sm:leading-tight">
+              {t("heroTitle")}
+            </h1>
+
+            <p className="max-w-2xl text-base text-zinc-300 sm:text-lg">
+              {t("heroSubtitle")}
+            </p>
+
+            {/* 双倒计时组件：预购状态 + 距发售日 */}
+            <Countdown
+              labels={{
+                preorderLive: t("preorderLive"),
+                preorderUpcoming: t("preorderUpcoming"),
+                releaseCountdown: t("releaseCountdown"),
+                released: t("released"),
+                days: t("days"),
+                hours: t("hours"),
+                minutes: t("minutes"),
+                seconds: t("seconds"),
+              }}
+            />
+
+            <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/map"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-emerald-500 px-6 font-medium text-zinc-950 transition hover:bg-emerald-400"
+              >
+                {t("exploreMap")}
+              </Link>
+              <Link
+                href="/subscribe"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 font-medium text-white transition hover:border-zinc-600 hover:bg-zinc-800"
+              >
+                {t("cta.subscribe")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 特性区块 */}
+      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+        <div className="grid gap-6 sm:grid-cols-3">
+          <FeatureCard
+            title={t("features.mapTitle")}
+            desc={t("features.mapDesc")}
+            icon="map"
+          />
+          <FeatureCard
+            title={t("features.syncTitle")}
+            desc={t("features.syncDesc")}
+            icon="sync"
+          />
+          <FeatureCard
+            title={t("features.seoTitle")}
+            desc={t("features.seoDesc")}
+            icon="info"
+          />
+        </div>
+      </section>
+
+      {/* 订阅 CTA */}
+      <section className="border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900">
+        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            {t("cta.subscribe")}
+          </h2>
+          <p className="mt-3 text-zinc-600 dark:text-zinc-400">
+            {t("cta.subscribeDesc")}
+          </p>
+          <Link
+            href="/subscribe"
+            className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-6 font-medium text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+          >
+            {t("cta.subscribe")}
+          </Link>
+        </div>
+      </section>
+
+      {/* FAQ 区块 */}
+      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+        <h2 className="mb-8 text-2xl font-bold tracking-tight sm:text-3xl">
+          {tFaq("title")}
+        </h2>
+        <div className="space-y-6">
+          {faqItems.map((faq, idx) => (
+            <div key={idx}>
+              <h3 className="font-semibold">{faq.question}</h3>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
+
+function FeatureCard({
+  title,
+  desc,
+  icon,
+}: {
+  title: string;
+  desc: string;
+  icon: "map" | "sync" | "info";
+}) {
+  return (
+    <div className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900">
+      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+        <FeatureIcon name={icon} />
+      </div>
+      <h3 className="font-semibold">{title}</h3>
+      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{desc}</p>
+    </div>
+  );
+}
+
+function FeatureIcon({ name }: { name: "map" | "sync" | "info" }) {
+  const paths: Record<string, React.ReactNode> = {
+    map: (
+      <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+    ),
+    sync: (
+      <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+    ),
+    info: (
+      <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    ),
+  };
+  return (
+    <svg
+      className="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={1.8}
+    >
+      {paths[name]}
+    </svg>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/privacy/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/content/page-header";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.privacy" });
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+  };
+}
+
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "pages.privacy" });
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+        <article className="prose prose-zinc max-w-none dark:prose-invert">
+          <h2>{t("collectTitle")}</h2>
+          <p>{t("collect")}</p>
+
+          <h2>{t("useTitle")}</h2>
+          <p>{t("use")}</p>
+
+          <h2>{t("shareTitle")}</h2>
+          <p>{t("share")}</p>
+
+          <h2>{t("retainTitle")}</h2>
+          <p>{t("retain")}</p>
+
+          <h2>{t("rightsTitle")}</h2>
+          <p>{t("rights")}</p>
+
+          <h2>{t("contactTitle")}</h2>
+          <p>{t("contact")}</p>
+        </article>
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/subscribe/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import SubscribeForm from "@/components/subscribe/subscribe-form";
+import { PageHeader } from "@/components/content/page-header";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.subscribe" });
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+  };
+}
+
+export default async function SubscribePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "pages.subscribe" });
+
+  const benefits = [
+    locale === "zh"
+      ? "发售日第一时间推送通知"
+      : "Release day notification the moment it drops",
+    locale === "zh"
+      ? "完整互动地图上线提醒"
+      : "Alert when the full interactive map goes live",
+    locale === "zh"
+      ? "Pro 功能抢先预览与优惠"
+      : "Early preview and discounts for Pro features",
+    locale === "zh"
+      ? "可随时退订，不发送垃圾邮件"
+      : "Unsubscribe anytime, no spam",
+  ];
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+        {/* 价值主张 */}
+        <section className="mb-10">
+          <h2 className="mb-4 text-lg font-semibold">
+            {locale === "zh" ? "订阅福利" : "Subscriber Benefits"}
+          </h2>
+          <ul className="space-y-3">
+            {benefits.map((benefit, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-emerald-500/15 text-sm text-emerald-600 dark:text-emerald-400">
+                  ✓
+                </span>
+                <span className="text-sm text-zinc-700 dark:text-zinc-300">
+                  {benefit}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 订阅表单 */}
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900 sm:p-8">
+          <SubscribeForm
+            labels={{
+              emailLabel: t("emailLabel"),
+              emailPlaceholder: t("emailPlaceholder"),
+              submitButton: t("submitButton"),
+              submitting: t("submitting"),
+              success: t("success"),
+              error: t("error"),
+              invalidEmail:
+                locale === "zh"
+                  ? "请输入有效的邮箱地址"
+                  : "Please enter a valid email address",
+            }}
+          />
+        </section>
+
+        {/* 信任提示 */}
+        <p className="mt-6 text-center text-xs text-zinc-500 dark:text-zinc-400">
+          {locale === "zh"
+            ? "我们尊重你的隐私，邮箱仅用于发售提醒，不会分享给第三方。"
+            : "We respect your privacy. Your email is used only for launch alerts and never shared with third parties."}
+        </p>
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/terms/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/content/page-header";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.terms" });
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+  };
+}
+
+export default async function TermsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "pages.terms" });
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6">
+        <article className="prose prose-zinc max-w-none dark:prose-invert">
+          <h2>{t("acceptTitle")}</h2>
+          <p>{t("accept")}</p>
+
+          <h2>{t("serviceTitle")}</h2>
+          <p>{t("service")}</p>
+
+          <h2>{t("ipTitle")}</h2>
+          <p>{t("ip")}</p>
+
+          <h2>{t("limitationTitle")}</h2>
+          <p>{t("limitation")}</p>
+
+          <h2>{t("changesTitle")}</h2>
+          <p>{t("changes")}</p>
+        </article>
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/vehicles/[slug]/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getEntry, getAllEntries, type VehicleFrontmatter } from "@/lib/content";
+import { StatusBadge, SourceList, LastUpdated } from "@/components/content/status-badge";
+import { DetailBreadcrumb } from "@/components/content/page-header";
+import { MarkdownContent } from "@/components/content/markdown-content";
+
+export function generateStaticParams() {
+  const entries = getAllEntries<VehicleFrontmatter>("vehicles");
+  return [
+    ...entries.map((e) => ({ locale: "zh", slug: e.slug })),
+    ...entries.map((e) => ({ locale: "en", slug: e.slug })),
+  ];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const entry = getEntry<VehicleFrontmatter>("vehicles", slug);
+  if (!entry) return {};
+
+  return {
+    title: entry.frontmatter.title,
+    description: entry.frontmatter.summary,
+  };
+}
+
+export default async function VehicleDetailPage({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.vehicles");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const entry = getEntry<VehicleFrontmatter>("vehicles", slug);
+  if (!entry) notFound();
+
+  const fm = entry.frontmatter;
+  const title = locale === "zh" ? fm.title : fm.title_en;
+
+  return (
+    <main className="flex-1">
+      <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
+        <DetailBreadcrumb
+          items={[
+            { label: t("title"), href: `/${locale}/vehicles` },
+            { label: title },
+          ]}
+        />
+
+        <header className="mt-6">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                {t(`categories.${fm.category}`)}
+                {fm.brand && ` · ${fm.brand}`}
+              </div>
+              <h1 className="mt-1 text-3xl font-bold tracking-tight">{title}</h1>
+            </div>
+            <StatusBadge status={fm.status} labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }} />
+          </div>
+
+          <p className="mt-4 text-base text-zinc-700 dark:text-zinc-300">
+            {locale === "zh" ? fm.summary : fm.summary_en || fm.summary}
+          </p>
+
+          {/* 特性列表 */}
+          {fm.features && fm.features.length > 0 && (
+            <div className="mt-6">
+              <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                {tCommon("features")}
+              </div>
+              <div className="mt-2 flex flex-wrap gap-2">
+                {fm.features.map((feature) => (
+                  <span
+                    key={feature}
+                    className="rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <LastUpdated date={fm.last_updated} label={tCommon("lastUpdated")} />
+        </header>
+
+        <MarkdownContent content={entry.content} />
+
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+
+        <div className="mt-8">
+          <Link
+            href={`/${locale}/vehicles`}
+            className="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400"
+          >
+            ← {tCommon("backToList")}
+          </Link>
+        </div>
+      </article>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/[locale]/vehicles/page.tsx">
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getAllEntries, type VehicleFrontmatter } from "@/lib/content";
+import { PageHeader } from "@/components/content/page-header";
+import { StatusBadge } from "@/components/content/status-badge";
+
+export function generateStaticParams() {
+  return [{ locale: "zh" }, { locale: "en" }];
+}
+
+export default async function VehiclesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("pages.vehicles");
+  const tCommon = await getTranslations("common");
+  const tStatus = await getTranslations({ locale, namespace: "common.status" });
+
+  const vehicles = getAllEntries<VehicleFrontmatter>("vehicles");
+
+  return (
+    <main className="flex-1">
+      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+        {vehicles.length === 0 ? (
+          <p className="text-zinc-500 dark:text-zinc-400">
+            {tCommon("noContent")}
+          </p>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {vehicles.map((vehicle) => (
+              <Link
+                key={vehicle.slug}
+                href={`/vehicles/${vehicle.slug}`}
+                className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex-1">
+                    <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                      {t(`categories.${vehicle.frontmatter.category}`)}
+                      {vehicle.frontmatter.brand && ` · ${vehicle.frontmatter.brand}`}
+                    </div>
+                    <h2 className="mt-1 text-lg font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                      {locale === "zh"
+                        ? vehicle.frontmatter.title
+                        : vehicle.frontmatter.title_en}
+                    </h2>
+                    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                      {locale === "zh"
+                        ? vehicle.frontmatter.summary
+                        : vehicle.frontmatter.summary_en || vehicle.frontmatter.summary}
+                    </p>
+                  </div>
+                  <StatusBadge
+                    status={vehicle.frontmatter.status}
+                    labels={{ confirmed: tStatus("confirmed"), speculated: tStatus("speculated"), leaked: tStatus("leaked") }}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
+</file>
+
+<file path="src/app/api/subscribe/route.ts">
+import { NextResponse } from "next/server";
+
+// 邮件订阅 API
+// 生产环境接入 Resend（https://resend.com）发送确认邮件
+// 开发环境（无 RESEND_API_KEY）模拟成功，便于本地调试
+
+interface SubscribeRequest {
+  email?: string;
+}
+
+export async function POST(request: Request) {
+  let body: SubscribeRequest;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json(
+      { error: "Invalid request body" },
+      { status: 400 },
+    );
+  }
+
+  const { email } = body;
+
+  // 服务端再次校验邮箱格式
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json(
+      { error: "Invalid email address" },
+      { status: 400 },
+    );
+  }
+
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const resendAudienceId = process.env.RESEND_AUDIENCE_ID;
+
+  // 开发环境或未配置 Resend：模拟成功
+  if (!resendApiKey) {
+    console.log(`[dev] Subscribe mock: ${email}`);
+    return NextResponse.json({
+      success: true,
+      message: "Subscribed (dev mode)",
+    });
+  }
+
+  // 生产环境：调用 Resend API 添加到联系人
+  try {
+    const res = await fetch("https://api.resend.com/audiences/" + resendAudienceId + "/contacts", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${resendApiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        unsubscribed: false,
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error("Resend API error:", errText);
+
+      // 邮箱已存在视为成功（幂等）
+      if (res.status === 422 || res.status === 409) {
+        return NextResponse.json({
+          success: true,
+          message: "Already subscribed",
+        });
+      }
+
+      return NextResponse.json(
+        { error: "Failed to subscribe" },
+        { status: 502 },
+      );
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (err) {
+    console.error("Subscribe error:", err);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
+  }
+}
+</file>
+
+<file path="src/app/layout.tsx">
+// 根 layout：仅转发 children 到 [locale] 路由
+// 真正的 HTML 文档结构由 [locale]/layout.tsx 提供
+// 此文件满足 Next.js App Router 根布局要求
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+}
+</file>
+
+<file path="src/app/robots.ts">
+import type { MetadataRoute } from "next";
+
+// robots.txt：允许全部爬取，屏蔽 API 路由与内部资源
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = "https://gta6-companion.example.com";
+
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/api/"],
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
+  };
+}
+</file>
+
+<file path="src/components/content/markdown-content.tsx">
+import { MDXRemote } from "next-mdx-remote/rsc";
+
+// Markdown 正文渲染组件
+// 使用 next-mdx-remote 的 RSC 版本，支持服务端渲染
+// 自定义 components 可在此扩展（如自定义标题、链接样式等）
+export function MarkdownContent({ content }: { content: string }) {
+  return (
+    <div className="prose prose-zinc max-w-none dark:prose-invert prose-headings:font-semibold prose-headings:tracking-tight prose-h2:mt-8 prose-h2:text-xl prose-h3:mt-6 prose-h3:text-lg prose-p:leading-relaxed prose-a:text-emerald-700 hover:prose-a:underline dark:prose-a:text-emerald-400 prose-li:my-1 prose-ul:my-2 prose-ol:my-2">
+      <MDXRemote source={content} />
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/content/page-header.tsx">
+// 列表页通用页头：标题 + 副标题
+// 用于角色/载具/活动/新闻等列表页统一头部样式
+export function PageHeader({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle?: string;
+}) {
+  return (
+    <div className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 sm:text-base">
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// 详情页通用面包屑
+export function DetailBreadcrumb({
+  items,
+}: {
+  items: { label: string; href?: string }[];
+}) {
+  return (
+    <nav className="flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400">
+      {items.map((item, idx) => (
+        <span key={idx} className="flex items-center gap-1">
+          {idx > 0 && <span className="text-zinc-300 dark:text-zinc-600">/</span>}
+          {item.href ? (
+            <a
+              href={item.href}
+              className="hover:text-zinc-900 dark:hover:text-zinc-100"
+            >
+              {item.label}
+            </a>
+          ) : (
+            <span className="text-zinc-900 dark:text-zinc-100">{item.label}</span>
+          )}
+        </span>
+      ))}
+    </nav>
+  );
+}
+</file>
+
+<file path="src/components/content/status-badge.tsx">
+import Link from "next/link";
+
+// 数据可信度三态徽章
+// 用于在内容卡片与详情页统一标注数据来源可信度
+export function StatusBadge({
+  status,
+  labels,
+}: {
+  status: "confirmed" | "speculated" | "leaked";
+  labels: { confirmed: string; speculated: string; leaked: string };
+}) {
+  const config = {
+    confirmed: {
+      label: labels.confirmed,
+      className: "bg-emerald-500/15 text-emerald-700 ring-emerald-500/30 dark:text-emerald-400",
+    },
+    speculated: {
+      label: labels.speculated,
+      className: "bg-amber-500/15 text-amber-700 ring-amber-500/30 dark:text-amber-400",
+    },
+    leaked: {
+      label: labels.leaked,
+      className: "bg-rose-500/15 text-rose-700 ring-rose-500/30 dark:text-rose-400",
+    },
+  } as const;
+
+  const { label, className } = config[status];
+
+  return (
+    <span
+      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ring-1 ${className}`}
+    >
+      <span className="h-1.5 w-1.5 rounded-full bg-current" />
+      {label}
+    </span>
+  );
+}
+
+// 来源链接列表
+export function SourceList({
+  sources,
+  label,
+}: {
+  sources: { label: string; url: string }[];
+  label: string;
+}) {
+  if (!sources || sources.length === 0) return null;
+
+  return (
+    <div className="mt-6 border-t border-zinc-200 pt-4 dark:border-zinc-800">
+      <div className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+        {label}
+      </div>
+      <ul className="mt-2 space-y-1">
+        {sources.map((source, idx) => (
+          <li key={idx}>
+            <Link
+              href={source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-emerald-700 hover:underline dark:text-emerald-400"
+            >
+              {source.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// 最后更新时间
+export function LastUpdated({
+  date,
+  label,
+}: {
+  date: string;
+  label: string;
+}) {
+  return (
+    <div className="text-xs text-zinc-500 dark:text-zinc-400">
+      {label}: {date}
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/layout/language-switcher.tsx">
+"use client";
+
+import { usePathname, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useTransition } from "react";
+
+// 语言切换器：切换 locale 并保留当前路径与查询参数
+export default function LanguageSwitcher({
+  currentLocale,
+  locales,
+}: {
+  currentLocale: string;
+  locales: readonly string[];
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [isPending, startTransition] = useTransition();
+
+  const onChange = (nextLocale: string) => {
+    if (nextLocale === currentLocale) return;
+
+    // 替换路径中的 locale 段：/zh/xxx -> /en/xxx
+    const segments = pathname.split("/");
+    if (segments.length > 1 && locales.includes(segments[1])) {
+      segments[1] = nextLocale;
+    } else {
+      segments.splice(1, 0, nextLocale);
+    }
+    const newPath = segments.join("/");
+
+    const query = searchParams.toString();
+    const target = query ? `${newPath}?${query}` : newPath;
+
+    startTransition(() => {
+      router.push(target);
+    });
+  };
+
+  return (
+    <label className="relative inline-flex items-center">
+      <select
+        value={currentLocale}
+        onChange={(e) => onChange(e.target.value)}
+        disabled={isPending}
+        aria-label="Language"
+        className="h-8 cursor-pointer appearance-none rounded-md border border-zinc-200 bg-transparent pl-2 pr-7 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100 disabled:opacity-50 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-800"
+      >
+        {locales.map((loc) => (
+          <option key={loc} value={loc}>
+            {loc === "zh" ? "中文" : "EN"}
+          </option>
+        ))}
+      </select>
+      <svg
+        className="pointer-events-none absolute right-2 h-4 w-4 text-zinc-400"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path d="M19 9l-7 7-7-7" />
+      </svg>
+    </label>
+  );
+}
+</file>
+
+<file path="src/components/layout/mobile-tab-bar-wrapper.tsx">
+import { getTranslations } from "next-intl/server";
+import MobileTabBar from "./mobile-tab-bar";
+
+// 移动端底部导航的服务器包装
+// 负责读取翻译，将静态 items 传入客户端组件
+export default async function MobileTabBarWrapper({
+  locale,
+}: {
+  locale: string;
+}) {
+  const t = await getTranslations("nav");
+
+  const items = [
+    { href: "/", label: t("home"), icon: "home" as const },
+    { href: "/map", label: t("map"), icon: "map" as const },
+    { href: "/characters", label: t("characters"), icon: "users" as const },
+    { href: "/activities", label: t("activities"), icon: "sparkles" as const },
+    { href: "/news", label: t("news"), icon: "news" as const },
+  ];
+
+  return <MobileTabBar items={items} locale={locale} />;
+}
+</file>
+
+<file path="src/components/layout/mobile-tab-bar.tsx">
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+// 移动端底部导航栏的客户端部分
+// 需要根据当前路径高亮激活的 tab
+// 这是移动优先 PWA 的关键导航入口，确保玩家单手可达所有核心页面
+export default function MobileTabBar({
+  items,
+  locale,
+}: {
+  items: { href: string; label: string; icon: IconName }[];
+  locale: string;
+}) {
+  const pathname = usePathname();
+  const localePrefix = `/${locale}`;
+  // 标准化当前路径用于匹配（去掉 locale 前缀）
+  const currentPath = pathname.startsWith(localePrefix)
+    ? pathname.slice(localePrefix.length) || "/"
+    : pathname;
+
+  return (
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/95 sm:hidden">
+      <div className="mx-auto flex h-14 max-w-5xl items-stretch justify-around pb-[env(safe-area-inset-bottom)]">
+        {items.map((item) => {
+          // 当前路径是否匹配此 tab
+          const isActive =
+            item.href === "/"
+              ? currentPath === "/"
+              : currentPath.startsWith(item.href);
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`flex flex-1 flex-col items-center justify-center gap-0.5 text-[10px] transition ${
+                isActive
+                  ? "text-emerald-600 dark:text-emerald-400"
+                  : "text-zinc-500 dark:text-zinc-400"
+              }`}
+              aria-current={isActive ? "page" : undefined}
+            >
+              <TabIcon name={item.icon} active={isActive} />
+              <span className="font-medium">{item.label}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
+type IconName = "home" | "map" | "users" | "sparkles" | "news";
+
+function TabIcon({ name, active }: { name: IconName; active: boolean }) {
+  const paths: Record<IconName, React.ReactNode> = {
+    home: <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3v-6a1 1 0 011-1h4a1 1 0 011 1v6h3a1 1 0 001-1V10" />,
+    map: <path d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />,
+    users: <path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-2a4 4 0 10-4-4 4 4 0 004 4z" />,
+    sparkles: <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />,
+    news: <path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 0a2 2 0 012 2v9a2 2 0 01-2 2M9 9h4m-4 4h4m-4 4h4m6-8h.01M5 9h.01M5 13h.01M5 17h.01" />,
+  };
+  return (
+    <svg
+      className="h-5 w-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={active ? 2.2 : 1.8}
+    >
+      {paths[name]}
+    </svg>
+  );
+}
+</file>
+
+<file path="src/components/layout/site-header.tsx">
+import Link from "next/link";
+import { Suspense } from "react";
+import { getTranslations } from "next-intl/server";
+import { locales } from "@/i18n/routing";
+import LanguageSwitcher from "./language-switcher";
+
+export default async function SiteHeader({
+  locale,
+}: {
+  locale: string;
+}) {
+  const t = await getTranslations("nav");
+
+  const navItems = [
+    { href: "/map", label: t("map") },
+    { href: "/characters", label: t("characters") },
+    { href: "/vehicles", label: t("vehicles") },
+    { href: "/activities", label: t("activities") },
+    { href: "/news", label: t("news") },
+  ];
+
+  return (
+    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-bold tracking-tight"
+        >
+          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-500 text-sm font-bold text-zinc-950">
+            6
+          </span>
+          <span className="hidden sm:inline">GTA6 Companion</span>
+        </Link>
+
+        <nav className="flex items-center gap-1 sm:gap-2">
+          {/* 桌面端导航 */}
+          <div className="hidden items-center gap-1 sm:flex">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-md px-3 py-1.5 text-sm font-medium text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* LanguageSwitcher 内部使用 useSearchParams，需 Suspense 包裹 */}
+          <Suspense fallback={<div className="h-8 w-16" />}>
+            <LanguageSwitcher currentLocale={locale} locales={locales} />
+          </Suspense>
+
+          <Link
+            href="/subscribe"
+            className="ml-1 inline-flex h-8 items-center justify-center rounded-full bg-emerald-500 px-3 text-sm font-medium text-zinc-950 transition hover:bg-emerald-400"
+          >
+            {t("subscribe")}
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
+}
+</file>
+
+<file path="src/components/map/map-view-client.tsx">
+"use client";
+
+import dynamic from "next/dynamic";
+
+// 客户端 wrapper：用于在 server component 中安全地 dynamic import MapView
+// 因为 next/dynamic 的 ssr:false 不能在 Server Component 使用
+const MapView = dynamic(() => import("./map-view"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[calc(100vh-7rem)] items-center justify-center bg-zinc-900 text-zinc-400">
+      Loading map...
+    </div>
+  ),
+});
+
+export default MapView;
+</file>
+
+<file path="src/components/seo/json-ld.tsx">
+// 结构化数据组件：输出 VideoGame schema.org JSON-LD
+// 帮助搜索引擎理解本站描述的对象（GTA6 游戏）及其属性
+export function VideoGameJsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    name: "Grand Theft Auto VI",
+    alternateName: "GTA6",
+    description:
+      "Action-adventure game set in Leonida (fictionalized Florida), featuring dual protagonists Lucia and Jason, developed by Rockstar North and published by Rockstar Games.",
+    genre: ["Action", "Adventure", "Open world"],
+    gamePlatform: ["PlayStation 5", "Xbox Series X", "Xbox Series S"],
+    datePublished: "2026-11-19",
+    publisher: {
+      "@type": "Organization",
+      name: "Rockstar Games",
+    },
+    developer: {
+      "@type": "Organization",
+      name: "Rockstar North",
+    },
+    applicationCategory: "Game",
+    operatingSystem: "PlayStation 5, Xbox Series X|S",
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+// 面包屑结构化数据
+export function BreadcrumbJsonLd({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+// FAQ 结构化数据：帮助搜索引擎抓取常见问题，提升富结果展示机会
+export function FaqJsonLd({
+  faqs,
+}: {
+  faqs: { question: string; answer: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+</file>
+
+<file path="src/components/subscribe/subscribe-form.tsx">
+"use client";
+
+import { useState } from "react";
+
+interface SubscribeFormLabels {
+  emailLabel: string;
+  emailPlaceholder: string;
+  submitButton: string;
+  submitting: string;
+  success: string;
+  error: string;
+  invalidEmail: string;
+}
+
+export default function SubscribeForm({ labels }: { labels: SubscribeFormLabels }) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // 简单邮箱格式校验
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setStatus("error");
+      setErrorMessage(labels.invalidEmail);
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Subscribe failed");
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+      setErrorMessage(labels.error);
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className="rounded-2xl border border-emerald-300 bg-emerald-50 p-6 text-center dark:border-emerald-700 dark:bg-emerald-950/30">
+        <div className="mb-2 text-3xl" aria-hidden>
+          ✓
+        </div>
+        <p className="font-medium text-emerald-700 dark:text-emerald-400">
+          {labels.success}
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-4">
+      <div>
+        <label htmlFor="email" className="mb-1.5 block text-sm font-medium">
+          {labels.emailLabel}
+        </label>
+        <input
+          id="email"
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder={labels.emailPlaceholder}
+          className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-base shadow-sm transition focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-zinc-700 dark:bg-zinc-900"
+          disabled={status === "submitting"}
+        />
+      </div>
+
+      {status === "error" && (
+        <p className="text-sm text-rose-600 dark:text-rose-400">
+          {errorMessage}
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === "submitting"}
+        className="w-full rounded-full bg-emerald-500 px-6 py-3 font-medium text-zinc-950 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        {status === "submitting" ? labels.submitting : labels.submitButton}
+      </button>
+    </form>
+  );
+}
+</file>
+
+<file path="src/content/activities/darts.md">
+---
+title: 飞镖 (Darts)
+title_en: Darts
+category: nightlife
+status: speculated
+last_updated: 2026-06-26
+summary: GTA 系列经典的小游戏飞镖，曾在《GTA4》《GTA5》中出现，预计在 GTA6 回归，玩家可在酒吧投掷飞镖。
+summary_en: The classic GTA mini-game darts, featured in GTA4 and GTA5, expected to return in GTA6 where players can throw darts in bars.
+sources:
+  - label: GTA 系列历史
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+飞镖是 GTA 系列的经典小游戏，曾在《GTA4》与《GTA5》的酒吧场景中出现。玩家可以与 NPC 进行飞镖对战。
+
+## 系列历史
+
+- **《GTA4》**：飞镖作为酒吧小游戏首次加入
+- **《GTA5》**：延续飞镖玩法
+
+## GTA6 展望
+
+酒吧场景已在 GTA6 预告片中出现，飞镖小游戏回归的可能性较高。本条目标记为"推测"，待官方进一步确认。
+</file>
+
+<file path="src/content/activities/fishing.md">
+---
+title: 钓鱼 (Fishing)
+title_en: Fishing
+category: water
+status: confirmed
+last_updated: 2026-06-25
+summary: GTA 系列首次引入的完整钓鱼系统，配备鱼竿类型、饵料选择与可钓物种，深度整合进游戏经济与库存系统。
+summary_en: Fully developed fishing system new to the GTA series, with rod types, bait selection, and fishable species, deeply integrated into the game economy.
+sources:
+  - label: Rockstar GTA6 产品页 - Shitzu Squalo
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+钓鱼是《GTA6》22 项已确认支线活动之一，也是 GTA 系列首次引入的完整钓鱼玩法。根据终极版独占载具 Shitzu Squalo 的描述——"非常适合在 Gambit Bay 垂钓并钓起各种猎物"，钓鱼已确认成为 Vice City 玩法的重要组成部分。
+
+## 已确认细节
+
+- **装备系统**：鱼竿类型与饵料选择
+- **可钓物种**：从鲈鱼到马林鱼等多种鱼类
+- **库存整合**：钓到的鱼会进入某种库存系统，可能配套烹饪机制
+- **地点**：Gambit Bay 为已确认钓点之一，预计在沿海与群岛区域有多处钓点
+
+## 与游戏经济的关联
+
+Rockstar 表示 GTA6 的活动不再孤立存在——钓鱼可能喂入"租船业务"（charter business）等经济系统，形成活动驱动的收益循环。
+</file>
+
+<file path="src/content/activities/gang-compound.md">
+---
+title: 帮派据点突袭 (Gang Compound)
+title_en: Gang Compound Raids
+category: criminal
+status: confirmed
+last_updated: 2026-06-25
+summary: 突袭南赛德 Vice City 帮派据点的活动类型，类似其他开放世界游戏的哨所/敌方堡垒，安全逃脱可获得特殊物品与违禁品。
+summary_en: Activity type involving raids on gang compounds in South Side Vice City, similar to outposts/strongholds in other open-world games; escaping safely yields special items and contraband.
+sources:
+  - label: Rockstar GTA6 产品页 - Pitt Youngin$
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+帮派据点突袭是 GTA6 终极版描述中揭示的全新活动类型。Pitt Youngin$ 非法商品店被描述为"帮派据点（Gang Compound）"——你将"突袭南赛德 Vice City 最喧闹、社交最活跃的帮派之一的据点"。
+
+## 已确认细节
+
+- **据点类型**：类似其他开放世界游戏的哨所或敌方堡垒
+- **Pitt Youngin\$**：可能是众多据点之一
+- **战利品**：描述提到"安全逃脱以获得一些特殊物品和独特的违禁品"
+- **销赃闭环**：突袭获得的违禁品可在 Paradise Garage 等地销赃
+
+## 与游戏系统的关联
+
+帮派据点突袭构成 GTA6 犯罪经济闭环的入口——通过突袭获取违禁品，再通过销赃场所变现，形成完整的犯罪业务循环。
+</file>
+
+<file path="src/content/activities/golf.md">
+---
+title: 高尔夫 (Golf)
+title_en: Golf
+category: sports
+status: confirmed
+last_updated: 2026-06-25
+summary: 回归并大幅扩展的 18 洞高尔夫玩法，位于乡村俱乐部，含职业模式、锦标赛与社交机制。
+summary_en: Returning and significantly expanded 18-hole golf at a country club, with career mode, tournaments, and social mechanics.
+sources:
+  - label: Rockstar Trailer 帧分析
+    url: https://www.rockstargames.com/newswire
+---
+
+## 概述
+
+高尔夫是 GTA6 22 项已确认活动之一，从 GTA V 回归并大幅扩展。确认位于乡村俱乐部（country club），提供完整的 18 洞球场，配套职业模式、锦标赛与社交机制。
+
+## 已确认细节
+
+- **18 洞完整球场**：位于乡村俱乐部
+- **职业模式**：含锦标赛与排名系统
+- **社交机制**：乡村俱乐部本身可能作为与富裕 NPC 互动的场所
+- **经济整合**：与资产与商业系统关联
+
+## 与游戏系统的关联
+
+乡村俱乐部作为社交场所，可能连接 GTA6 的资产与商业系统——高尔夫不再是孤立活动，而是经济与社交网络的入口。
+</file>
+
+<file path="src/content/activities/heists.md">
+---
+title: 劫案 (Heists)
+title_en: Heists
+category: criminal
+status: confirmed
+last_updated: 2026-06-26
+summary: 由老牌银行劫匪劳尔·包蒂斯塔引出，身后"无国界国家银行"暗示经典银行劫案剧情，延续 GTA 系列劫案玩法，双主角 Jason 与 Lucia 协同行动。
+summary_en: Introduced via veteran bank robber Raul Bautista, with the "Borderless National Bank" signaling classic heist storylines; continues the GTA series heist gameplay with dual protagonists Jason and Lucia in coordinated action.
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 概述
+
+劫案是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时确认的核心犯罪活动方向。老牌银行劫匪劳尔·包蒂斯塔的登场，以及其身后"无国界国家银行"（Borderless National Bank）的设定，强烈暗示本作延续 GTA 系列经典的银行劫案剧情。
+
+## 劫案主线
+
+- **劳尔·包蒂斯塔**：老牌银行劫匪，预计作为劫案主线的引出者或关键人物
+- **无国界国家银行**：身后的银行招牌暗示经典银行劫案剧情回归
+- **系列延续**：延续 GTA 系列（尤其 GTA Online）的劫案玩法传统
+
+## 双主角协同
+
+本作双主角 Jason 与 Lucia 的劫案行动预计将构成核心玩法：
+
+- **自由分工**：任务过程中可自由分配两人分工
+- **协同作战**：合伙银行劫案等双人协同任务
+- **玩法升级**：双主角机制使劫案自由度大幅升级
+
+劫案作为 GTA 系列的标志性玩法，在双主角协同机制下预计迎来新的体验维度。
+</file>
+
+<file path="src/content/activities/hunting.md">
+---
+title: 狩猎 (Hunting)
+title_en: Hunting
+category: sports
+status: confirmed
+last_updated: 2026-06-26
+summary: 大概率加入类似《荒野大镖客 2》的野生动物狩猎玩法，对应莱昂尼达州"草河"(Grassrivers)湿地区域，该区域被设定为"未被驯服的地图核心"。
+summary_en: Likely to feature wildlife hunting similar to Red Dead Redemption 2, set in the Grassrivers wetlands of Leonida — described as the "untamed heart of the map."
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 概述
+
+狩猎是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时浮现的活动方向。封面底部出现的巨型短吻鳄，配合莱昂尼达州"草河"（Grassrivers）湿地的官方设定，预示本作大概率加入野生动物狩猎玩法。
+
+## 草河湿地
+
+- **草河 (Grassrivers)**：莱昂尼达州湿地区域，是 Rockstar 的大沼泽地（Everglades）equivalent
+- **未被驯服的地图核心**：该区域被官方设定为"未被驯服的地图核心"
+- **生态构成**：满是野生动物、沼泽与乡村社区，构成独特的南方湿地生态
+
+## 玩法预期
+
+> 注：以下为基于官方封面与设定推测的部分，非官方明确确认。
+
+- **狩猎机制**：预计加入类似《荒野大镖客 2》的野生动物狩猎玩法
+- **巨型短吻鳄**：封面底部出现的短吻鳄可能成为狩猎目标或湿地威胁
+- **湿地生态**：草河湿地丰富的野生动物资源，可能支撑完整的狩猎与采集循环
+
+草河作为"未被驯服的地图核心"，可能成为本作探索与野外活动的核心区域之一。
+</file>
+
+<file path="src/content/activities/nightlife.md">
+---
+title: 夜生活 (Nightlife)
+title_en: Nightlife
+category: nightlife
+status: confirmed
+last_updated: 2026-06-26
+summary: Vice City 标志性的夜生活系统回归——夜店、酒吧、海滩派对，延续罪恶都市系列的霓虹美学，玩家可参与 DJ、舞蹈等互动。
+summary_en: The iconic Vice City nightlife system returns — clubs, bars, beach parties, continuing the neon aesthetic of the series, with player interactions like DJing and dancing.
+sources:
+  - label: GTA6 首支预告片 (2023-12-05)
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+夜生活是 GTA 系列最具 Vice City 标志性的活动之一。预告片中展示了大量夜店、海滩派对与霓虹场景，确认夜生活将是 GTA6 的重要组成部分。
+
+## 已确认细节
+
+- **夜店场景**：预告片多次出现夜店内部与外部镜头，配有 DJ、舞池
+- **海滩派对**：海滩派对场景，延续罪恶都市的度假氛围
+- **霓虹美学**：标志性的霓虹灯光美学贯穿夜间场景
+- **社交互动**：玩家预计可参与舞蹈、社交等互动
+
+## 系列传承
+
+夜生活是《罪恶都市》的标志性玩法，GTA6 回归这一主题，既是对原作精神的致敬，也是 Leonida 州世界观的核心表达。Vice City 的霓虹夜色将再次成为玩家记忆点。
+</file>
+
+<file path="src/content/activities/pool.md">
+---
+title: 台球 (Pool)
+title_en: Pool
+category: nightlife
+status: speculated
+last_updated: 2026-06-26
+summary: GTA 系列经典的小游戏台球，曾在《罪恶都市》《圣安地列斯》《GTA4》中出现，预计在 GTA6 回归，玩家可在酒吧挑战 NPC。
+summary_en: The classic GTA mini-game pool, featured in Vice City, San Andreas, and GTA4, expected to return in GTA6 where players can challenge NPCs in bars.
+sources:
+  - label: GTA 系列历史
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+台球是 GTA 系列经典的小游戏，曾在《罪恶都市》、《圣安地列斯》与《GTA4》中作为酒吧内的互动小游戏出现。玩家可以与 NPC 对战台球。
+
+## 系列历史
+
+- **《罪恶都市》**：台球作为酒吧小游戏首次出现
+- **《圣安地列斯》**：扩展了台球玩法
+- **《GTA4》**：在酒吧可玩台球
+
+## GTA6 展望
+
+由于 GTA6 回归 Vice City 世界观，且酒吧场景已在预告片中出现，台球小游戏回归的可能性很高。本条目标记为"推测"，待官方进一步确认。
+</file>
+
+<file path="src/content/activities/street-racing.md">
+---
+title: 街头赛车 (Street Racing)
+title_en: Street Racing
+category: sports
+status: confirmed
+last_updated: 2026-06-26
+summary: 全新 Principe Alvino V1 运动摩托登场，粉紫合成波涂装暗示高自由度载具改装系统，呼应罪恶城热带风格，与改版 Vapid 警用巡逻车形成追逐关系。
+summary_en: The all-new Principe Alvino V1 sportbike debuts with a pink-purple synthwave livery hinting at a high-freedom vehicle customization system; echoes Vice City's tropical style and forms a chase dynamic with the modified Vapid police patrol car.
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 概述
+
+街头赛车是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时浮现的活动方向。封面上全新 Principe Alvino V1 运动摩托的登场，配合改版 Vapid 警用巡逻车，共同勾勒出本作街头赛车与警匪追逐的玩法轮廓。
+
+## 载具改装
+
+- **Principe Alvino V1**：全新运动摩托登场
+- **粉紫合成波涂装**：独特的粉紫合成波风格涂装，暗示高自由度载具改装系统
+- **改装深度**：涂装风格预示玩家可对载具外观进行深度定制
+
+## 街头文化
+
+- **罪恶城热带风格**：粉紫合成波美学呼应 Vice City 的热带风格与怀旧氛围
+- **警匪追逐**：Principe Alvino V1 与改版 Vapid 警用巡逻车形成追逐关系，预示街头赛车与警匪对抗的玩法交织
+
+街头赛车作为 GTA 系列经典活动，在本作的载具改装系统与热带风格美学下预计呈现全新的视觉与玩法体验。
+</file>
+
+<file path="src/content/characters/boobie-ike.md">
+---
+title: 布比·艾克 (Boobie Ike)
+title_en: Boobie Ike
+type: supporting
+status: confirmed
+last_updated: 2026-06-26
+summary: 莱昂尼达州多方势力的核心人物，身兼音乐制作人、脱衣舞俱乐部老板与地产商多重身份，被称为"莱昂尼达之王"，手上狮王金戒指象征其地位。
+summary_en: Key power broker in Leonida, simultaneously a music producer, strip club owner, and real estate magnate; known as the "King of Leonida," with a lion-head gold ring symbolizing his status.
+abilities:
+  - 音乐制作
+  - 脱衣舞俱乐部经营
+  - 地产投资
+background: 集音乐、夜店与地产于一身的多重身份角色，被誉为"莱昂尼达之王"，狮王金戒指为其地位象征。
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 角色概述
+
+布比·艾克是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时确认的支援角色之一。他集音乐制作人、脱衣舞俱乐部老板与地产商多重身份于一身，被称为"莱昂尼达之王"（King of Leonida）。他手上的狮王金戒指象征其在莱昂尼达州的显赫地位。
+
+## 身份与势力
+
+- **音乐制作人**：涉足音乐产业，可能连接 Vice City 的夜生活与嘻哈文化场景
+- **脱衣舞俱乐部老板**：经营夜店产业，呼应《罪恶都市》系列的俱乐部玩法传统
+- **地产商**：掌握地产资源，构成其在莱昂尼达州势力版图的重要一环
+- **莱昂尼达之王**：多方身份叠加，使其成为州内举足轻重的权力人物
+
+## 在剧情中的角色
+
+布比·艾克预计是剧情中亦敌亦友的关键角色。其横跨音乐、夜店与地产的多重身份，使他既可能与主角产生合作，又可能因利益冲突而成为对手。作为"莱昂尼达之王"，他将是主角在莱昂尼达州权力网络中无法绕开的关键节点。
+</file>
+
+<file path="src/content/characters/brian-heder.md">
+---
+title: 布莱恩·海德 (Brian Heder)
+title_en: Brian Heder
+type: supporting
+status: confirmed
+last_updated: 2026-06-26
+summary: GTA6 官方封面确认的支援角色之一，与双主角 Jason、Lucia 同框出现，预计与主线剧情密切相关。
+summary_en: One of the supporting characters confirmed on the official GTA6 cover, appearing alongside dual protagonists Jason and Lucia, expected to be closely tied to the main storyline.
+abilities:
+  - 主线剧情关联
+background: 官方封面公布的支援角色，与双主角同框，预计参与本作核心犯罪剧情。
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 角色概述
+
+布莱恩·海德是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时确认的支援角色之一。他与双主角 Jason、Lucia 以及劳尔·包蒂斯塔同框出现，预计与主线剧情密切相关。
+
+## 与主线的关系
+
+作为官方封面确认的角色，布莱恩·海德预计将参与本作的核心犯罪剧情。封面构图暗示他与双主角的关系紧密，可能作为剧情的关键节点人物。
+
+## 待确认细节
+
+更多关于布莱恩·海德的背景、能力与剧情定位，待 Rockstar 后续公布。
+</file>
+
+<file path="src/content/characters/jason.md">
+---
+title: 杰森 (Jason)
+title_en: Jason
+type: protagonist
+status: confirmed
+last_updated: 2026-06-25
+summary: GTA6 双主角之一，退伍军人出身，擅长正面枪战与高速驾驶，自带子弹时间瞄准。性格偏冲动，主线围绕复仇与摆脱黑暗过往展开。
+summary_en: One of GTA6's dual protagonists, ex-military background, skilled in frontal combat and high-speed driving with bullet-time aiming. Impulsive; main story revolves around revenge and escaping his dark past.
+abilities:
+  - 子弹时间瞄准
+  - 高速驾驶
+  - 正面枪战
+background: 退伍军人出身，早年混迹底层犯罪圈子，擅长正面枪战、高速驾驶。
+sources:
+  - label: Rockstar Newswire - Trailer 1
+    url: https://www.rockstargames.com/newswire
+  - label: Trailer 2 (May 2025)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 角色概述
+
+杰森是《Grand Theft Auto VI》的双主角之一。退伍军人出身，早年混迹底层犯罪圈子，擅长正面枪战、高速驾驶，自带子弹时间瞄准，性格偏冲动。主线围绕复仇与摆脱黑暗过往展开。
+
+## 专属机制
+
+- **子弹时间**：杰森可触发慢动作瞄准模式，针对敌人弱点
+- **高速驾驶**：擅长高速追逐与车辆战斗
+- **正面枪战**：硬直低、装填快，适合正面交火
+
+## 剧情
+
+杰森与露西娅的主线深度绑定，大量双人协同任务围绕两人展开：合伙银行劫案、沼泽走私、对抗本地毒枭集团等。任务过程可自由分配分工，玩法自由度大幅升级。
+</file>
+
+<file path="src/content/characters/lucia.md">
+---
+title: 露西娅 (Lucia)
+title_en: Lucia
+type: protagonist
+status: confirmed
+last_updated: 2026-06-25
+summary: GTA 正传系列首位女性主角，与 Jason 组成邦妮与克莱德式亡命情侣。心思缜密，擅长潜行、开锁与偷盗。
+summary_en: First female protagonist in mainline GTA, paired with Jason in a Bonnie-and-Clyde dynamic. Methodical, skilled in stealth, lockpicking, and theft.
+abilities:
+  - 潜行慢动作
+  - 开锁
+  - 偷盗
+  - 完整个人家庭支线
+background: 曾因抢劫入狱，剧情比重与 Jason 持平，不再是配角工具人。
+sources:
+  - label: Rockstar Newswire - Trailer 1
+    url: https://www.rockstargames.com/newswire
+  - label: Trailer 2 (May 2025)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 角色概述
+
+露西娅是《Grand Theft Auto VI》的双主角之一，也是 GTA 正传系列首次引入的女性主角。她与 Jason 构成邦妮与克莱德式的亡命情侣关系，两人在单人模式下可无缝自由切换。
+
+## 专属机制
+
+- **潜行慢动作**：露西娅可触发单发慢动作模式，适合潜行击杀
+- **开锁与偷盗**：潜行、开锁、偷盗能力拉满，对应专属任务设计
+- **家庭支线**：拥有完整的个人家庭支线剧情
+
+## 剧情
+
+露西娅曾因抢劫入狱，心思缜密。她与 Jason 的主线深度绑定，大量双人协同任务围绕两人展开：合伙银行劫案、沼泽走私、对抗本地毒枭集团等。任务过程中可自由分配分工，玩法自由度大幅升级。
+</file>
+
+<file path="src/content/characters/raul-bautista.md">
+---
+title: 劳尔·包蒂斯塔 (Raul Bautista)
+title_en: Raul Bautista
+type: supporting
+status: confirmed
+last_updated: 2026-06-26
+summary: 老牌银行劫匪，手持"杜克"(Dewbrand)品牌突击步枪——该武器品牌首次从《荒野大镖客》宇宙跨至 GTA HD 世界观，身后"无国界国家银行"暗示本作延续经典银行劫案剧情。
+summary_en: Veteran bank robber wielding a Dewbrand assault rifle — a weapon brand crossing over from the Red Dead universe into the GTA HD world for the first time; the "Borderless National Bank" behind him signals a continuation of classic heist storylines.
+abilities:
+  - 银行劫案策划
+  - 杜克品牌武器使用
+background: 老牌银行劫匪，手持杜克品牌突击步枪，身后"无国界国家银行"暗示其与经典银行劫案主线的关联。
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 角色概述
+
+劳尔·包蒂斯塔是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时确认的支援角色之一。他是一名老牌银行劫匪，封面上他手持"杜克"（Dewbrand）品牌突击步枪，身后是"无国界国家银行"（Borderless National Bank）。
+
+## 背景
+
+- **老牌银行劫匪**：经验丰富的劫案老手，预示其将主导或参与本作的银行劫案主线
+- **杜克品牌武器**：手持"杜克"（Dewbrand）品牌突击步枪——该武器品牌首次从《荒野大镖客》宇宙跨至 GTA HD 世界观，是 Rockstar 宇宙联动的标志性细节
+- **无国界国家银行**：身后的银行招牌暗示本作延续 GTA 系列经典的银行劫案剧情
+
+## 与劫案主线的关系
+
+劳尔·包蒂斯塔的出现与"无国界国家银行"的设定，强烈暗示本作将延续 GTA 系列经典的银行劫案主线。作为老牌劫匪，他预计将引出或指导双主角 Jason 与 Lucia 的劫案行动，串联起本作的犯罪剧情核心。
+</file>
+
+<file path="src/content/news/2026-06-24-preorders-live.md">
+---
+title: GTA6 全球预购今日开启，标准版 $79.99 / 终极版 $99.99
+title_en: "GTA6 Global Pre-orders Live Now: Standard $79.99 / Ultimate $99.99"
+status: confirmed
+last_updated: 2026-06-26
+date: 2026-06-24
+author: GTA6 Companion Editorial
+summary: GTA6 全球预购于 6 月 24 日午夜（当地时间）开启，标准版 $79.99，终极版 $99.99，首发 PS5 / Xbox Series X|S，PC 版预计 2027，11 月 19 日正式发售，11 月 20 日前预购免费领取"罪恶都市怀旧包"。
+summary_en: GTA6 global pre-orders open at midnight local time on June 24; Standard Edition $79.99, Ultimate Edition $99.99; launching first on PS5 / Xbox Series X|S with PC expected in 2027; releases November 19, with the "Vice City Nostalgia Pack" free for pre-orders before November 20.
+sources:
+  - label: Rockstar Newswire
+    url: https://www.rockstargames.com/newswire
+---
+
+## 预购详情
+
+《Grand Theft Auto VI》全球预购于 **6 月 24 日午夜（当地时间）** 正式开启。本次预购覆盖标准版与终极版两个版本，首发登陆主机平台。
+
+## 版本与定价
+
+- **标准版**：$79.99，包含完整单人剧情 + 线上模式基础内容
+- **终极版**：$99.99，追加：
+  - 独家剧情支线
+  - 限定载具套装
+  - 双倍线上启动资金
+  - 专属角色外观
+
+- **首发平台**：PS5 / Xbox Series X|S
+- **PC 版**：预计 2027 年推出
+- **正式发售**：11 月 19 日
+
+## 预购福利
+
+- **罪恶都市怀旧包**：11 月 20 日前预购的玩家可免费领取，含复古载具、80 年代主题服装、经典武器皮肤等怀旧内容
+
+预购窗口与正式发售日（11 月 19 日）紧密衔接，怀旧包领取截止至发售次日（11 月 20 日）。
+</file>
+
+<file path="src/content/news/2026-06-25-release-date-confirmed.md">
+---
+title: GTA6 发售日定档 11 月 19 日，6 月 25 日开启全球预购
+title_en: GTA6 Release Date Set for November 19, Pre-order Opens June 25
+status: confirmed
+last_updated: 2026-06-25
+date: 2026-06-25
+author: GTA6 Companion Editorial
+summary: Rockstar 与 Take-Two 正式宣布 GTA6 于 2026 年 11 月 19 日登陆 PS5 / Xbox Series X|S，全球预购 6 月 25 日开启，标准版 $79.99，终极版 $99.99。
+summary_en: Rockstar and Take-Two officially announce GTA6 launches November 19, 2026 on PS5 / Xbox Series X|S, with global pre-order opening June 25.
+sources:
+  - label: Rockstar Newswire
+    url: https://www.rockstargames.com/newswire
+  - label: Take-Two Official
+    url: https://www.take2games.com
+---
+
+## 发售与预购
+
+Rockstar Games 正式宣布《Grand Theft Auto VI》将于 **2026 年 11 月 19 日**全球发售，首发仅登陆 **PlayStation 5 与 Xbox Series X|S**。本次档期为最终版本，无延期计划。
+
+全球预购于 **6 月 25 日**同步开启：
+
+- **标准版**：$79.99，包含完整单人剧情 + 线上模式基础内容
+- **终极版**：$99.99，追加独家剧情支线、限定载具套装、双倍线上启动资金、专属角色外观
+
+## 平台与定价
+
+- **首发独占主机**：PS5 / Xbox Series X|S，PS4 与 Xbox One 不兼容
+- **PC 版延期**：遵循 R 星一贯策略，主机版发售后 12-18 个月推出，预计 2027 年底登陆 Steam 与 Epic
+- **预载**：11 月 12 日开放，发售当天直接开玩
+
+## 预购福利
+
+11 月 20 日前预购玩家免费领取**罪恶都市怀旧包**，含复古载具、80 年代主题服装、经典武器皮肤；数字预购用户额外赠送 1 个月 GTA+ 会员。
+</file>
+
+<file path="src/content/vehicles/pegassi-cheetah.md">
+---
+title: 佩嘉西 Cheetah (Pegassi Cheetah)
+title_en: Pegassi Cheetah
+category: car
+brand: Pegassi
+status: speculated
+last_updated: 2026-06-26
+summary: 系列经典超跑 Cheetah 的潜在回归，致敬《罪恶都市》封面的经典超跑，设计灵感源自法拉利 Testarossa。
+summary_en: Potential return of the classic series supercar Cheetah, paying homage to the iconic supercar on the Vice City cover, inspired by the Ferrari Testarossa.
+features:
+  - 低矮流线车身
+  - 中置引擎布局
+sources:
+  - label: GTA 系列历史
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+佩嘉西 Cheetah 是 GTA 系列标志性的超跑之一，曾在《罪恶都市》《圣安地列斯》《GTA5》中出现。设计灵感源自法拉利 Testarossa，是罪恶都市封面上的经典车型。
+
+## 系列传承
+
+- **《罪恶都市》**：Cheetah 作为顶级超跑登场，是封面经典车型
+- **《GTA5》**：以 Pegassi 品牌回归
+
+## GTA6 展望
+
+由于 GTA6 回归 Vice City 世界观，Cheetah 回归的可能性较高，作为对原作封面的致敬。本条目标记为"推测"，待官方进一步确认。
+</file>
+
+<file path="src/content/vehicles/pegassi-infernus.md">
+---
+title: 佩嘉西 Infernus (Pegassi Infernus)
+title_en: Pegassi Infernus
+category: car
+brand: Pegassi
+status: confirmed
+last_updated: 2026-06-26
+summary: 亮黄色剪刀门超跑，设计灵感源自兰博基尼埃文塔多，致敬《罪恶都市》封面的经典黄色 Infernus 跑车，是系列标志性的豪华载具符号。
+summary_en: Bright yellow scissor-door supercar inspired by the Lamborghini Aventador, paying homage to the iconic yellow Infernus on the Vice City cover — a signature luxury vehicle of the series.
+features:
+  - 剪刀门
+  - 亮黄色涂装
+  - 剪刀门设计
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 概述
+
+佩嘉西 Infernus（Pegassi Infernus）是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时确认的载具之一。它是一辆亮黄色剪刀门超跑，设计灵感源自兰博基尼埃文塔多（Aventador），是 GTA 系列标志性的豪华载具符号。
+
+## 设计传承
+
+- **亮黄色涂装**：致敬《罪恶都市》封面上的经典黄色 Infernus 跑车
+- **剪刀门设计**：超跑标志性配置，强化其豪华定位
+- **兰博基尼灵感**：设计灵感源自兰博基尼埃文塔多
+
+## 系列地位
+
+Infernus 自系列早期便是 GTA 标志性的豪华载具符号。本次在 GTA6 中以亮黄色剪刀门超跑形态回归，既是对《罪恶都市》封面经典的直接致敬，也延续其作为系列豪华跑车代表的地位，呼应本作 Vice City 的世界观传承。
+</file>
+
+<file path="src/content/vehicles/sea-sparrow.md">
+---
+title: 海麻雀 (Sea Sparrow)
+title_en: Sea Sparrow
+category: aircraft
+status: confirmed
+last_updated: 2026-06-26
+summary: 两栖武装直升机，最早出自《GTA：罪恶都市》，本次机身加装机载加特林机枪，暗示新作延续载具改装玩法并呼应滨海世界观。
+summary_en: "Amphibious armed helicopter, first introduced in GTA: Vice City; this iteration mounts an onboard Gatling gun, suggesting vehicle customization returns alongside the coastal setting."
+features:
+  - 两栖起降
+  - 机载加特林机枪
+  - 可改装
+sources:
+  - label: Rockstar 官方封面公布 (2026-06-19)
+    url: https://www.rockstargames.com/newswire
+---
+
+## 概述
+
+海麻雀（Sea Sparrow）是《Grand Theft Auto VI》官方封面于 2026 年 6 月 19 日公布时确认的载具之一。它是一架两栖武装直升机，最早出自《GTA：罪恶都市》，是系列中极具辨识度的经典飞行载具。本次回归机身加装机载加特林机枪，进一步强化其武装定位。
+
+## 已确认特性
+
+- **两栖起降**：可在水面与陆地起降，契合莱昂尼达州滨海湿地的地理设定
+- **机载加特林机枪**：机身加装的加特林机枪，提供强大的空中火力
+- **可改装**：加特林机枪的加装暗示新作延续载具改装玩法
+
+## 系列传承
+
+海麻雀最早登场于《GTA：罪恶都市》，是系列经典的飞行载具符号。本次在 GTA6 中回归并强化武装配置，既是对《罪恶都市》的致敬，也呼应了本作 Vice City 滨海世界观——两栖能力使其能在草河湿地与沿海区域自由穿梭。
+</file>
+
+<file path="src/content/vehicles/shitzu-squalo.md">
+---
+title: Shitzu Squalo
+title_en: Shitzu Squalo
+category: boat
+brand: Shitzu
+status: confirmed
+last_updated: 2026-06-25
+summary: 终极版独占快艇，配备潜水设备与武器箱，适合在 Gambit Bay 垂钓与水下探索。
+summary_en: Ultimate Edition exclusive speedboat, equipped with diving gear and weapons locker, ideal for fishing in Gambit Bay and underwater exploration.
+features:
+  - 潜水设备
+  - 武器箱（含炸药）
+  - 钓鱼专用
+sources:
+  - label: Rockstar GTA6 产品页
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+Shitzu Squalo 是 GTA6 终极版独占载具之一，是一艘多功能快艇。根据 Rockstar 官方描述，它"非常适合在 Gambit Bay 垂钓并钓起各种猎物"，同时也是水下探索的重要载具。
+
+## 已确认特性
+
+- **潜水设备**：船体配备潜水装备，支持水下探索活动
+- **武器箱**：装满炸药的武器箱，可能也用于存放枪支
+- **钓鱼适配**：官方描述明确指出其钓鱼场景
+
+## 与活动的关联
+
+Squalo 是钓鱼活动与潜水活动的重要载体，连接了 GTA6 的水域经济系统。
+</file>
+
+<file path="src/content/vehicles/vapid-dominator-buggy.md">
+---
+title: "'67 Vapid Dominator Buggy"
+title_en: "'67 Vapid Dominator Buggy"
+category: car
+brand: Vapid
+status: confirmed
+last_updated: 2026-06-25
+summary: 终极版独占越野车，存放于沃森湾 Paradise Garage，擅长卡拉加山及荒野越野，配套销赃安全场所。
+summary_en: Ultimate Edition exclusive off-road buggy, stored at Paradise Garage in Watson Bay, excels at Mount Kalaga and wilderness off-roading, paired with a fencing safehouse.
+features:
+  - 越野改装
+  - 存放于 Paradise Garage
+  - 配套销赃场所
+sources:
+  - label: Rockstar GTA6 产品页
+    url: https://www.rockstargames.com/gta6
+---
+
+## 概述
+
+'67 Vapid Dominator Buggy 是 GTA6 终极版独占载具，存放于沃森湾（Watson Bay）的 Paradise Garage。该车提供"在卡拉加山（Mount Kalaga）及更远荒野的令人印象深刻的越野操控性"。
+
+## 已确认特性
+
+- **越野专精**：专为卡拉加山及荒野地形设计
+- **Paradise Garage**：该车库存放于沃森湾的 Paradise Garage
+- **销赃场所**：Paradise Garage 同时是"存放赃物并进行销赃的安全场所"
+
+## 与活动的关联
+
+- 越野赛车活动
+- 泥浆俱乐部（Mud Club）相关活动
+- 帮派据点突袭后的销赃流程
+</file>
+
+<file path="src/data/map-markers.json">
+{
+  "meta": {
+    "version": "0.1.0",
+    "last_updated": "2026-06-25",
+    "disclaimer": "本地图数据基于公开信息与预告片帧分析，严格三态标注。发售日（2026-11-19）后将快速校正并铺满已确认数据。"
+  },
+  "markers": [
+    {
+      "id": "vc-downtown",
+      "name": "罪恶城 Downtown",
+      "name_en": "Vice City Downtown",
+      "coordinates": { "lat": 25.77, "lng": -80.19 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.95,
+      "description": "罪恶城核心商业区，GTA6 主要城区之一。",
+      "description_en": "Core commercial district of Vice City, one of GTA6's main urban areas.",
+      "sources": [
+        { "label": "Trailer 1 (2023-12)", "url": "https://www.rockstargames.com/newswire" },
+        { "label": "Trailer 2 (2025-05)", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "vc-beach",
+      "name": "罪恶城海滩",
+      "name_en": "Vice City Beach",
+      "coordinates": { "lat": 25.79, "lng": -80.13 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.9,
+      "description": "标志性海滩区，预告片中多次出现。",
+      "description_en": "Iconic beach area, featured multiple times in trailers.",
+      "sources": [
+        { "label": "Trailer 1", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "everglades-grass-river",
+      "name": "草河沼泽",
+      "name_en": "Grass River",
+      "coordinates": { "lat": 25.85, "lng": -80.9 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "description": "佛罗里达原型大沼泽地，Jason 与 Lucia 的藏身处之一，沼泽走私任务区域。",
+      "description_en": "Florida-inspired great swamp, one of Jason & Lucia's hideouts, smuggling mission area.",
+      "sources": [
+        { "label": "Trailer 2", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "mount-kalaga",
+      "name": "卡拉加山",
+      "name_en": "Mount Kalaga",
+      "coordinates": { "lat": 26.1, "lng": -81.2 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "description": "越野活动区域，Vapid Dominator Buggy 的设计目标地形。",
+      "description_en": "Off-road activity area, target terrain for the Vapid Dominator Buggy.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "leonida-keys",
+      "name": "莱昂尼达群岛",
+      "name_en": "Leonida Keys",
+      "coordinates": { "lat": 24.7, "lng": -80.9 },
+      "type": "landmark",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "description": "佛罗里达群岛原型，潜水与水上活动区域。",
+      "description_en": "Florida Keys-inspired archipelago, diving and water activity area.",
+      "sources": [
+        { "label": "Trailer 1", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "port-gellhorn",
+      "name": "Port Gellhorn",
+      "name_en": "Port Gellhorn",
+      "coordinates": { "lat": 26.0, "lng": -80.4 },
+      "type": "landmark",
+      "status": "speculated",
+      "confidence": 0.5,
+      "description": "推测的工业港口区域，具体位置与规模待发售日确认。",
+      "description_en": "Speculated industrial port area, exact location and scale pending confirmation on release day.",
+      "sources": [
+        { "label": "社区帧分析（推测）", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "fishing-gambit-bay",
+      "name": "Gambit Bay 钓点",
+      "name_en": "Gambit Bay Fishing Spot",
+      "coordinates": { "lat": 25.82, "lng": -80.3 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.9,
+      "description": "Shitzu Squalo 官方描述中的钓鱼地点。",
+      "description_en": "Fishing location mentioned in Shitzu Squalo's official description.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页 - Shitzu Squalo", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "country-club",
+      "name": "乡村俱乐部（高尔夫）",
+      "name_en": "Country Club (Golf)",
+      "coordinates": { "lat": 25.75, "lng": -80.22 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.75,
+      "description": "18 洞高尔夫球场所在地。",
+      "description_en": "Location of the 18-hole golf course.",
+      "sources": [
+        { "label": "Trailer 帧分析", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    },
+    {
+      "id": "pitt-youngins",
+      "name": "Pitt Youngin$ 帮派据点",
+      "name_en": "Pitt Youngin$ Gang Compound",
+      "coordinates": { "lat": 25.76, "lng": -80.21 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.8,
+      "description": "南赛德 Vice City 的帮派据点，可突袭获取违禁品。",
+      "description_en": "Gang compound in South Side Vice City, raidable for contraband.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页 - Pitt Youngin$", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "paradise-garage",
+      "name": "Paradise Garage（销赃）",
+      "name_en": "Paradise Garage (Fence)",
+      "coordinates": { "lat": 25.78, "lng": -80.17 },
+      "type": "activity",
+      "status": "confirmed",
+      "confidence": 0.85,
+      "description": "沃森湾的销赃安全场所，Vapid Dominator Buggy 存放地。",
+      "description_en": "Fencing safehouse in Watson Bay, storage for Vapid Dominator Buggy.",
+      "sources": [
+        { "label": "Rockstar GTA6 产品页", "url": "https://www.rockstargames.com/gta6" }
+      ]
+    },
+    {
+      "id": "airport-speculated",
+      "name": "国际机场（推测）",
+      "name_en": "International Airport (Speculated)",
+      "coordinates": { "lat": 25.7, "lng": -80.27 },
+      "type": "landmark",
+      "status": "speculated",
+      "confidence": 0.4,
+      "description": "推测的机场位置，沿用 GTA Vice City 设定，待确认。",
+      "description_en": "Speculated airport location, following GTA Vice City convention, pending confirmation.",
+      "sources": [
+        { "label": "社区推测", "url": "https://www.rockstargames.com/newswire" }
+      ]
+    }
+  ]
+}
+</file>
+
+<file path="src/i18n/request.ts">
+import { getRequestConfig } from "next-intl/server";
+import { routing } from "./routing";
+
+// 请求时加载对应语言的 messages 文件
+// next-intl 会在每个请求中调用此函数以决定使用哪套翻译
+export default getRequestConfig(async ({ requestLocale }) => {
+  // 从请求上下文中获取 locale（由 middleware 注入）
+  let locale = await requestLocale;
+
+  // 若未获取到或获取到的 locale 不在支持列表中，回退到默认语言
+  if (!locale || !routing.locales.includes(locale as never)) {
+    locale = routing.defaultLocale;
+  }
+
+  return {
+    locale,
+    messages: (await import(`../../messages/${locale}.json`)).default,
+  };
+});
+</file>
+
+<file path="src/i18n/routing.ts">
+import { defineRouting } from "next-intl/routing";
+
+// 国际化路由配置
+// 定义支持的语言、默认语言、locale 前缀策略
+export const routing = defineRouting({
+  // 支持的语言：中文（默认）、英文
+  locales: ["zh", "en"] as const,
+
+  // 默认语言
+  defaultLocale: "zh",
+
+  // 始终在 URL 中显示 locale 前缀（如 /zh、/en）
+  // 有利于 SEO 与清晰的 URL 结构
+  localePrefix: "always",
+});
+
+// 直接导出 locales，便于其他模块直接引用
+export const locales = routing.locales;
+
+export type Locale = (typeof routing.locales)[number];
+</file>
+
+<file path="src/lib/content.ts">
+import fs from "node:fs";
+import path from "node:path";
+import matter from "gray-matter";
+
+// 内容集合工具：加载 Markdown 文件并解析 frontmatter
+// 内容目录结构：src/content/<collection>/<slug>.md
+// 每个 collection 有对应的 frontmatter schema
+
+export const CONTENT_DIR = path.join(process.cwd(), "src", "content");
+
+// js-yaml 会将未加引号的 ISO 日期（如 2026-06-25）解析为 Date 对象，
+// 但 frontmatter schema 中 last_updated / date 声明为 string，需还原为字符串
+function coerceDates(data: Record<string, unknown>) {
+  for (const key of Object.keys(data)) {
+    if (data[key] instanceof Date) {
+      data[key] = (data[key] as Date).toISOString().slice(0, 10);
+    }
+  }
+  return data;
+}
+
+// 已定义的内容集合
+export const collections = [
+  "characters",
+  "vehicles",
+  "activities",
+  "news",
+] as const;
+export type Collection = (typeof collections)[number];
+
+// 通用 frontmatter 字段
+interface BaseFrontmatter {
+  slug: string;
+  title: string;
+  title_en: string;
+  last_updated: string;
+  status: "confirmed" | "speculated" | "leaked";
+  summary: string;
+  summary_en?: string;
+  sources?: { label: string; url: string }[];
+}
+
+// 角色集合 frontmatter
+export interface CharacterFrontmatter extends BaseFrontmatter {
+  type: "protagonist" | "supporting";
+  abilities: string[];
+  background?: string;
+}
+
+// 载具集合 frontmatter
+export interface VehicleFrontmatter extends BaseFrontmatter {
+  category: "car" | "motorcycle" | "boat" | "aircraft" | "special";
+  brand?: string;
+  features?: string[];
+}
+
+// 活动集合 frontmatter
+export interface ActivityFrontmatter extends BaseFrontmatter {
+  category: "sports" | "water" | "nightlife" | "gambling" | "criminal" | "social";
+  details?: string;
+}
+
+// 新闻集合 frontmatter
+export interface NewsFrontmatter extends BaseFrontmatter {
+  date: string;
+  author?: string;
+}
+
+export type Frontmatter =
+  | CharacterFrontmatter
+  | VehicleFrontmatter
+  | ActivityFrontmatter
+  | NewsFrontmatter;
+
+interface ContentEntry<T extends Frontmatter> {
+  slug: string;
+  frontmatter: T;
+  content: string;
+}
+
+// 读取单个 collection 的所有条目
+export function getAllEntries<T extends Frontmatter>(
+  collection: Collection,
+): ContentEntry<T>[] {
+  const dir = path.join(CONTENT_DIR, collection);
+  if (!fs.existsSync(dir)) return [];
+
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .map((filename) => {
+      const slug = filename.replace(/\.md$/, "");
+      const raw = fs.readFileSync(path.join(dir, filename), "utf8");
+      const { data, content } = matter(raw);
+      return {
+        slug,
+        frontmatter: { slug, ...coerceDates(data) } as T,
+        content,
+      };
+    });
+}
+
+// 读取单个条目
+export function getEntry<T extends Frontmatter>(
+  collection: Collection,
+  slug: string,
+): ContentEntry<T> | null {
+  const filePath = path.join(CONTENT_DIR, collection, `${slug}.md`);
+  if (!fs.existsSync(filePath)) return null;
+
+  const raw = fs.readFileSync(filePath, "utf8");
+  const { data, content } = matter(raw);
+  return {
+    slug,
+    frontmatter: { slug, ...coerceDates(data) } as T,
+    content,
+  };
+}
+</file>
+
+<file path="src/lib/map.ts">
+// 地图配置与类型定义
+
+// Marker 三态标注：确认 / 推测 / 泄漏
+export type MarkerStatus = "confirmed" | "speculated" | "leaked";
+
+// Marker 类型：地标 / 活动 / 资产 / 商店 / 载具刷新点 / 兴趣点
+export type MarkerType =
+  | "landmark"
+  | "activity"
+  | "asset"
+  | "shop"
+  | "vehicle"
+  | "poi";
+
+export interface MapMarker {
+  id: string;
+  name: string;
+  name_en: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  type: MarkerType;
+  status: MarkerStatus;
+  confidence: number; // 0-1
+  description: string;
+  description_en: string;
+  sources: { label: string; url: string }[];
+}
+
+// 地图初始视图配置（以罪恶城为中心）
+export const MAP_INITIAL_VIEW = {
+  center: [25.79, -80.2] as [number, number], // [lat, lng]
+  zoom: 9,
+  minZoom: 6,
+  maxZoom: 16,
+} as const;
+
+// 三态视觉配置：颜色与图标
+export const STATUS_STYLES: Record<
+  MarkerStatus,
+  { color: string; bgClass: string; textClass: string; ringClass: string }
+> = {
+  confirmed: {
+    color: "#10b981", // emerald
+    bgClass: "bg-emerald-500",
+    textClass: "text-emerald-700 dark:text-emerald-400",
+    ringClass: "ring-emerald-500/30",
+  },
+  speculated: {
+    color: "#f59e0b", // amber
+    bgClass: "bg-amber-500",
+    textClass: "text-amber-700 dark:text-amber-400",
+    ringClass: "ring-amber-500/30",
+  },
+  leaked: {
+    color: "#f43f5e", // rose
+    bgClass: "bg-rose-500",
+    textClass: "text-rose-700 dark:text-rose-400",
+    ringClass: "ring-rose-500/30",
+  },
+};
+
+// Marker 类型图标配置
+export const TYPE_ICONS: Record<MarkerType, string> = {
+  landmark: "📍",
+  activity: "🎯",
+  asset: "🏠",
+  shop: "🏪",
+  vehicle: "🚗",
+  poi: "⭐",
+};
+</file>
+
+<file path="src/middleware.ts">
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
+
+// next-intl 中间件：处理 locale 检测、URL 重写与重定向
+// 根据请求路径与浏览器偏好自动匹配语言，并保持 URL 中的 locale 前缀
+export default createMiddleware(routing);
+
+export const config = {
+  // 匹配除以下路径外的所有路径：
+  // - /api/*（API 路由不需要 i18n）
+  // - /_next/*（Next.js 内部资源）
+  // - /.*\.(.*)*（静态文件，如 favicon.ico、manifest.json、图标等）
+  matcher: ["/((?!api|_next|.*\\..*).*)"],
+};
+</file>
+
+<file path="tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+</file>
+
+<file path="wrangler.jsonc">
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "gta6-companion",
+  "compatibility_date": "2026-04-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
+}
+</file>
+
+<file path="messages/en.json">
+{
+  "metadata": {
+    "title": "GTA6 Companion - Vice City Interactive Map & Guide",
+    "description": "Second-screen companion for GTA6 players: release countdown, Leonida interactive map, character & vehicle database, 22 activity guides. Mobile-first, cross-device sync.",
+    "keywords": "GTA6, GTA6 map, GTA6 guide, Vice City, Leonida, GTA6 release date, GTA6 characters, GTA6 activities"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "characters": "Characters",
+    "vehicles": "Vehicles",
+    "activities": "Activities",
+    "news": "News",
+    "subscribe": "Subscribe",
+    "language": "Language"
+  },
+  "home": {
+    "releaseCountdown": "Release Countdown",
+    "preorderLive": "Pre-order Live",
+    "preorderUpcoming": "Pre-order Coming Soon",
+    "preorderLiveDesc": "Global pre-order opens June 25, 2026",
+    "released": "Available Now",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "releaseDate": "November 19, 2026",
+    "heroTitle": "The second-screen companion for GTA6 players",
+    "heroSubtitle": "An authoritative info hub before launch, the ultimate interactive map and progress tracker after launch. Mobile-first, cross-device sync.",
+    "exploreMap": "Explore Map",
+    "browseCharacters": "Browse Characters",
+    "browseActivities": "Browse Activities",
+    "features": {
+      "mapTitle": "Ultimate Interactive Map",
+      "mapDesc": "Mobile-first interactive map of Leonida with three-state data labeling (confirmed/speculated/leaked) and layer filtering.",
+      "syncTitle": "Cross-Device Sync",
+      "syncDesc": "Progress and markers sync to all devices. Play on TV, check map on phone.",
+      "seoTitle": "Authoritative Info Hub",
+      "seoDesc": "Aggregates Rockstar official info and community findings. SEO authority before launch."
+    },
+    "cta": {
+      "subscribe": "Subscribe for Launch Alert",
+      "subscribeDesc": "Get notified on release day and be the first to access the full interactive map.",
+      "exploreMap": "Explore Preview Map"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "disclaimer": "This is a fan-made unofficial companion tool. GTA and Grand Theft Auto are trademarks of Rockstar Games. This site is not affiliated with Rockstar Games.",
+    "links": {
+      "about": "About",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "common": {
+    "status": {
+      "confirmed": "Confirmed",
+      "speculated": "Speculated",
+      "leaked": "Leaked"
+    },
+    "loading": "Loading...",
+    "lastUpdated": "Last updated",
+    "sources": "Sources",
+    "backToList": "Back to list",
+    "noContent": "No content yet",
+    "abilities": "Abilities",
+    "features": "Features",
+    "background": "Background",
+    "category": "Category",
+    "brand": "Brand",
+    "type": "Type",
+    "date": "Date",
+    "author": "Author"
+  },
+  "pages": {
+    "characters": {
+      "title": "Characters",
+      "subtitle": "GTA6 dual protagonists and supporting cast",
+      "protagonist": "Protagonist",
+      "supporting": "Supporting"
+    },
+    "vehicles": {
+      "title": "Vehicles",
+      "subtitle": "Confirmed vehicle database",
+      "categories": {
+        "car": "Car",
+        "motorcycle": "Motorcycle",
+        "boat": "Boat",
+        "aircraft": "Aircraft",
+        "special": "Special"
+      }
+    },
+    "activities": {
+      "title": "Activities",
+      "subtitle": "22 confirmed side activities in GTA6",
+      "categories": {
+        "sports": "Sports",
+        "water": "Water",
+        "nightlife": "Nightlife",
+        "gambling": "Gambling",
+        "criminal": "Criminal",
+        "social": "Social"
+      }
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Daily digest of Rockstar official info and community findings"
+    },
+    "map": {
+      "title": "Interactive Map",
+      "subtitle": "Leonida preview map (three-state labeling)",
+      "legend": "Legend",
+      "layerFilter": "Layer filter",
+      "noMarkers": "No markers",
+      "comingSoon": "Full interactive map launches on release day, Nov 19"
+    },
+    "subscribe": {
+      "title": "Subscribe for Launch Alert",
+      "subtitle": "Get notified on release day and be the first to access the full interactive map.",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "submitButton": "Subscribe",
+      "submitting": "Submitting...",
+      "success": "Subscribed! You'll be notified on release day.",
+      "error": "Subscription failed, please try again later."
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "The mission behind GTA6 Companion",
+      "missionTitle": "Our Mission",
+      "mission": "To build the ultimate second-screen companion for GTA6 players — an authoritative information hub before launch, and the ultimate interactive map and progress tracker after launch.",
+      "whatWeDoTitle": "What We Do",
+      "feature1": "Aggregate Rockstar official info and community findings with three-state labeling (confirmed/speculated/leaked)",
+      "feature2": "Mobile-first interactive map of Leonida with layer filtering",
+      "feature3": "Characters, vehicles, and activities database, continuously updated",
+      "feature4": "Launch day alerts and Pro feature subscriptions",
+      "disclaimerTitle": "Disclaimer",
+      "disclaimer": "This is a fan-made unofficial companion tool. GTA and Grand Theft Auto are trademarks of Rockstar Games. This site is not affiliated with Rockstar Games. All content is for reference only and not guaranteed to be 100% accurate."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "How we collect, use, and protect your data",
+      "collectTitle": "What We Collect",
+      "collect": "We only collect the email address you voluntarily provide (for launch alert subscriptions). We do not use cookies to track your browsing behavior, nor do we collect personally identifiable information.",
+      "useTitle": "How We Use It",
+      "use": "Your email is used solely for sending GTA6 launch alerts and product update notifications. We will never send spam, and you can unsubscribe at any time.",
+      "shareTitle": "Do We Share with Third Parties",
+      "share": "Never. We will not sell, rent, or share your email with any third party. The email service is hosted by Resend and used only for sending emails.",
+      "retainTitle": "Data Retention",
+      "retain": "Your email is retained until you unsubscribe. After unsubscribing, we will remove your email from our mailing list within 30 days.",
+      "rightsTitle": "Your Rights",
+      "rights": "You can unsubscribe, view, or delete your data at any time. To do so, contact us via the GitHub repository.",
+      "contactTitle": "Contact Us",
+      "contact": "For privacy-related questions, please open an issue on the GitHub repository th2004xyz/gta6-companion."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "subtitle": "Terms for using this site",
+      "acceptTitle": "Acceptance of Terms",
+      "accept": "By accessing or using this site, you agree to these terms of service. If you do not agree, please stop using the site.",
+      "serviceTitle": "Service Description",
+      "service": "This site provides unofficial GTA6 information and tools, including an interactive map, character/vehicle database, and launch alerts. The service is provided as-is, with no guarantee of continuous availability or error-free operation.",
+      "ipTitle": "Intellectual Property",
+      "ip": "GTA, Grand Theft Auto, and all related trademarks, characters, and place names are the intellectual property of Rockstar Games. Site content is fan-made and does not claim ownership of any official content.",
+      "limitationTitle": "Limitation of Liability",
+      "limitation": "This site is an information provider and is not liable for any actions taken based on its content. Game content is subject to Rockstar Games' official releases.",
+      "changesTitle": "Changes to Terms",
+      "changes": "We may update these terms at any time. Continued use of the site constitutes acceptance of the updated terms."
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "question": "When does GTA6 release?",
+        "answer": "GTA6 launches globally on November 19, 2026, first on PlayStation 5 and Xbox Series X|S. PC version is expected in late 2027."
+      },
+      {
+        "question": "Is this an official website?",
+        "answer": "No. This is a fan-made unofficial companion tool. GTA and Grand Theft Auto are trademarks of Rockstar Games. This site is not affiliated with Rockstar Games."
+      },
+      {
+        "question": "Is the data on the preview map accurate?",
+        "answer": "Preview map data is based on public information and trailer frame analysis, with strict three-state labeling (confirmed/speculated/leaked). Each marker includes data sources and a confidence score. On release day (Nov 19), data will be quickly corrected and populated with confirmed entries."
+      },
+      {
+        "question": "When will the full interactive map launch?",
+        "answer": "The full interactive map launches on release day, November 19, 2026, featuring all collectibles, missions, assets and other markers, with progress tracking and cross-device sync."
+      }
+    ]
+  }
+}
+</file>
+
+<file path="messages/zh.json">
+{
+  "metadata": {
+    "title": "GTA6 伴侣 - 罪恶城互动地图与攻略",
+    "description": "GTA6 玩家的第二屏伴侣：发售倒计时、莱昂尼达州互动地图、角色载具数据库、22 项活动解析。移动优先，跨设备同步。",
+    "keywords": "GTA6, GTA6 地图, GTA6 攻略, 罪恶城, 莱昂尼达, GTA6 发售日, GTA6 角色数据库, GTA6 活动"
+  },
+  "nav": {
+    "home": "首页",
+    "map": "地图",
+    "characters": "角色",
+    "vehicles": "载具",
+    "activities": "活动",
+    "news": "新闻",
+    "subscribe": "订阅",
+    "language": "语言"
+  },
+  "home": {
+    "releaseCountdown": "发售倒计时",
+    "preorderLive": "预购已开启",
+    "preorderUpcoming": "预购即将开启",
+    "preorderLiveDesc": "全球预购通道于 2026 年 6 月 25 日开启",
+    "released": "现已发售",
+    "days": "天",
+    "hours": "时",
+    "minutes": "分",
+    "seconds": "秒",
+    "releaseDate": "2026 年 11 月 19 日",
+    "heroTitle": "GTA6 玩家的第二屏伴侣",
+    "heroSubtitle": "发售前是权威信息枢纽，发售后是终极互动地图 + 进度追踪器，移动优先，跨设备同步。",
+    "exploreMap": "探索地图",
+    "browseCharacters": "浏览角色",
+    "browseActivities": "浏览活动",
+    "features": {
+      "mapTitle": "终极互动地图",
+      "mapDesc": "移动优先的莱昂尼达州互动地图，三态数据标注（确认/推测/泄漏），图层过滤。",
+      "syncTitle": "跨设备同步",
+      "syncDesc": "进度与标记云同步到所有设备，电视上玩、手机上查。",
+      "seoTitle": "权威信息枢纽",
+      "seoDesc": "整合 Rockstar 官方信息与社区发现，发售前抢占 SEO 权威性。"
+    },
+    "cta": {
+      "subscribe": "订阅发售提醒",
+      "subscribeDesc": "发售日第一时间收到推送，抢先体验完整互动地图。",
+      "exploreMap": "探索预览地图"
+    }
+  },
+  "footer": {
+    "rights": "保留所有权利",
+    "disclaimer": "本站为玩家自制非官方伴侣工具，GTA 与 Grand Theft Auto 为 Rockstar Games 商标，本站不隶属 Rockstar Games。",
+    "links": {
+      "about": "关于",
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    }
+  },
+  "common": {
+    "status": {
+      "confirmed": "已确认",
+      "speculated": "推测",
+      "leaked": "泄漏"
+    },
+    "loading": "加载中...",
+    "lastUpdated": "最后更新",
+    "sources": "数据来源",
+    "backToList": "返回列表",
+    "noContent": "暂无内容",
+    "abilities": "能力",
+    "features": "特性",
+    "background": "背景",
+    "category": "类别",
+    "brand": "品牌",
+    "type": "类型",
+    "date": "日期",
+    "author": "作者"
+  },
+  "pages": {
+    "characters": {
+      "title": "角色",
+      "subtitle": "GTA6 双主角与 supporting 角色",
+      "protagonist": "主角",
+      "supporting": "配角"
+    },
+    "vehicles": {
+      "title": "载具",
+      "subtitle": "已确认载具数据库",
+      "categories": {
+        "car": "汽车",
+        "motorcycle": "摩托车",
+        "boat": "船只",
+        "aircraft": "飞行器",
+        "special": "特殊"
+      }
+    },
+    "activities": {
+      "title": "活动",
+      "subtitle": "GTA6 22 项已确认支线活动",
+      "categories": {
+        "sports": "运动",
+        "water": "水域",
+        "nightlife": "夜生活",
+        "gambling": "博彩",
+        "criminal": "犯罪",
+        "social": "社交"
+      }
+    },
+    "news": {
+      "title": "新闻",
+      "subtitle": "每日编译 Rockstar 官方信息与社区发现"
+    },
+    "map": {
+      "title": "互动地图",
+      "subtitle": "莱昂尼达州预览地图（三态标注）",
+      "legend": "图例",
+      "layerFilter": "图层过滤",
+      "noMarkers": "暂无标记点",
+      "comingSoon": "完整互动地图将于 11 月 19 日发售日上线"
+    },
+    "subscribe": {
+      "title": "订阅发售提醒",
+      "subtitle": "发售日第一时间收到推送，抢先体验完整互动地图。",
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "your@email.com",
+      "submitButton": "订阅",
+      "submitting": "提交中...",
+      "success": "订阅成功！发售日将收到推送。",
+      "error": "订阅失败，请稍后重试。"
+    },
+    "about": {
+      "title": "关于我们",
+      "subtitle": "GTA6 伴侣的使命与定位",
+      "missionTitle": "我们的使命",
+      "mission": "为 GTA6 玩家打造终极第二屏伴侣——发售前是权威信息枢纽，发售后是终极互动地图与进度追踪器。",
+      "whatWeDoTitle": "我们做什么",
+      "feature1": "整合 Rockstar 官方信息与社区发现，三态标注（已确认/推测/泄漏）",
+      "feature2": "移动优先的莱昂尼达州互动地图，支持图层过滤",
+      "feature3": "角色、载具、活动数据库，持续更新",
+      "feature4": "发售日提醒与 Pro 功能订阅",
+      "disclaimerTitle": "免责声明",
+      "disclaimer": "本站为玩家自制非官方伴侣工具，GTA 与 Grand Theft Auto 为 Rockstar Games 商标，本站不隶属 Rockstar Games。所有内容仅供参考，不保证 100% 准确。"
+    },
+    "privacy": {
+      "title": "隐私政策",
+      "subtitle": "我们如何收集、使用与保护你的数据",
+      "collectTitle": "我们收集什么",
+      "collect": "我们仅收集你主动提供的邮箱地址（用于发售提醒订阅）。我们不使用 Cookie 跟踪你的浏览行为，不收集个人身份信息。",
+      "useTitle": "如何使用",
+      "use": "你的邮箱仅用于发送 GTA6 发售提醒与产品更新通知。我们不会发送垃圾邮件，你可以随时退订。",
+      "shareTitle": "是否分享给第三方",
+      "share": "绝不。我们不会出售、出租或分享你的邮箱给任何第三方。邮件订阅服务由 Resend 托管，仅用于发送邮件。",
+      "retainTitle": "数据保留",
+      "retain": "你的邮箱将保留至你主动退订。退订后，我们会在 30 天内从邮件列表中删除你的邮箱。",
+      "rightsTitle": "你的权利",
+      "rights": "你可以随时退订、查看或删除你的数据。如有需求，请通过 GitHub 仓库联系我们。",
+      "contactTitle": "联系我们",
+      "contact": "如有隐私相关问题，请在 GitHub 仓库 th2004xyz/gta6-companion 提交 Issue。"
+    },
+    "terms": {
+      "title": "服务条款",
+      "subtitle": "使用本站需遵守的条款",
+      "acceptTitle": "条款接受",
+      "accept": "访问或使用本站即表示你同意本服务条款。如不同意，请停止使用本站。",
+      "serviceTitle": "服务说明",
+      "service": "本站提供 GTA6 非官方信息与工具，包括互动地图、角色载具数据库、发售提醒等。服务按现状提供，不保证持续可用或无错误。",
+      "ipTitle": "知识产权",
+      "ip": "GTA、Grand Theft Auto 及所有相关商标、角色、地名均为 Rockstar Games 的知识产权。本站内容为玩家自制，不主张任何官方内容的所有权。",
+      "limitationTitle": "责任限制",
+      "limitation": "本站为信息提供者，不对任何基于本站内容的行为承担责任。游戏内容以 Rockstar Games 官方发布为准。",
+      "changesTitle": "条款变更",
+      "changes": "我们可能随时更新本条款。继续使用本站即表示接受更新后的条款。"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "GTA6 什么时候发售？",
+        "answer": "GTA6 于 2026 年 11 月 19 日全球发售，首发仅登陆 PlayStation 5 与 Xbox Series X|S。PC 版预计 2027 年底推出。"
+      },
+      {
+        "question": "这个网站是官方的吗？",
+        "answer": "不是。本站为玩家自制的非官方伴侣工具，GTA 与 Grand Theft Auto 为 Rockstar Games 商标，本站不隶属 Rockstar Games。"
+      },
+      {
+        "question": "预览地图上的数据准确吗？",
+        "answer": "预览地图数据基于公开信息与预告片帧分析，严格三态标注（已确认/推测/泄漏）。每个标记点附数据来源与可信度评分。发售日（11月19日）后将快速校正并铺满已确认数据。"
+      },
+      {
+        "question": "完整互动地图什么时候上线？",
+        "answer": "完整互动地图将于 2026 年 11 月 19 日发售日当天上线，届时将包含全部收集品、任务、资产等标记点，并支持进度勾选与跨设备同步。"
+      }
+    ]
+  }
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "gta6-companion",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:cf": "opennextjs-cloudflare build",
+    "preview:cf": "opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare deploy"
+  },
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^10.2.9",
+    "@tailwindcss/typography": "^0.5.20",
+    "gray-matter": "^4.0.3",
+    "leaflet": "^1.9.4",
+    "next": "16.2.9",
+    "next-intl": "^4.13.0",
+    "next-mdx-remote": "^6.0.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.105.0"
+  }
+}
+</file>
+
+<file path="src/app/globals.css">
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Leaflet 暗色底图适配 */
+.leaflet-container {
+  background: #0a1628;
+  font-family: inherit;
+}
+
+/* Popup 样式覆盖 */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.leaflet-popup-tip {
+  background: #fff;
+}
+
+/* 暗色模式下 popup 背景适配 */
+@media (prefers-color-scheme: dark) {
+  .leaflet-popup-content-wrapper {
+    background: #18181b;
+    color: #fafafa;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
+  }
+  .leaflet-popup-tip {
+    background: #18181b;
+  }
+  .leaflet-container a.leaflet-popup-close-button {
+    color: #fafafa;
+  }
+}
+
+/* 自定义 marker 容器（清除 Leaflet 默认样式） */
+.gta6-map-marker {
+  background: transparent;
+  border: none;
+}
+</file>
+
+<file path="src/app/sitemap.ts">
+import type { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
+
+// 站点地图：列出所有 locale 下的核心页面
+// 包含 hreflang 替代链接，帮助搜索引擎理解多语言版本关系
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gta6-companion.example.com";
+  const lastModified = new Date();
+
+  // P1 阶段核心页面路径
+  const routes = [
+    "",
+    "/map",
+    "/characters",
+    "/vehicles",
+    "/activities",
+    "/news",
+    "/subscribe",
+    "/about",
+    "/privacy",
+    "/terms",
+  ];
+
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const route of routes) {
+    // 为每个路由生成所有语言版本，并标注 hreflang alternates
+    const alternates: Record<string, string> = {};
+    for (const locale of routing.locales) {
+      alternates[locale] = `${baseUrl}/${locale}${route}`;
+    }
+
+    for (const locale of routing.locales) {
+      entries.push({
+        url: `${baseUrl}/${locale}${route}`,
+        lastModified,
+        changeFrequency: route === "/news" ? "daily" : "weekly",
+        priority: route === "" ? 1 : route === "/map" ? 0.9 : 0.7,
+        alternates: {
+          languages: alternates,
+        },
+      });
+    }
+  }
+
+  return entries;
+}
+</file>
+
+<file path="src/components/layout/site-footer.tsx">
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+
+export default async function SiteFooter() {
+  const t = await getTranslations("footer");
+
+  return (
+    <footer className="border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between">
+          <div className="max-w-md">
+            <div className="flex items-center gap-2 font-bold">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-500 text-sm font-bold text-zinc-950">
+                6
+              </span>
+              GTA6 Companion
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
+              {t("disclaimer")}
+            </p>
+          </div>
+
+          <nav className="flex flex-col gap-2 text-sm">
+            <Link
+              href="/about"
+              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              {t("links.about")}
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              {t("links.privacy")}
+            </Link>
+            <Link
+              href="/terms"
+              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            >
+              {t("links.terms")}
+            </Link>
+          </nav>
+        </div>
+
+        <div className="mt-8 border-t border-zinc-200 pt-6 text-xs text-zinc-400 dark:border-zinc-800">
+          © {new Date().getFullYear()} GTA6 Companion. {t("rights")}.
+        </div>
+      </div>
+    </footer>
+  );
+}
+</file>
+
+<file path="src/components/map/map-view.tsx">
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import {
+  type MapMarker,
+  type MarkerType,
+  type MarkerStatus,
+  STATUS_STYLES,
+  TYPE_ICONS,
+} from "@/lib/map";
+
+interface MapViewProps {
+  markers: MapMarker[];
+  locale: string;
+  labels: {
+    legend: string;
+    noMarkers: string;
+    sources: string;
+    status: { confirmed: string; speculated: string; leaked: string };
+  };
+}
+
+export default function MapView({ markers, locale, labels }: MapViewProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<L.Map | null>(null);
+  const layerRef = useRef<L.LayerGroup | null>(null);
+  const [activeTypes, setActiveTypes] = useState<Set<MarkerType>>(
+    new Set(["landmark", "activity", "asset", "shop", "vehicle", "poi"]),
+  );
+  const [activeStatuses, setActiveStatuses] = useState<MarkerStatus[]>(
+    ["confirmed", "speculated", "leaked"],
+  );
+
+  // 初始化地图
+  useEffect(() => {
+    if (!containerRef.current || mapRef.current) return;
+
+    // 自绘底图：纯色背景的 Simple CRS 地图（不依赖外部瓦片）
+    // 使用 CRS.Simple + 一个覆盖全图的矩形作为"海洋"背景
+    const map = L.map(containerRef.current, {
+      center: [25.79, -80.2],
+      zoom: 9,
+      minZoom: 6,
+      maxZoom: 16,
+      zoomControl: true,
+      attributionControl: false,
+      // 禁用旋转相关（Leaflet 本来就不支持旋转，移动端体验更直觉）
+      dragging: true,
+      touchZoom: true,
+      scrollWheelZoom: true,
+      doubleClickZoom: true,
+      keyboard: false,
+    });
+
+    // 纯色背景层：用一个覆盖大范围的矩形作为底图
+    // Ocean 深色背景
+    const bgLayer = L.rectangle(
+      [
+        [20, -85],
+        [30, -75],
+      ],
+      {
+        color: "transparent",
+        fillColor: "#0a1628",
+        fillOpacity: 1,
+        weight: 0,
+        interactive: false,
+      },
+    ).addTo(map);
+
+    // 网格参考线层（伪瓦片效果）
+    const gridLines: [number, number][][] = [];
+    for (let lat = 24; lat <= 27; lat += 0.5) {
+      gridLines.push([
+        [lat, -81.5],
+        [lat, -79.5],
+      ]);
+    }
+    for (let lng = -81.5; lng <= -79.5; lng += 0.5) {
+      gridLines.push([
+        [24, lng],
+        [27, lng],
+      ]);
+    }
+    gridLines.forEach((line) => {
+      L.polyline(line, {
+        color: "#1e3a5f",
+        weight: 0.5,
+        opacity: 0.5,
+        interactive: false,
+      }).addTo(map);
+    });
+
+    // markers 容器层
+    const markersLayer = L.layerGroup().addTo(map);
+    layerRef.current = markersLayer;
+    mapRef.current = map;
+
+    // 监听容器尺寸变化，强制 map invalidateSize（修复初始化尺寸不对的问题）
+    const resizeObserver = new ResizeObserver(() => {
+      map.invalidateSize();
+    });
+    resizeObserver.observe(containerRef.current);
+
+    // 初始化后延迟 invalidateSize 一次（确保容器尺寸已稳定）
+    const timer = setTimeout(() => map.invalidateSize(), 100);
+
+    return () => {
+      clearTimeout(timer);
+      resizeObserver.disconnect();
+      map.remove();
+      mapRef.current = null;
+      layerRef.current = null;
+    };
+  }, []);
+
+  // 渲染 markers
+  useEffect(() => {
+    if (!mapRef.current || !layerRef.current) return;
+
+    layerRef.current.clearLayers();
+
+    markers.forEach((data) => {
+      if (!activeTypes.has(data.type) || !activeStatuses.includes(data.status)) {
+        return;
+      }
+
+      const style = STATUS_STYLES[data.status];
+
+      // 创建三态水滴形 marker 图标（HTML）
+      const iconHtml = `
+        <div style="
+          width: 28px;
+          height: 28px;
+          border-radius: 50% 50% 50% 0;
+          background: ${style.color};
+          border: 2px solid #fff;
+          transform: rotate(-45deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        ">
+          <span style="transform: rotate(45deg); font-size: 12px;">${TYPE_ICONS[data.type]}</span>
+        </div>
+      `;
+
+      const icon = L.divIcon({
+        html: iconHtml,
+        className: "gta6-map-marker",
+        iconSize: [28, 28],
+        iconAnchor: [14, 28],
+        popupAnchor: [0, -28],
+      });
+
+      // popup 内容
+      const name = locale === "zh" ? data.name : data.name_en;
+      const desc = locale === "zh" ? data.description : data.description_en;
+      const sourcesHtml = data.sources
+        .map(
+          (s) =>
+            `<a href="${s.url}" target="_blank" rel="noopener noreferrer" style="display:block;font-size:11px;color:#10b981;margin-top:2px;">${s.label}</a>`,
+        )
+        .join("");
+      const popupHtml = `
+        <div style="padding:4px;max-width:240px;">
+          <div style="font-weight:600;font-size:14px;margin-bottom:4px;">${name}</div>
+          <div style="display:inline-block;padding:2px 8px;border-radius:9999px;font-size:10px;font-weight:500;background:${style.color}22;color:${style.color};margin-bottom:6px;">${labels.status[data.status]}</div>
+          <div style="font-size:12px;color:#666;margin-bottom:6px;">${desc}</div>
+          <div style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;">${labels.sources}</div>
+          ${sourcesHtml}
+        </div>
+      `;
+
+      const marker = L.marker([data.coordinates.lat, data.coordinates.lng], {
+        icon,
+      }).bindPopup(popupHtml, { maxWidth: 280 });
+
+      layerRef.current!.addLayer(marker);
+    });
+  }, [markers, activeTypes, activeStatuses, locale, labels]);
+
+  const toggleType = (type: MarkerType) => {
+    setActiveTypes((prev) => {
+      const next = new Set(prev);
+      if (next.has(type)) {
+        next.delete(type);
+      } else {
+        next.add(type);
+      }
+      return next;
+    });
+  };
+
+  const toggleStatus = (status: MarkerStatus) => {
+    setActiveStatuses((prev) =>
+      prev.includes(status)
+        ? prev.filter((s) => s !== status)
+        : [...prev, status],
+    );
+  };
+
+  const typeOptions: { value: MarkerType; label: string }[] = [
+    { value: "landmark", label: locale === "zh" ? "地标" : "Landmark" },
+    { value: "activity", label: locale === "zh" ? "活动" : "Activity" },
+    { value: "asset", label: locale === "zh" ? "资产" : "Asset" },
+    { value: "shop", label: locale === "zh" ? "商店" : "Shop" },
+    { value: "vehicle", label: locale === "zh" ? "载具" : "Vehicle" },
+    { value: "poi", label: locale === "zh" ? "兴趣点" : "POI" },
+  ];
+
+  const statusOptions: { value: MarkerStatus; label: string; color: string }[] = [
+    { value: "confirmed", label: labels.status.confirmed, color: "#10b981" },
+    { value: "speculated", label: labels.status.speculated, color: "#f59e0b" },
+    { value: "leaked", label: labels.status.leaked, color: "#f43f5e" },
+  ];
+
+  return (
+    <div className="relative h-[calc(100vh-3.5rem-3.5rem)] w-full bg-[#0a1628] sm:h-[calc(100vh-3.5rem)]">
+      {/* 地图容器 */}
+      <div ref={containerRef} className="h-full w-full" />
+
+      {/* 图层过滤面板（桌面端浮于右上） */}
+      <div className="absolute right-3 top-3 z-[1000] w-56 rounded-xl border border-zinc-200 bg-white/95 p-3 shadow-lg backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95 sm:right-4 sm:top-4">
+        {/* 类型过滤 */}
+        <div className="mb-3">
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            {locale === "zh" ? "类型" : "Type"}
+          </div>
+          <div className="grid grid-cols-2 gap-1">
+            {typeOptions.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => toggleType(opt.value)}
+                className={`rounded px-2 py-1 text-left text-xs transition ${
+                  activeTypes.has(opt.value)
+                    ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                    : "text-zinc-400 line-through dark:text-zinc-500"
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* 状态过滤 */}
+        <div>
+          <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            {labels.legend}
+          </div>
+          <div className="space-y-1">
+            {statusOptions.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => toggleStatus(opt.value)}
+                className={`flex w-full items-center gap-2 rounded px-2 py-1 text-left text-xs transition ${
+                  activeStatuses.includes(opt.value)
+                    ? "text-zinc-700 dark:text-zinc-200"
+                    : "text-zinc-400 line-through dark:text-zinc-500"
+                }`}
+              >
+                <span
+                  className="h-2.5 w-2.5 rounded-full"
+                  style={{ backgroundColor: opt.color }}
+                />
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* 移动端提示：双指缩放 */}
+      <div className="pointer-events-none absolute bottom-4 left-1/2 z-[1000] -translate-x-1/2 rounded-full bg-zinc-900/80 px-3 py-1 text-xs text-white opacity-70 sm:hidden">
+        {locale === "zh" ? "双指缩放 · 单指拖动" : "Pinch to zoom · Drag to pan"}
+      </div>
+    </div>
+  );
+}
+</file>
+
+</files>

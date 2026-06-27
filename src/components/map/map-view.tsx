@@ -37,16 +37,13 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
-    // 自绘底图：纯色背景的 Simple CRS 地图（不依赖外部瓦片）
-    // 使用 CRS.Simple + 一个覆盖全图的矩形作为"海洋"背景
     const map = L.map(containerRef.current, {
       center: [25.79, -80.2],
       zoom: 9,
       minZoom: 6,
       maxZoom: 16,
       zoomControl: true,
-      attributionControl: false,
-      // 禁用旋转相关（Leaflet 本来就不支持旋转，移动端体验更直觉）
+      attributionControl: true,
       dragging: true,
       touchZoom: true,
       scrollWheelZoom: true,
@@ -54,51 +51,23 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
       keyboard: false,
     });
 
-    // 纯色背景层：用一个覆盖大范围的矩形作为底图
-    // Ocean 深色背景
-    const bgLayer = L.rectangle(
-      [
-        [20, -85],
-        [30, -75],
-      ],
+    // CartoDB Dark Matter 暗色底图，与站点深色风格契合
+    L.tileLayer(
+      "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
       {
-        color: "transparent",
-        fillColor: "#0a1628",
-        fillOpacity: 1,
-        weight: 0,
-        interactive: false,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: "abcd",
+        maxZoom: 19,
       },
     ).addTo(map);
-
-    // 网格参考线层（伪瓦片效果）
-    const gridLines: [number, number][][] = [];
-    for (let lat = 24; lat <= 27; lat += 0.5) {
-      gridLines.push([
-        [lat, -81.5],
-        [lat, -79.5],
-      ]);
-    }
-    for (let lng = -81.5; lng <= -79.5; lng += 0.5) {
-      gridLines.push([
-        [24, lng],
-        [27, lng],
-      ]);
-    }
-    gridLines.forEach((line) => {
-      L.polyline(line, {
-        color: "#1e3a5f",
-        weight: 0.5,
-        opacity: 0.5,
-        interactive: false,
-      }).addTo(map);
-    });
 
     // markers 容器层
     const markersLayer = L.layerGroup().addTo(map);
     layerRef.current = markersLayer;
     mapRef.current = map;
 
-    // 监听容器尺寸变化，强制 map invalidateSize（修复初始化尺寸不对的问题）
+    // 监听容器尺寸变化，强制 map invalidateSize
     const resizeObserver = new ResizeObserver(() => {
       map.invalidateSize();
     });
@@ -129,7 +98,7 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
 
       const style = STATUS_STYLES[data.status];
 
-      // 创建三态水滴形 marker 图标（HTML）
+      // 三态水滴形 marker 图标
       const iconHtml = `
         <div style="
           width: 28px;
@@ -218,7 +187,7 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
   ];
 
   return (
-    <div className="relative h-[calc(100vh-3.5rem-3.5rem)] w-full bg-[#0a1628] sm:h-[calc(100vh-3.5rem)]">
+    <div className="relative h-[calc(100vh-3.5rem-3.5rem)] w-full sm:h-[calc(100vh-3.5rem)]">
       {/* 地图容器 */}
       <div ref={containerRef} className="h-full w-full" />
 

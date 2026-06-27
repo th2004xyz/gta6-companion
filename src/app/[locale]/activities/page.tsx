@@ -52,7 +52,7 @@ export default async function ActivitiesPage({
                       {group.items.map((activity) => (
                         <Link
                           key={activity.slug}
-                          href={`/activities/${activity.slug}`}
+                          href={`/${locale}/activities/${activity.slug}`}
                           className="group rounded-2xl border border-zinc-200 bg-white p-5 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
                         >
                           <div className="flex items-start justify-between gap-3">

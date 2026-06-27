@@ -123,7 +123,14 @@
       "submitButton": "订阅",
       "submitting": "提交中...",
       "success": "订阅成功！发售日将收到推送。",
-      "error": "订阅失败，请稍后重试。"
+      "error": "订阅失败，请稍后重试。",
+      "benefitsTitle": "订阅福利",
+      "benefit1": "发售日第一时间推送通知",
+      "benefit2": "完整互动地图上线提醒",
+      "benefit3": "Pro 功能抢先预览与优惠",
+      "benefit4": "可随时退订，不发送垃圾邮件",
+      "invalidEmail": "请输入有效的邮箱地址",
+      "privacyNote": "我们尊重你的隐私，邮箱仅用于发售提醒，不会分享给第三方。"
     },
     "about": {
       "title": "关于我们",
