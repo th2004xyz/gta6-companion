@@ -121,7 +121,8 @@ export function getEntry<T extends Frontmatter>(
 // 约定：文件正文中可用独立成行的 `---` 作为中英分隔符，
 // 分隔符之前为中文章节，之后为英文章节（通常以 `## Overview` 开头）。
 // 若无分隔符，则所有 locale 返回全文（向后兼容纯中文文件）。
-const LOCALE_SEPARATOR = /\n---\n/;
+// 兼容 LF (\n) 与 CRLF (\r\n) 换行符，并容忍 `---` 行的尾随空格。
+const LOCALE_SEPARATOR = /\r?\n---[ \t]*\r?\n/;
 
 export function splitLocaleContent(
   content: string,
