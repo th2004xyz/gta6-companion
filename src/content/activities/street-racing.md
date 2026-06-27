@@ -7,7 +7,9 @@ last_updated: 2026-06-26
 summary: 全新 Principe Alvino V1 运动摩托登场，粉紫合成波涂装暗示高自由度载具改装系统，呼应罪恶城热带风格，与改版 Vapid 警用巡逻车形成追逐关系。
 summary_en: The all-new Principe Alvino V1 sportbike debuts with a pink-purple synthwave livery hinting at a high-freedom vehicle customization system; echoes Vice City's tropical style and forms a chase dynamic with the modified Vapid police patrol car.
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

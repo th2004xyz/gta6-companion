@@ -8,9 +8,13 @@ summary: 经典赌场 21 点玩法预计在 GTA6 回归，沿用《GTA Online》
 summary_en: The classic casino blackjack is expected to return in GTA6, building on the mature implementation from GTA Online's Diamond Casino, where players face off against the dealer at Vice City and Leonida casinos, aiming to beat the dealer without busting.
 details: 推测沿用《GTA Online》的赌场 21 点实现，含 Hit / Stand / Double Down / Split 等标准操作。
 sources:
-  - label: Rockstar GTA6 官方页面
+  - label:
+      zh: Rockstar GTA6 官方页面
+      en: Rockstar Official GTA6 Page
     url: https://www.rockstargames.com/gta6
-  - label: Rockstar Newswire
+  - label:
+      zh: Rockstar Newswire
+      en: Rockstar Newswire
     url: https://www.rockstargames.com/newswire
 ---
 

@@ -7,12 +7,17 @@ last_updated: 2026-06-27
 summary: 莱昂尼达州多方势力的核心人物，身兼音乐制作人、脱衣舞俱乐部老板与地产商多重身份，被称为"莱昂尼达之王"，手上狮王金戒指象征其地位。
 summary_en: Key power broker in Leonida, simultaneously a music producer, strip club owner, and real estate magnate; known as the "King of Leonida," with a lion-head gold ring symbolizing his status.
 abilities:
-  - 音乐制作
-  - 脱衣舞俱乐部经营
-  - 地产投资
+  - zh: 音乐制作
+    en: Music production
+  - zh: 脱衣舞俱乐部经营
+    en: Strip club management
+  - zh: 地产投资
+    en: Real estate investment
 background: 集音乐、夜店与地产于一身的多重身份角色，被誉为"莱昂尼达之王"，狮王金戒指为其地位象征。
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

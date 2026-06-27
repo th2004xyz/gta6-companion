@@ -7,7 +7,9 @@ last_updated: 2026-06-26
 summary: GTA 系列经典的小游戏飞镖，曾在《GTA4》《GTA5》中出现，预计在 GTA6 回归，玩家可在酒吧投掷飞镖。
 summary_en: The classic GTA mini-game darts, featured in GTA4 and GTA5, expected to return in GTA6 where players can throw darts in bars.
 sources:
-  - label: GTA 系列历史
+  - label:
+      zh: GTA 系列历史
+      en: GTA Series History
     url: https://www.rockstargames.com/gta6
 ---
 

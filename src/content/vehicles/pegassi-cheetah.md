@@ -8,10 +8,14 @@ last_updated: 2026-06-26
 summary: 系列经典超跑 Cheetah 的潜在回归，致敬《罪恶都市》封面的经典超跑，设计灵感源自法拉利 Testarossa。
 summary_en: Potential return of the classic series supercar Cheetah, paying homage to the iconic supercar on the Vice City cover, inspired by the Ferrari Testarossa.
 features:
-  - 低矮流线车身
-  - 中置引擎布局
+  - zh: 低矮流线车身
+    en: Low-slung aerodynamic body
+  - zh: 中置引擎布局
+    en: Mid-engine layout
 sources:
-  - label: GTA 系列历史
+  - label:
+      zh: GTA 系列历史
+      en: GTA Series History
     url: https://www.rockstargames.com/gta6
 ---
 

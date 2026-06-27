@@ -7,7 +7,9 @@ last_updated: 2026-06-25
 summary: 突袭南赛德 Vice City 帮派据点的活动类型，类似其他开放世界游戏的哨所/敌方堡垒，安全逃脱可获得特殊物品与违禁品。
 summary_en: Activity type involving raids on gang compounds in South Side Vice City, similar to outposts/strongholds in other open-world games; escaping safely yields special items and contraband.
 sources:
-  - label: Rockstar GTA6 产品页 - Pitt Youngin$
+  - label:
+      zh: Rockstar GTA6 产品页 - Pitt Youngin$
+      en: Rockstar GTA6 Product Page - Pitt Youngin$
     url: https://www.rockstargames.com/gta6
 ---
 

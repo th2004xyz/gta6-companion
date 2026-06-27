@@ -7,7 +7,9 @@ last_updated: 2026-06-26
 summary: Vice City 标志性的夜生活系统回归——夜店、酒吧、海滩派对，延续罪恶都市系列的霓虹美学，玩家可参与 DJ、舞蹈等互动。
 summary_en: The iconic Vice City nightlife system returns — clubs, bars, beach parties, continuing the neon aesthetic of the series, with player interactions like DJing and dancing.
 sources:
-  - label: GTA6 首支预告片 (2023-12-05)
+  - label:
+      zh: GTA6 首支预告片 (2023-12-05)
+      en: GTA6 First Trailer (2023-12-05)
     url: https://www.rockstargames.com/gta6
 ---
 

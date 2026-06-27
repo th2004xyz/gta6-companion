@@ -7,11 +7,15 @@ last_updated: 2026-06-27
 summary: 老牌银行劫匪，手持"杜克"(Dewbrand)品牌突击步枪——该武器品牌首次从《荒野大镖客》宇宙跨至 GTA HD 世界观，身后"无国界国家银行"暗示本作延续经典银行劫案剧情。
 summary_en: Veteran bank robber wielding a Dewbrand assault rifle — a weapon brand crossing over from the Red Dead universe into the GTA HD world for the first time; the "Borderless National Bank" behind him signals a continuation of classic heist storylines.
 abilities:
-  - 银行劫案策划
-  - 杜克品牌武器使用
+  - zh: 银行劫案策划
+    en: Bank heist planning
+  - zh: 杜克品牌武器使用
+    en: Dewbrand weapon proficiency
 background: 老牌银行劫匪，手持杜克品牌突击步枪，身后"无国界国家银行"暗示其与经典银行劫案主线的关联。
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

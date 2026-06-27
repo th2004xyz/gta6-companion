@@ -7,7 +7,9 @@ last_updated: 2026-06-26
 summary: 大概率加入类似《荒野大镖客 2》的野生动物狩猎玩法，对应莱昂尼达州"草河"(Grassrivers)湿地区域，该区域被设定为"未被驯服的地图核心"。
 summary_en: Likely to feature wildlife hunting similar to Red Dead Redemption 2, set in the Grassrivers wetlands of Leonida — described as the "untamed heart of the map."
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

@@ -8,7 +8,9 @@ author: GTA6 Companion Editorial
 summary: GTA6 全球预购于 6 月 24 日午夜（当地时间）开启，标准版 $79.99，终极版 $99.99，首发 PS5 / Xbox Series X|S，PC 版预计 2027，11 月 19 日正式发售，11 月 20 日前预购免费领取"罪恶都市怀旧包"。
 summary_en: GTA6 global pre-orders open at midnight local time on June 24; Standard Edition $79.99, Ultimate Edition $99.99; launching first on PS5 / Xbox Series X|S with PC expected in 2027; releases November 19, with the "Vice City Nostalgia Pack" free for pre-orders before November 20.
 sources:
-  - label: Rockstar Newswire
+  - label:
+      zh: Rockstar Newswire
+      en: Rockstar Newswire
     url: https://www.rockstargames.com/newswire
 ---
 

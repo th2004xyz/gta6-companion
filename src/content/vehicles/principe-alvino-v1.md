@@ -8,13 +8,20 @@ last_updated: 2026-06-27
 summary: GTA6 街头赛车场景中确认登场的赛事级摩托，由系列意大利摩托车品牌 Principe 制造，V1 命名暗示其赛道血统，预告片中与高速街头追逐画面同框出现。
 summary_en: A race-spec motorcycle confirmed in GTA6's street racing scenes, manufactured by Principe — the series' Italian motorcycle brand. The V1 naming hints at track pedigree, appearing alongside high-speed street chase sequences in the trailer.
 features:
-  - 赛事级动力调校
-  - 流线整流罩
-  - 街头赛车定位
+  - zh: 赛事级动力调校
+    en: Race-spec power tuning
+  - zh: 流线整流罩
+    en: Streamlined fairing
+  - zh: 街头赛车定位
+    en: Street racing positioning
 sources:
-  - label: Rockstar GTA6 官方页面
+  - label:
+      zh: Rockstar GTA6 官方页面
+      en: Rockstar Official GTA6 Page
     url: https://www.rockstargames.com/gta6
-  - label: Rockstar Newswire
+  - label:
+      zh: Rockstar Newswire
+      en: Rockstar Newswire
     url: https://www.rockstargames.com/newswire
 ---
 

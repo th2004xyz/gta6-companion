@@ -81,12 +81,12 @@ export default async function VehicleDetailPage({
                 {tCommon("features")}
               </div>
               <div className="mt-2 flex flex-wrap gap-2">
-                {fm.features.map((feature) => (
+                {fm.features.map((feature, idx) => (
                   <span
-                    key={feature}
+                    key={idx}
                     className="rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                   >
-                    {feature}
+                    {locale === "zh" ? feature.zh : feature.en}
                   </span>
                 ))}
               </div>
@@ -98,7 +98,7 @@ export default async function VehicleDetailPage({
 
         <MarkdownContent content={splitLocaleContent(entry.content, locale as "zh" | "en")} />
 
-        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} locale={locale as "zh" | "en"} />
 
         <div className="mt-8">
           <Link

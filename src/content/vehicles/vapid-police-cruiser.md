@@ -8,13 +8,20 @@ last_updated: 2026-06-27
 summary: GTA6 改版警用巡逻车，由系列福特对应品牌 Vapid 制造，2025 款命名暗示本作时间线设定，预告片中多次出现在 Vice City 街头执行巡逻与追逐任务。
 summary_en: The redesigned police cruiser in GTA6, manufactured by Vapid — the series' Ford analogue. The '25 model year designation hints at the game's timeline, appearing in multiple trailer scenes patrolling and pursuing across Vice City streets.
 features:
-  - 警用改装套件
-  - LED 警灯阵列
-  - 强化的追逐调校
+  - zh: 警用改装套件
+    en: Police modification kit
+  - zh: LED 警灯阵列
+    en: LED light bar array
+  - zh: 强化的追逐调校
+    en: Reinforced pursuit tuning
 sources:
-  - label: Rockstar GTA6 官方页面
+  - label:
+      zh: Rockstar GTA6 官方页面
+      en: Rockstar Official GTA6 Page
     url: https://www.rockstargames.com/gta6
-  - label: Rockstar Newswire
+  - label:
+      zh: Rockstar Newswire
+      en: Rockstar Newswire
     url: https://www.rockstargames.com/newswire
 ---
 

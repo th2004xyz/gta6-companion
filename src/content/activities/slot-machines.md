@@ -8,9 +8,13 @@ summary: 赌场场景中最普及的随机类玩法，预计在 GTA6 延续《GT
 summary_en: The most ubiquitous random-outcome game in casino settings, expected to continue the GTA Online slot machine implementation in GTA6, where players spin reels at Vice City and Leonida casinos aiming to trigger payouts via symbol combinations.
 details: 推测沿用《GTA Online》的老虎机实现，含多种主题与赔付表，单次投币与多线投注可选。
 sources:
-  - label: Rockstar GTA6 官方页面
+  - label:
+      zh: Rockstar GTA6 官方页面
+      en: Rockstar Official GTA6 Page
     url: https://www.rockstargames.com/gta6
-  - label: Rockstar Newswire
+  - label:
+      zh: Rockstar Newswire
+      en: Rockstar Newswire
     url: https://www.rockstargames.com/newswire
 ---
 

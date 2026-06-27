@@ -7,14 +7,21 @@ last_updated: 2026-06-27
 summary: GTA6 双主角之一，退伍军人出身，擅长正面枪战与高速驾驶，自带子弹时间瞄准。性格偏冲动，主线围绕复仇与摆脱黑暗过往展开。
 summary_en: One of GTA6's dual protagonists, ex-military background, skilled in frontal combat and high-speed driving with bullet-time aiming. Impulsive; main story revolves around revenge and escaping his dark past.
 abilities:
-  - 子弹时间瞄准
-  - 高速驾驶
-  - 正面枪战
+  - zh: 子弹时间瞄准
+    en: Bullet-Time
+  - zh: 高速驾驶
+    en: High-Speed Driving
+  - zh: 正面枪战
+    en: Frontal Combat
 background: 退伍军人出身，早年混迹底层犯罪圈子，擅长正面枪战、高速驾驶。
 sources:
-  - label: Rockstar Newswire - Trailer 1
+  - label:
+      zh: Rockstar Newswire - Trailer 1
+      en: Rockstar Newswire - Trailer 1
     url: https://www.rockstargames.com/newswire
-  - label: Trailer 2 (May 2025)
+  - label:
+      zh: Trailer 2 (May 2025)
+      en: Trailer 2 (May 2025)
     url: https://www.rockstargames.com/newswire
 ---
 

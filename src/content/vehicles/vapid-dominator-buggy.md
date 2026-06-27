@@ -8,11 +8,16 @@ last_updated: 2026-06-25
 summary: 终极版独占越野车，存放于沃森湾 Paradise Garage，擅长卡拉加山及荒野越野，配套销赃安全场所。
 summary_en: Ultimate Edition exclusive off-road buggy, stored at Paradise Garage in Watson Bay, excels at Mount Kalaga and wilderness off-roading, paired with a fencing safehouse.
 features:
-  - 越野改装
-  - 存放于 Paradise Garage
-  - 配套销赃场所
+  - zh: 越野改装
+    en: Off-road modification
+  - zh: 存放于 Paradise Garage
+    en: Stored at Paradise Garage
+  - zh: 配套销赃场所
+    en: Paired fencing safehouse
 sources:
-  - label: Rockstar GTA6 产品页
+  - label:
+      zh: Rockstar GTA6 产品页
+      en: Rockstar Official GTA6 Page
     url: https://www.rockstargames.com/gta6
 ---
 

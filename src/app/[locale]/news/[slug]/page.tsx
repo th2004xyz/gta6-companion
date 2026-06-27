@@ -87,7 +87,7 @@ export default async function NewsDetailPage({
 
         <MarkdownContent content={splitLocaleContent(entry.content, locale as "zh" | "en")} />
 
-        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} locale={locale as "zh" | "en"} />
 
         <div className="mt-8">
           <Link

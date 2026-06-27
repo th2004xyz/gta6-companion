@@ -7,10 +7,13 @@ last_updated: 2026-06-27
 summary: GTA6 官方封面确认的支援角色之一，与双主角 Jason、Lucia 同框出现，预计与主线剧情密切相关。
 summary_en: One of the supporting characters confirmed on the official GTA6 cover, appearing alongside dual protagonists Jason and Lucia, expected to be closely tied to the main storyline.
 abilities:
-  - 主线剧情关联
+  - zh: 主线剧情关联
+    en: Main storyline connection
 background: 官方封面公布的支援角色，与双主角同框，预计参与本作核心犯罪剧情。
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

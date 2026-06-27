@@ -7,7 +7,9 @@ last_updated: 2026-06-26
 summary: GTA 系列经典的小游戏台球，曾在《罪恶都市》《圣安地列斯》《GTA4》中出现，预计在 GTA6 回归，玩家可在酒吧挑战 NPC。
 summary_en: The classic GTA mini-game pool, featured in Vice City, San Andreas, and GTA4, expected to return in GTA6 where players can challenge NPCs in bars.
 sources:
-  - label: GTA 系列历史
+  - label:
+      zh: GTA 系列历史
+      en: GTA Series History
     url: https://www.rockstargames.com/gta6
 ---
 

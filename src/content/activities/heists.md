@@ -7,7 +7,9 @@ last_updated: 2026-06-26
 summary: 由老牌银行劫匪劳尔·包蒂斯塔引出，身后"无国界国家银行"暗示经典银行劫案剧情，延续 GTA 系列劫案玩法，双主角 Jason 与 Lucia 协同行动。
 summary_en: Introduced via veteran bank robber Raul Bautista, with the "Borderless National Bank" signaling classic heist storylines; continues the GTA series heist gameplay with dual protagonists Jason and Lucia in coordinated action.
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 
