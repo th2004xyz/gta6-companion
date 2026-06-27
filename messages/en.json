@@ -30,13 +30,13 @@
     "exploreMap": "Explore Map",
     "browseCharacters": "Browse Characters",
     "browseActivities": "Browse Activities",
-    "features": {
-      "mapTitle": "Ultimate Interactive Map",
-      "mapDesc": "Mobile-first interactive map of Leonida with three-state data labeling (confirmed/speculated/leaked) and layer filtering.",
-      "syncTitle": "Cross-Device Sync",
-      "syncDesc": "Progress and markers sync to all devices. Play on TV, check map on phone.",
-      "seoTitle": "Authoritative Info Hub",
-      "seoDesc": "Aggregates Rockstar official info and community findings. SEO authority before launch."
+    "latestIntel": "Latest Intel",
+    "latestIntelViewAll": "View all",
+    "weeklyUpdates": "This Week's Updates",
+    "stats": {
+      "charactersLabel": "confirmed characters",
+      "vehiclesLabel": "confirmed vehicles",
+      "activitiesLabel": "confirmed activities"
     },
     "cta": {
       "subscribe": "Subscribe for Launch Alert",

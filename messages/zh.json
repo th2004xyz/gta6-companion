@@ -30,13 +30,13 @@
     "exploreMap": "探索地图",
     "browseCharacters": "浏览角色",
     "browseActivities": "浏览活动",
-    "features": {
-      "mapTitle": "终极互动地图",
-      "mapDesc": "移动优先的莱昂尼达州互动地图，三态数据标注（确认/推测/泄漏），图层过滤。",
-      "syncTitle": "跨设备同步",
-      "syncDesc": "进度与标记云同步到所有设备，电视上玩、手机上查。",
-      "seoTitle": "权威信息枢纽",
-      "seoDesc": "整合 Rockstar 官方信息与社区发现，发售前抢占 SEO 权威性。"
+    "latestIntel": "最新情报",
+    "latestIntelViewAll": "查看全部",
+    "weeklyUpdates": "本周更新",
+    "stats": {
+      "charactersLabel": "位已确认角色",
+      "vehiclesLabel": "辆已确认载具",
+      "activitiesLabel": "项已确认活动"
     },
     "cta": {
       "subscribe": "订阅发售提醒",

@@ -1,0 +1,68 @@
+{
+  "weekLabel": {
+    "zh": "本周更新 · 6 月 23 日 – 6 月 27 日",
+    "en": "This Week · Jun 23 – 27"
+  },
+  "updates": [
+    {
+      "date": "2026-06-25",
+      "title": {
+        "zh": "发售日定档 11 月 19 日，全球预购同步开启",
+        "en": "Release date set for Nov 19, global pre-order now live"
+      },
+      "summary": {
+        "zh": "Rockstar 正式宣布 GTA6 于 2026 年 11 月 19 日登陆 PS5 / Xbox Series X|S，标准版 $79.99、终极版 $99.99。",
+        "en": "Rockstar confirms GTA6 launches Nov 19, 2026 on PS5 / Xbox Series X|S; Standard $79.99, Ultimate $99.99."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-06-25-release-date-confirmed"
+      }
+    },
+    {
+      "date": "2026-06-24",
+      "title": {
+        "zh": "全球预购今日午夜开启",
+        "en": "Global pre-orders open at midnight"
+      },
+      "summary": {
+        "zh": "6 月 24 日午夜（当地时间）起开放预购，11 月 20 日前预购免费领取「罪恶都市怀旧包」。",
+        "en": "Pre-orders open at midnight local time on Jun 24; \"Vice City Nostalgia Pack\" free for pre-orders before Nov 20."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-06-24-preorders-live"
+      }
+    },
+    {
+      "date": "2026-06-23",
+      "title": {
+        "zh": "角色数据库补充：Brian Heder 与 Raul Bautista 条目已确认",
+        "en": "Character DB update: Brian Heder & Raul Bautista confirmed"
+      },
+      "summary": {
+        "zh": "补充两条 supporting 角色的来源与背景信息，目前共 5 位已确认角色。",
+        "en": "Added sources and background for two supporting characters; 5 confirmed characters in total."
+      },
+      "link": {
+        "collection": "characters",
+        "slug": "brian-heder"
+      }
+    },
+    {
+      "date": "2026-06-22",
+      "title": {
+        "zh": "活动数据库扩充：夜生活、狩猎、钓鱼等条目上线",
+        "en": "Activities DB expansion: nightlife, hunting, fishing added"
+      },
+      "summary": {
+        "zh": "本周新增多条已确认支线活动，目前共 9 项活动（7 项已确认）。",
+        "en": "Several confirmed side activities added this week; 9 activities in total (7 confirmed)."
+      },
+      "link": {
+        "collection": "activities",
+        "slug": "nightlife"
+      }
+    }
+  ]
+}
