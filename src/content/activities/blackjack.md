@@ -53,3 +53,45 @@ GTA6 在此基础上的延续几乎是必然——赌场场景在预告片中已
 - **跨设备同步**：作为非实时反应类玩法，21 点天然适合跨设备同步——玩家可在主机端开局，移动端继续对局
 
 本条目 status 标记为 speculated，因 Rockstar 尚未在预告片或新闻稿中明确展示 GTA6 的 21 点玩法画面。鉴于《GTA Online》已有完整实现，发售日（2026-11-19）后确认上线的概率极高，届时本条目将更新为 confirmed。
+
+---
+
+## Overview
+
+Blackjack is one of the most iconic casino table games worldwide — simple rules, fast pace, and moderate strategic depth make it the most common entry point for new casino players. With *Grand Theft Auto VI* returning to Vice City and expanding casino settings across Leonida, blackjack as a foundational casino component has an extremely high probability of return. This entry is marked as speculated because Rockstar has already implemented a complete blackjack system in *GTA Online*'s Diamond Casino & Resort update, but has not explicitly shown the gameplay in GTA6 trailers or press materials.
+
+### Series History
+
+Blackjack's appearance in the GTA series is not new — its GTA Online implementation has been refined over years:
+
+- ***GTA Online* Diamond Casino & Resort update (2019-07)**: Blackjack debuted as one of three core table games, alongside roulette and slots, forming the casino game matrix
+- **Ruleset**: Standard Las Vegas Strip rules — dealer stands on soft 17; player actions include Hit / Stand / Double Down / Split (one re-split max)
+- **Stake limits**: Single-hand bet limits scale with player rank, with high-rank players accessing high-roller tables
+- **VIP tables**: Unlocked via Membership, granting access to high-stakes VIP tables
+- **Assist features**: A "basic strategy" hint function helps newcomers learn optimal play
+- **Achievements**: Win streaks and specific hand types (e.g., suited Blackjack) trigger achievements
+
+Continuation into GTA6 is nearly certain — casino scenes appear repeatedly in the trailer, and blackjack as the lowest-barrier table game is virtually impossible to omit.
+
+### GTA6 Outlook
+
+Based on *GTA Online*'s mature implementation and GTA6's confirmed casino settings, blackjack can be projected as follows:
+
+- **Ruleset continuity**: Las Vegas Strip rules retained — dealer stands on 17, player actions unchanged
+- **Scene expansion**: From the single Diamond Casino to multiple casinos across Vice City and Leonida, each with distinct table limits and atmosphere
+- **Multiplayer shared tables**: The continuing GTA Online mode may introduce multi-player shared tables (GTA Online's blackjack is currently solo player-vs-dealer)
+- **Narrative embedding**: Mainline or side missions may include scripted blackjack hands — e.g., high-stakes showdowns with faction figures like Boobie Ike
+- **Wealth system coupling**: High-stakes table limits may scale with the player's overall asset level, forming an "assets — bet ceiling — potential return" loop
+- **Challenges and achievements**: Win streaks, specific hand types, and strategy combinations (e.g., "100 hands of perfect strategy") provide long-tail challenge goals
+
+### Systems Coupling
+
+If blackjack continues, it will couple with multiple core GTA6 systems:
+
+- **Wealth system**: As a low-volatility, low-barrier cash inlet, blackjack is the best starting point for new players learning the casino rhythm — and a viable "laundering" channel for large sums (e.g., heist proceeds)
+- **Casino ecosystem**: Joins roulette, slots, and (rumored) Texas Hold'em to form a complete casino game matrix, transforming casinos from set-piece locations into living venues
+- **Narrative nodes**: Scripted blackjack hands can serve as key mainline or side-mission beats — e.g., high-stakes showdowns with figures like Boobie Ike
+- **Achievement system**: Win streaks, special hand types, and specific action combinations provide achievement goals that extend player time in casino scenes
+- **Cross-device sync**: As a non-realtime-reaction game, blackjack is naturally suited to cross-device sync — start a session on console, continue on mobile
+
+This entry is marked as speculated because Rockstar has not explicitly shown GTA6 blackjack gameplay in trailers or press materials. Given *GTA Online*'s complete implementation, post-launch confirmation (2026-11-19) is highly probable, at which point this entry will be updated to confirmed.

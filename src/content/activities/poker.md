@@ -53,3 +53,45 @@ sources:
 - **跨平台同步**：作为非实时反应类玩法，扑克天然适合跨设备同步——玩家可在 PC 端开局，移动端继续对局
 
 本条目 status 标记为 speculated，因 Rockstar 尚未在预告片或新闻稿中明确展示扑克玩法画面。若发售日（2026-11-19）后确认上线，本条目将更新为 confirmed。
+
+---
+
+## Overview
+
+Texas Hold'em is the most influential variant of poker worldwide — and one of the casino mini-games GTA fans have long demanded back. With *Grand Theft Auto VI* returning to the Vice City universe and confirming expanded casino settings across Leonida, Texas Hold'em stands as a core component of casino gameplay with a high probability of return. This entry is marked as speculated based on the fact that Rockstar already built a mature poker system in *Red Dead Redemption 2*, and that GTA Online's casino update introduced roulette, blackjack, and slot machines but conspicuously never added Texas Hold'em — a gap widely interpreted by the community as "the heavy-hitting feature held back for GTA6."
+
+### Series History
+
+Texas Hold'em in Rockstar titles traces back to *Red Dead Redemption* (2010) and *Red Dead Redemption 2* (2018), both of which implemented full cash-table play: players faced multiple NPC opponents in taverns, with complete betting rounds (pre-flop / flop / turn / river), fold, raise, and all-in actions. AI opponents exhibited distinct play styles (tight, aggressive, bluff-prone), giving hands genuine strategic depth.
+
+Yet in mainline GTA, Texas Hold'em's absence is a long-standing mystery:
+
+- ***GTA4***: No poker
+- ***GTA5***: No poker — side activities centered on darts, tennis, triathlons
+- ***GTA Online* Diamond Casino & Resort update (2019)**: Introduced roulette, blackjack, and slots — but **no Texas Hold'em** — sparking extensive community discussion
+- ***GTA Online* The Diamond Casino Heist (2019)**: Built out the casino worldbuilding narratively, but still did not fill the poker gap
+
+This "system ready, gameplay missing" state has been widely read as a deliberate Rockstar reservation — keeping a complete poker experience as a major selling point for GTA6.
+
+### GTA6 Outlook
+
+Based on Rockstar's accumulated poker-system expertise and the confirmed GTA6 casino settings, Texas Hold'em can be projected as follows:
+
+- **Cash tables**: Multiple cash tables inside Vice City and Leonida casinos, with in-game cash stakes and standard Texas Hold'em rules
+- **Tournament mode**: Buy-in tournaments with multi-round elimination, potentially tied to the achievement system
+- **NPC AI opponents**: Reusing the *Red Dead Redemption 2* poker AI framework, with NPCs exhibiting distinct play styles (tight, aggressive, bluff-prone)
+- **Multiplayer play**: Direct player-vs-player tables in the continuing GTA Online mode, introducing real bluffing unpredictability
+- **Narrative embedding**: Mainline or side missions may include scripted poker hands as key story beats (e.g., high-stakes showdowns with faction figures)
+- **Wealth system coupling**: High-stakes tables may tie to the player's cash assets, forming a "casino — money laundering — assets" economic node
+
+### Systems Coupling
+
+If Texas Hold'em returns, it will couple with multiple core GTA6 systems:
+
+- **Wealth system**: A high-volatility cash inlet that hedges against robbery and smuggling income — big wins accelerate asset accumulation, big losses require crime to recover
+- **Casino ecosystem**: Joins confirmed blackjack and slots (and rumored roulette) to form a complete casino game matrix, transforming casinos from set-piece locations into living venues
+- **Social and faction relations**: In multiplayer or scripted hands, poker serves as a relationship-building venue with faction figures, echoing *Red Dead Redemption 2*'s campfire poker narrative function
+- **Achievements and challenges**: Poker-related achievements (e.g., "Royal Flush," "All-In Win") provide long-tail gameplay goals that extend player time in casino scenes
+- **Cross-device sync**: As a non-realtime-reaction game, poker is naturally suited to cross-device sync — start a session on PC, continue on mobile
+
+This entry is marked as speculated because Rockstar has not explicitly shown poker gameplay in trailers or press releases. If confirmed post-launch (2026-11-19), this entry will be updated to confirmed.

@@ -116,3 +116,24 @@ export function getEntry<T extends Frontmatter>(
     content,
   };
 }
+
+// 按 locale 切分 markdown 正文
+// 约定：文件正文中可用独立成行的 `---` 作为中英分隔符，
+// 分隔符之前为中文章节，之后为英文章节（通常以 `## Overview` 开头）。
+// 若无分隔符，则所有 locale 返回全文（向后兼容纯中文文件）。
+const LOCALE_SEPARATOR = /\n---\n/;
+
+export function splitLocaleContent(
+  content: string,
+  locale: "zh" | "en",
+): string {
+  const parts = content.split(LOCALE_SEPARATOR);
+  if (parts.length < 2) {
+    // 无分隔符：返回全文（兼容现有纯中文文件）
+    return content.trim();
+  }
+  // parts[0] = 中文段，parts[1] = 英文段
+  const zhContent = parts[0].trim();
+  const enContent = parts.slice(1).join("\n---\n").trim();
+  return locale === "zh" ? zhContent : enContent;
+}

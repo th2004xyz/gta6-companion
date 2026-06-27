@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getEntry, getAllEntries, type ActivityFrontmatter } from "@/lib/content";
+import { getEntry, getAllEntries, splitLocaleContent, type ActivityFrontmatter } from "@/lib/content";
 import { StatusBadge, SourceList, LastUpdated } from "@/components/content/status-badge";
 import { DetailBreadcrumb } from "@/components/content/page-header";
 import { MarkdownContent } from "@/components/content/markdown-content";
@@ -76,7 +76,7 @@ export default async function ActivityDetailPage({
           <LastUpdated date={fm.last_updated} label={tCommon("lastUpdated")} />
         </header>
 
-        <MarkdownContent content={entry.content} />
+        <MarkdownContent content={splitLocaleContent(entry.content, locale as "zh" | "en")} />
 
         <SourceList sources={fm.sources || []} label={tCommon("sources")} />
 
