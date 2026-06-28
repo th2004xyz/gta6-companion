@@ -1,0 +1,73 @@
+name: Fetch GTA6 News Drafts
+
+# Daily auto-fetch RSS feeds → filter GTA6 → generate bilingual draft md files
+# → commit to news-drafts branch for editor review.
+#
+# Schedule: 08:00 Beijing time (UTC+8) = 00:00 UTC, daily.
+# Editor workflow:
+#   1. git fetch origin && git checkout news-drafts
+#   2. Edit drafts in src/content/news/ (translate to Chinese, set status)
+#   3. git checkout main && git checkout news-drafts -- src/content/news/<file>.md
+#   4. git commit -m "publish: <news title>" && git push
+#   5. (Optional) delete news-drafts branch — it will be rebuilt next day.
+
+on:
+  schedule:
+    # 00:00 UTC = 08:00 Beijing time
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run fetch-news script
+        run: npx tsx scripts/fetch-news.ts
+
+      - name: Commit drafts to news-drafts branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage any new draft files
+          git add src/content/news/
+
+          if git diff --staged --quiet; then
+            echo "No new drafts today. Skipping commit."
+            exit 0
+          fi
+
+          # Stash new drafts so we can switch branches cleanly
+          git stash push --staged -m "auto-fetch-drafts"
+
+          # Rebuild news-drafts from latest main
+          git fetch origin
+          git checkout -B news-drafts origin/main
+
+          # Restore new drafts on top of main
+          git stash pop
+
+          git add src/content/news/
+          git commit -m "chore(news): auto-fetch drafts $(date -u +%Y-%m-%d)"
+
+          # Force-push because we rebuilt the branch from main.
+          # User edits should go to main directly, not stay on news-drafts.
+          git push origin news-drafts --force-with-lease
