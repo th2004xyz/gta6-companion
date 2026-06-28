@@ -7,7 +7,9 @@ last_updated: 2026-06-25
 summary: 回归并大幅扩展的 18 洞高尔夫玩法，位于乡村俱乐部，含职业模式、锦标赛与社交机制。
 summary_en: Returning and significantly expanded 18-hole golf at a country club, with career mode, tournaments, and social mechanics.
 sources:
-  - label: Rockstar Trailer 帧分析
+  - label:
+      zh: Rockstar Trailer 帧分析
+      en: Rockstar Trailer Frame Analysis
     url: https://www.rockstargames.com/newswire
 ---
 

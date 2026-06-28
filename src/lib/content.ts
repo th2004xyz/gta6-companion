@@ -28,6 +28,12 @@ export const collections = [
 ] as const;
 export type Collection = (typeof collections)[number];
 
+// 双语字符串：用于 frontmatter 中需要中英双译的字段
+export interface LocalizedText {
+  zh: string;
+  en: string;
+}
+
 // 通用 frontmatter 字段
 interface BaseFrontmatter {
   slug: string;
@@ -37,13 +43,13 @@ interface BaseFrontmatter {
   status: "confirmed" | "speculated" | "leaked";
   summary: string;
   summary_en?: string;
-  sources?: { label: string; url: string }[];
+  sources?: { label: LocalizedText; url: string }[];
 }
 
 // 角色集合 frontmatter
 export interface CharacterFrontmatter extends BaseFrontmatter {
   type: "protagonist" | "supporting";
-  abilities: string[];
+  abilities: LocalizedText[];
   background?: string;
 }
 
@@ -51,7 +57,7 @@ export interface CharacterFrontmatter extends BaseFrontmatter {
 export interface VehicleFrontmatter extends BaseFrontmatter {
   category: "car" | "motorcycle" | "boat" | "aircraft" | "special";
   brand?: string;
-  features?: string[];
+  features?: LocalizedText[];
 }
 
 // 活动集合 frontmatter
@@ -116,6 +122,7 @@ export function getEntry<T extends Frontmatter>(
     content,
   };
 }
+
 // 按 locale 切分 markdown 正文
 // 约定：文件正文中可用独立成行的 `---` 作为中英分隔符，
 // 分隔符之前为中文章节，之后为英文章节（通常以 `## Overview` 开头）。

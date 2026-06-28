@@ -7,11 +7,16 @@ last_updated: 2026-06-26
 summary: 两栖武装直升机，最早出自《GTA：罪恶都市》，本次机身加装机载加特林机枪，暗示新作延续载具改装玩法并呼应滨海世界观。
 summary_en: "Amphibious armed helicopter, first introduced in GTA: Vice City; this iteration mounts an onboard Gatling gun, suggesting vehicle customization returns alongside the coastal setting."
 features:
-  - 两栖起降
-  - 机载加特林机枪
-  - 可改装
+  - zh: 两栖起降
+    en: Amphibious takeoff and landing
+  - zh: 机载加特林机枪
+    en: Onboard Gatling gun
+  - zh: 可改装
+    en: Customizable
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

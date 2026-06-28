@@ -84,12 +84,12 @@ export default async function CharacterDetailPage({
                 {tCommon("abilities")}
               </div>
               <div className="mt-2 flex flex-wrap gap-2">
-                {fm.abilities.map((ability) => (
+                {fm.abilities.map((ability, idx) => (
                   <span
-                    key={ability}
+                    key={idx}
                     className="rounded-full bg-zinc-100 px-3 py-1 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                   >
-                    {ability}
+                    {locale === "zh" ? ability.zh : ability.en}
                   </span>
                 ))}
               </div>
@@ -101,7 +101,7 @@ export default async function CharacterDetailPage({
 
         <MarkdownContent content={splitLocaleContent(entry.content, locale as "zh" | "en")} />
 
-        <SourceList sources={fm.sources || []} label={tCommon("sources")} />
+        <SourceList sources={fm.sources || []} label={tCommon("sources")} locale={locale as "zh" | "en"} />
 
         <div className="mt-8">
           <Link

@@ -7,7 +7,9 @@ last_updated: 2026-06-25
 summary: GTA 系列首次引入的完整钓鱼系统，配备鱼竿类型、饵料选择与可钓物种，深度整合进游戏经济与库存系统。
 summary_en: Fully developed fishing system new to the GTA series, with rod types, bait selection, and fishable species, deeply integrated into the game economy.
 sources:
-  - label: Rockstar GTA6 产品页 - Shitzu Squalo
+  - label:
+      zh: Rockstar GTA6 产品页 - Shitzu Squalo
+      en: Rockstar GTA6 Product Page - Shitzu Squalo
     url: https://www.rockstargames.com/gta6
 ---
 

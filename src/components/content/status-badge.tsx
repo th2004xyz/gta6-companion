@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { LocalizedText } from "@/lib/content";
 
 // 数据可信度三态徽章
 // 用于在内容卡片与详情页统一标注数据来源可信度
@@ -40,9 +41,11 @@ export function StatusBadge({
 export function SourceList({
   sources,
   label,
+  locale,
 }: {
-  sources: { label: string; url: string }[];
+  sources: { label: LocalizedText; url: string }[];
   label: string;
+  locale: "zh" | "en";
 }) {
   if (!sources || sources.length === 0) return null;
 
@@ -60,7 +63,7 @@ export function SourceList({
               rel="noopener noreferrer"
               className="text-sm text-emerald-700 hover:underline dark:text-emerald-400"
             >
-              {source.label}
+              {locale === "zh" ? source.label.zh : source.label.en}
             </Link>
           </li>
         ))}

@@ -8,11 +8,16 @@ last_updated: 2026-06-26
 summary: 亮黄色剪刀门超跑，设计灵感源自兰博基尼埃文塔多，致敬《罪恶都市》封面的经典黄色 Infernus 跑车，是系列标志性的豪华载具符号。
 summary_en: Bright yellow scissor-door supercar inspired by the Lamborghini Aventador, paying homage to the iconic yellow Infernus on the Vice City cover — a signature luxury vehicle of the series.
 features:
-  - 剪刀门
-  - 亮黄色涂装
-  - 兰博基尼埃文塔多灵感设计
+  - zh: 剪刀门
+    en: Scissor doors
+  - zh: 亮黄色涂装
+    en: Bright yellow livery
+  - zh: 兰博基尼埃文塔多灵感设计
+    en: Lamborghini Aventador-inspired design
 sources:
-  - label: Rockstar 官方封面公布 (2026-06-19)
+  - label:
+      zh: Rockstar 官方封面公布 (2026-06-19)
+      en: Rockstar Official Cover Reveal (2026-06-19)
     url: https://www.rockstargames.com/newswire
 ---
 

@@ -254,7 +254,9 @@ export default async function HomePage({
       </section>
     </main>
   );
-}// 按 status 统计 confirmed 数量与总数
+}
+
+// 按 status 统计 confirmed 数量与总数
 function countByStatus<T extends { frontmatter: { status: string } }>(
   entries: T[],
 ): { confirmed: number; total: number } {

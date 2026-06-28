@@ -8,9 +8,13 @@ author: GTA6 Companion Editorial
 summary: Rockstar 与 Take-Two 正式宣布 GTA6 于 2026 年 11 月 19 日登陆 PS5 / Xbox Series X|S，全球预购 6 月 25 日开启，标准版 $79.99，终极版 $99.99。
 summary_en: Rockstar and Take-Two officially announce GTA6 launches November 19, 2026 on PS5 / Xbox Series X|S, with global pre-order opening June 25.
 sources:
-  - label: Rockstar Newswire
+  - label:
+      zh: Rockstar Newswire
+      en: Rockstar Newswire
     url: https://www.rockstargames.com/newswire
-  - label: Take-Two Official
+  - label:
+      zh: Take-Two Official
+      en: Take-Two Official
     url: https://www.take2games.com
 ---
 

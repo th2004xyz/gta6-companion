@@ -7,15 +7,23 @@ last_updated: 2026-06-27
 summary: GTA 正传系列首位女性主角，与 Jason 组成邦妮与克莱德式亡命情侣。心思缜密，擅长潜行、开锁与偷盗。
 summary_en: First female protagonist in mainline GTA, paired with Jason in a Bonnie-and-Clyde dynamic. Methodical, skilled in stealth, lockpicking, and theft.
 abilities:
-  - 潜行慢动作
-  - 开锁
-  - 偷盗
-  - 完整个人家庭支线
+  - zh: 潜行慢动作
+    en: Stealth Slow-Mo
+  - zh: 开锁
+    en: Lockpicking
+  - zh: 偷盗
+    en: Theft
+  - zh: 完整个人家庭支线
+    en: Family Storyline
 background: 曾因抢劫入狱，剧情比重与 Jason 持平，不再是配角工具人。
 sources:
-  - label: Rockstar Newswire - Trailer 1
+  - label:
+      zh: Rockstar Newswire - Trailer 1
+      en: Rockstar Newswire - Trailer 1
     url: https://www.rockstargames.com/newswire
-  - label: Trailer 2 (May 2025)
+  - label:
+      zh: Trailer 2 (May 2025)
+      en: Trailer 2 (May 2025)
     url: https://www.rockstargames.com/newswire
 ---
 

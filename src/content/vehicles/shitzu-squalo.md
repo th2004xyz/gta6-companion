@@ -8,11 +8,16 @@ last_updated: 2026-06-25
 summary: 终极版独占快艇，配备潜水设备与武器箱，适合在 Gambit Bay 垂钓与水下探索。
 summary_en: Ultimate Edition exclusive speedboat, equipped with diving gear and weapons locker, ideal for fishing in Gambit Bay and underwater exploration.
 features:
-  - 潜水设备
-  - 武器箱（含炸药）
-  - 钓鱼专用
+  - zh: 潜水设备
+    en: Diving gear
+  - zh: 武器箱（含炸药）
+    en: Weapons locker (with explosives)
+  - zh: 钓鱼专用
+    en: Fishing-ready
 sources:
-  - label: Rockstar GTA6 产品页
+  - label:
+      zh: Rockstar GTA6 产品页
+      en: Rockstar Official GTA6 Page
     url: https://www.rockstargames.com/gta6
 ---
 
