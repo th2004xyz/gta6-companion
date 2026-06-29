@@ -1,6 +1,5 @@
 # GTA6 News - Pull Latest Drafts
-# 拉取 news-drafts 分支上的草稿到本地
-# 已编辑的文件（删除了 AUTO-FETCHED DRAFT 注释的）不会被覆盖
+# 用 git show 直接写文件，避免 git checkout 的 staging 问题
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
@@ -16,14 +15,14 @@ Write-Host "项目目录: $projectRoot" -ForegroundColor DarkGray
 Write-Host ""
 
 # 确保在 main 分支
-$currentBranch = git branch --show-current 2>&1
-Write-Host "当前分支: $currentBranch" -ForegroundColor DarkGray
-if ($currentBranch -ne "main") {
+$currentBranch = (git branch --show-current 2>&1) -join ""
+Write-Host "当前分支: '$currentBranch'" -ForegroundColor DarkGray
+if ($currentBranch.Trim() -ne "main") {
     Write-Host "[!] 正在切换到 main 分支..." -ForegroundColor Yellow
-    git checkout main 2>&1 | Out-Null
+    $sw = git checkout main 2>&1
     if ($LASTEXITCODE -ne 0) {
-        Write-Host "[X] 无法切换到 main。请先在 VS Code 终端运行: git status" -ForegroundColor Red
-        Write-Host "    看看有没有未提交的改动，提交或丢弃后再试。" -ForegroundColor Yellow
+        Write-Host "[X] 无法切换到 main" -ForegroundColor Red
+        Write-Host $sw -ForegroundColor DarkRed
         Read-Host "按回车键退出"
         exit 1
     }
@@ -31,8 +30,10 @@ if ($currentBranch -ne "main") {
 
 Write-Host ""
 Write-Host "[1/4] 从 GitHub 拉取数据..." -ForegroundColor White
-git fetch origin 2>&1 | Out-Null
-git fetch origin news-drafts:refs/remotes/origin/news-drafts 2>&1 | Out-Null
+$f1 = git fetch origin 2>&1
+Write-Host "  fetch origin: $f1" -ForegroundColor DarkGray
+$f2 = git fetch origin news-drafts:refs/remotes/origin/news-drafts 2>&1
+Write-Host "  fetch news-drafts: $f2" -ForegroundColor DarkGray
 if ($LASTEXITCODE -ne 0) {
     Write-Host "[X] 拉取 news-drafts 分支失败" -ForegroundColor Red
     Read-Host "按回车键退出"
@@ -42,8 +43,8 @@ Write-Host "  OK" -ForegroundColor Green
 
 Write-Host ""
 Write-Host "[2/4] 读取 news-drafts 分支上的草稿列表..." -ForegroundColor White
-$drafts = git ls-tree origin/news-drafts --name-only -- src/content/news/ 2>&1
-$draftCount = ($drafts | Measure-Object).Count
+$drafts = git ls-tree origin/news-drafts --name-only -- src/content/news/ 2>&1 | Where-Object { $_.Trim() -ne "" }
+$draftCount = @($drafts).Count
 Write-Host "  远程草稿数量: $draftCount" -ForegroundColor DarkGray
 
 if ($draftCount -eq 0) {
@@ -55,7 +56,14 @@ if ($draftCount -eq 0) {
 }
 
 Write-Host ""
-Write-Host "[3/4] 拉取草稿文件到本地..." -ForegroundColor White
+Write-Host "[3/4] 用 git show 拉取草稿文件到本地..." -ForegroundColor White
+
+# 确保 news 目录存在
+$newsDir = Join-Path $projectRoot "src\content\news"
+if (-not (Test-Path $newsDir)) {
+    New-Item -ItemType Directory -Path $newsDir -Force | Out-Null
+    Write-Host "  创建目录: $newsDir" -ForegroundColor DarkGray
+}
 
 $newCount = 0
 $skipCount = 0
@@ -65,34 +73,42 @@ foreach ($file in $drafts) {
     $file = $file.Trim()
     if (-not $file) { continue }
 
+    # 本地路径用反斜杠
     $localPath = $file -replace '/', '\'
+    $fullPath = Join-Path $projectRoot $localPath
 
     # 检查本地是否已有此文件
-    if (Test-Path $localPath) {
-        # 文件已存在，检查是否已编辑（无 AUTO-FETCHED DRAFT 注释 = 已编辑）
-        $content = Get-Content $localPath -Raw -ErrorAction SilentlyContinue
+    if (Test-Path $fullPath) {
+        $content = Get-Content $fullPath -Raw -ErrorAction SilentlyContinue
         if ($content -and -not ($content -match "AUTO-FETCHED DRAFT")) {
-            # 已编辑，跳过不覆盖
             Write-Host "  [=] 跳过(已编辑): $file" -ForegroundColor DarkYellow
             $skipCount++
             continue
         }
     }
 
-    # 拉取文件（显示错误信息，不再隐藏）
-    $result = git checkout origin/news-drafts -- $file 2>&1
-    if ($LASTEXITCODE -eq 0) {
+    # 用 git show 把文件内容写到标准输出，再写入本地文件
+    # 这避免了 git checkout 的 staging 问题
+    $gitPath = $file -replace '\\', '/'
+    $content = git show "origin/news-drafts:$gitPath" 2>&1
+
+    if ($LASTEXITCODE -eq 0 -and $content) {
+        # 确保父目录存在
+        $parentDir = Split-Path -Parent $fullPath
+        if (-not (Test-Path $parentDir)) {
+            New-Item -ItemType Directory -Path $parentDir -Force | Out-Null
+        }
+        # 写入文件（UTF8 无 BOM）
+        $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+        [System.IO.File]::WriteAllText($fullPath, ($content -join "`r`n"), $utf8NoBom)
         Write-Host "  [+] 新草稿: $file" -ForegroundColor Green
         $newCount++
     } else {
         Write-Host "  [X] 失败: $file" -ForegroundColor Red
-        Write-Host "      $result" -ForegroundColor DarkRed
+        Write-Host "      错误: $content" -ForegroundColor DarkRed
         $failCount++
     }
 }
-
-# 取消 git 暂存（checkout 会自动 stage，需要 unstage 以便后续选择性发布）
-git reset HEAD src/content/news/ 2>&1 | Out-Null
 
 Write-Host ""
 Write-Host "[4/4] 完成！" -ForegroundColor White
@@ -103,8 +119,8 @@ Write-Host "  失败: $failCount 个" -ForegroundColor $(if ($failCount -gt 0) {
 Write-Host ""
 
 # 列出本地 news 文件夹的实际内容
-Write-Host "当前 src\content\news\ 文件夹内容:" -ForegroundColor Cyan
-$localFiles = Get-ChildItem -Path "src\content\news" -Filter "*.md" -ErrorAction SilentlyContinue
+Write-Host "当前 src\content\news\ 文件夹实际内容:" -ForegroundColor Cyan
+$localFiles = Get-ChildItem -Path $newsDir -Filter "*.md" -ErrorAction SilentlyContinue
 if ($localFiles) {
     Write-Host "  共 $($localFiles.Count) 个文件:" -ForegroundColor DarkGray
     foreach ($f in $localFiles) {
@@ -112,13 +128,12 @@ if ($localFiles) {
     }
 } else {
     Write-Host "  [!] 文件夹为空或不存在！" -ForegroundColor Red
+    Write-Host "  路径: $newsDir" -ForegroundColor DarkGray
 }
 
 Write-Host ""
-Write-Host "提示: 如果在 VS Code 文件树中看不到新文件，" -ForegroundColor Yellow
-Write-Host "      请在 VS Code 文件资源管理器中点击刷新按钮，" -ForegroundColor Yellow
-Write-Host "      或按 Ctrl+Shift+P 输入 'Refresh' 刷新文件资源管理器。" -ForegroundColor Yellow
-Write-Host ""
-Write-Host "编辑完成后，双击 publish-news.bat 发布。" -ForegroundColor Cyan
+Write-Host "提示:" -ForegroundColor Yellow
+Write-Host "  - 如果 VS Code 文件树看不到新文件，按 Ctrl+Shift+P 输入 'Refresh'" -ForegroundColor Yellow
+Write-Host "  - 编辑完成后双击 publish-news.bat 发布" -ForegroundColor Cyan
 Write-Host ""
 Read-Host "按回车键退出"
