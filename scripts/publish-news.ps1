@@ -1,4 +1,4 @@
-# GTA6 News - Publish Edited Drafts to Main
+﻿# GTA6 News - Publish Edited Drafts to Main
 # 只发布已编辑的草稿（删除了 AUTO-FETCHED DRAFT 注释的文件）
 # 未编辑的草稿保留在工作区，不会被发布
 

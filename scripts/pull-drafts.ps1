@@ -1,4 +1,4 @@
-# GTA6 News - Pull Latest Drafts
+﻿# GTA6 News - Pull Latest Drafts
 # 用 git show 直接写文件，避免 git checkout 的 staging 问题
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
