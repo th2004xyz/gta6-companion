@@ -27,6 +27,8 @@ if ($currentBranch -ne "main") {
 
 Write-Host "[1/3] 从 GitHub 拉取最新数据..." -ForegroundColor White
 git fetch origin 2>&1 | Out-Null
+# 显式拉取 news-drafts 分支引用（默认 fetch 可能不拉取此分支）
+git fetch origin news-drafts:refs/remotes/origin/news-drafts 2>&1 | Out-Null
 
 Write-Host ""
 Write-Host "[2/3] 检查 news-drafts 分支上的草稿..." -ForegroundColor White
@@ -34,10 +36,20 @@ Write-Host "[2/3] 检查 news-drafts 分支上的草稿..." -ForegroundColor Whi
 # 获取 news-drafts 上的所有 news 文件
 $drafts = git ls-tree origin/news-drafts --name-only -- src/content/news/ 2>$null
 if (-not $drafts) {
-    Write-Host "[X] news-drafts 分支不存在或没有草稿。" -ForegroundColor Red
-    Write-Host "    请等待 GitHub Actions 首次运行（每天 8AM 北京时间），" -ForegroundColor Yellow
-    Write-Host "    或手动触发：" -ForegroundColor Yellow
-    Write-Host "    https://github.com/th2004xyz/gta6-companion/actions/workflows/fetch-news.yml" -ForegroundColor Cyan
+    Write-Host "[X] 无法读取 news-drafts 分支的草稿。" -ForegroundColor Red
+    Write-Host ""
+    Write-Host "    可能原因及解决方法：" -ForegroundColor Yellow
+    Write-Host "    1. GitHub Actions 还没运行过——请手动触发：" -ForegroundColor White
+    Write-Host "       https://github.com/th2004xyz/gta6-companion/actions/workflows/fetch-news.yml" -ForegroundColor Cyan
+    Write-Host "       点击 'Run workflow' 按钮" -ForegroundColor White
+    Write-Host ""
+    Write-Host "    2. 网络问题——请检查能否访问 github.com" -ForegroundColor White
+    Write-Host ""
+    Write-Host "    3. 分支确实不存在——联系开发者" -ForegroundColor White
+    Write-Host ""
+    Write-Host "    调试信息（可截图发给开发者）：" -ForegroundColor Yellow
+    Write-Host "    ---git ls-remote---" -ForegroundColor DarkGray
+    git ls-remote --heads origin 2>&1 | ForEach-Object { Write-Host "    $_" -ForegroundColor DarkGray }
     Read-Host "按回车键退出"
     exit 1
 }
