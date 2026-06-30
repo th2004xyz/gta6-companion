@@ -23,6 +23,8 @@
 
 过滤关键词：`gta 6`、`gta6`、`grand theft auto 6`、`grand theft auto vi`、`rockstar`。
 
+**日期过滤**：只抓取最近 3 天（今天、昨天、前天）的新闻，避免旧新闻反复出现。运行 `pull-drafts.bat` 时会自动清理本地超过 3 天且未编辑的草稿。已编辑的草稿不会被清理。如需调整天数，编辑 [scripts/fetch-news.ts](../scripts/fetch-news.ts) 顶部的 `MAX_AGE_DAYS` 常量。
+
 > Rockstar 官方没有 RSS，但其动态会被上述媒体转载，所以采用聚合方式覆盖。
 
 ## 你每天的操作

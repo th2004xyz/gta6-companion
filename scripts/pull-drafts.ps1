@@ -29,7 +29,7 @@ if ($currentBranch.Trim() -ne "main") {
 }
 
 Write-Host ""
-Write-Host "[1/4] 从 GitHub 拉取数据..." -ForegroundColor White
+Write-Host "[1/5] 从 GitHub 拉取数据..." -ForegroundColor White
 $f1 = git fetch origin 2>&1
 Write-Host "  fetch origin: $f1" -ForegroundColor DarkGray
 $f2 = git fetch origin news-drafts:refs/remotes/origin/news-drafts 2>&1
@@ -42,7 +42,7 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host "  OK" -ForegroundColor Green
 
 Write-Host ""
-Write-Host "[2/4] 读取 news-drafts 分支上的草稿列表..." -ForegroundColor White
+Write-Host "[2/5] 读取 news-drafts 分支上的草稿列表..." -ForegroundColor White
 $drafts = git ls-tree origin/news-drafts --name-only -- src/content/news/ 2>&1 | Where-Object { $_.Trim() -ne "" }
 $draftCount = @($drafts).Count
 Write-Host "  远程草稿数量: $draftCount" -ForegroundColor DarkGray
@@ -56,7 +56,7 @@ if ($draftCount -eq 0) {
 }
 
 Write-Host ""
-Write-Host "[3/4] 用 git show 拉取草稿文件到本地..." -ForegroundColor White
+Write-Host "[3/5] 用 git show 拉取草稿文件到本地..." -ForegroundColor White
 
 # 确保 news 目录存在
 $newsDir = Join-Path $projectRoot "src\content\news"
@@ -111,10 +111,42 @@ foreach ($file in $drafts) {
 }
 
 Write-Host ""
-Write-Host "[4/4] 完成！" -ForegroundColor White
+Write-Host "[4/5] 清理本地过期未编辑草稿..." -ForegroundColor White
+Write-Host "  规则: 仅保留最近 3 天 + 所有已编辑草稿" -ForegroundColor DarkGray
+$cutoffDate = (Get-Date).Date.AddDays(-2)  # 3 天前那天的 00:00
+$cleanedCount = 0
+$keptEditedCount = 0
+if (Test-Path $newsDir) {
+    $allLocalDrafts = Get-ChildItem -Path $newsDir -Filter "*.md" -ErrorAction SilentlyContinue
+    foreach ($f in $allLocalDrafts) {
+        # 从文件名提取日期 YYYY-MM-DD-xxx.md
+        if ($f.Name -match "^(\d{4}-\d{2}-\d{2})-") {
+            $fileDate = [datetime]::ParseExact($matches[1], "yyyy-MM-dd", $null)
+            if ($fileDate -lt $cutoffDate) {
+                # 超过 3 天的文件：检查是否已编辑
+                $content = Get-Content $f.FullName -Raw -ErrorAction SilentlyContinue
+                if ($content -and ($content -match "AUTO-FETCHED DRAFT")) {
+                    # 未编辑的旧草稿：删除
+                    Remove-Item $f.FullName -Force
+                    Write-Host "  [-] 删除过期草稿: $($f.Name)" -ForegroundColor DarkYellow
+                    $cleanedCount++
+                } else {
+                    Write-Host "  [=] 保留(已编辑): $($f.Name)" -ForegroundColor DarkGreen
+                    $keptEditedCount++
+                }
+            }
+        }
+    }
+}
+Write-Host "  删除过期未编辑: $cleanedCount 个" -ForegroundColor $(if ($cleanedCount -gt 0) {"Yellow"} else {"DarkGray"})
+Write-Host "  保留已编辑旧草稿: $keptEditedCount 个" -ForegroundColor DarkGreen
+
+Write-Host ""
+Write-Host "[5/5] 完成！" -ForegroundColor White
 Write-Host ""
 Write-Host "  新增: $newCount 个" -ForegroundColor Green
 Write-Host "  跳过(已编辑): $skipCount 个" -ForegroundColor DarkYellow
+Write-Host "  删除过期: $cleanedCount 个" -ForegroundColor $(if ($cleanedCount -gt 0) {"Yellow"} else {"DarkGray"})
 Write-Host "  失败: $failCount 个" -ForegroundColor $(if ($failCount -gt 0) {"Red"} else {"DarkGray"})
 Write-Host ""
 

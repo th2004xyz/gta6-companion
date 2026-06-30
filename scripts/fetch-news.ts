@@ -53,6 +53,24 @@ const GTA6_KEYWORDS = [
   "rockstar",
 ];
 
+// Only fetch articles published within the last N days (inclusive of today).
+// Prevents old RSS items from reappearing as drafts every day after the
+// news-drafts branch is rebuilt from main.
+const MAX_AGE_DAYS = 3;
+
+function isRecent(item: FeedItem): boolean {
+  const dateStr = item.isoDate || item.pubDate;
+  if (!dateStr) return false;
+  const itemDate = new Date(dateStr);
+  if (isNaN(itemDate.getTime())) return false;
+  // Cutoff = start of (today - (MAX_AGE_DAYS - 1)). For MAX_AGE_DAYS=3 that
+  // means today, yesterday, and the day before yesterday are all included.
+  const cutoff = new Date();
+  cutoff.setHours(0, 0, 0, 0);
+  cutoff.setDate(cutoff.getDate() - (MAX_AGE_DAYS - 1));
+  return itemDate >= cutoff;
+}
+
 const parser = new RSSParser();
 
 const FETCH_HEADERS = {
@@ -214,8 +232,8 @@ async function main() {
     const items = await fetchFromSource(source);
     totalFetched += items.length;
 
-    const gta6Items = items.filter(isGTA6Related);
-    console.log(`  → ${gta6Items.length} GTA6-related items from ${source.name}`);
+    const gta6Items = items.filter((item) => isGTA6Related(item) && isRecent(item));
+    console.log(`  → ${gta6Items.length} recent GTA6-related items from ${source.name} (last ${MAX_AGE_DAYS} days)`);
 
     for (const item of gta6Items) {
       const date = (item.isoDate || new Date().toISOString()).slice(0, 10);
