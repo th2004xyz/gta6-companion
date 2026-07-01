@@ -5,7 +5,7 @@ status: speculated
 last_updated: 2026-06-30
 date: 2026-06-30
 author: Push Square
-summary: 我觉得这肯定能大火。毫无疑问，《GTA 6》（侠盗猎车手6）绝对会引爆全场。这款即将在PS5平台发售的大作已经成功登顶全球几乎所有国家和地区的PS Store（PlayStation Store）畅销榜。从美国到日本，乃至世界上的任何一个角落，你都能看到Rockstar（R星）的这款新晋顶流……
+summary: "我觉得这肯定能大火。毫无疑问，《GTA 6》（侠盗猎车手6）绝对会引爆全场。这款即将在PS5平台发售的大作已经成功登顶全球几乎所有国家和地区的PS Store（PlayStation Store）畅销榜。从美国到日本，乃至世界上的任何一个角落，你都能看到Rockstar（R星）的这款新晋顶流……"
 summary_en: I think this might do well. As if there was ever any doubt about the splash GTA 6 is about to make, the upcoming PS5 game has topped the PS Store charts in practically every country on the planet. From the United States to Japan and everywhere in between, you’ll see Rockstar’s up
 sources:
   - label:
@@ -22,7 +22,7 @@ sources:
 
 ## 来源
 
-原文：【GTA 6 登顶全球所有国家 PS5 游戏畅销榜】(<https://www.pushsquare.com/news/2026/06/gta-6-is-the-ps5s-number-one-game-in-every-country-on-the-planet>)
+[原文：【GTA 6 登顶全球所有国家 PS5 游戏畅销榜】](https://www.pushsquare.com/news/2026/06/gta-6-is-the-ps5s-number-one-game-in-every-country-on-the-planet)
 
 ---
 
