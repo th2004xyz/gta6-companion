@@ -22,7 +22,7 @@ sources:
 
 ## 来源
 
-原文：【GTA 6 或许能在 Steam Machine 上运行】(<https://www.ign.com/articles/gta-6-would-probably-run-on-the-steam-machine>)
+原文：[GTA 6 或许能在 Steam Machine 上运行](https://www.ign.com/articles/gta-6-would-probably-run-on-the-steam-machine)
 
 ---
 
