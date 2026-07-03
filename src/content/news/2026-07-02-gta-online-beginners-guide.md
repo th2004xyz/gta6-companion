@@ -76,7 +76,7 @@ RP 即声望值（Reputation Points），可以通过完成各种活动来获得
 
 ## 来源
 
-原文：GTA Online 新手指南(<https://www.gamespot.com/articles/gta-online-beginners-guide/>)
+原文：[GTA Online 新手指南](https://www.gamespot.com/articles/gta-online-beginners-guide/)
 
 ## Overview
 
