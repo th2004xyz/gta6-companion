@@ -62,3 +62,27 @@ body {
   background: transparent;
   border: none;
 }
+/* ==========================================================================
+   Zephyr-Translate V1.6: 强力精简界面 - 隐藏冗余功能
+   ========================================================================== */
+
+/* 1. 隐藏输入框工具栏的 语音输入(STT)、画图、插件、Market 等按钮 */
+button[aria-label*="语音"], 
+button[title*="语音"],
+button[aria-label*="Speech"], 
+button[title*="Speech"],
+button[aria-label*="画图"], 
+button[title*="DALL"],
+button[aria-label*="插件"], 
+button[title*="Plugin"],
+button[aria-label*="市场"],
+button[aria-label*="Market"] {
+    display: none !important;
+}
+
+/* 2. 隐藏聊天历史记录中每条消息气泡下方的“语音播报(TTS)”按钮 */
+button[aria-label*="朗读"],
+button[aria-label*="TTS"],
+button[title*="朗读"] {
+    display: none !important;
+}
