@@ -5,8 +5,8 @@ status: speculated
 last_updated: 2026-07-09
 date: 2026-07-09
 author: Cade Onder
-summary:《GTA Online》下一次大型更新 《The Kortz Center Heist》 将于下周正式上线，而玩家们已经发现了其中隐藏的几处与 Rockstar 有关的彩蛋。
-summary_en: GTA Online's next big update, The Kortz Center Heist, will officially release next week, and fans have already spotted a few Rockstar-related Easter eggs.
+summary: "《GTA Online》下一次大型更新 《The Kortz Center Heist》 将于下周正式上线，而玩家们已经发现了其中隐藏的几处与 Rockstar 有关的彩蛋。"
+summary_en: "GTA Online's next big update, The Kortz Center Heist, will officially release next week, and fans have already spotted a few Rockstar-related Easter eggs."
 sources:
   - label:
       zh: IGN
@@ -22,7 +22,7 @@ GTA Online 的下一次大型更新——The Kortz Center Heist（科茨中心�
 
 ## 来源
 
-原文：[TA Online's Next Big Update, the Kortz Center Heist, Releases Next Week, and Fans Have Already Spotted a Few Rockstar-Related Easter Eggs]<https://www.ign.com/articles/gta-onlines-next-big-update-the-kortz-center-heist-releases-next-week-and-fans-have-already-spotted-a-few-rockstar-related-easter-eggs>
+[原文：GTA Online's Next Big Update, the Kortz Center Heist, Releases Next Week, and Fans Have Already Spotted a Few Rockstar-Related Easter Eggs](https://www.ign.com/articles/gta-onlines-next-big-update-the-kortz-center-heist-releases-next-week-and-fans-have-already-spotted-a-few-rockstar-related-easter-eggs)
 
 > 此为自动抓取的英文草稿，请补充中文摘要与正文。建议参考下方英文内容进行翻译与扩充。
 
