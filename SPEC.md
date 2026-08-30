@@ -281,3 +281,21 @@ fetch-news.ts ──► news-drafts 分支 ──► 双语润色 + status 标�
 - ✅ B4 weekly-updates.json 更新至 8-24 ~ 8-30
 - ✅ 霓虹主题全站落地：globals.css 重写（dark-only + @custom-variant）、首页霓虹光斑 Hero + 渐变标题、全部列表/详情页强调色替换为粉/青（语义状态色保留）
 - ✅ 构建验证：`next build` 通过，110/110 页面
+
+### P1 第一批执行记录（2026-08-31）
+
+- ✅ P0 关键词页 ×4（全部赶在 9 月底期限前，部分提前）：
+  PC 版发布日澄清页（含 R 星历代延迟表 + 谣言核查）、预购/版本对比页（含 affiliate 位预留）、Trailer 3 追踪页、Everything We Know 终极汇总页（全站内链枢纽）
+- ✅ 档案补录：载具 +2（Jet Ski / Airboat）、活动 +6（篮球/健身/跳伞/潜水/VR 小游戏/社媒直播）——全部出自实机演示，status=confirmed
+- ⚠️ 角色未硬补（可信度原则）：实机演示未公布新角色名，待 Trailer 3 / 媒体试玩后再补
+- ✅ 代码：news 详情页 NewsArticleJsonLd + BreadcrumbJsonLd；news 列表页 status 筛选器（客户端、双语）；补全分类翻译键
+- ✅ 构建验证：134/134 页面，零警告
+
+## 8. 下一步（P1 剩余 / P2）
+
+- [ ] P1: 新闻管线人工编辑流程跑通（拉草稿→翻译→发布）
+- [ ] P1: 每周更新例行机制（每周一更新 weekly-updates.json）
+- [ ] P2: 「Everything We Know」页加 FAQ schema 补充
+- [ ] P2: 预购 affiliate 链接接入版本对比页
+- [ ] P2: 邮件列表发售日唤醒序列（预载日/发售日两封）
+- [ ] P2: OG 图与 favicon 霓虹化重设计
