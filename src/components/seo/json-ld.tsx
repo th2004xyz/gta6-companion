@@ -82,3 +82,51 @@ export function FaqJsonLd({
     />
   );
 }
+
+// 新闻文章结构化数据：让新闻进入 Google 富结果与 Top Stories 轮播位
+export function NewsArticleJsonLd({
+  title,
+  description,
+  datePublished,
+  dateModified,
+  author,
+  url,
+}: {
+  title: string;
+  description: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+  url: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: title,
+    description,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: author
+      ? { "@type": "Person", name: author }
+      : { "@type": "Organization", name: "GTA6 Companion" },
+    publisher: {
+      "@type": "Organization",
+      name: "GTA6 Companion",
+      logo: {
+        "@type": "ImageObject",
+        url: "/icons/icon-192.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

@@ -88,7 +88,8 @@
         "motorcycle": "Motorcycle",
         "boat": "Boat",
         "aircraft": "Aircraft",
-        "special": "Special"
+        "special": "Special",
+        "water": "Water"
       }
     },
     "activities": {
@@ -100,7 +101,9 @@
         "nightlife": "Nightlife",
         "gambling": "Gambling",
         "criminal": "Criminal",
-        "social": "Social"
+        "social": "Social",
+        "air": "Air",
+        "leisure": "Leisure"
       }
     },
     "news": {

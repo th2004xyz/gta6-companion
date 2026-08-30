@@ -88,7 +88,8 @@
         "motorcycle": "摩托车",
         "boat": "船只",
         "aircraft": "飞行器",
-        "special": "特殊"
+        "special": "特殊",
+        "water": "水上"
       }
     },
     "activities": {
@@ -100,7 +101,9 @@
         "nightlife": "夜生活",
         "gambling": "博彩",
         "criminal": "犯罪",
-        "social": "社交"
+        "social": "社交",
+        "air": "空中",
+        "leisure": "休闲"
       }
     },
     "news": {

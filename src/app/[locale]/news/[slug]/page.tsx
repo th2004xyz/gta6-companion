@@ -6,6 +6,7 @@ import { getEntry, getAllEntries, splitLocaleContent, type NewsFrontmatter } fro
 import { StatusBadge, SourceList } from "@/components/content/status-badge";
 import { DetailBreadcrumb } from "@/components/content/page-header";
 import { MarkdownContent } from "@/components/content/markdown-content";
+import { NewsArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 
 export function generateStaticParams() {
   const entries = getAllEntries<NewsFrontmatter>("news");
@@ -58,6 +59,20 @@ export default async function NewsDetailPage({
 
   return (
     <main className="flex-1">
+      <NewsArticleJsonLd
+        title={title}
+        description={locale === "zh" ? fm.summary : fm.summary_en || fm.summary}
+        datePublished={fm.date}
+        dateModified={fm.last_updated}
+        author={fm.author}
+        url={`https://gta6.sohou.xyz/${locale}/news/${slug}`}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: t("title"), url: `https://gta6.sohou.xyz/${locale}/news` },
+          { name: title, url: `https://gta6.sohou.xyz/${locale}/news/${slug}` },
+        ]}
+      />
       <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
         <DetailBreadcrumb
           items={[
