@@ -19,7 +19,7 @@
  *      - Translate `summary` field to Chinese
  *      - Fill in Chinese body above the --- separator
  *      - Update `status` if needed (confirmed/speculated/leaked)
- *      - Remove the AUTO-FETCHED DRAFT comment
+ *      - Delete the AUTO-FETCHED DRAFT TODO block (now a quote block, not HTML comment)
  *   3. Move reviewed file to main: git checkout main && git add ... && git commit
  */
 
@@ -132,6 +132,39 @@ function slugify(title: string): string {
     .replace(/^-|-$/g, "");
 }
 
+// YAML 字符串转义：值含特殊字符时用双引号包裹，内部双引号转义。
+// 解决 summary/title_en 含冒号+空格、中文引号等导致 YAML 解析失败。
+function yamlString(value: string): string {
+  const v = value.trim();
+  // 纯安全字符且不含冒号+空格 -> 裸写
+  if (
+    v.length <= 60 &&
+    /^[A-Za-z0-9 _\-./]+$/.test(v) &&
+    !v.includes(": ") &&
+    !v.startsWith("-") &&
+    !v.includes('"')
+  ) {
+    return v;
+  }
+  // 其他情况：双引号包裹，内部双引号转义
+  return `"${v.replace(/"/g, "\\\"")}"`;
+}
+
+// MDX 正文转义：移除 HTML 注释，修复错误链接格式。
+function mdxSafe(content: string): string {
+  return content
+    // 删除 HTML 注释（MDX 编译会报错）
+    .replace(/<!--[\s\S]*?-->/g, "")
+    // 【文字】(<url>) -> [文字](url)
+    .replace(/【([^】]+)】\(<(https?:\/\/[^>]+)>\)/g, "[$1]($2)")
+    .replace(/【([^】]+)】\((https?:\/\/[^)]+)\)/g, "[$1]($2)")
+    // [文字]<url> -> [文字](url)
+    .replace(/\[([^\]]+)\]<(https?:\/\/[^>]+)>/g, "[$1]($2)")
+    // 裸 <url> -> [url](url)
+    .replace(/<(https?:\/\/[^>]+)>/g, "[$1]($1)")
+    .trim();
+}
+
 function isGTA6Related(item: FeedItem): boolean {
   const haystack = [
     item.title || "",
@@ -151,9 +184,9 @@ function buildMarkdown(item: FeedItem, sourceName: string): string {
     .replace(/\n+/g, " ")
     .slice(0, 280)
     .trim();
-  const englishBody = stripHtml(item.content || item.contentSnippet || "")
-    .slice(0, 4000)
-    .trim();
+  const englishBody = mdxSafe(
+    stripHtml(item.content || item.contentSnippet || "").slice(0, 4000),
+  ).trim();
 
   const sourceUrl = item.link || "";
 
@@ -168,8 +201,8 @@ summary: "${summary.replace(/"/g, '\\"')}"
 summary_en: "${summary.replace(/"/g, '\\"')}"
 sources:
   - label:
-      zh: ${sourceName}
-      en: ${sourceName}
+      zh: ${yamlString(sourceName)}
+      en: ${yamlString(sourceName)}
     url: ${sourceUrl}
 ---
 
