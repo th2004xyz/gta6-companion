@@ -11,22 +11,23 @@ export default async function SiteHeader({
 }) {
   const t = await getTranslations("nav");
 
+  // 链接统一携带 locale 前缀，避免中间件二次重定向（SEO 友好）
   const navItems = [
-    { href: "/map", label: t("map") },
-    { href: "/characters", label: t("characters") },
-    { href: "/vehicles", label: t("vehicles") },
-    { href: "/activities", label: t("activities") },
-    { href: "/news", label: t("news") },
+    { href: `/${locale}/map`, label: t("map") },
+    { href: `/${locale}/characters`, label: t("characters") },
+    { href: `/${locale}/vehicles`, label: t("vehicles") },
+    { href: `/${locale}/activities`, label: t("activities") },
+    { href: `/${locale}/news`, label: t("news") },
   ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
         <Link
-          href="/"
+          href={`/${locale}`}
           className="flex items-center gap-2 font-bold tracking-tight"
         >
-          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-500 text-sm font-bold text-zinc-950">
+          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#ff2d78] text-sm font-bold text-zinc-950">
             6
           </span>
           <span className="hidden sm:inline">GTA6 Companion</span>
@@ -52,8 +53,8 @@ export default async function SiteHeader({
           </Suspense>
 
           <Link
-            href="/subscribe"
-            className="ml-1 inline-flex h-8 items-center justify-center rounded-full bg-emerald-500 px-3 text-sm font-medium text-zinc-950 transition hover:bg-emerald-400"
+            href={`/${locale}/subscribe`}
+            className="ml-1 inline-flex h-8 items-center justify-center rounded-full bg-[#ff2d78] px-3 text-sm font-medium text-zinc-950 transition hover:bg-[#ff5c9a]"
           >
             {t("subscribe")}
           </Link>

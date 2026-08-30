@@ -76,7 +76,7 @@ export default function SubscribeForm({ labels }: { labels: SubscribeFormLabels 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={labels.emailPlaceholder}
-          className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-base shadow-sm transition focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-zinc-700 dark:bg-zinc-900"
+          className="w-full rounded-lg border border-zinc-300 bg-white px-4 py-3 text-base shadow-sm transition focus:border-[#ff2d78] focus:outline-none focus:ring-2 focus:ring-[#ff2d78]/25 dark:border-zinc-700 dark:bg-zinc-900"
           disabled={status === "submitting"}
         />
       </div>
@@ -90,7 +90,7 @@ export default function SubscribeForm({ labels }: { labels: SubscribeFormLabels 
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-emerald-500 px-6 py-3 font-medium text-zinc-950 transition hover:bg-emerald-400 disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-[#ff2d78] px-6 py-3 font-medium text-zinc-950 transition hover:bg-[#ff5c9a] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? labels.submitting : labels.submitButton}
       </button>

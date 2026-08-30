@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export default async function SiteFooter() {
   const t = await getTranslations("footer");
+  const locale = await getLocale();
 
   return (
     <footer className="border-t border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
@@ -10,7 +11,7 @@ export default async function SiteFooter() {
         <div className="flex flex-col gap-6 sm:flex-row sm:justify-between">
           <div className="max-w-md">
             <div className="flex items-center gap-2 font-bold">
-              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-500 text-sm font-bold text-zinc-950">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#ff2d78] text-sm font-bold text-zinc-950">
                 6
               </span>
               GTA6 Companion
@@ -22,19 +23,19 @@ export default async function SiteFooter() {
 
           <nav className="flex flex-col gap-2 text-sm">
             <Link
-              href="/about"
+              href={`/${locale}/about`}
               className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
             >
               {t("links.about")}
             </Link>
             <Link
-              href="/privacy"
+              href={`/${locale}/privacy`}
               className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
             >
               {t("links.privacy")}
             </Link>
             <Link
-              href="/terms"
+              href={`/${locale}/terms`}
               className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
             >
               {t("links.terms")}

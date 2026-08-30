@@ -205,7 +205,7 @@ export default function MapView({ markers, locale, labels }: MapViewProps) {
                 onClick={() => toggleType(opt.value)}
                 className={`rounded px-2 py-1 text-left text-xs transition ${
                   activeTypes.has(opt.value)
-                    ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                    ? "bg-cyan-500/15 text-cyan-600 dark:text-cyan-400"
                     : "text-zinc-400 line-through dark:text-zinc-500"
                 }`}
               >

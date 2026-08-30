@@ -38,7 +38,7 @@ export default async function CharactersPage({
               <Link
                 key={char.slug}
                 href={`/${locale}/characters/${char.slug}`}
-                className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+                className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-[#ff2d78]/50 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-[#ff2d78]/60"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1">
@@ -47,7 +47,7 @@ export default async function CharactersPage({
                         ? t("protagonist")
                         : t("supporting")}
                     </div>
-                    <h2 className="mt-1 text-lg font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                    <h2 className="mt-1 text-lg font-semibold group-hover:text-cyan-400">
                       {locale === "zh"
                         ? char.frontmatter.title
                         : char.frontmatter.title_en}

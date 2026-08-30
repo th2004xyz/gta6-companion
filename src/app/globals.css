@@ -1,34 +1,86 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* ==========================================================================
+   GTA6 Companion · Vice City 霓虹暗色设计系统（dark-only）
+   Token 定义见 SPEC.md §4.2
+   ========================================================================== */
+
+/* class 驱动的 dark 变体：html 挂 .dark 类，全站强制暗色 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 底色层 */
+  --background: #0a0a0f; /* 深夜底 */
+  --foreground: #f4f4f5; /* 正文 */
+
+  /* 霓虹强调层 */
+  --accent-primary: #ff2d78; /* 霓虹粉：主 CTA */
+  --accent-secondary: #22d3ee; /* 霓虹青：链接 / 次强调 */
+  --accent-glow: #a855f7; /* 霓虹紫：渐变过渡 / 氛围 */
+
+  /* 表面层 */
+  --surface: #14141c; /* 卡片 / 区块 */
+  --surface-raised: #1b1b26; /* 浮层（弹窗 / 下拉） */
+
+  /* 状态层（语义色，勿作装饰用） */
+  --status-confirmed: #22c55e;
+  --status-reported: #eab308;
+  --status-speculation: #f97316;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-glow: var(--accent-glow);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Leaflet 暗色底图适配 */
+/* Vice City 日落霓虹渐变（克制使用：仅 Hero / 页头） */
+.neon-sunset-gradient {
+  background-image: linear-gradient(
+    135deg,
+    var(--accent-primary) 0%,
+    var(--accent-glow) 50%,
+    var(--accent-secondary) 100%
+  );
+}
+
+/* 霓虹文字（Hero 标题等大字号场景，克制使用） */
+.neon-text {
+  background-image: linear-gradient(
+    100deg,
+    #ff2d78 0%,
+    #a855f7 50%,
+    #22d3ee 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 霓虹发光卡片 hover（SPEC §4.3） */
+.neon-glow-hover {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.neon-glow-hover:hover {
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent-primary) 15%, transparent);
+}
+
+/* Leaflet 暗色底图适配（dark-only，不再跟随系统） */
 .leaflet-container {
-  background: #0a1628;
+  background: #0a0a16;
   font-family: inherit;
 }
 
@@ -36,53 +88,19 @@ body {
 .leaflet-popup-content-wrapper {
   border-radius: 12px;
   padding: 4px;
+  background: #1b1b26;
+  color: #f4f4f5;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
 }
-
 .leaflet-popup-tip {
-  background: #fff;
+  background: #1b1b26;
 }
-
-/* 暗色模式下 popup 背景适配 */
-@media (prefers-color-scheme: dark) {
-  .leaflet-popup-content-wrapper {
-    background: #18181b;
-    color: #fafafa;
-    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.6);
-  }
-  .leaflet-popup-tip {
-    background: #18181b;
-  }
-  .leaflet-container a.leaflet-popup-close-button {
-    color: #fafafa;
-  }
+.leaflet-container a.leaflet-popup-close-button {
+  color: #f4f4f5;
 }
 
 /* 自定义 marker 容器（清除 Leaflet 默认样式） */
 .gta6-map-marker {
   background: transparent;
   border: none;
-}
-/* ==========================================================================
-   Zephyr-Translate V1.6: 强力精简界面 - 隐藏冗余功能
-   ========================================================================== */
-
-/* 1. 隐藏输入框工具栏的 语音输入(STT)、画图、插件、Market 等按钮 */
-button[aria-label*="语音"], 
-button[title*="语音"],
-button[aria-label*="Speech"], 
-button[title*="Speech"],
-button[aria-label*="画图"], 
-button[title*="DALL"],
-button[aria-label*="插件"], 
-button[title*="Plugin"],
-button[aria-label*="市场"],
-button[aria-label*="Market"] {
-    display: none !important;
-}
-
-/* 2. 隐藏聊天历史记录中每条消息气泡下方的“语音播报(TTS)”按钮 */
-button[aria-label*="朗读"],
-button[aria-label*="TTS"],
-button[title*="朗读"] {
-    display: none !important;
 }

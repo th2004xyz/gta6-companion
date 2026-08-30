@@ -61,7 +61,7 @@ export function SourceList({
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-emerald-700 hover:underline dark:text-emerald-400"
+              className="text-sm text-cyan-400 hover:underline"
             >
               {locale === "zh" ? source.label.zh : source.label.en}
             </Link>

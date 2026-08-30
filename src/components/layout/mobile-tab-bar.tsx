@@ -29,13 +29,17 @@ export default function MobileTabBar({
             item.href === "/"
               ? currentPath === "/"
               : currentPath.startsWith(item.href);
+          // 渲染链接时补全 locale 前缀，避免中间件重定向
+          const localizedHref = `${localePrefix}${
+            item.href === "/" ? "" : item.href
+          }`;
           return (
             <Link
               key={item.href}
-              href={item.href}
+              href={localizedHref}
               className={`flex flex-1 flex-col items-center justify-center gap-0.5 text-[10px] transition ${
                 isActive
-                  ? "text-emerald-600 dark:text-emerald-400"
+                  ? "text-cyan-500 dark:text-cyan-400"
                   : "text-zinc-500 dark:text-zinc-400"
               }`}
               aria-current={isActive ? "page" : undefined}

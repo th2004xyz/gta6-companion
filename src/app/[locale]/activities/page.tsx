@@ -53,10 +53,10 @@ export default async function ActivitiesPage({
                         <Link
                           key={activity.slug}
                           href={`/${locale}/activities/${activity.slug}`}
-                          className="group rounded-2xl border border-zinc-200 bg-white p-5 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+                          className="group rounded-2xl border border-zinc-200 bg-white p-5 transition hover:border-[#ff2d78]/50 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-[#ff2d78]/60"
                         >
                           <div className="flex items-start justify-between gap-3">
-                            <h3 className="font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                            <h3 className="font-semibold group-hover:text-cyan-400">
                               {locale === "zh"
                                 ? activity.frontmatter.title
                                 : activity.frontmatter.title_en}

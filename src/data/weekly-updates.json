@@ -1,18 +1,63 @@
 {
   "weekLabel": {
-    "zh": "本周更新 · 6 月 23 日 – 6 月 27 日",
-    "en": "This Week · Jun 23 – 27"
+    "zh": "本周更新 · 8 月 24 日 – 8 月 30 日",
+    "en": "This Week · Aug 24 – 30"
   },
   "updates": [
     {
-      "date": "2026-06-25",
+      "date": "2026-08-28",
       "title": {
-        "zh": "发售日定档 11 月 19 日，全球预购同步开启",
-        "en": "Release date set for Nov 19, global pre-order now live"
+        "zh": "26 分钟实机演示 Netflix 独家首播，全球 397 万人同时观看",
+        "en": "26-minute gameplay showcase premieres on Netflix, 3.97M concurrent viewers"
       },
       "summary": {
-        "zh": "Rockstar 正式宣布 GTA6 于 2026 年 11 月 19 日登陆 PS5 / Xbox Series X|S，标准版 $79.99、终极版 $99.99。",
-        "en": "Rockstar confirms GTA6 launches Nov 19, 2026 on PS5 / Xbox Series X|S; Standard $79.99, Ultimate $99.99."
+        "zh": "《GTA6: An Extended Look》全程 PS5 实机画面首发，刷新 2026 年游戏直播纪录，Twitch 一度宕机。发售日 11 月 19 日不变。",
+        "en": "\"GTA 6: An Extended Look\" — all PS5 gameplay — sets a 2026 streaming record and briefly crashes Twitch. Launch stays Nov 19."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-08-28-extended-look-dual-protagonists-and-criminal-record"
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "title": {
+        "zh": "实机解析系列上线：双主角 / 莱昂尼达州 / 抢劫玩法全拆解",
+        "en": "Extended Look breakdown series: dual protagonists, Leonida, heists"
+      },
+      "summary": {
+        "zh": "三篇深度解析更新：罪犯档案系统、会呼吸的霓虹都市、以及载具与休闲玩法的细节密度拆解。",
+        "en": "Three deep-dive breakdowns: the Criminal Record system, a city that breathes, and the density of vehicle & activity systems."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-08-28-extended-look-heists-stealth-activities"
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "title": {
+        "zh": "R 星承认泄漏属实，但发售计划不变",
+        "en": "Rockstar confirms leaks are real, launch plan unchanged"
+      },
+      "summary": {
+        "zh": "针对 CyberLeek 超 40 分钟偷跑片段风波，R 星官方确认泄漏属实，并说明开发团队受冲击，但 11 月 19 日档期不变。",
+        "en": "Following the CyberLeak of 40+ minutes of footage, Rockstar confirms the leaks are genuine but holds the Nov 19 date."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-08-28-extended-look-leonida-living-city"
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "title": {
+        "zh": "预购突破 450 万份，收入近 4.5 亿美元",
+        "en": "Pre-orders pass 4.5M units, nearly $450M in revenue"
+      },
+      "summary": {
+        "zh": "截至 8 月 28 日预购数据已破 450 万份，超出 Take-Two 内部预期；分析师预测首发日 2500 万套才接近市场预期。",
+        "en": "Pre-orders top 4.5M units as of Aug 28, beating Take-Two's internal expectations; analysts see 25M day-one as the bar."
       },
       "link": {
         "collection": "news",
@@ -20,48 +65,14 @@
       }
     },
     {
-      "date": "2026-06-24",
+      "date": "2026-08-30",
       "title": {
-        "zh": "全球预购今日午夜开启",
-        "en": "Global pre-orders open at midnight"
+        "zh": "站点升级：Vice City 霓虹视觉系统上线",
+        "en": "Site upgrade: Vice City neon design system live"
       },
       "summary": {
-        "zh": "6 月 24 日午夜（当地时间）起开放预购，11 月 20 日前预购免费领取「罪恶都市怀旧包」。",
-        "en": "Pre-orders open at midnight local time on Jun 24; \"Vice City Nostalgia Pack\" free for pre-orders before Nov 20."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-06-24-preorders-live"
-      }
-    },
-    {
-      "date": "2026-06-23",
-      "title": {
-        "zh": "角色数据库补充：Brian Heder 与 Raul Bautista 条目已确认",
-        "en": "Character DB update: Brian Heder & Raul Bautista confirmed"
-      },
-      "summary": {
-        "zh": "补充两条 supporting 角色的来源与背景信息，目前共 5 位已确认角色。",
-        "en": "Added sources and background for two supporting characters; 5 confirmed characters in total."
-      },
-      "link": {
-        "collection": "characters",
-        "slug": "brian-heder"
-      }
-    },
-    {
-      "date": "2026-06-22",
-      "title": {
-        "zh": "活动数据库扩充：夜生活、狩猎、钓鱼等条目上线",
-        "en": "Activities DB expansion: nightlife, hunting, fishing added"
-      },
-      "summary": {
-        "zh": "本周新增多条已确认支线活动，目前共 9 项活动（7 项已确认）。",
-        "en": "Several confirmed side activities added this week; 9 activities in total (7 confirmed)."
-      },
-      "link": {
-        "collection": "activities",
-        "slug": "nightlife"
+        "zh": "全站切换为霓虹夜色主题（霓虹粉 / 青 / 紫），修复导航与 SEO 元数据缺陷，倒计时距发售 81 天。",
+        "en": "Site-wide neon night theme (pink / cyan / violet), navigation & SEO metadata fixes, and 81 days on the countdown."
       }
     }
   ]

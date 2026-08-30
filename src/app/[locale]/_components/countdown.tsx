@@ -64,7 +64,7 @@ export default function Countdown({ labels }: { labels: CountdownLabels }) {
           {labels.releaseCountdown}
         </div>
         {released ? (
-          <div className="mt-2 text-2xl font-bold text-emerald-400">
+          <div className="mt-2 text-2xl font-bold text-[#ff5c9a]">
             {labels.released}
           </div>
         ) : (

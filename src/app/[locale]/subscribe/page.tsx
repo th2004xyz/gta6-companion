@@ -43,7 +43,7 @@ export default async function SubscribePage({
           <ul className="space-y-3">
             {(["benefit1", "benefit2", "benefit3", "benefit4"] as const).map((key) => (
               <li key={key} className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-emerald-500/15 text-sm text-emerald-600 dark:text-emerald-400">
+                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-cyan-500/15 text-sm text-cyan-600 dark:text-cyan-400">
                   ✓
                 </span>
                 <span className="text-sm text-zinc-700 dark:text-zinc-300">

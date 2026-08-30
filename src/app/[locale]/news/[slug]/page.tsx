@@ -92,7 +92,7 @@ export default async function NewsDetailPage({
         <div className="mt-8">
           <Link
             href={`/${locale}/news`}
-            className="text-sm font-medium text-emerald-700 hover:underline dark:text-emerald-400"
+            className="text-sm font-medium text-cyan-400 hover:underline"
           >
             ← {tCommon("backToList")}
           </Link>

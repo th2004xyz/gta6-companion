@@ -57,11 +57,21 @@ export default async function HomePage({
       <VideoGameJsonLd />
       <FaqJsonLd faqs={faqItems} />
 
-      {/* Hero 区块 */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-zinc-900 to-zinc-950 text-white">
-        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+      {/* Hero 区块：Vice City 霓虹夜色 */}
+      <section className="relative overflow-hidden bg-zinc-950 text-white">
+        {/* 霓虹氛围光斑：粉 / 紫 / 青，克制点缀 */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-25"
+        >
+          <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#ff2d78] blur-[100px]" />
+          <div className="absolute -right-24 top-1/3 h-72 w-72 rounded-full bg-[#a855f7] blur-[100px]" />
+          <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-[#22d3ee] blur-[100px]" />
+        </div>
+
+        <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
           <div className="flex flex-col gap-6">
-            <h1 className="text-3xl font-bold tracking-tight sm:text-5xl sm:leading-tight">
+            <h1 className="neon-text text-3xl font-bold tracking-tight sm:text-5xl sm:leading-tight">
               {t("heroTitle")}
             </h1>
 
@@ -86,12 +96,12 @@ export default async function HomePage({
             {/* 最新情报：server component，直渲最新 2 条 news 标题 + 日期 */}
             <div className="mt-2 rounded-2xl border border-zinc-800 bg-zinc-900/60 p-4 backdrop-blur">
               <div className="flex items-center justify-between">
-                <h2 className="text-sm font-semibold uppercase tracking-wide text-emerald-400">
+                <h2 className="text-sm font-semibold uppercase tracking-wide text-cyan-400">
                   {t("latestIntel")}
                 </h2>
                 <Link
                   href={`/${locale}/news`}
-                  className="text-xs text-zinc-400 transition hover:text-emerald-400"
+                  className="text-xs text-zinc-400 transition hover:text-cyan-300"
                 >
                   {t("latestIntelViewAll")} →
                 </Link>
@@ -101,7 +111,7 @@ export default async function HomePage({
                   <li key={item.slug}>
                     <Link
                       href={`/${locale}/news/${item.slug}`}
-                      className="flex items-baseline justify-between gap-3 text-sm transition hover:text-emerald-400"
+                      className="flex items-baseline justify-between gap-3 text-sm transition hover:text-cyan-300"
                     >
                       <span className="line-clamp-1 text-zinc-200">
                         {locale === "zh"
@@ -122,14 +132,14 @@ export default async function HomePage({
 
             <div className="mt-2 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/map"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-emerald-500 px-6 font-medium text-zinc-950 transition hover:bg-emerald-400"
+                href={`/${locale}/map`}
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[#ff2d78] px-6 font-medium text-zinc-950 shadow-[0_0_24px_rgba(255,45,120,0.35)] transition hover:bg-[#ff5c9a]"
               >
                 {t("exploreMap")}
               </Link>
               <Link
-                href="/subscribe"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 font-medium text-white transition hover:border-zinc-600 hover:bg-zinc-800"
+                href={`/${locale}/subscribe`}
+                className="inline-flex h-12 items-center justify-center rounded-full border border-zinc-700 px-6 font-medium text-white transition hover:border-zinc-500 hover:bg-zinc-800"
               >
                 {t("cta.subscribe")}
               </Link>
@@ -184,12 +194,12 @@ export default async function HomePage({
                   <div className="flex items-baseline gap-2">
                     <time
                       dateTime={item.date}
-                      className="text-xs font-medium text-emerald-600 dark:text-emerald-400"
+                      className="text-xs font-medium text-cyan-500 dark:text-cyan-400"
                     >
                       {item.date}
                     </time>
                   </div>
-                  <h3 className="mt-1 font-semibold group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
+                  <h3 className="mt-1 font-semibold group-hover:text-[#ff2d78] dark:group-hover:text-[#ff5c9a]">
                     {title}
                   </h3>
                   <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
@@ -228,8 +238,8 @@ export default async function HomePage({
             {t("cta.subscribeDesc")}
           </p>
           <Link
-            href="/subscribe"
-            className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-zinc-900 px-6 font-medium text-white transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-200"
+            href={`/${locale}/subscribe`}
+            className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-[#ff2d78] px-6 font-medium text-zinc-950 shadow-[0_0_24px_rgba(255,45,120,0.35)] transition hover:bg-[#ff5c9a]"
           >
             {t("cta.subscribe")}
           </Link>
@@ -282,9 +292,9 @@ function StatsCard({
   return (
     <Link
       href={href}
-      className="group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-emerald-300 hover:shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-emerald-700"
+      className="neon-glow-hover group rounded-2xl border border-zinc-200 bg-white p-6 transition hover:border-[#ff2d78]/50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-[#ff2d78]/60"
     >
-      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
+      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[#ff2d78]/15 text-[#ff2d78] dark:text-[#ff5c9a]">
         <StatsIcon name={icon} />
       </div>
       <div className="flex items-baseline gap-1">

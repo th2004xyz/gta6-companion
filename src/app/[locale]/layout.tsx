@@ -39,7 +39,9 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://gta6-companion.example.com"),
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL || "https://gta6.sohou.xyz"
+    ),
     manifest: "/manifest.json",
     icons: {
       icon: "/icons/icon-192.png",
@@ -68,7 +70,7 @@ export async function generateMetadata({
 
 // viewport 配置：themeColor 移至此处（Next.js 16 要求）
 export const viewport: Viewport = {
-  themeColor: "#10b981",
+  themeColor: "#0a0a0f",
   width: "device-width",
   initialScale: 1,
 };
@@ -93,7 +95,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <NextIntlClientProvider>
