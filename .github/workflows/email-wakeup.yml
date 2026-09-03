@@ -1,0 +1,57 @@
+name: Email Wakeup (Preload & Launch)
+
+# 发售日唤醒序列：向全体邮件订阅者发送两封唤醒邮件
+# - 2026-11-12 09:00（北京时间）：预载开启提醒
+# - 2026-11-19 09:00（北京时间）：发售日提醒
+# 调用线上 /api/email-wakeup 接口，由 WAKEUP_SECRET 鉴权。
+#
+# 所需 GitHub Secrets：
+#   WAKEUP_SECRET — 与生产环境同名环境变量一致的随机字符串
+#
+# 所需生产环境变量（Vercel / Cloudflare）：
+#   RESEND_API_KEY、RESEND_AUDIENCE_ID、RESEND_FROM、WAKEUP_SECRET
+
+on:
+  schedule:
+    # 01:00 UTC = 09:00 北京时间
+    - cron: '0 1 12 11 *'  # 每年 11 月 12 日（预载日）
+    - cron: '0 1 19 11 *'  # 每年 11 月 19 日（发售日）
+  workflow_dispatch:
+    inputs:
+      type:
+        description: '邮件类型'
+        required: true
+        default: 'preload'
+        type: choice
+        options:
+          - preload
+          - launch
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine email type
+        id: type
+        run: |
+          if [ -n "${{ github.event.inputs.type }}" ]; then
+            echo "type=${{ github.event.inputs.type }}" >> "$GITHUB_OUTPUT"
+          else
+            DAY=$(date -u +%d)
+            if [ "$DAY" = "12" ]; then
+              echo "type=preload" >> "$GITHUB_OUTPUT"
+            elif [ "$DAY" = "19" ]; then
+              echo "type=launch" >> "$GITHUB_OUTPUT"
+            else
+              echo "今天不是预载日或发售日，跳过发送。"
+              echo "type=skip" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Send wakeup email
+        if: steps.type.outputs.type != 'skip'
+        run: |
+          curl -sS -f -X POST "https://gta6.sohou.xyz/api/email-wakeup" \
+            -H "Content-Type: application/json" \
+            -H "x-wakeup-secret: ${{ secrets.WAKEUP_SECRET }}" \
+            -d '{"type": "${{ steps.type.outputs.type }}"}'

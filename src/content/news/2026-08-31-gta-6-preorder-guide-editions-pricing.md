@@ -2,8 +2,9 @@
 title: "GTA 6 预购指南：标准版 vs 终极版、价格、预载时间与全部福利"
 title_en: "GTA 6 Pre-Order Guide: Standard vs Ultimate, Pricing, Preload Date, and Every Bonus"
 status: confirmed
-last_updated: 2026-08-31
+last_updated: 2026-09-03
 date: 2026-08-31
+purchaseLinks: true
 author: GTA6 Companion Editorial
 summary: "GTA 6 预购全攻略：标准版 $79.99、终极版 $99.99 怎么选？数字版 11 月 12 日开放预载，预购送「罪恶都市怀旧包」，数字预购额外送 1 个月 GTA+。附购买渠道对比与省钱建议。"
 summary_en: "The complete GTA 6 pre-order guide: Standard at $79.99 vs Ultimate at $99.99, digital preload from November 12, the Vice City Nostalgia Pack bonus, and an extra month of GTA+ for digital pre-orders. Includes channel comparison and money-saving tips."
@@ -16,6 +17,31 @@ sources:
       zh: PlayStation Store 官方页面
       en: PlayStation Store Official Listing
     url: https://store.playstation.com
+faqs:
+  - question:
+      zh: "GTA6 预购后能退款吗？"
+      en: "Can I refund a GTA 6 pre-order?"
+    answer:
+      zh: "各平台政策不同，数字版一般发售前可退，请以平台规则为准。"
+      en: "Platform policies vary; digital refunds are generally allowed before launch — check your store's rules."
+  - question:
+      zh: "PC 版能预购吗？"
+      en: "Can I pre-order GTA 6 on PC?"
+    answer:
+      zh: "不能——PC 版尚未公布发售日，目前仅 PS5 与 Xbox Series X|S 开放预购。"
+      en: "No — no PC date has been announced. Only PS5 and Xbox Series X|S are available to pre-order."
+  - question:
+      zh: "终极版内容会单独售卖吗？"
+      en: "Will Ultimate edition content be sold separately?"
+    answer:
+      zh: "会。官方确认先买标准版、后续可单独购买「终极版升级包」（Ultimate Edition Upgrade），差价补齐即可。"
+      en: "Yes. Rockstar has confirmed an Ultimate Edition Upgrade will be sold separately, so you can buy Standard first and upgrade later."
+  - question:
+      zh: "实体版是光盘吗？"
+      en: "Is the physical edition on a disc?"
+    answer:
+      zh: "不是。实体版盒内是下载兑换码（Code in Box），无游戏数据光盘，同样 11 月 12 日起可兑换预载、19 日解锁。"
+      en: "No. Physical boxes contain a download code (code-in-box) — no game data on disc. Redeemable from Nov 12, locked until Nov 19."
 ---
 
 ## 核心信息速览
@@ -54,14 +80,6 @@ sources:
 | Microsoft Store | 同上（Xbox 平台） | — |
 | 零售实体店 | 收藏盒装 | 需等兑换码到货 |
 
-## 常见问题（FAQ）
-
-**Q：预购后能退款吗？** 各平台政策不同，数字版一般发售前可退，请以平台规则为准。
-
-**Q：PC 版能预购吗？** 不能——PC 版尚未公布发售日，详见[PC 版发布日指南](/zh/news/2026-08-31-gta-6-pc-release-date-everything-we-know)。
-
-**Q：终极版内容会单独售卖吗？** 官方未说明，按 GTA5 惯例部分内容后续可能单独上架。
-
 ---
 
 ## Overview
@@ -90,9 +108,3 @@ sources:
 ## Channels
 
 PlayStation Store / Microsoft Store for earliest preload and the GTA+ bonus; physical retail for collectors.
-
-## FAQ
-
-**Can I refund a pre-order?** Platform policies vary; digital refunds are generally allowed before launch — check your store's rules.
-
-**Can I pre-order on PC?** No — no PC date has been announced. See our [PC release date guide](/en/news/2026-08-31-gta-6-pc-release-date-everything-we-know).

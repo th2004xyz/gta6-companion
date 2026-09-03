@@ -268,6 +268,7 @@ fetch-news.ts ──► news-drafts 分支 ──► 双语润色 + status 标�
 |---|---|---|
 | v1.0 | 2026-08-30 | 首版：战略转向内容+轻工具双轮，确立霓虹设计系统，P0-P3 路线图 |
 | v1.1 | 2026-08-31 | P0 执行完成：修复 B1-B4、重刷霓虹主题、补发实机解析 ×3、管线根因修复（YAML 冒号值 / MDX HTML 注释 / 裸 URL 尖括号三处炸弹 + fetch-news.ts 模板加固 + validate-frontmatter.js 校验脚本） |
+| v1.2 | 2026-09-03 | P1 收尾 + P2 首批：新闻管线编辑流程跑通（5 篇发布/2 篇去重）、FAQ schema、affiliate 链接位、邮件唤醒序列、OG 图霓虹化 |
 
 ### P0 执行记录（2026-08-31）
 
@@ -291,11 +292,21 @@ fetch-news.ts ──► news-drafts 分支 ──► 双语润色 + status 标�
 - ✅ 代码：news 详情页 NewsArticleJsonLd + BreadcrumbJsonLd；news 列表页 status 筛选器（客户端、双语）；补全分类翻译键
 - ✅ 构建验证：134/134 页面，零警告
 
+### P1 收尾 + P2 首批执行记录（2026-09-03）
+
+- ✅ 新闻管线人工编辑流程跑通：拉取 news-drafts 草稿 → AI 辅助翻译 → 发布 main。本次 7 篇草稿去重后发布 5 篇（Netflix 数据 ×2 合并、奔跑键 ×2 合并），每篇含中文正文 + 2 条内链 + 可信度标签
+- ✅ FAQ schema：news frontmatter 新增 `faqs` 字段（双语 Q/A），详情页渲染可见 FAQ 折叠区块 + `FaqJsonLd`；已应用于 Everything We Know（5 条）与预购指南（4 条）
+- ✅ 预购 affiliate 链接位：`src/data/purchase-links.json` 统一维护渠道链接（PS Store / Xbox Store / Rockstar Store / Amazon），`PurchaseLinks` 组件渲染 CTA；填入 `affiliateQuery` 后自动追加联盟参数并切换 `rel="sponsored"`。预购页 FAQ 同步官方新信息（终极版升级包可单独购买）
+- ✅ 邮件唤醒序列：`/api/email-wakeup` 路由（WAKEUP_SECRET 鉴权、Resend 联系人分页拉取、100 封/批批量发送、双语模板）+ `email-wakeup.yml` 工作流（11-12 预载日 / 11-19 发售日 09:00 北京时间自动触发）
+- ✅ OG 图霓虹化：Vice City 霓虹风分享卡替换 `/og/default.jpg`
+- ✅ weekly-updates.json 更新至 8-31 ~ 9-6 周
+- ✅ 构建验证：145/145 页面零错误
+
 ## 8. 下一步（P1 剩余 / P2）
 
-- [ ] P1: 新闻管线人工编辑流程跑通（拉草稿→翻译→发布）
-- [ ] P1: 每周更新例行机制（每周一更新 weekly-updates.json）
-- [ ] P2: 「Everything We Know」页加 FAQ schema 补充
-- [ ] P2: 预购 affiliate 链接接入版本对比页
-- [ ] P2: 邮件列表发售日唤醒序列（预载日/发售日两封）
-- [ ] P2: OG 图与 favicon 霓虹化重设计
+- [ ] P1: 每周更新例行机制落地（每周一更新 weekly-updates.json，可考虑自动化）
+- [ ] P2: affiliate 联盟 ID 落地（注册 Amazon Associates 等，回填 purchase-links.json 的 affiliateQuery）
+- [ ] P2: 邮件唤醒生产配置（Resend 验证域名 + 配置 RESEND_FROM / WAKEUP_SECRET 到生产环境与 GitHub Secrets）
+- [ ] P2: favicon 霓虹化重设计
+- [ ] P1: 档案补录（角色 ≥ 10、载具 ≥ 20、活动 ≥ 20，待 Trailer 3 / 媒体试玩新信息）
+- [ ] P3: 发售周决战准备（预载指南页、首页「已发售」模式、Wiki 化 SPEC v2.0）

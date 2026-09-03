@@ -16,6 +16,37 @@ sources:
       zh: PlayStation Store
       en: PlayStation Store
     url: https://store.playstation.com
+faqs:
+  - question:
+      zh: "GTA6 什么时候发售？"
+      en: "When does GTA 6 come out?"
+    answer:
+      zh: "2026 年 11 月 19 日，登陆 PS5 与 Xbox Series X|S，首发不含 PC。数字版 11 月 12 日开放预载。"
+      en: "November 19, 2026 on PS5 and Xbox Series X|S — no PC at launch. Digital preload opens November 12."
+  - question:
+      zh: "GTA6 卖多少钱？"
+      en: "How much does GTA 6 cost?"
+    answer:
+      zh: "标准版 $79.99，终极版 $99.99。终极版含独家剧情支线、限定载具套装、双倍线上启动资金与专属外观。"
+      en: "Standard is $79.99 and Ultimate is $99.99. Ultimate adds exclusive story missions, a limited vehicle set, double Online starting funds, and exclusive outfits."
+  - question:
+      zh: "GTA6 有 PC 版吗？"
+      en: "Is GTA 6 coming to PC?"
+    answer:
+      zh: "确认会出 PC 版，但发售日未公布。参考 GTA5 的 1.5 年间隔，业内普遍预计 2027 年底。详见我们的 PC 版发布日指南。"
+      en: "PC is confirmed but undated. Given GTA 5's 1.5-year gap, expectations point to late 2027 — see our PC release date guide."
+  - question:
+      zh: "GTA6 的舞台设定在哪？"
+      en: "Where is GTA 6 set?"
+    answer:
+      zh: "虚构的莱昂尼达州（以佛罗里达为原型），核心城市为罪恶城（Vice City，以迈阿密为原型），是系列史上最大开放世界。"
+      en: "The fictional state of Leonida (Florida-inspired), centered on Vice City (Miami-inspired) — Rockstar's largest open world ever."
+  - question:
+      zh: "GTA6 是双主角吗？"
+      en: "Does GTA 6 have two protagonists?"
+    answer:
+      zh: "是。杰森（Jason）与露西亚（Lucia）双主角可无缝切换，切换时另一角色自动接管行动，这是系列首次。"
+      en: "Yes. Jason and Lucia are seamlessly switchable dual protagonists — a series first — with the other character carrying on autonomously."
 ---
 
 ## 核心信息（confirmed）

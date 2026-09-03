@@ -70,6 +70,10 @@ export interface ActivityFrontmatter extends BaseFrontmatter {
 export interface NewsFrontmatter extends BaseFrontmatter {
   date: string;
   author?: string;
+  // 常见问题（用于 FAQ 可见区块 + FAQPage 结构化数据）
+  faqs?: { question: LocalizedText; answer: LocalizedText }[];
+  // 显示预购渠道链接区块（用于预购/版本对比等变现页）
+  purchaseLinks?: boolean;
 }
 
 export type Frontmatter =

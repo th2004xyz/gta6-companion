@@ -6,7 +6,8 @@ import { getEntry, getAllEntries, splitLocaleContent, type NewsFrontmatter } fro
 import { StatusBadge, SourceList } from "@/components/content/status-badge";
 import { DetailBreadcrumb } from "@/components/content/page-header";
 import { MarkdownContent } from "@/components/content/markdown-content";
-import { NewsArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
+import { PurchaseLinks } from "@/components/content/purchase-links";
+import { NewsArticleJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld";
 
 export function generateStaticParams() {
   const entries = getAllEntries<NewsFrontmatter>("news");
@@ -50,12 +51,17 @@ export default async function NewsDetailPage({
   const t = await getTranslations("pages.news");
   const tCommon = await getTranslations("common");
   const tStatus = await getTranslations({ locale, namespace: "common.status" });
+  const tFaq = await getTranslations("faq");
 
   const entry = getEntry<NewsFrontmatter>("news", slug);
   if (!entry) notFound();
 
   const fm = entry.frontmatter;
   const title = locale === "zh" ? fm.title : fm.title_en;
+  const faqs = (fm.faqs || []).map((f) => ({
+    question: locale === "zh" ? f.question.zh : f.question.en,
+    answer: locale === "zh" ? f.answer.zh : f.answer.en,
+  }));
 
   return (
     <main className="flex-1">
@@ -73,6 +79,7 @@ export default async function NewsDetailPage({
           { name: title, url: `https://gta6.sohou.xyz/${locale}/news/${slug}` },
         ]}
       />
+      {faqs.length > 0 && <FaqJsonLd faqs={faqs} />}
       <article className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
         <DetailBreadcrumb
           items={[
@@ -101,6 +108,27 @@ export default async function NewsDetailPage({
         </header>
 
         <MarkdownContent content={splitLocaleContent(entry.content, locale as "zh" | "en")} />
+
+        {faqs.length > 0 && (
+          <section className="mt-10">
+            <h2 className="text-xl font-semibold tracking-tight">{tFaq("title")}</h2>
+            <div className="mt-4 space-y-3">
+              {faqs.map((faq) => (
+                <details
+                  key={faq.question}
+                  className="group rounded-xl border border-white/10 bg-[#14141c] px-4 py-3 open:border-fuchsia-500/40"
+                >
+                  <summary className="cursor-pointer list-none text-sm font-medium text-zinc-100 marker:hidden [&::-webkit-details-marker]:hidden">
+                    {faq.question}
+                  </summary>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">{faq.answer}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {fm.purchaseLinks && <PurchaseLinks locale={locale as "zh" | "en"} />}
 
         <SourceList sources={fm.sources || []} label={tCommon("sources")} locale={locale as "zh" | "en"} />
 

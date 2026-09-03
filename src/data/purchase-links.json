@@ -1,0 +1,48 @@
+{
+  "title": {
+    "zh": "去哪预购",
+    "en": "Where to Pre-Order"
+  },
+  "disclosure": {
+    "zh": "标注「推广」的链接为联盟链接：通过它下单价格不变，但我们会获得少量佣金用于站点运营。",
+    "en": "Links marked \"ad\" are affiliate links: your price stays the same, and we earn a small commission that keeps this site running."
+  },
+  "stores": [
+    {
+      "id": "playstation",
+      "label": {
+        "zh": "PlayStation Store（PS5）",
+        "en": "PlayStation Store (PS5)"
+      },
+      "url": "https://store.playstation.com/concept/10000730",
+      "affiliateQuery": ""
+    },
+    {
+      "id": "xbox",
+      "label": {
+        "zh": "Xbox Store（Series X|S）",
+        "en": "Xbox Store (Series X|S)"
+      },
+      "url": "https://www.xbox.com/en-us/games/store/grand-theft-auto-vi/9nl3wwnzlzzn",
+      "affiliateQuery": ""
+    },
+    {
+      "id": "rockstar",
+      "label": {
+        "zh": "Rockstar 官方商店",
+        "en": "Rockstar Store"
+      },
+      "url": "https://store.rockstargames.com/game/buy-gta-vi",
+      "affiliateQuery": ""
+    },
+    {
+      "id": "amazon",
+      "label": {
+        "zh": "Amazon（实体版）",
+        "en": "Amazon (Physical)"
+      },
+      "url": "https://www.amazon.com/s?k=grand+theft+auto+vi",
+      "affiliateQuery": ""
+    }
+  ]
+}
