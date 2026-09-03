@@ -4,6 +4,7 @@ title_en: GTA 6 PS5 Disc Hopes Seemingly Dashed by Rockstar Source
 status: speculated
 last_updated: 2026-06-27
 date: 2026-06-27
+tags: [release]
 author: Push Square
 summary: GTA6 首发将不包含蓝光实体光盘，引发实体游戏爱好者强烈不满。Rockstar 尚未公开解释为何将本世代最受期待的游戏以"盒装兑换码"形式发售，但业内人士推测此举主要为了防止泄露——若零售商提前突破发售日禁令，实体盘流入市场的泄露风险将大幅增加。
 summary_en: Flying disc. GTA 6 will launch without a Blu-ray disc, causing frustration among physical fans. Rockstar hasn't cited a reason for its decision to ship the most anticipated game of the generation as a code in a box, but the likelihood is to avoid leaks, which surely would have happened if retailers broke street dates.

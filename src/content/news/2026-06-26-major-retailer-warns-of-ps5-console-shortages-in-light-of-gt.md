@@ -4,6 +4,7 @@ title_en: Major Retailer Warns of PS5 Console Shortages in Light of GTA 6
 status: speculated
 last_updated: 2026-06-26
 date: 2026-06-26
+tags: [industry, release]
 author: Push Square
 summary: 供不应求。今年年末的假期档（商战期）将会非常引人瞩目：不仅PS5主机的售价创下了历史新高，本世代最重磅的游戏大作《GTA 6》也将于今年11月强势来袭。这两个事实在某种程度上是环环相扣的，因为届时会有许多人……
 summary_en: More demand than supply. This holiday season will be very interesting to follow; not only are PS5 consoles more expensive than ever, but the biggest game of the generation, GTA 6, is on the way this November. These two facts are somewhat intertwined, as there will be many people

@@ -4,6 +4,7 @@ title_en: "As the legal hunt for the GTA 6 leaker continues, Take-Two reportedly
 status: speculated
 last_updated: 2026-09-01
 date: 2026-09-01
+tags: [leaks]
 author: Sherif Saed
 summary: "据 Eurogamer 报道，Take-Two 针对两周前 GTA6 大规模泄漏的源头追查持续升级：发行商已再次向法院申请 Discord 传票，这次点名了具体个人，并请求法院对传票细节保密封存、不对外公开。"
 summary_en: "Rockstar parent company Take-Two has escalated its hunt for the people behind the numerous Grand Theft Auto 6 leaks from two weeks ago. The publisher has filed a request for another subpoena, though this time it's asking the court to withhold the details from the public and keep it sealed."

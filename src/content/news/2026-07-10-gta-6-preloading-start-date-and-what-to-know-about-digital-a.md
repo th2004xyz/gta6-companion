@@ -4,6 +4,7 @@ title_en: "GTA 6 Preloading: Start Date And What To Know About Digital And Physi
 status: speculated
 last_updated: 2026-07-10
 date: 2026-07-10
+tags: [release]
 author: Eddie Makuch
 summary: 经过多年的开发以及多次跳票后，Rockstar 的《Grand Theft Auto VI（GTA 6）》终于将于 11 月 19 日 正式发售，现在玩家已经可以**预购（Pre-order）**这款游戏了。这款售价 80 美元 的游戏将于 11 月 19 日 上线，而玩家还可以提前一周进行预载（Preload），对于数量庞大的玩家来说，这无疑是个不错的消息。
 summary_en: After years of development and multiple delays, Rockstar's Grand Theft Auto 6 is finally launching on November 19, and you can now actually preorder the game. The $80 game arrives on November 19, but you can preload it a week earlier, which is nice for the countless people eager to jump in on day one.

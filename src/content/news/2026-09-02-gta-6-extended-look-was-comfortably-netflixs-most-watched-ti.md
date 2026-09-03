@@ -4,6 +4,7 @@ title_en: "GTA 6 Extended Look Was Comfortably Netflix's Most-Watched Title of L
 status: confirmed
 last_updated: 2026-09-02
 date: 2026-09-02
+tags: [marketing]
 author: Push Square
 summary: "Netflix 每周收视榜显示：GTA6 实机演示《An Extended Look》以 3110 万次观看大幅领跑全球榜单，是当周第二名难以企及的量级——而这只是 8 月 27 日至 30 日四天的数据，YouTube 等平台的播放量另计。"
 summary_en: "\"My AC!\". Rockstar Games made the unusual move to debut an extended look at GTA 6 on Netflix last week. While the video made its way onto YouTube and other sources eventually, the subscription service had dibs for six hours, and it seems that's paid off quite nicely. Netflix's weekly top 10 charts show that the GTA 6 video was its most-watched title globally by some distance; it accrued 31.1 million views between 27th and 30th August."

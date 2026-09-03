@@ -4,6 +4,7 @@ title_en: GTA 6 Screenshots Unlikely to Be Running Real-Time on PS5, Tech Expert
 status: speculated
 last_updated: 2026-06-26
 date: 2026-06-26
+tags: [marketing]
 author: Push Square
 summary: 说句大实话。如果你在游戏发烧友圈子里混迹已久，肯定对“bullshots”（官方美化/欺诈性截图）这个词不会陌生。现在我们已经不怎么能听到它了——我特意去翻了翻 Push Square 的历史存档，发现自 2016 年以来，我就再没在文章标题里用过这个词——但对于那些……
 summary_en: Reality check. If you’ve been in the gaming enthusiast arena for a long time, you’ll be familiar with the phrase ‘bullshots’. We don’t hear it very often anymore – I did a quick search through the Push Square archives, and I haven’t used it in a headline since 2016 – but for thos

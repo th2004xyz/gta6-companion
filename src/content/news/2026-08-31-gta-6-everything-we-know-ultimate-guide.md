@@ -4,6 +4,7 @@ title_en: "GTA 6 Ultimate Guide: Release Date, Map, Characters, Gameplay, Price,
 status: confirmed
 last_updated: 2026-08-31
 date: 2026-08-31
+tags: [release, gameplay, characters]
 author: GTA6 Companion Editorial
 summary: "GTA 6 一切已知信息终极汇总：11 月 19 日发售、$79.99/$99.99、莱昂尼达州与罪恶城、双主角系统、罪犯档案、六星通缉、数十种活动。本文持续更新，是发售前信息基准页。"
 summary_en: "The definitive GTA 6 info hub: Nov 19 launch, $79.99/$99.99, Leonida & Vice City, dual protagonists, the Criminal Record system, six-star wanted levels, and dozens of activities. Continuously updated — the baseline page for pre-release facts."

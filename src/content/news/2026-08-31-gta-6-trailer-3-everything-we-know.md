@@ -4,6 +4,7 @@ title_en: "GTA 6 Trailer 3: Has It Been Announced? What the 'Main Course and Des
 status: confirmed
 last_updated: 2026-08-31
 date: 2026-08-31
+tags: [marketing]
 author: GTA6 Companion Editorial
 summary: "Trailer 3 是 GTA6 发售前最受关注的物料。本文汇总：官方从未宣布名为「Trailer 3」的预告；8 月 27 日已发布 26 分钟实机演示《An Extended Look》；Zelnick 预告「主菜和甜点」；媒体试玩、GTA Online 揭示等后续节点分析。"
 summary_en: "Trailer 3 is the most anticipated pre-release asset. Facts: Rockstar has never announced anything called 'Trailer 3'; the 26-minute Extended Look premiered Aug 27; Zelnick teased 'main course and dessert'; here's our read on media previews, the Online reveal, and what comes next."
