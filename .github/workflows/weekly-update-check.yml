@@ -1,0 +1,66 @@
+name: Weekly Update Check
+
+# 每周更新例行机制：每周一北京时间 09:00 检查 src/data/weekly-updates.json
+# 若本周（周一 00:00 起尚无任何更新条目，则自动开一个 GitHub Issue 提醒补录。
+#
+# weekly-updates.json 约定：updates[].date 为条目所属日期（YYYY-MM-DD，北京时间）。
+# 只要本周内有任意一条 date >= 本周一，即视为已更新，不开 Issue。
+
+on:
+  schedule:
+    # 01:00 UTC 周一 = 09:00 北京时间周一
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check weekly-updates.json for this week's entries
+        id: check
+        run: |
+          node -e '
+          const fs = require("fs");
+          const data = JSON.parse(fs.readFileSync("src/data/weekly-updates.json", "utf8"));
+          // 本周一（北京时间）
+          const now = new Date(Date.now() + 8 * 3600 * 1000);
+          const monday = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - ((now.getUTCDay() + 6) % 7)));
+          const mondayISO = monday.toISOString().slice(0, 10);
+          const sunday = new Date(monday.getTime() + 6 * 86400000).toISOString().slice(0, 10);
+          const entries = (data.updates || []).filter(u => u.date >= mondayISO && u.date <= sunday);
+          const count = entries.length;
+          console.log(`本周区间: ${mondayISO} ~ ${sundayISO}，条目数: ${count}`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `count=${count}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `week=${mondayISO}\n`);
+          '
+
+      - name: Open reminder issue if not updated
+        if: steps.check.outputs.count == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          WEEK="${{ steps.check.outputs.week }}"
+          gh label create "routine" --color "0e8a16" --description "例行事务" 2>/dev/null || true
+          if gh issue list --state open --search "weekly-update in:title" --json number --jq 'length' | grep -q '^0$'; then
+            gh issue create \
+              --title "weekly-update: ${WEEK} 周更新未录入" \
+              --body "每周更新例行检查发现：**${WEEK}** 这一周（${WEEK} 起）的 weekly-updates.json 尚无任何条目。
+
+          请按例行流程补录：
+          1. 汇总上周（周一至周日）站点新增内容与本周热点新闻
+          2. 更新 `src/data/weekly-updates.json`（weekLabel + updates 条目）
+          3. 提交并推送 main，Vercel 自动部署
+
+          本 Issue 由每周一 09:00（北京时间）的定时检查自动创建。" \
+              --label "routine"
+            echo "已创建提醒 Issue。"
+          else
+            echo "已有未关闭的 weekly-update 提醒 Issue，跳过。"
+          fi

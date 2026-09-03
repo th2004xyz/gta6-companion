@@ -269,6 +269,7 @@ fetch-news.ts ──► news-drafts 分支 ──► 双语润色 + status 标�
 | v1.0 | 2026-08-30 | 首版：战略转向内容+轻工具双轮，确立霓虹设计系统，P0-P3 路线图 |
 | v1.1 | 2026-08-31 | P0 执行完成：修复 B1-B4、重刷霓虹主题、补发实机解析 ×3、管线根因修复（YAML 冒号值 / MDX HTML 注释 / 裸 URL 尖括号三处炸弹 + fetch-news.ts 模板加固 + validate-frontmatter.js 校验脚本） |
 | v1.2 | 2026-09-03 | P1 收尾 + P2 首批：新闻管线编辑流程跑通（5 篇发布/2 篇去重）、FAQ schema、affiliate 链接位、邮件唤醒序列、OG 图霓虹化 |
+| v1.3 | 2026-09-03 | P1 档案补录完成（角色 5→10、载具 9→24、活动 18→20）+ 每周更新例行机制（GitHub Actions 周一自动检查并开 Issue 提醒）；延后项（Amazon Associates、Resend 域名验证）维持待办 |
 
 ### P0 执行记录（2026-08-31）
 
