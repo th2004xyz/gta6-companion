@@ -304,9 +304,14 @@ fetch-news.ts ──► news-drafts 分支 ──► 双语润色 + status 标�
 
 ## 8. 下一步（P1 剩余 / P2）
 
+### 延后事项（人工/账号类，暂缓执行 —— 2026-09-03 决定）
+
+- [ ] ⏸️ affiliate 联盟 ID 落地：注册 Amazon Associates 等（含账号审核周期），拿到 ID 后回填 `src/data/purchase-links.json` 各渠道的 `affiliateQuery` 字段即可生效，无需改代码
+- [ ] ⏸️ 邮件唤醒生产配置：Resend 验证域名 → 配置 `RESEND_FROM` / `WAKEUP_SECRET` 到生产环境（Vercel/Cloudflare）与 GitHub Secrets 同名项。**注意：这两项必须在 11-12 预载日前完成**，否则唤醒邮件发不出去
+
+### 待办（按优先级）
+
 - [ ] P1: 每周更新例行机制落地（每周一更新 weekly-updates.json，可考虑自动化）
-- [ ] P2: affiliate 联盟 ID 落地（注册 Amazon Associates 等，回填 purchase-links.json 的 affiliateQuery）
-- [ ] P2: 邮件唤醒生产配置（Resend 验证域名 + 配置 RESEND_FROM / WAKEUP_SECRET 到生产环境与 GitHub Secrets）
-- [ ] P2: favicon 霓虹化重设计
 - [ ] P1: 档案补录（角色 ≥ 10、载具 ≥ 20、活动 ≥ 20，待 Trailer 3 / 媒体试玩新信息）
+- [ ] P2: favicon 霓虹化重设计
 - [ ] P3: 发售周决战准备（预载指南页、首页「已发售」模式、Wiki 化 SPEC v2.0）
