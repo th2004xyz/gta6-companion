@@ -4,6 +4,7 @@ title_en: GTA Online Beginner’s Guide
 status: speculated
 last_updated: 2026-07-02
 date: 2026-07-02
+tags: [online]
 author: Cheri Faulkner
 summary: With the GTA 6 release date creeping up ever faster, you might want to scratch the GTA-shaped itch that we're all getting. GTA Online has been around for years, but there's never been a better time to jump into the sprawling sandbox. If you've never stepped foot in Rockstar's sha
 summary_en: With the GTA 6 release date creeping up ever faster, you might want to scratch the GTA-shaped itch that we're all getting. GTA Online has been around for years, but there's never been a better time to jump into the sprawling sandbox. If you've never stepped foot in Rockstar's sha

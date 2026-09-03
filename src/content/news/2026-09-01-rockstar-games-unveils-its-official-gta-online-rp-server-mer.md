@@ -4,6 +4,7 @@ title_en: "Rockstar Games unveils its official GTA Online RP server, mere months
 status: confirmed
 last_updated: 2026-09-01
 date: 2026-09-01
+tags: [online]
 author: Kaan Serin
 summary: "Rockstar 正式公开与 NoPixel 合作的 GTA Online 官方角色扮演（RP）服务器计划，NoPixel 5 封闭测试将于下周开启、先以观战形式进行。此时距 GTA6 发售已不足三个月，官方对 GTA6 多人模式的口径依然谨慎。"
 summary_en: "Rockstar Games hasn't said much of anything about GTA 6's potential multiplayer offerings, but the developer is making strides for GTA Online's roleplaying community. A watch-only nopixel 5 closed beta is coming next week."

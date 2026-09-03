@@ -4,6 +4,7 @@ title_en: "Extended Look Breakdown (2): Leonida — A Neon City That Breathes"
 status: confirmed
 last_updated: 2026-08-28
 date: 2026-08-28
+tags: [gameplay]
 author: GTA6 Companion Editorial
 summary: "26 分钟实机演示展示了以迈阿密为原型的莱昂尼达州：NPC 生态随街区与时间动态变化、车流对混乱实时反应、天气在路面留下痕迹。IGN 评价其为「PS5 最佳画面」。"
 summary_en: "The 26-minute showcase puts Leonida — Rockstar's Florida-inspired state — on full display: NPC ecosystems that shift by neighborhood and hour, traffic that reacts to chaos, and weather that leaves marks on surfaces. IGN calls it the best visuals on PS5."

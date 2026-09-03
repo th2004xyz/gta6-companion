@@ -4,6 +4,7 @@ title_en: GTA Online Doesn’t Tell You These Things, But It Should
 status: speculated
 last_updated: 2026-07-02
 date: 2026-07-02
+tags: [online]
 author: Cheri Faulkner
 summary: 如果你已经玩了一段时间的《GTA在线模式》（GTA Online），可能对一些基础玩法已经驾轻就熟了，但这款游戏在光鲜的表面之下，其实还隐藏着海量的深度内容。自2013年上线以来，游戏历经了长期的迭代更新，不断加入全新的商战资产（businesses）、抢劫任务（heists）、载具以及各项优化改进，这让整个洛圣都（Los Santos）……
 summary_en: If you've been playing GTA Online for a little while now, you might be familiar with the basics but there's so much more hidden under the surface. The game has come a long way since its 2013 launch, adding new businesses, heists, vehicles, and other improvements that make Los San

@@ -4,6 +4,7 @@ title_en: GTA Online's Next Big Update, the Kortz Center Heist, Releases Next We
 status: speculated
 last_updated: 2026-07-09
 date: 2026-07-09
+tags: [online]
 author: Cade Onder
 summary: 《GTA Online》下一次大型更新《The Kortz Center Heist》将于下周正式上线，而玩家们已经发现了其中隐藏的几处与 Rockstar 有关的彩蛋。
 summary_en: GTA Online's next big update, The Kortz Center Heist, will officially release next week, and fans have already spotted a few Rockstar-related Easter eggs.

@@ -4,6 +4,7 @@ title_en: "YouTuber Claims Rockstar Confirmed Fans Measured Oxygen Levels Around
 status: speculated
 last_updated: 2026-09-02
 date: 2026-09-02
+tags: [gameplay]
 author: Virginia Glaze
 summary: "意大利 YouTuber Mike ShowSha 在 GTA6 Netflix 演示首播前受邀参观 Rockstar 园区，开发者向他透露：为了预判新预告片何时发布，过于狂热的粉丝竟然真的在园区周边测量氧气浓度变化。"
 summary_en: "Italian YouTuber Mike ShowSha got to visit Rockstar ahead of the company’s big GTA 6 Netflix showcase, where developers told him that overeager fans were literally measuring the oxygen levels around their campus in anticipation for a new trailer."

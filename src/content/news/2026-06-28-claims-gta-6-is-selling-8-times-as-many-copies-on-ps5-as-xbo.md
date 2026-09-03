@@ -4,6 +4,7 @@ title_en: Claims GTA 6 is selling 8 times as many copies on PS5 as Xbox "doesn't
 status: speculated
 last_updated: 2026-06-28
 date: 2026-06-28
+tags: [industry]
 author: Vikki Blake
 summary: 微软驳斥了有关其竞品主机 PlayStation 5 销量超越 Xbox 版《侠盗猎车手 6》（GTA 6）的传言，声称相关数据“并不能反映预购数据”，并坚称“我们的订单量创下了历史新高”。阅读更多
 summary_en: Microsoft has refuted claims that its rival system, the PlayStation 5, is outselling the Xbox edition of Grand Theft Auto 6, claiming that the figure "doesn't represent pre-order data" and insisting "we've had record orders".  Read more

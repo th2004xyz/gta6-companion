@@ -34,6 +34,7 @@ export default async function NewsPage({
         ? item.frontmatter.summary
         : item.frontmatter.summary_en || item.frontmatter.summary,
     status: item.frontmatter.status,
+    tags: item.frontmatter.tags || [],
   }));
 
   return (

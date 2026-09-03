@@ -4,6 +4,7 @@ title_en: Prepare for GTA 6 by Robbing an Art Gallery in GTA Online on PS5 Next 
 status: speculated
 last_updated: 2026-07-10
 date: 2026-07-10
+tags: [online]
 author: Push Square
 summary: 《GTA Online》下一次大型更新「科尔茨中心抢劫」（Kortz Center Heist）将于 7 月 14 日登陆 PS5 / PS4，支持单人与合作，要求玩家拥有豪宅并扩建全新艺术工作室，为 GTA6 发售提前热手。
 summary_en: Fake it until you take it. GTA Online's next major update sounds like a doozy for art lovers, and it's dropping as early as next week, 14th July, on PS5 and PS4 – with free upgrades available now on next-gen consoles. The Kortz Center Heist will be playable in both single player

@@ -4,6 +4,7 @@ title_en: "Extended Look Breakdown (3): Heists, Stealth, and Dozens of Activitie
 status: confirmed
 last_updated: 2026-08-28
 date: 2026-08-28
+tags: [gameplay]
 author: GTA6 Companion Editorial
 summary: "实机演示完整展示了新抢劫流程（面罩、3D 建筑小地图规划、无声撬锁）、载具新系统（燃油/电瓶/后备箱/追踪装置）以及篮球、健身、水上摩托、跳伞、钓鱼、夜店经营等大量休闲活动——甚至还有戴着 VR 装置的滑稽场面。"
 summary_en: The showcase fully details the new heist flow (masks, 3D building blueprints, silent lockpicking), vehicle systems (fuel, battery, trunk, trackers), and a huge slate of leisure activities — basketball, gym workouts, jet skis, skydiving, fishing, club management, and even a comedic VR headset sequence.

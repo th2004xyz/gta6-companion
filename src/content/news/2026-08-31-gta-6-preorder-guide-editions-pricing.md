@@ -4,6 +4,7 @@ title_en: "GTA 6 Pre-Order Guide: Standard vs Ultimate, Pricing, Preload Date, a
 status: confirmed
 last_updated: 2026-09-03
 date: 2026-08-31
+tags: [release]
 purchaseLinks: true
 author: GTA6 Companion Editorial
 summary: "GTA 6 预购全攻略：标准版 $79.99、终极版 $99.99 怎么选？数字版 11 月 12 日开放预载，预购送「罪恶都市怀旧包」，数字预购额外送 1 个月 GTA+。附购买渠道对比与省钱建议。"

@@ -4,6 +4,7 @@ title_en: GTA 6 Would Probably Run on the Steam Machine
 status: speculated
 last_updated: 2026-07-02
 date: 2026-07-02
+tags: [release]
 author: Jacqueline Thomas
 summary: 《Grand Theft Auto 6》不会马上登陆 PC 平台，但它迟早会出 PC 版。到时候，它应该能在 Steam Machine 上跑得动，只不过得开低特效（低画质）。
 summary_en: Grand Theft Auto 6 isn't coming out on PC right away, but when it inevitably does, it should run on the Steam Machine, albeit at lower settings.

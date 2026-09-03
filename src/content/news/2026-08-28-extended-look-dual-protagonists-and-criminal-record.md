@@ -4,6 +4,7 @@ title_en: "Extended Look Breakdown (1): Seamless Dual-Protagonist Switching and 
 status: confirmed
 last_updated: 2026-08-28
 date: 2026-08-28
+tags: [gameplay, characters]
 author: GTA6 Companion Editorial
 summary: "Rockstar 在 Netflix 独家首播的 26 分钟实机演示中，首次展示 Jason 与 Lucia 的无缝切换机制、随玩家行为变化的「罪犯档案」系统以及大幅进化的战斗 AI。全球直播峰值 397 万人同时观看，Twitch 一度宕机。"
 summary_en: Rockstar's 26-minute gameplay showcase premiered on Netflix reveals seamless switching between Jason and Lucia, a Criminal Record system that evolves with player behavior, and overhauled combat AI. The stream peaked at 3.97 million concurrent viewers and briefly crashed Twitch.

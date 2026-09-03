@@ -4,6 +4,7 @@ title_en: "The Grand Theft Auto run button has changed after 25 years - GTA 6 no
 status: confirmed
 last_updated: 2026-09-02
 date: 2026-09-02
+tags: [gameplay]
 author: Sherif Saed
 summary: "Eurogamer 确认：延续近 25 年的 GTA 系列「连打 X/A 键加速奔跑」操作在 GTA6 中正式终结，8 月 27 日实机演示显示新方案为按下左摇杆（L3）即可全速奔跑，手部疲劳时代宣告结束。"
 summary_en: "For nearly 25 years, Grand Theft Auto games have uniquely mapped your sprint movement to a face button on a controller. Although some Rockstar games offered alternate control schemes, the default has always required players to tap X or A (depending on your platform) to run. But GTA 6 is bucking the trend."
