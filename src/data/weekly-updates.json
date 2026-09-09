@@ -1,78 +1,51 @@
 {
   "weekLabel": {
-    "zh": "本周更新 · 8 月 31 日 – 9 月 6 日",
-    "en": "This Week · Aug 31 – Sep 6"
+    "zh": "本周更新 · 9 月 7 日 – 9 月 13 日",
+    "en": "This Week · Sep 7 – Sep 13"
   },
   "updates": [
     {
-      "date": "2026-09-02",
+      "date": "2026-09-08",
       "title": {
-        "zh": "《An Extended Look》4 天狂揽 3110 万次观看，登顶 Netflix 全球榜",
-        "en": "Extended Look hits 31.1M views in 4 days, tops Netflix worldwide"
+        "zh": "全球解锁时刻表曝光：63 个地区分批开服，新西兰最早、美英垫底",
+        "en": "Global unlock times surface: 63 regions roll out in waves, New Zealand first"
       },
       "summary": {
-        "zh": "Netflix 官方周榜：GTA6 实机演示断层式登顶，几乎在所有上榜国家排名第一，YouTube 播放量另计——史上最强游戏营销事件再添佐证。",
-        "en": "Netflix's official weekly chart has the GTA 6 showcase as the runaway #1 globally, with YouTube views on top."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-09-02-gta-6-extended-look-was-comfortably-netflixs-most-watched-ti"
+        "zh": "PS Store 页面显示 11 月 19 日各地时间午夜 0 点分批解锁，新西兰比墨西哥与中美洲早 19 小时进入罪恶城；因首发不含实体光盘，所有玩家都受平台排程约束。",
+        "en": "PlayStation Store listings show a midnight-local unlock on Nov 19 across 63 regions — New Zealand gets in 19 hours before Mexico and Central America. With no disc at launch, everyone is bound by the platforms' schedule."
       }
     },
     {
-      "date": "2026-09-02",
+      "date": "2026-09-08",
       "title": {
-        "zh": "25 年惯例终结：GTA6 奔跑键改为按下左摇杆",
-        "en": "After 25 years, the sprint button finally changes"
+        "zh": "索尼 State of Play 公布两款 GTA6 限定 DualSense，9 月 10 日开预售",
+        "en": "Two GTA 6 limited-edition DualSense controllers revealed at State of Play"
       },
       "summary": {
-        "zh": "实机演示确认 GTA6 取消连打 X 键加速奔跑，改为 L3 一键全速——伴随罪犯档案、六星通缉等系统革新的又一处细节。",
-        "en": "GTA 6 ditches the 25-year-old tap-to-sprint for a single L3 press, per the Extended Look."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-09-02-the-grand-theft-auto-run-button-has-changed-after-25-years-g"
+        "zh": "白色限量版与 Vice City 深色版两款，$84.99，9 月 10 日开启预售、11 月 19 日与游戏同日发售，全球限量发售。",
+        "en": "A white Limited Edition and a Vice City–inspired dark variant land at $84.99, with pre-orders opening Sep 10 and release on Nov 19 alongside the game — in limited quantities worldwide."
       }
     },
     {
-      "date": "2026-09-01",
+      "date": "2026-09-07",
       "title": {
-        "zh": "Rockstar 官宣 GTA Online 官方 RP 服务器，NoPixel 5 封测下周开启",
-        "en": "Rockstar unveils its official GTA Online RP server with NoPixel 5"
+        "zh": "Rockstar 确认枪械携带规则：两把隐蔽手枪，长枪必须外露",
+        "en": "Rockstar confirms gun-carry rules: two concealed pistols, visible long guns"
       },
       "summary": {
-        "zh": "Rockstar 首次官方下场 RP 服务器运营，观战模式封测下周上线；距 GTA6 发售不足三个月，多人模式动向值得关注。",
-        "en": "Rockstar's first official RP server arrives with a watch-only closed beta next week — an interesting signal ahead of GTA 6."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-09-01-rockstar-games-unveils-its-official-gta-online-rp-server-mer"
+        "zh": "Rob Nelson 确认主角可常备两把隐蔽手枪；长枪最多两把且必须可见——背上一把、手上一把，不能两把都背。NPC 与警察会对公开持械分级反应，多余武器可存进车辆或 Ammu-Nation 枪柜。",
+        "en": "Rob Nelson confirms two always-concealed handguns, while long guns stay visible — one on the back, one in hand. NPCs and police react in tiers to open carry, and spare weapons live in vehicles or Ammu-Nation lockers."
       }
     },
     {
-      "date": "2026-08-31",
+      "date": "2026-09-07",
       "title": {
-        "zh": "四大 P0 关键词页上线：终极汇总 / 预购指南 / PC 澄清 / Trailer 3 追踪",
-        "en": "Four P0 keyword pages live: ultimate guide, pre-order, PC, Trailer 3"
+        "zh": "开发总监：GTA6 不追求照片级真实，“目标是给人真实的感觉”",
+        "en": "Dev boss: GTA 6 isn't chasing photorealism — “the goal is to feel real”"
       },
       "summary": {
-        "zh": "「Everything We Know」终极汇总页成为全站内链枢纽；预购指南附 FAQ 结构化数据与官方购买渠道直链，冲刺 9 月底 SEO 收录目标。",
-        "en": "The Everything We Know hub anchors the site's internal linking, with the pre-order guide carrying FAQ schema and official store links."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-08-31-gta-6-everything-we-know-ultimate-guide"
-      }
-    },
-    {
-      "date": "2026-09-03",
-      "title": {
-        "zh": "站点升级：FAQ 富结果、预购渠道直链与全新霓虹 OG 分享图",
-        "en": "Site upgrade: FAQ rich results, store links, and a new neon OG card"
-      },
-      "summary": {
-        "zh": "新闻管线恢复每日编辑发布；Everything We Know 与预购页接入 FAQPage 结构化数据，OG 分享卡重制为 Vice City 霓虹风。",
-        "en": "Daily editorial pipeline restored; FAQPage schema on key pages and a redesigned Vice City neon share card."
+        "zh": "Rockstar North 开发总监 Rob Nelson 接受法媒采访时表示，画面当然会更好，但“完全真实不是我们的目标”，美术风格优先于技术参数的堆叠。",
+        "en": "Rockstar North's Rob Nelson says the visuals will improve, but photorealism “isn't the goal” — art direction takes priority over piling on technical specs."
       }
     }
   ]
