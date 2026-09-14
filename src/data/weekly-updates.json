@@ -1,59 +1,52 @@
 {
   "weekLabel": {
-    "zh": "本周更新 · 9 月 7 日 – 9 月 13 日",
-    "en": "This Week · Sep 7 – Sep 13"
+    "zh": "本周更新 · 9 月 14 日 – 9 月 20 日",
+    "en": "This Week · Sep 14 – Sep 20"
   },
   "updates": [
     {
-      "date": "2026-09-08",
+      "date": "2026-09-14",
       "title": {
-        "zh": "全球解锁时刻表曝光：63 个地区分批开服，新西兰最早、美英垫底",
-        "en": "Global unlock times surface: 63 regions roll out in waves, New Zealand first"
+        "zh": "迈阿密线下营销推进：横幅 10 月 10 日亮相，Rockstar 出资约 300 万美元",
+        "en": "Miami outdoor campaign moves forward: banners land Oct 10, Rockstar pays ~$3M"
       },
       "summary": {
-        "zh": "PS Store 页面显示 11 月 19 日各地时间午夜 0 点分批解锁，新西兰比墨西哥与中美洲早 19 小时进入罪恶城；因首发不含实体光盘，所有玩家都受平台排程约束。",
-        "en": "PlayStation Store listings show a midnight-local unlock on Nov 19 across 63 regions — New Zealand gets in 19 hours before Mexico and Central America. With no disc at launch, everyone is bound by the platforms' schedule."
+        "zh": "Rockstar 与迈阿密市政敲定协议后，GTA6 户外宣传物料（海报、横幅等）计划 10 月 10 日正式亮相，覆盖迈阿密多个地点；沙滩椅与遮阳伞上将低调打上 \"VI\" 与 Vice City 标识。社交平台还流出疑似 GTA6 达人宣传套装的图片。",
+        "en": "Following the deal with Miami authorities, GTA 6 outdoor materials (posters, banners) are set to appear Oct 10 across multiple Miami locations, with discreet \"VI\" and Vice City branding on beach chairs and umbrellas. Leaked creator kit images have also surfaced."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-08-grand-theft-auto-6-worldwide-unlock-times-revealed-and-xbox"
+        "slug": "2026-09-11-i-dont-think-its-worth-any-amount-of-money-controversial-rea"
       }
     },
     {
-      "date": "2026-09-08",
+      "date": "2026-09-11",
       "title": {
-        "zh": "索尼 State of Play 公布两款 GTA6 限定 DualSense，9 月 10 日开预售",
-        "en": "Two GTA 6 limited-edition DualSense controllers revealed at State of Play"
+        "zh": "解雇案听证会开庭：工会指 Rockstar 用\"内鬼\"监控员工 Discord 21 个月",
+        "en": "Tribunal begins: IWGB alleges Rockstar used a mole to monitor staff Discord for 21 months"
       },
       "summary": {
-        "zh": "白色限量版与 Vice City 深色版两款，$84.99，9 月 10 日开启预售、11 月 19 日与游戏同日发售，全球限量发售。",
-        "en": "A white Limited Edition and a Vice City–inspired dark variant land at $84.99, with pre-orders opening Sep 10 and release on Nov 19 alongside the game — in limited quantities worldwide."
+        "zh": "31 名被解雇员工的劳动仲裁在格拉斯哥开庭，预计持续到 10 月 16 日。工会 IWGB 称 Rockstar 直到工会支持率突破 10% 认证门槛才突然\"清洗\"工会核心组织者；Rockstar 以保密文化和机密泄露为由辩护。",
+        "en": "The tribunal over 31 sacked Rockstar staff opened in Glasgow, running to Oct 16. IWGB says Rockstar moved only after union support crossed the UK's 10% recognition threshold; Rockstar defends the dismissals as leak-related, citing bank-level confidentiality culture."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-08-gta-6-limited-edition-dualsense-controllers-state-of-play"
+        "slug": "2026-09-11-it-would-have-been-insanity-to-take-no-action-fiery-opening"
       }
     },
     {
-      "date": "2026-09-07",
+      "date": "2026-09-11",
       "title": {
-        "zh": "Rockstar 确认枪械携带规则：两把隐蔽手枪，长枪必须外露",
-        "en": "Rockstar confirms gun-carry rules: two concealed pistols, visible long guns"
+        "zh": "迈阿密海滩市以 4:3 批准与 Rockstar 谈判 GTA6 营销合作，总额或近 400 万美元",
+        "en": "Miami Beach votes 4–3 to open GTA 6 marketing talks with Rockstar, worth up to ~$4M"
       },
       "summary": {
-        "zh": "Rob Nelson 确认主角可常备两把隐蔽手枪；长枪最多两把且必须可见——背上一把、手上一把，不能两把都背。NPC 与警察会对公开持械分级反应，多余武器可存进车辆或 Ammu-Nation 枪柜。",
-        "en": "Rob Nelson confirms two always-concealed handguns, while long guns stay visible — one on the back, one in hand. NPCs and police react in tiers to open carry, and spare weapons live in vehicles or Ammu-Nation lockers."
-      }
-    },
-    {
-      "date": "2026-09-07",
-      "title": {
-        "zh": "开发总监：GTA6 不追求照片级真实，“目标是给人真实的感觉”",
-        "en": "Dev boss: GTA 6 isn't chasing photorealism — “the goal is to feel real”"
+        "zh": "市委员会微弱多数通过谈判授权：合作金额约 300 万美元、总收益有望接近 400 万，部分收益将资助当地公共项目。品牌露出被严格限制在私营沙滩设施，反对者担忧城市形象与游戏内容绑定。",
+        "en": "Miami Beach commissioners narrowly approved negotiations: ~$3M from Rockstar, potentially near $4M in total benefit, partly funding local public projects. Branding stays limited to private beach gear; critics worry about the city's image."
       },
-      "summary": {
-        "zh": "Rockstar North 开发总监 Rob Nelson 接受法媒采访时表示，画面当然会更好，但“完全真实不是我们的目标”，美术风格优先于技术参数的堆叠。",
-        "en": "Rockstar North's Rob Nelson says the visuals will improve, but photorealism “isn't the goal” — art direction takes priority over piling on technical specs."
+      "link": {
+        "collection": "news",
+        "slug": "2026-09-11-i-dont-think-its-worth-any-amount-of-money-controversial-rea"
       }
     }
   ]
