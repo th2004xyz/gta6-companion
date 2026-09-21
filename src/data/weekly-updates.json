@@ -1,52 +1,74 @@
 {
   "weekLabel": {
-    "zh": "本周更新 · 9 月 14 日 – 9 月 20 日",
-    "en": "This Week · Sep 14 – Sep 20"
+    "zh": "本周更新 · 9 月 21 日 – 9 月 27 日",
+    "en": "This Week · Sep 21 – Sep 27"
   },
   "updates": [
     {
-      "date": "2026-09-14",
+      "date": "2026-09-21",
       "title": {
-        "zh": "迈阿密线下营销推进：横幅 10 月 10 日亮相，Rockstar 出资约 300 万美元",
-        "en": "Miami outdoor campaign moves forward: banners land Oct 10, Rockstar pays ~$3M"
+        "zh": "Rockstar 更新官方 Mod 指引：单机改装仍被容忍，付费与多人都被收进 Creator 平台",
+        "en": "Rockstar updates official mod guidelines: single-player tolerated, monetisation pulled into its Creator Platform"
       },
       "summary": {
-        "zh": "Rockstar 与迈阿密市政敲定协议后，GTA6 户外宣传物料（海报、横幅等）计划 10 月 10 日正式亮相，覆盖迈阿密多个地点；沙滩椅与遮阳伞上将低调打上 \"VI\" 与 Vice City 标识。社交平台还流出疑似 GTA6 达人宣传套装的图片。",
-        "en": "Following the deal with Miami authorities, GTA 6 outdoor materials (posters, banners) are set to appear Oct 10 across multiple Miami locations, with discreet \"VI\" and Vice City branding on beach chairs and umbrellas. Leaked creator kit images have also surfaced."
+        "zh": "官网 Community Resources 下的 Mod Guidelines 页面更新（页面日期 9 月 10 日），覆盖含 GTA6 在内的全线作品。PC 单机改装在非商业、不干扰线上、不跨作搬运 IP 的前提下继续可行；剧情扩展、跨作品混搭、未授权移植与 Creator 平台之外的商业化全部被禁。",
+        "en": "Rockstar's Mod Guidelines page (dated Sep 10) now applies across its catalogue, GTA 6 included. PC single-player mods survive under strict non-commercial conditions, while story expansions, cross-title mashups, unofficial ports and any monetisation outside the licensed Creator Platform are barred."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-11-i-dont-think-its-worth-any-amount-of-money-controversial-rea"
+        "slug": "2026-09-21-rockstar-updates-official-mod-guidelines-ahead-of-gta-6"
       }
     },
     {
-      "date": "2026-09-11",
+      "date": "2026-09-17",
       "title": {
-        "zh": "解雇案听证会开庭：工会指 Rockstar 用\"内鬼\"监控员工 Discord 21 个月",
-        "en": "Tribunal begins: IWGB alleges Rockstar used a mole to monitor staff Discord for 21 months"
+        "zh": "官方专辑《GTA VI: The Album》公布：34 首原创曲目 11 月 19 日同步发售",
+        "en": "Grand Theft Auto VI: The Album announced — 34 original tracks landing November 19"
       },
       "summary": {
-        "zh": "31 名被解雇员工的劳动仲裁在格拉斯哥开庭，预计持续到 10 月 16 日。工会 IWGB 称 Rockstar 直到工会支持率突破 10% 认证门槛才突然\"清洗\"工会核心组织者；Rockstar 以保密文化和机密泄露为由辩护。",
-        "en": "The tribunal over 31 sacked Rockstar staff opened in Glasgow, running to Oct 16. IWGB says Rockstar moved only after union support crossed the UK's 10% recognition threshold; Rockstar defends the dismissals as leak-related, citing bank-level confidentiality culture."
+        "zh": "Rockstar 与 Atlantic Records 合作推出官方专辑，34 首为游戏创作的曲目与 GTA6 同日发售，Yung Lean、Travis Scott、Future、Metro Boomin、Morgan Wallen、Keith Richards 在列，六首先行单曲已上线。实体版分 CD 19.98、黑胶 49.98、限量充液黑胶 124.98 美元。",
+        "en": "Made with Atlantic Records, the 34-track companion album ships alongside GTA VI on November 19. Six singles are streaming now, and CD, standard vinyl and a $124.98 limited liquid-filled vinyl are up for pre-order."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-11-it-would-have-been-insanity-to-take-no-action-fiery-opening"
+        "slug": "2026-09-17-grand-theft-auto-vi-the-album-34-original-tracks-november-19"
       }
     },
     {
-      "date": "2026-09-11",
+      "date": "2026-09-17",
       "title": {
-        "zh": "迈阿密海滩市以 4:3 批准与 Rockstar 谈判 GTA6 营销合作，总额或近 400 万美元",
-        "en": "Miami Beach votes 4–3 to open GTA 6 marketing talks with Rockstar, worth up to ~$4M"
+        "zh": "Take-Two 股东大会：发售时不预期 recurring spending，PC 版依旧不松口",
+        "en": "Take-Two AGM: no recurrent spending expected at launch, PC version still unannounced"
       },
       "summary": {
-        "zh": "市委员会微弱多数通过谈判授权：合作金额约 300 万美元、总收益有望接近 400 万，部分收益将资助当地公共项目。品牌露出被严格限制在私营沙滩设施，反对者担忧城市形象与游戏内容绑定。",
-        "en": "Miami Beach commissioners narrowly approved negotiations: ~$3M from Rockstar, potentially near $4M in total benefit, partly funding local public projects. Branding stays limited to private beach gear; critics worry about the city's image."
+        "zh": "Zelnick 称本次发售不预期出现鲨鱼卡式持续付费收入，发售端就是单机；PC 平台\"越来越重要\"但无版本无日期。被股东当面质疑多年延期时，他搬出 2007 年至今营收与股价数据逐条反驳。",
+        "en": "Zelnick said \"no recurrent consumer spending anticipated with regard to this launch\" and offered no date or window for PC. He also pushed back hard on an investor's charge of years of delays, citing growth since 2007."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-11-i-dont-think-its-worth-any-amount-of-money-controversial-rea"
+        "slug": "2026-09-17-take-two-agm-no-recurrent-spending-at-gta-6-launch"
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "title": {
+        "zh": "Rockstar 开发主管 Rob Nelson：GTA6 是团队史上\"最大、最深、最密集、最复杂\"的世界",
+        "en": "Rockstar's Rob Nelson: GTA 6 is the studio's \"biggest, deepest, densest, most complex\" world yet"
+      },
+      "summary": {
+        "zh": "Nelson 向 IGN 表示，GTA6 延续《荒野大镖客 2》\"打造完全实现且感觉一致的世界\"的设计路径，同时在设计层面既是 GTA5 的续作也是 RDR2 的续作——杰森的\"死神之眼\"与生物收集等机制都来自后者。",
+        "en": "Speaking to IGN, Nelson framed GTA 6 as the continuation of the Red Dead Redemption 2 design philosophy taken further — \"the biggest, deepest, densest, most complex world\" the studio has built."
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "title": {
+        "zh": "东京电玩展 GTA6 展台开门十分钟即限流；听证会材料称 32 人在线格式是\"公司最高机密\"",
+        "en": "TGS queue caps within ten minutes; tribunal filings call GTA 6 Online's 32-player format a closely guarded secret"
+      },
+      "summary": {
+        "zh": "TGS 现场 GTA6 展台队伍在开放约十分钟后因满员关闭，热度可见一斑。另一边，苏格兰格拉斯哥的听证会材料提到 GTA6 的 32 人在线格式，Rockstar 法律文件将其形容为\"公司最高机密之一\"——但这是庭审材料，不是官方规格。",
+        "en": "The GTA 6 booth line at Tokyo Game Show closed to new entries roughly ten minutes after opening. Meanwhile, Glasgow tribunal filings reference a 32-player online format for GTA VI, described in Rockstar's submissions as one of the company's most closely guarded secrets — court material, not an official spec."
       }
     }
   ]
