@@ -1,74 +1,67 @@
 {
   "weekLabel": {
-    "zh": "本周更新 · 9 月 21 日 – 9 月 27 日",
-    "en": "This Week · Sep 21 – Sep 27"
+    "zh": "近期更新 · 9 月 24 日 – 10 月 11 日",
+    "en": "Latest · Sep 24 – Oct 11"
   },
   "updates": [
     {
-      "date": "2026-09-21",
+      "date": "2026-10-05",
       "title": {
-        "zh": "Rockstar 更新官方 Mod 指引：单机改装仍被容忍，付费与多人都被收进 Creator 平台",
-        "en": "Rockstar updates official mod guidelines: single-player tolerated, monetisation pulled into its Creator Platform"
+        "zh": "LOVE Magazine Issue 27 上架报刊亭，GTA6 跨界封面售罄；M / PEGI 18 分级确认",
+        "en": "LOVE Magazine Issue 27 hits newsstands after a sold-out GTA 6 cover; M / PEGI 18 ratings confirmed"
       },
       "summary": {
-        "zh": "官网 Community Resources 下的 Mod Guidelines 页面更新（页面日期 9 月 10 日），覆盖含 GTA6 在内的全线作品。PC 单机改装在非商业、不干扰线上、不跨作搬运 IP 的前提下继续可行；剧情扩展、跨作品混搭、未授权移植与 Creator 平台之外的商业化全部被禁。",
-        "en": "Rockstar's Mod Guidelines page (dated Sep 10) now applies across its catalogue, GTA 6 included. PC single-player mods survive under strict non-commercial conditions, while story expansions, cross-title mashups, unofficial ports and any monetisation outside the licensed Creator Platform are barred."
+        "zh": "时尚杂志 LOVE 的 GTA6 封面（Issue 27）10 月 5 日上架，此前 10 月 2 日公布即数分钟售罄；同期 ESRB「M」与 PEGI 18 分级确认，发行内容边界锁定。",
+        "en": "LOVE's GTA 6 cover (Issue 27) reached newsstands on October 5 after selling out within minutes of its October 2 reveal; ESRB 'M' and PEGI 18 ratings were also confirmed, locking regional content boundaries."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-21-rockstar-updates-official-mod-guidelines-ahead-of-gta-6"
+        "slug": "2026-10-02-love-magazine-issue-27-cover-age-rating-confirmed"
       }
     },
     {
-      "date": "2026-09-17",
+      "date": "2026-09-29",
       "title": {
-        "zh": "官方专辑《GTA VI: The Album》公布：34 首原创曲目 11 月 19 日同步发售",
-        "en": "Grand Theft Auto VI: The Album announced — 34 original tracks landing November 19"
+        "zh": "Game Informer 第 382 期数字版上线：GTA6 封面报道 + 12 张官方新截图",
+        "en": "Game Informer issue 382 goes digital: GTA 6 cover story with 12 new official screenshots"
       },
       "summary": {
-        "zh": "Rockstar 与 Atlantic Records 合作推出官方专辑，34 首为游戏创作的曲目与 GTA6 同日发售，Yung Lean、Travis Scott、Future、Metro Boomin、Morgan Wallen、Keith Richards 在列，六首先行单曲已上线。实体版分 CD 19.98、黑胶 49.98、限量充液黑胶 124.98 美元。",
-        "en": "Made with Atlantic Records, the 34-track companion album ships alongside GTA VI on November 19. Six singles are streaming now, and CD, standard vinyl and a $124.98 limited liquid-filled vinyl are up for pre-order."
+        "zh": "9 月 29 日 Game Informer 第 382 期数字版上线，约 14 页封面报道配合 12 张全新官方截图，是发售前首个权威媒体正式预览。",
+        "en": "On September 29 Game Informer issue 382's digital edition went live — a ~14-page cover feature with 12 brand-new official screenshots, the first proper preview from a major outlet before launch."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-17-grand-theft-auto-vi-the-album-34-original-tracks-november-19"
+        "slug": "2026-09-29-game-informer-issue-382-cover-story-12-screenshots"
       }
     },
     {
-      "date": "2026-09-17",
+      "date": "2026-09-29",
       "title": {
-        "zh": "Take-Two 股东大会：发售时不预期 recurring spending，PC 版依旧不松口",
-        "en": "Take-Two AGM: no recurrent spending expected at launch, PC version still unannounced"
+        "zh": "Game Informer 深度披露 GTA6 世界细节：动态天气、约 170 种野生动物、更大地图",
+        "en": "Game Informer details GTA 6's world: dynamic weather, ~170 wildlife species, a larger map"
       },
       "summary": {
-        "zh": "Zelnick 称本次发售不预期出现鲨鱼卡式持续付费收入，发售端就是单机；PC 平台\"越来越重要\"但无版本无日期。被股东当面质疑多年延期时，他搬出 2007 年至今营收与股价数据逐条反驳。",
-        "en": "Zelnick said \"no recurrent consumer spending anticipated with regard to this launch\" and offered no date or window for PC. He also pushed back hard on an investor's charge of years of delays, citing growth since 2007."
+        "zh": "配合封面报道，Game Informer 放出世界层细节：动态天气、约 170 种野生动物、更大地图尺度与更新的警察/通缉机制，均属 Rockstar 授权预览的官方口径。",
+        "en": "Alongside the cover story, Game Informer detailed world systems: dynamic weather, ~170 wildlife species, a larger map and revised police/wanted mechanics — all from Rockstar-sanctioned preview framing."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-09-17-take-two-agm-no-recurrent-spending-at-gta-6-launch"
+        "slug": "2026-09-29-game-informer-gta-6-world-details-weather-wildlife-map"
       }
     },
     {
-      "date": "2026-09-16",
+      "date": "2026-09-24",
       "title": {
-        "zh": "Rockstar 开发主管 Rob Nelson：GTA6 是团队史上\"最大、最深、最密集、最复杂\"的世界",
-        "en": "Rockstar's Rob Nelson: GTA 6 is the studio's \"biggest, deepest, densest, most complex\" world yet"
+        "zh": "Rockstar 推出 The Goodtime State Vice City Collection 周边套装：399.99 美元，不含游戏",
+        "en": "Rockstar unveils The Goodtime State Vice City Collection: a $399.99 merch box that does not include the game"
       },
       "summary": {
-        "zh": "Nelson 向 IGN 表示，GTA6 延续《荒野大镖客 2》\"打造完全实现且感觉一致的世界\"的设计路径，同时在设计层面既是 GTA5 的续作也是 RDR2 的续作——杰森的\"死神之眼\"与生物收集等机制都来自后者。",
-        "en": "Speaking to IGN, Nelson framed GTA 6 as the continuation of the Red Dead Redemption 2 design philosophy taken further — \"the biggest, deepest, densest, most complex world\" the studio has built."
-      }
-    },
-    {
-      "date": "2026-09-18",
-      "title": {
-        "zh": "东京电玩展 GTA6 展台开门十分钟即限流；听证会材料称 32 人在线格式是\"公司最高机密\"",
-        "en": "TGS queue caps within ten minutes; tribunal filings call GTA 6 Online's 32-player format a closely guarded secret"
+        "zh": "9 月 24 日 Rockstar 上架 399.99 美元周边收藏盒，含实体周边与数字内容但不含游戏本体，是发售前单价最高的官方周边。",
+        "en": "On September 24 Rockstar listed a $399.99 collector's box with physical merch and digital extras but no game — the highest-priced official merchandise of the pre-launch run."
       },
-      "summary": {
-        "zh": "TGS 现场 GTA6 展台队伍在开放约十分钟后因满员关闭，热度可见一斑。另一边，苏格兰格拉斯哥的听证会材料提到 GTA6 的 32 人在线格式，Rockstar 法律文件将其形容为\"公司最高机密之一\"——但这是庭审材料，不是官方规格。",
-        "en": "The GTA 6 booth line at Tokyo Game Show closed to new entries roughly ten minutes after opening. Meanwhile, Glasgow tribunal filings reference a 32-player online format for GTA VI, described in Rockstar's submissions as one of the company's most closely guarded secrets — court material, not an official spec."
+      "link": {
+        "collection": "news",
+        "slug": "2026-09-24-the-goodtime-state-vice-city-collection-rockstar-merch"
       }
     }
   ]
