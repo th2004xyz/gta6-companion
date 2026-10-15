@@ -1,9 +1,174 @@
 {
   "weekLabel": {
-    "zh": "近期更新 · 9 月 24 日 – 10 月 11 日",
-    "en": "Latest · Sep 24 – Oct 11"
+    "zh": "近期更新 · 10 月 8 日 – 10 月 15 日",
+    "en": "Latest · Oct 8 – Oct 15"
   },
   "updates": [
+    {
+      "date": "2026-10-14",
+      "title": {
+        "zh": "Bloomberg 万字长文揭秘 GTA6 开发史：NPC 单开洛杉矶工作室，确认「Project Americas」起源",
+        "en": "Bloomberg's GTA 6 development feature: an LA studio for NPCs, 'Project Americas' confirmed"
+      },
+      "summary": {
+        "zh": "Bloomberg 记者 Jason Schreier 获罕见工作室访问，披露 Rockstar 为填满 NPC 目标专设洛杉矶工作室，并首次官方确认 GTA6 起源于横跨南北美洲的「Project Americas」。",
+        "en": "Bloomberg's Jason Schreier got rare studio access, revealing Rockstar opened a dedicated LA studio for NPCs and officially confirming GTA 6 began as the multi-continent 'Project Americas.'"
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-14-bloomberg-gta-6-development-feature"
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "title": {
+        "zh": "Bloomberg 配图新截图：泥泞的 Jason 与 Lucia 在乡野喝啤酒，Ocean Drive 疑似新跑车 GranForma",
+        "en": "New Bloomberg stills: mud-caked Jason & Lucia in the countryside; Ocean Drive car hints at a 'GranForma'"
+      },
+      "summary": {
+        "zh": "随开发长文放出两张官方授权截图：满身泥泞的主角二人组在 Leonida 乡野，以及 Ocean Drive 日落下一台疑似 Pegassi 新 trim 的敞篷跑车（媒体读图，非官方命名）。",
+        "en": "Two Rockstar-sanctioned stills with the feature: a mud-caked Jason and Lucia in Leonida's backcountry, and a convertible on Ocean Drive the press reads as a possible Pegassi 'GranForma' (outlet's reading, not official)."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-14-bloomberg-screenshots-jason-lucia-granforma"
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "title": {
+        "zh": "GTA6 盒装预购美国告急：Amazon 暂停、Target 多地售罄",
+        "en": "GTA 6 boxed pre-orders run dry in the US: Amazon pauses, Target empties"
+      },
+      "summary": {
+        "zh": "截至 10 月 11 日，Amazon 美国站盒装兑换码版已无法预购，洛杉矶、纽约等地 Target 多店售罄；官方页面自 6 月起标注「售完即止」。",
+        "en": "As of October 11, Amazon US pulled the code-in-a-box pre-order and dense-area Target stores sold out; Rockstar's page has said 'while supplies last' since June."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-12-gta-6-boxed-preorders-sold-out-us-retailers"
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "title": {
+        "zh": "Goodyear 飞艇换上 Vice City 涂装飞往佛罗里达，GTA6 联动现实",
+        "en": "A Goodyear blimp wrapped in Vice City livery flies to Florida"
+      },
+      "summary": {
+        "zh": "一艘 Goodyear 齐柏林飞艇被包上 GTA VI「Vice City」涂装，从阿克伦飞往佛罗里达，虚构飞艇首度以真实品牌涂装现身。",
+        "en": "A Goodyear Zeppelin NT wrapped in GTA VI's 'Vice City' livery flew from Akron to Florida — the fictional airship's first real-world branding."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-12-goodyear-vice-city-blimp-gta-6-florida"
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "title": {
+        "zh": "Xbox 否认获得 GTA6 独占云串流权，PC 玩家发售日仍无法借云游戏畅玩",
+        "en": "Xbox denies exclusive GTA 6 cloud-streaming rights; PC players still can't stream it at launch"
+      },
+      "summary": {
+        "zh": "针对《The Verge》称微软获 GTA6 独占云串流权的报道，Xbox 首席战略官 Matthew Ball 正式否认：游戏 11 月 19 日登陆 Xbox，但不会以独占形式、也不会串流到 PC。",
+        "en": "After a Verge report claimed Microsoft secured exclusive cloud-streaming rights, Xbox CSO Matthew Ball denied it: “The excitement for GTA 6 and Xbox is great to see, but it has also led to some misreporting. We are looking forward to launching GTA 6 on Xbox November 19, but the game will not be streaming exclusively or to PC.” So PC players shouldn't expect to fire up Xbox Cloud Gaming on November 19 and roam Vice City without a console."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-07-gta-6-will-not-stream-to-pc-through-xbox-despite-earlier-rep"
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "title": {
+        "zh": "GTA6 PC 版发售日估算：基于 Rockstar 历史的 Q1 2028 预测",
+        "en": "GTA 6 PC release date estimate: a Q1 2028 guess based on Rockstar's history"
+      },
+      "summary": {
+        "zh": "主机版 11 月 19 日发售，PC 版未官宣。GameSpot 据 Rockstar 历代滞后规律估算 Q1 2028，强调并非泄露。",
+        "en": "Console launches November 19; no PC version announced. GameSpot estimates Q1 2028 from Rockstar's track record, stressing it's not a leak."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-07-gta-6-pc-release-date-estimate-rumors-and-news"
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "title": {
+        "zh": "GTA6：深度专访（Rob Nelson 实机演示 30 分钟）",
+        "en": "GTA 6: The Big Interview (Rob Nelson plays 30 minutes of gameplay)"
+      },
+      "summary": {
+        "zh": "IGN 放出与 Rockstar North 的 Rob Nelson 完整深度专访，Netflix 揭晓前夕实机演示 30 分钟，覆盖 Vice City、双主角与 NPC 自主行为。",
+        "en": "IGN published the full interview with Rockstar North's Rob Nelson, who played 30 minutes ahead of the Netflix reveal — covering Vice City, the dual protagonists and NPC autonomy."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-07-gta-6-the-big-interview"
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "title": {
+        "zh": "GTA6 不会让你像 GTA5 那样“全能”：NPC 也会有自己的意图",
+        "en": "GTA 6 won't make you “all-powerful” like GTA 5 — NPCs will have their own impulses"
+      },
+      "summary": {
+        "zh": "Rob Nelson 表示 GTA6 的 NPC 会有自己的冲动并可能反过来追杀你，世界更不可预测，延续《荒野大镖客2》的设计思路。",
+        "en": "Rob Nelson says GTA 6's NPCs will have impulses of their own and may come after you, making the world more unpredictable — extending RDR2's design."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-07-gta-6-wont-make-you-all-powerful-like-gta-5-did"
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "title": {
+        "zh": "GameStop 将二手 PS5 Pro 涨价 55% 至 1400 美元，GTA6 需求临近是主因",
+        "en": "GameStop hikes used PS5 Pro price 55% to $1,400 as GTA 6 demand looms"
+      },
+      "summary": {
+        "zh": "发售临近，GameStop 把二手 PS5 Pro 抬到约 1400 美元，反映主机稀缺与抢购热潮；二手涨价不等同官方调价。",
+        "en": "Ahead of launch, GameStop raised a pre-owned PS5 Pro 55% to ~$1,400 — console scarcity and buying frenzy; a second-hand markup, not an official price change."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-07-gamestop-hikes-used-ps5-pro-price-to-1400-as-gta-6-demand-lo"
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "title": {
+        "zh": "GTA6 开发者不愿“赶潮流”，转而打造“自己的歪斜夸张版本”",
+        "en": "GTA 6 devs avoided chasing trends, building their own slanted, overblown versions"
+      },
+      "summary": {
+        "zh": "开发周期长达五年以上，时事讽刺易过时。Rockstar 选择不追会过气的潮流，为游戏世界创造属于自己的夸张版本。",
+        "en": "With dev cycles over five years, timely satire risks feeling dated. Rockstar avoided passing trends, building its own slanted, overblown world."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-05-gta-6-devs-tried-not-to-jump-on-the-bandwagon-of-passing-tre"
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "title": {
+        "zh": "“必须更夸张、更疯狂、更直白”——Rockstar 解释 GTA6 为何不讽刺现实政治",
+        "en": "“More over the top, more insane, more in your face” — why GTA 6 skips real-world politics"
+      },
+      "summary": {
+        "zh": "新采访中 Rockstar 称 GTA6 内容必须比现实更夸张疯狂，用放大荒诞回应现实，而非点名政治人物。",
+        "en": "In a new interview Rockstar says GTA 6 must be more over the top and insane — amplifying the absurd rather than naming real politicians."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-05-it-has-to-be-more-over-the-top-more-insane-more-in-your-face"
+      }
+    },
     {
       "date": "2026-10-05",
       "title": {
