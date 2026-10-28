@@ -1,277 +1,127 @@
 {
   "weekLabel": {
-    "zh": "近期更新 · 10 月 8 日 – 10 月 16 日",
-    "en": "Latest · Oct 8 – Oct 16"
+    "zh": "近期更新 · 10 月 17 日 – 10 月 28 日",
+    "en": "Latest · Oct 17 – Oct 28"
   },
   "updates": [
     {
-      "date": "2026-10-16",
+      "date": "2026-10-28",
       "title": {
-        "zh": "GTA6 上市预告 20 小时破 1200 万播放，玩家「不敢相信这是真的」；索尼同步推限定 DualSense",
-        "en": "GTA 6 launch trailer tops 12M views in 20 hours; Sony reveals limited DualSense"
+        "zh": "GTA6 最后 22 天日历：从 11 月 5 日财报到 11 月 19 日解锁，一个不漏",
+        "en": "GTA 6 Final Countdown Calendar: Every Date Left Before the November 19 Unlock"
       },
       "summary": {
-        "zh": "最终上市预告放出后数据狂飙：约 20 小时破 1119 万播放，10 月 16 日读到约 1265 万播放、110 万点赞，评论区约 98% 正面。索尼同步公布两款 GTA6 限定版 DualSense（黑/白），11 月 19 日发售，美国预购价 84.99 美元。",
-        "en": "The launch trailer blew past 11.19M views in ~20 hours and read ~12.65M views / 1.11M likes on Oct 16, ~98% positive. Sony also revealed two limited-edition GTA VI DualSense controllers (black/white), launching Nov 19 at $84.99 in the US."
+        "zh": "发售前日程已排满：11/5 索尼财报、11/9 Take-Two 财报、11/12 预载开放、11/18 热火「罪恶都市之夜」与传闻中的评测解禁、11/19 午夜解锁、11/20 预购特典截止。",
+        "en": "The run-in is fully booked: Sony's results Nov 5, Take-Two's Nov 9, preload Nov 12, the Heat's Vice City night plus the rumoured review embargo Nov 18, the midnight unlock Nov 19, and the pre-order bonus deadline Nov 20."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-16-gta-6-launch-trailer-breaks-records"
+        "slug": "2026-10-28-gta-6-final-countdown-calendar"
       }
     },
     {
-      "date": "2026-10-15",
+      "date": "2026-10-27",
       "title": {
-        "zh": "媒体评测版据称 10 月底前发放，评测 embargo 在 11 月 19 日前解除",
-        "en": "Review copies reportedly go out by end of October; the embargo lifts before November 19"
+        "zh": "消息称 R 星已向媒体发放 GTA6 评测码，11 月 18 日解禁——玩家只剩一天看评分",
+        "en": "GTA 6 Review Codes Are Reportedly Out With a November 18 Embargo"
       },
       "summary": {
-        "zh": "据 NateTheHate，媒体评测版 10 月底前发放、embargo 在发售日前解除；背景含 Cyberleek 泄露、无光盘降低泄露风险、Zelnick 强调媒体评价（Metacritic 常年约 95）。",
-        "en": "Per NateTheHate, review copies ship by end of October and the embargo lifts before launch; context includes Cyberleek leaks, the disc-free release, and Zelnick on why reviews still matter (~95 on Metacritic)."
+        "zh": "NateTheHate 称 Rockstar 已开始发放评测码、解禁定在 11 月 18 日发售前一天，Insider Gaming 表示独立验证。Rockstar 与 Take-Two 均未确认，也没有媒体公开承认持码。",
+        "en": "NateTheHate says review code is out with a Nov 18 embargo, one day before launch, and Insider Gaming says it verified the date. Neither Rockstar nor Take-Two has confirmed it and no outlet has admitted holding a copy."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-15-gta-6-review-copies-end-of-october-embargo"
+        "slug": "2026-10-27-gta-6-review-codes-sent-embargo-november-18"
       }
     },
     {
-      "date": "2026-10-15",
+      "date": "2026-10-27",
       "title": {
-        "zh": "Rockstar 无预告放出 GTA6 最终上市预告片：双主角、Justice 配乐、11 月 19 日锁定",
-        "en": "Rockstar drops the GTA 6 launch trailer — Jason & Lucia, a Justice score, a locked November 19 date"
+        "zh": "GTA6 容量曝光：PS5 版据报约 210GB，11 月 12 日开放预载",
+        "en": "GTA 6 Download Size Reported at ~210GB on PS5, Preload Opens November 12"
       },
       "summary": {
-        "zh": "Rockstar 在 10 月 15 日无预告放出最终上市预告片（Trailer 2 以来首支），90 秒全程 PS5 实机，双主角关系为主线，配乐为 Justice《Flower in a Hurricane》；11 月 19 日发售、11 月 12 日预载不变。",
-        "en": "Rockstar dropped the launch trailer on Oct 15 with no warning (first since Trailer 2), a 90-second all-PS5 cut centered on Jason & Lucia, scored by Justice's 'Flower in a Hurricane'; Nov 19 launch and Nov 12 preload unchanged."
+        "zh": "PS 商店后台读数报出 PS5 版 210GB，Kotaku 等跟进转述；Xbox 商店仍是占位值，Rockstar 与索尼均未官宣。210GB 在 100Mbps 下约需 4.7 小时，Series S 用户压力最大。",
+        "en": "A PS Store backend reading puts the PS5 install at 210GB, picked up by Kotaku; the Xbox store still shows a placeholder and Rockstar has announced nothing. 210GB is ~4.7 hours at 100Mbps, with Series S owners squeezed hardest."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-15-gta-6-launch-trailer-released"
+        "slug": "2026-10-27-gta-6-download-size-210gb-preload-november-12"
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-27",
       "title": {
-        "zh": "Bloomberg 万字长文揭秘 GTA6 开发史：NPC 单开洛杉矶工作室，确认「Project Americas」起源",
-        "en": "Bloomberg's GTA 6 development feature: an LA studio for NPCs, 'Project Americas' confirmed"
+        "zh": "Rockstar 首次详细说明 GTA6 任务多路线：公寓逃脱不止一条路，不照提示也能逃出去",
+        "en": "Rockstar Details GTA 6 Mission Routes: More Than One Way Out of the Tower"
       },
       "summary": {
-        "zh": "Bloomberg 记者 Jason Schreier 获罕见工作室访问，披露 Rockstar 为填满 NPC 目标专设洛杉矶工作室，并首次官方确认 GTA6 起源于横跨南北美洲的「Project Americas」。",
-        "en": "Bloomberg's Jason Schreier got rare studio access, revealing Rockstar opened a dedicated LA studio for NPCs and officially confirming GTA 6 began as the multi-continent 'Project Americas.'"
+        "zh": "官方确认部分剧情任务支持多种完成方式。Rob Nelson 称离开公寓塔楼有多条路线，Raul 那段任务在固定开头后交还玩家驾驶，系统提示最佳路线但不照做也能逃脱。",
+        "en": "Rockstar confirms some story missions support multiple routes. Rob Nelson says there are several ways out of the tower, and the Raul sequence hands driving back to the player with a suggested route that can be ignored."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-14-bloomberg-gta-6-development-feature"
+        "slug": "2026-10-27-gta-6-mission-routes-rockstar-statement"
       }
     },
     {
-      "date": "2026-10-14",
+      "date": "2026-10-23",
       "title": {
-        "zh": "Bloomberg 配图新截图：泥泞的 Jason 与 Lucia 在乡野喝啤酒，Ocean Drive 疑似新跑车 GranForma",
-        "en": "New Bloomberg stills: mud-caked Jason & Lucia in the countryside; Ocean Drive car hints at a 'GranForma'"
+        "zh": "武器轮回归：Rockstar 花了数月甚至数年想换掉它，最后还是回到了原点",
+        "en": "The Weapon Wheel Is Back After Rockstar Spent Years Trying to Replace It"
       },
       "summary": {
-        "zh": "随开发长文放出两张官方授权截图：满身泥泞的主角二人组在 Leonida 乡野，以及 Ocean Drive 日落下一台疑似 Pegassi 新 trim 的敞篷跑车（媒体读图，非官方命名）。",
-        "en": "Two Rockstar-sanctioned stills with the feature: a mud-caked Jason and Lucia in Leonida's backcountry, and a convertible on Ocean Drive the press reads as a possible Pegassi 'GranForma' (outlet's reading, not official)."
+        "zh": "Bloomberg 记者 Schreier 透露，团队想要《荒野大镖客 2》式的限重携带，试过托盘、网状 UI 乃至取消选择界面，最终还是用回武器轮；携带限制仍是「报道提及但未详述」。",
+        "en": "Bloomberg's Schreier says the team wanted an RDR2-style loadout limit, tried trays, web menus and no selection screen, then returned to the wheel. The carrying limit remains reported but undetailed."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-14-bloomberg-screenshots-jason-lucia-granforma"
+        "slug": "2026-10-23-gta-6-weapon-wheel-returns"
       }
     },
     {
-      "date": "2026-10-12",
+      "date": "2026-10-23",
       "title": {
-        "zh": "GTA6 盒装预购美国告急：Amazon 暂停、Target 多地售罄",
-        "en": "GTA 6 boxed pre-orders run dry in the US: Amazon pauses, Target empties"
+        "zh": "GTA6 全球分级已集齐：韩国 19+、日本 CERO Z、欧美 M/18——以及一个常见误读",
+        "en": "GTA 6's Ratings Are In Worldwide — and One Common Misread"
       },
       "summary": {
-        "zh": "截至 10 月 11 日，Amazon 美国站盒装兑换码版已无法预购，洛杉矶、纽约等地 Target 多店售罄；官方页面自 6 月起标注「售完即止」。",
-        "en": "As of October 11, Amazon US pulled the code-in-a-box pre-order and dense-area Target stores sold out; Rockstar's page has said 'while supplies last' since June."
+        "zh": "韩国 GCRB 于 10/16 给出 19+，日本 CERO 随后给出 Z，加上 ESRB M、PEGI 18、USK 18、澳洲 R18+ 全部集齐。需要厘清：北美是 M（17+），不是 ESRB 的 AO 级。",
+        "en": "Korea's GCRB ruled 19+ on Oct 16 and CERO followed with Z, completing the set with ESRB M, PEGI 18, USK 18 and Australia's R18+. Clarification: North America is M (17+), not ESRB Adults Only."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-12-gta-6-boxed-preorders-sold-out-us-retailers"
+        "slug": "2026-10-23-gta-6-age-ratings-worldwide"
       }
     },
     {
-      "date": "2026-10-12",
+      "date": "2026-10-23",
       "title": {
-        "zh": "Goodyear 飞艇换上 Vice City 涂装飞往佛罗里达，GTA6 联动现实",
-        "en": "A Goodyear blimp wrapped in Vice City livery flies to Florida"
+        "zh": "GTA6 上市预告上电视、快餐摊开进球馆：迈阿密正在被改造成罪恶都市",
+        "en": "GTA 6 Hits TV and Its Fast-Food Stands Open in an Arena"
       },
       "summary": {
-        "zh": "一艘 Goodyear 齐柏林飞艇被包上 GTA VI「Vice City」涂装，从阿克伦飞往佛罗里达，虚构飞艇首度以真实品牌涂装现身。",
-        "en": "A Goodyear Zeppelin NT wrapped in GTA VI's 'Vice City' livery flew from Akron to Florida — the fictional airship's first real-world branding."
+        "zh": "预告片出现两个电视版本；Burger Shot 与 Cluckin' Bell 实体餐摊进驻 Kaseya Center；Vice Beach 合作涉 30 万美元给城市、400 万美元给特许经营商，11/1 前未获批可能取消。",
+        "en": "Two TV cuts of the trailer aired; Burger Shot and Cluckin' Bell stands are serving inside Kaseya Center; the Vice Beach deal involves $300K to the city and $4M to the concessionaire, cancellable if permits miss Nov 1."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-12-goodyear-vice-city-blimp-gta-6-florida"
+        "slug": "2026-10-23-gta-6-tv-spots-vice-beach-miami"
       }
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-10-17",
       "title": {
-        "zh": "Xbox 否认获得 GTA6 独占云串流权，PC 玩家发售日仍无法借云游戏畅玩",
-        "en": "Xbox denies exclusive GTA 6 cloud-streaming rights; PC players still can't stream it at launch"
+        "zh": "GTA6 营销占领美国街头：好莱坞壁画、布鲁克林墙绘、芝加哥巴士与时代广场大屏",
+        "en": "GTA 6 Marketing Takes the Streets: Hollywood, Brooklyn, Chicago, Times Square"
       },
       "summary": {
-        "zh": "针对《The Verge》称微软获 GTA6 独占云串流权的报道，Xbox 首席战略官 Matthew Ball 正式否认：游戏 11 月 19 日登陆 Xbox，但不会以独占形式、也不会串流到 PC。",
-        "en": "After a Verge report claimed Microsoft secured exclusive cloud-streaming rights, Xbox CSO Matthew Ball denied it: “The excitement for GTA 6 and Xbox is great to see, but it has also led to some misreporting. We are looking forward to launching GTA 6 on Xbox November 19, but the game will not be streaming exclusively or to PC.” So PC players shouldn't expect to fire up Xbox Cloud Gaming on November 19 and roam Vice City without a console."
+        "zh": "户外广告同时在好莱坞大道、布鲁克林、芝加哥与时代广场铺开，含 Colossal Media 手绘墙绘与 Spotify 原声广告牌。同期 Xbox 一张宣传图因缺失「预购」字样被怀疑提前拿到游戏，双方均未回应。",
+        "en": "Outdoor ads landed at once on Hollywood Boulevard, in Brooklyn, across Chicago and in Times Square, including a hand-painted Colossal Media wall and Spotify billboards. An Xbox promo image missing the 'pre-order' label fuelled early-access talk; neither company has commented."
       },
       "link": {
         "collection": "news",
-        "slug": "2026-10-07-gta-6-will-not-stream-to-pc-through-xbox-despite-earlier-rep"
-      }
-    },
-    {
-      "date": "2026-10-07",
-      "title": {
-        "zh": "GTA6 PC 版发售日估算：基于 Rockstar 历史的 Q1 2028 预测",
-        "en": "GTA 6 PC release date estimate: a Q1 2028 guess based on Rockstar's history"
-      },
-      "summary": {
-        "zh": "主机版 11 月 19 日发售，PC 版未官宣。GameSpot 据 Rockstar 历代滞后规律估算 Q1 2028，强调并非泄露。",
-        "en": "Console launches November 19; no PC version announced. GameSpot estimates Q1 2028 from Rockstar's track record, stressing it's not a leak."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-07-gta-6-pc-release-date-estimate-rumors-and-news"
-      }
-    },
-    {
-      "date": "2026-10-07",
-      "title": {
-        "zh": "GTA6：深度专访（Rob Nelson 实机演示 30 分钟）",
-        "en": "GTA 6: The Big Interview (Rob Nelson plays 30 minutes of gameplay)"
-      },
-      "summary": {
-        "zh": "IGN 放出与 Rockstar North 的 Rob Nelson 完整深度专访，Netflix 揭晓前夕实机演示 30 分钟，覆盖 Vice City、双主角与 NPC 自主行为。",
-        "en": "IGN published the full interview with Rockstar North's Rob Nelson, who played 30 minutes ahead of the Netflix reveal — covering Vice City, the dual protagonists and NPC autonomy."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-07-gta-6-the-big-interview"
-      }
-    },
-    {
-      "date": "2026-10-07",
-      "title": {
-        "zh": "GTA6 不会让你像 GTA5 那样“全能”：NPC 也会有自己的意图",
-        "en": "GTA 6 won't make you “all-powerful” like GTA 5 — NPCs will have their own impulses"
-      },
-      "summary": {
-        "zh": "Rob Nelson 表示 GTA6 的 NPC 会有自己的冲动并可能反过来追杀你，世界更不可预测，延续《荒野大镖客2》的设计思路。",
-        "en": "Rob Nelson says GTA 6's NPCs will have impulses of their own and may come after you, making the world more unpredictable — extending RDR2's design."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-07-gta-6-wont-make-you-all-powerful-like-gta-5-did"
-      }
-    },
-    {
-      "date": "2026-10-07",
-      "title": {
-        "zh": "GameStop 将二手 PS5 Pro 涨价 55% 至 1400 美元，GTA6 需求临近是主因",
-        "en": "GameStop hikes used PS5 Pro price 55% to $1,400 as GTA 6 demand looms"
-      },
-      "summary": {
-        "zh": "发售临近，GameStop 把二手 PS5 Pro 抬到约 1400 美元，反映主机稀缺与抢购热潮；二手涨价不等同官方调价。",
-        "en": "Ahead of launch, GameStop raised a pre-owned PS5 Pro 55% to ~$1,400 — console scarcity and buying frenzy; a second-hand markup, not an official price change."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-07-gamestop-hikes-used-ps5-pro-price-to-1400-as-gta-6-demand-lo"
-      }
-    },
-    {
-      "date": "2026-10-05",
-      "title": {
-        "zh": "GTA6 开发者不愿“赶潮流”，转而打造“自己的歪斜夸张版本”",
-        "en": "GTA 6 devs avoided chasing trends, building their own slanted, overblown versions"
-      },
-      "summary": {
-        "zh": "开发周期长达五年以上，时事讽刺易过时。Rockstar 选择不追会过气的潮流，为游戏世界创造属于自己的夸张版本。",
-        "en": "With dev cycles over five years, timely satire risks feeling dated. Rockstar avoided passing trends, building its own slanted, overblown world."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-05-gta-6-devs-tried-not-to-jump-on-the-bandwagon-of-passing-tre"
-      }
-    },
-    {
-      "date": "2026-10-05",
-      "title": {
-        "zh": "“必须更夸张、更疯狂、更直白”——Rockstar 解释 GTA6 为何不讽刺现实政治",
-        "en": "“More over the top, more insane, more in your face” — why GTA 6 skips real-world politics"
-      },
-      "summary": {
-        "zh": "新采访中 Rockstar 称 GTA6 内容必须比现实更夸张疯狂，用放大荒诞回应现实，而非点名政治人物。",
-        "en": "In a new interview Rockstar says GTA 6 must be more over the top and insane — amplifying the absurd rather than naming real politicians."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-05-it-has-to-be-more-over-the-top-more-insane-more-in-your-face"
-      }
-    },
-    {
-      "date": "2026-10-05",
-      "title": {
-        "zh": "LOVE Magazine Issue 27 上架报刊亭，GTA6 跨界封面售罄；M / PEGI 18 分级确认",
-        "en": "LOVE Magazine Issue 27 hits newsstands after a sold-out GTA 6 cover; M / PEGI 18 ratings confirmed"
-      },
-      "summary": {
-        "zh": "时尚杂志 LOVE 的 GTA6 封面（Issue 27）10 月 5 日上架，此前 10 月 2 日公布即数分钟售罄；同期 ESRB「M」与 PEGI 18 分级确认，发行内容边界锁定。",
-        "en": "LOVE's GTA 6 cover (Issue 27) reached newsstands on October 5 after selling out within minutes of its October 2 reveal; ESRB 'M' and PEGI 18 ratings were also confirmed, locking regional content boundaries."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-02-love-magazine-issue-27-cover-age-rating-confirmed"
-      }
-    },
-    {
-      "date": "2026-09-29",
-      "title": {
-        "zh": "Game Informer 第 382 期数字版上线：GTA6 封面报道 + 12 张官方新截图",
-        "en": "Game Informer issue 382 goes digital: GTA 6 cover story with 12 new official screenshots"
-      },
-      "summary": {
-        "zh": "9 月 29 日 Game Informer 第 382 期数字版上线，约 14 页封面报道配合 12 张全新官方截图，是发售前首个权威媒体正式预览。",
-        "en": "On September 29 Game Informer issue 382's digital edition went live — a ~14-page cover feature with 12 brand-new official screenshots, the first proper preview from a major outlet before launch."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-09-29-game-informer-issue-382-cover-story-12-screenshots"
-      }
-    },
-    {
-      "date": "2026-09-29",
-      "title": {
-        "zh": "Game Informer 深度披露 GTA6 世界细节：动态天气、约 170 种野生动物、更大地图",
-        "en": "Game Informer details GTA 6's world: dynamic weather, ~170 wildlife species, a larger map"
-      },
-      "summary": {
-        "zh": "配合封面报道，Game Informer 放出世界层细节：动态天气、约 170 种野生动物、更大地图尺度与更新的警察/通缉机制，均属 Rockstar 授权预览的官方口径。",
-        "en": "Alongside the cover story, Game Informer detailed world systems: dynamic weather, ~170 wildlife species, a larger map and revised police/wanted mechanics — all from Rockstar-sanctioned preview framing."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-09-29-game-informer-gta-6-world-details-weather-wildlife-map"
-      }
-    },
-    {
-      "date": "2026-09-24",
-      "title": {
-        "zh": "Rockstar 推出 The Goodtime State Vice City Collection 周边套装：399.99 美元，不含游戏",
-        "en": "Rockstar unveils The Goodtime State Vice City Collection: a $399.99 merch box that does not include the game"
-      },
-      "summary": {
-        "zh": "9 月 24 日 Rockstar 上架 399.99 美元周边收藏盒，含实体周边与数字内容但不含游戏本体，是发售前单价最高的官方周边。",
-        "en": "On September 24 Rockstar listed a $399.99 collector's box with physical merch and digital extras but no game — the highest-priced official merchandise of the pre-launch run."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-09-24-the-goodtime-state-vice-city-collection-rockstar-merch"
+        "slug": "2026-10-17-gta-6-marketing-takes-over-us-cities"
       }
     }
   ]

@@ -2,7 +2,7 @@
 title: "GTA 6 终极汇总：发售日、地图、角色、玩法、价格与一切已知信息（持续更新）"
 title_en: "GTA 6 Ultimate Guide: Release Date, Map, Characters, Gameplay, Price, and Everything We Know (Live)"
 status: confirmed
-last_updated: 2026-08-31
+last_updated: 2026-10-28
 date: 2026-08-31
 tags: [release, gameplay, characters]
 author: GTA6 Companion Editorial
@@ -34,8 +34,8 @@ faqs:
       zh: "GTA6 有 PC 版吗？"
       en: "Is GTA 6 coming to PC?"
     answer:
-      zh: "确认会出 PC 版，但发售日未公布。参考 GTA5 的 1.5 年间隔，业内普遍预计 2027 年底。详见我们的 PC 版发布日指南。"
-      en: "PC is confirmed but undated. Given GTA 5's 1.5-year gap, expectations point to late 2027 — see our PC release date guide."
+      zh: "Rockstar 官方从未给出 PC 版日期。10 月有报道称目标为 2027 年 1–3 月，也有基于 R 星历史间隔的估算指向 2028 年初，两者都不是官方口径。详见我们的 PC 版发布日指南。"
+      en: "Rockstar has never given a PC date. October reporting pointed at January-March 2027, while an estimate based on Rockstar's historical gaps points to early 2028 — neither is official. See our PC release date guide."
   - question:
       zh: "GTA6 的舞台设定在哪？"
       en: "Where is GTA 6 set?"
@@ -55,8 +55,10 @@ faqs:
 - **发售日**：2026 年 11 月 19 日（PS5 / Xbox Series X|S）
 - **价格**：标准版 $79.99 / 终极版 $99.99
 - **预购**：已于 6 月 25 日开启，截至 8 月 28 日预购破 450 万份
-- **PC 版**：确认会出，发售日未公布（详见[PC 指南](/zh/news/2026-08-31-gta-6-pc-release-date-everything-we-know)）
+- **PC 版**：官方从未公布日期。有报道称 2027 年初，也有估算指向 2028 年初，均无官方确认（详见[PC 指南](/zh/news/2026-08-31-gta-6-pc-release-date-everything-we-know)）
 - **预载**：11 月 12 日（数字版）
+- **容量**：PS5 版据报约 210GB（商店后台读数，官方未公布，详见[容量报道](/zh/news/2026-10-27-gta-6-download-size-210gb-preload-november-12)）
+- **分级**：ESRB M（17+）/ PEGI 18 / 日本 CERO Z / 韩国 19+，均已确认（详见[全球分级页](/zh/news/2026-10-23-gta-6-age-ratings-worldwide)）
 
 ## 世界设定（confirmed）
 
@@ -102,7 +104,7 @@ faqs:
 
 ## Overview
 
-**The facts (confirmed)**: Launching November 19, 2026 on PS5 and Xbox Series X|S. Standard $79.99 / Ultimate $99.99. Pre-orders opened June 25 and passed 4.5M units by Aug 28. PC is confirmed but undated. Digital preload begins November 12.
+**The facts (confirmed)**: Launching November 19, 2026 on PS5 and Xbox Series X|S. Standard $79.99 / Ultimate $99.99. Pre-orders opened June 25 and passed 4.5M units by Aug 28. No PC date has ever been announced (October reporting pointed at early 2027; a history-based estimate points at early 2028 — neither is official). Digital preload begins November 12, with a reported ~210GB PS5 install (store-backend reading, unannounced). Ratings are settled: ESRB M, PEGI 18, CERO Z, Korea 19+.
 
 **The world**: Leonida (Florida-inspired) and Vice City (Miami-inspired) — Rockstar's largest open world ever, with NPC ecosystems that shift by neighborhood and hour.
 
@@ -110,6 +112,6 @@ faqs:
 
 **The systems** (from the Aug 27 Extended Look): seamless dual-protagonist switching; a Criminal Record system where masks, torched cars, and outfit changes affect heat and story branches; six-star wanted levels with flanking AI; deeper vehicles (fuel, battery, trunk, lockpicking, trackers); dozens of activities from basketball to VR minigames ([activities database](/en/activities)); and an in-game social media system with livestreaming.
 
-**Pre-launch timeline**: pre-orders Jun 25 → Extended Look Aug 27 → media previews / Online reveal (expected Sept-Oct) → preload Nov 12 → **launch Nov 19**.
+**Pre-launch timeline**: pre-orders Jun 25 → Extended Look Aug 27 → **launch trailer Oct 15** → Sony / Take-Two earnings Nov 5-9 → preload Nov 12 → Heat night & the rumoured review embargo Nov 18 → **launch Nov 19**.
 
-**More from us**: [Breakdown 1: dual protagonists](/en/news/2026-08-28-extended-look-dual-protagonists-and-criminal-record) · [Breakdown 2: Leonida](/en/news/2026-08-28-extended-look-leonida-living-city) · [Breakdown 3: heists & activities](/en/news/2026-08-28-extended-look-heists-stealth-activities) · [Pre-order guide](/en/news/2026-08-31-gta-6-preorder-guide-editions-pricing) · [PC guide](/en/news/2026-08-31-gta-6-pc-release-date-everything-we-know) · [Interactive map](/en/map)
+**More from us**: [Final countdown calendar](/en/news/2026-10-28-gta-6-final-countdown-calendar) · [Launch trailer](/en/news/2026-10-15-gta-6-launch-trailer-released) · [Breakdown 1: dual protagonists](/en/news/2026-08-28-extended-look-dual-protagonists-and-criminal-record) · [Breakdown 2: Leonida](/en/news/2026-08-28-extended-look-leonida-living-city) · [Breakdown 3: heists & activities](/en/news/2026-08-28-extended-look-heists-stealth-activities) · [Pre-order guide](/en/news/2026-08-31-gta-6-preorder-guide-editions-pricing) · [PC guide](/en/news/2026-08-31-gta-6-pc-release-date-everything-we-know) · [Interactive map](/en/map)

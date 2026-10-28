@@ -2,12 +2,12 @@
 title: "GTA 6 预载指南：11 月 12 日开放、预计容量、硬盘准备与实体版说明"
 title_en: "GTA 6 Preload Guide: November 12 Start, Expected File Size, Storage Prep & Code-in-Box Explained"
 status: confirmed
-last_updated: 2026-09-01
+last_updated: 2026-10-28
 date: 2026-09-01
 tags: [release]
 author: GTA6 Companion Editorial
-summary: "GTA 6 数字版预载 11 月 12 日开放，实体版同步可兑换。官方尚未公布安装容量，本文基于 GTA5 / RDR2 历史数据给出预估与硬盘准备清单，并说明实体版 Code in Box 与终极版 $20 升级包。"
-summary_en: "GTA 6 digital preload opens November 12, with physical code redemption on the same day. Rockstar has not announced the install size — this guide estimates it from GTA 5 / RDR2 history, gives a storage prep checklist, and explains code-in-box plus the $20 Ultimate upgrade."
+summary: "GTA 6 数字版预载 11 月 12 日开放，实体版同步可兑换。10 月 27 日有 PS 商店后台读数报出 PS5 版容量约 210GB（官方仍未公布），本文据此更新硬盘准备清单，并说明实体版 Code in Box 与终极版 $20 升级包。"
+summary_en: "GTA 6 digital preload opens November 12, with physical code redemption on the same day. A October 27 PS Store backend reading put the PS5 install at ~210GB (still unannounced by Rockstar) — this guide updates its storage checklist accordingly, and explains code-in-box plus the $20 Ultimate upgrade."
 faq:
   - question:
       zh: GTA 6 什么时候可以预载？
@@ -19,8 +19,8 @@ faq:
       zh: GTA 6 的安装容量是多少？
       en: What is the GTA 6 install size?
     answer:
-      zh: Rockstar 官方尚未公布任何容量数字。参考 R 星近作——GTA 5 次世代版约 110GB、荒野大镖客 2 约 150GB——业界普遍推测 GTA 6 在 150GB 至 200GB 以上区间。这是推测而非官方数据，建议预留 200GB 以上空间。
-      en: Rockstar has not announced any figure. For reference, GTA 5's current-gen build is roughly 110GB and Red Dead Redemption 2 around 150GB — industry estimates put GTA 6 in the 150-200GB+ range. That's speculation, not an official number; we recommend clearing at least 200GB.
+      zh: 截至 10 月 28 日，Rockstar 官方仍未公布任何容量数字。10 月 27 日，追踪 PS 商店后台的账号 PlayStation Game Size 报出 PS5 版下载容量为 210GB（Kotaku、ComputerBase 等跟进），Xbox 商店只有占位值。这是报道而非官方数据，且仍可能在发售前变动。建议按 250GB 预留。
+      en: As of October 28 Rockstar has published no figure. On October 27, PS Store backend tracker PlayStation Game Size reported the PS5 download at 210GB (picked up by Kotaku and ComputerBase), while the Xbox store shows only a placeholder. That is a report, not an official number, and it can still change before launch. We recommend reserving 250GB.
   - question:
       zh: 实体版里面有光盘吗？
       en: Does the physical edition include a disc?
@@ -80,24 +80,25 @@ sources:
 
 **关于解锁时刻**：R 星尚未公布各时区具体解锁时间。按 R 星近作惯例，多数地区为当地时间 00:00 解锁，部分地区为统一全球时间——以平台商店页面倒计时为准，我们会在官方公布后第一时间更新本页。
 
-## 预计容量（⚠️ speculation — 官方未公布）
+## 容量：210GB 读数（⚠️ reported — 官方未公布）
 
-**Rockstar 至今没有公布 GTA 6 的安装容量。** 以下是基于 R 星近作的历史数据推演，仅供硬盘规划参考：
+**Rockstar 至今没有公布 GTA 6 的安装容量。** 10 月 27 日，追踪 PS 商店后台数据的账号 **PlayStation Game Size** 报出 PS5 版下载容量 **210GB**，Kotaku、ComputerBase 等媒体跟进转述；Xbox 商店目前只显示一个占位数值，Xbox 版实际容量仍不清楚。
 
 | 作品 | 平台 | 安装容量 |
 |---|---|---|
 | GTA 5（次世代版） | PS5 / XSX | 约 110 GB |
 | 荒野大镖客 2 | PS5 / XSX | 约 150 GB |
-| **GTA 6（预估）** | PS5 / XSX | **150 至 200 GB+** |
+| **GTA 6（10-27 读数）** | PS5 | **约 210 GB** |
+| GTA 6（Xbox） | XSX / S | 未公布 |
 
-推演依据：GTA 6 是 R 星史上最大开放世界，实机演示显示 NPC 生态、物理粒子、光线变化等细节密度远超以往作品。加上 Leonida 地图规模大幅扩张，容量超越 RDR2 是大概率事件。
+这让它成为本世代体积最大的作品之一——但并非纪录，几款《使命召唤》含 DLC 后占用更多。真正的压力在 **Xbox Series S**：约 512GB 固态，可用部分本就有限，210GB 会吃掉将近三分之二。
 
-> 再次强调：以上数字为推测。请等待官方在预载开启前公布的确切容量（通常随商店页面更新同步释出）。
+> 再次强调：这是商店后台读数，不是官方公告，且可能在发售前变动，**也不含后续更新、DLC 与尚未公布的在线模式**。详见我们的[容量专项报道](/zh/news/2026-10-27-gta-6-download-size-210gb-preload-november-12)。
 
 ## 预载前准备清单
 
-1. **清出至少 200 GB 空间** —— 留出预估容量 + 首日补丁 + 后续更新的余量。PS5 可用容量可在 设置 → 存储 中查看。
-2. **检查网络** —— 200GB 在 100Mbps 带宽下约需 4.5 小时，50Mbps 约 9 小时。建议提前测速，必要时预约夜间下载。
+1. **清出至少 250 GB 空间** —— 210GB 读数 + 首日补丁 + 后续更新的余量。PS5 可用容量可在 设置 → 存储 中查看。
+2. **检查网络** —— 210GB 在 100Mbps 带宽下约需 4.7 小时，50Mbps 接近 10 小时。建议提前测速，必要时预约夜间下载。
 3. **更新主机系统** —— 发售周主机系统更新频繁，提前升级避免解锁日卡在更新。
 4. **开启自动下载 / 待机下载** —— 设好之后 11 月 12 日无需守着，睡醒即已就绪。
 5. **实体版玩家** —— 11 月 12 日收到包裹后立刻兑换（兑换码通常无失效风险，但早兑早下载）。
@@ -135,22 +136,25 @@ Notably, digital and physical share the same preload date — Rockstar isn't giv
 
 *Unlock time*: Rockstar hasn't announced regional unlock times. Based on recent Rockstar launches, most regions unlock at local midnight while some use a single global moment — trust the countdown on your store page. We'll update this page the moment it's confirmed.
 
-**Expected size (⚠️ speculation — not announced)**
+**Size: the 210GB reading (⚠️ reported — not announced)**
 
-Rockstar has published no install size. Here's the historical basis for planning:
+Rockstar has published no install size. On October 27, PS Store backend tracker **PlayStation Game Size** reported the PS5 download at **210GB** — picked up by Kotaku and ComputerBase — while the Xbox store shows only a placeholder, so the Xbox build's real footprint is unknown.
 
 | Game | Platform | Install size |
 |---|---|---|
 | GTA 5 (current-gen) | PS5 / XSX | ~110 GB |
 | Red Dead Redemption 2 | PS5 / XSX | ~150 GB |
-| **GTA 6 (estimated)** | PS5 / XSX | **150-200 GB+** |
+| **GTA 6 (Oct 27 reading)** | PS5 | **~210 GB** |
+| GTA 6 (Xbox) | XSX / S | Not published |
 
-The reasoning: Rockstar's largest open world yet, with NPC ecosystems, particle physics, and lighting detail well beyond prior titles, plus a substantially bigger Leonida map. Exceeding RDR2 is likely — but again, this is an estimate, not an official figure.
+That makes it one of the biggest of the generation — though not a record, since several Call of Duty installs with DLC are larger. The real squeeze is **Xbox Series S**: usable space on the ~512GB SSD is tight, and 210GB would take close to two-thirds of it.
+
+> To repeat: this is a store-backend reading, not an official announcement, it can still change before launch, and it **excludes future updates, DLC and the unannounced online mode**. See our [dedicated size report](/en/news/2026-10-27-gta-6-download-size-210gb-preload-november-12).
 
 **Preload checklist**
 
-1. **Clear at least 200 GB** — estimated install + day-one patch + future updates headroom. Check free space on PS5 under Settings → Storage.
-2. **Test your connection** — 200GB takes ~4.5 hours at 100Mbps, ~9 hours at 50Mbps. Schedule an overnight download if needed.
+1. **Clear at least 250 GB** — the 210GB reading + day-one patch + future updates headroom. Check free space on PS5 under Settings → Storage.
+2. **Test your connection** — 210GB takes ~4.7 hours at 100Mbps, close to ten at 50Mbps. Schedule an overnight download if needed.
 3. **Update your console** — system updates land frequently during launch week; get ahead of it.
 4. **Enable auto / rest-mode download** — so Nov 12 needs no babysitting.
 5. **Physical buyers**: redeem the code the day your package arrives.
@@ -164,4 +168,4 @@ The reasoning: Rockstar's largest open world yet, with NPC ecosystems, particle 
 
 *Our take*: collectors who want the box and the Ultimate perks should go **physical Standard + $20 digital upgrade** ($79.99 + $20 = $99.99, same as Ultimate, but you get the box too).
 
-**Related**: [Pre-order & editions guide](/en/news/2026-08-31-gta-6-preorder-guide-editions-pricing) · [Everything We Know](/en/news/2026-08-31-gta-6-everything-we-know-ultimate-guide) · [PC release date](/en/news/2026-08-31-gta-6-pc-release-date-everything-we-know) · [Trailer 3 tracker](/en/news/2026-08-31-gta-6-trailer-3-everything-we-know) · [Get launch reminders](/en/subscribe)
+**Related**: [Pre-order & editions guide](/en/news/2026-08-31-gta-6-preorder-guide-editions-pricing) · [Everything We Know](/en/news/2026-08-31-gta-6-everything-we-know-ultimate-guide) · [PC release date](/en/news/2026-08-31-gta-6-pc-release-date-everything-we-know) · [210GB size report](/en/news/2026-10-27-gta-6-download-size-210gb-preload-november-12) · [Final countdown calendar](/en/news/2026-10-28-gta-6-final-countdown-calendar) · [Trailer 3 tracker](/en/news/2026-08-31-gta-6-trailer-3-everything-we-know) · [Get launch reminders](/en/subscribe)

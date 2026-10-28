@@ -2,12 +2,12 @@
 title: "GTA 6 PC 版什么时候出？发售日、延迟模式与谣言澄清（2026 更新）"
 title_en: "GTA 6 PC Release Date: Everything We Know, Rockstar's Delay Pattern, and Rumor Check (2026)"
 status: confirmed
-last_updated: 2026-08-31
+last_updated: 2026-10-28
 date: 2026-08-31
 tags: [release]
 author: GTA6 Companion Editorial
-summary: "PC 玩家最关心的问题：GTA 6 有没有 PC 版？什么时候出？本文汇总官方口径、R 星历代主机→PC 延迟规律，并澄清 2027 年 2 月「泄漏」传言。结论：PC 版已确认会出，但发售日未公布，按历史规律大概率在主机版之后 12-18 个月。"
-summary_en: "The question every PC player is asking: will GTA 6 come to PC, and when? This guide covers the official stance, Rockstar's historical console-to-PC delay pattern, and fact-checks the February 2027 'leak'. Bottom line: PC is confirmed but undated — history suggests 12-18 months after console."
+summary: "PC 玩家最关心的问题：GTA 6 有没有 PC 版？什么时候出？本文汇总官方口径、R 星历代主机→PC 延迟规律，并核查 10 月两派说法——GamesBeat 称四个信源指向 2027 年 1–3 月，GameSpot 按历史间隔估算 2028 年第一季度。结论：官方从未公布日期，两种说法都不是官方口径。"
+summary_en: "The question every PC player is asking: will GTA 6 come to PC, and when? This guide covers the official stance, Rockstar's historical console-to-PC delay pattern, and checks October's two competing claims — GamesBeat's four sources pointing at January-March 2027, and GameSpot's history-based Q1 2028 estimate. Bottom line: no date has been announced and neither claim is official."
 sources:
   - label:
       zh: Rockstar Newswire
@@ -39,6 +39,15 @@ sources:
 
 R 星一直采用「先主机、后 PC」的错峰策略，业界普遍认为这服务于「双次购买」的营收逻辑。因此任何「PC 与主机同日发售」的说法都值得怀疑。
 
+## 10 月的两派说法（reported，均非官方）
+
+| 时间 | 来源 | 说法 |
+|---|---|---|
+| 10 月 13 日 | GamesBeat（称四个信源） | PC 版目标为 **2027 年 1–3 月**，即主机版后约 2 个月 |
+| 10 月 7 日 | GameSpot | 按 R 星历史间隔估算 **2028 年第一季度** |
+
+两派差距整整一年，且**都未获 Rockstar 确认**。GamesBeat 的说法与 R 星 19 个月 / 13 个月的历史间隔明显相左——如果成立，将是该系列史上最短的主机→PC 间隔。在官方开口前，按历史规律准备、对「2027 年初」保持怀疑是更稳妥的读法。
+
 ## 谣言澄清（speculation，勿当真）
 
 - **「2027 年 2 月发售」的 Reddit 泄漏**：自称前员工爆料的 PC 版 2027 年 2 月发售（仅在主机版后 3 个月）——被多方分析驳斥，与 R 星历代策略严重不符，**未获官方确认**
@@ -54,7 +63,7 @@ R 星一直采用「先主机、后 PC」的错峰策略，业界普遍认为这
 
 ## Overview
 
-**Bottom line: GTA 6 is coming to PC, but no date has been announced.** The console version (PS5 / Xbox Series X|S) launches November 19, 2026. Based on Rockstar's historical pattern, PC typically arrives 12-18 months after console — meaning late 2027 or early 2028.
+**Bottom line: GTA 6 is coming to PC, but Rockstar has never announced a date.** The console version (PS5 / Xbox Series X|S) launches November 19, 2026, and Rockstar's pattern points 12-18 months later — late 2027 or early 2028. Two October reports point earlier, at early 2027, but neither is official (see below).
 
 ## What Rockstar Has Said (confirmed)
 
@@ -71,6 +80,15 @@ R 星一直采用「先主机、后 PC」的错峰策略，业界普遍认为这
 | GTA 6 (expected) | 2026-11-19 | TBA | 12-18 months (estimate) |
 
 Rockstar has always staggered PC releases — widely read as enabling "double-dip" purchases. Treat any day-one-PC claim with skepticism.
+
+## October's Two Competing Claims (reported, neither official)
+
+| Date | Source | Claim |
+|---|---|---|
+| Oct 13 | GamesBeat (four sources) | Targeting **January-March 2027** — about two months after console |
+| Oct 7 | GameSpot | History-based estimate of **Q1 2028** |
+
+The two are a full year apart and **neither is confirmed by Rockstar**. GamesBeat's version clashes with Rockstar's 19-month and 13-month gaps — if it held, it would be the shortest console-to-PC gap in the series. Until Rockstar speaks, planning on the historical pattern while staying skeptical of "early 2027" is the safer read.
 
 ## Rumor Check (speculation)
 
