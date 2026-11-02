@@ -1,9 +1,84 @@
 {
   "weekLabel": {
-    "zh": "近期更新 · 10 月 17 日 – 10 月 28 日",
-    "en": "Latest · Oct 17 – Oct 28"
+    "zh": "近期更新 · 10 月 29 日 – 11 月 2 日",
+    "en": "Latest · Oct 29 – Nov 2"
   },
   "updates": [
+    {
+      "date": "2026-11-02",
+      "title": {
+        "zh": "发售前 17 天：GTA6 广告登上全球地标建筑，沃尔玛预购或送「神秘礼包」",
+        "en": "17 Days Out: GTA 6 Ads Take Over Landmark Buildings Worldwide, and Walmart Pre-Orders May Include a Mystery Bag"
+      },
+      "summary": {
+        "zh": "国际宣传升级：官方图像与标志铺上多国建筑外墙、巨型 LED 屏与体育场馆。另有传闻称沃尔玛门店自提预购可获「surprise and delight bag」，11 月 12 日起领取——沃尔玛与 Rockstar 均未确认，且 11/12 只开放预载、不能提前玩。",
+        "en": "The international push escalates: official artwork and logos are up on building facades, giant LED screens and stadiums across several countries. A rumoured Walmart \"surprise and delight bag\" would ship from Nov 12 — unconfirmed by Walmart and Rockstar, and Nov 12 is preload only, not early access."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-11-02-gta-6-global-ad-blitz-walmart-surprise-bag"
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "title": {
+        "zh": "预购数据一览：估算 645 万份 / 6.3 亿美元，近三成美国玩家说要买——但官方仍未开口",
+        "en": "GTA 6 Pre-Order Numbers: ~6.45M Copies and $630M Estimated, 29% of US Gamers Say They'll Buy — Still No Official Word"
+      },
+      "summary": {
+        "zh": "Sensor Tower 估算截至 10/20 数字版预购约 645 万份、6.3 亿美元（PS5 占 74%）；Circana 调查显示 29% 美国玩家计划购买，创其追踪史上最高。两项均非官方口径。下一个官方节点是 11/9 Take-Two 财报。",
+        "en": "Sensor Tower estimates 6.45M digital pre-orders worth ~$630M as of Oct 20, with PlayStation at 74%. Circana puts purchase intent at 29% of US players, its highest ever. Neither is official. The next checkpoint is Take-Two's results on Nov 9."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-30-gta-6-preorder-numbers-circana-sensor-tower"
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "title": {
+        "zh": "《Edge》探访 R 星北方工作室：12 张新截图与 90 分钟无脚本试玩，警察会记住你的衣服",
+        "en": "Edge Visits Rockstar North: 12 New Screenshots, a 90-Minute Unscripted Demo, and Police Who Remember Your Outfit"
+      },
+      "summary": {
+        "zh": "Rob Nelson 无脚本试玩 90 分钟：警方会记录服装、武器、车辆与监控曝光；犯罪档案从 Professional 到 Irredeemable；Jason 与 Lucia 关系为四级量表。12 张全新截图含首次公开的水下锤头鲨。",
+        "en": "Rob Nelson played unscripted for 90 minutes: police log your clothes, weapon, vehicle and camera exposure; a Criminal Profile runs from Professional to Irredeemable; Jason and Lucia's bond is a four-point scale. Twelve new screenshots include the first proper underwater hammerhead."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-29-gta-6-edge-magazine-12-new-screenshots-systems"
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "title": {
+        "zh": "R 星美术总监回应「会不会缩水」：我们在珠穆朗玛峰上建了一座金字塔",
+        "en": "Rockstar's Art Director on Whether GTA 6 Was Cut Down: \"We've Built a Pyramid on Everest\""
+      },
+      "summary": {
+        "zh": "Aaron Garbut 表示团队在规模、细节、互动性、剧情与开放世界上都没有妥协，全作约 60 万条独特动画，并有一支只为背景路人写作的团队。同场 Nelson 称游戏「已经准备好了」。PC 版仍无消息。",
+        "en": "Aaron Garbut says the studio did not compromise on scale, detail, interactivity, story or open world, citing ~600,000 unique animations and a team writing solely for background NPCs. Nelson says the game is \"ready\". Still no word on PC."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-29-gta-6-garbut-pyramid-on-everest-no-compromise"
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "title": {
+        "zh": "《南方公园》播出官方 GTA6 实机片段：狗屎袋可以当武器，还能互抡",
+        "en": "South Park Aired Official GTA 6 Gameplay: You Can Swing a Bag of Dog Poo at People"
+      },
+      "summary": {
+        "zh": "第 29 季第 4 集插入约 17–20 秒实机画面，片尾署名由 Rockstar 提供。片段显示海滩支持高密度会反应的 NPC 人群，环境物件可捡起当临时近战武器，被攻击者会还手。发售日与定价不变。",
+        "en": "Season 29 episode 4 carried roughly 17–20 seconds of gameplay, credited in the end titles to Rockstar. It shows beaches supporting dense, reactive NPC crowds and environmental objects usable as improvised melee weapons, with victims fighting back. Date and pricing unchanged."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-10-28-gta-6-south-park-official-gameplay-clip"
+      }
+    },
     {
       "date": "2026-10-28",
       "title": {
@@ -47,81 +122,6 @@
       "link": {
         "collection": "news",
         "slug": "2026-10-27-gta-6-download-size-210gb-preload-november-12"
-      }
-    },
-    {
-      "date": "2026-10-27",
-      "title": {
-        "zh": "Rockstar 首次详细说明 GTA6 任务多路线：公寓逃脱不止一条路，不照提示也能逃出去",
-        "en": "Rockstar Details GTA 6 Mission Routes: More Than One Way Out of the Tower"
-      },
-      "summary": {
-        "zh": "官方确认部分剧情任务支持多种完成方式。Rob Nelson 称离开公寓塔楼有多条路线，Raul 那段任务在固定开头后交还玩家驾驶，系统提示最佳路线但不照做也能逃脱。",
-        "en": "Rockstar confirms some story missions support multiple routes. Rob Nelson says there are several ways out of the tower, and the Raul sequence hands driving back to the player with a suggested route that can be ignored."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-27-gta-6-mission-routes-rockstar-statement"
-      }
-    },
-    {
-      "date": "2026-10-23",
-      "title": {
-        "zh": "武器轮回归：Rockstar 花了数月甚至数年想换掉它，最后还是回到了原点",
-        "en": "The Weapon Wheel Is Back After Rockstar Spent Years Trying to Replace It"
-      },
-      "summary": {
-        "zh": "Bloomberg 记者 Schreier 透露，团队想要《荒野大镖客 2》式的限重携带，试过托盘、网状 UI 乃至取消选择界面，最终还是用回武器轮；携带限制仍是「报道提及但未详述」。",
-        "en": "Bloomberg's Schreier says the team wanted an RDR2-style loadout limit, tried trays, web menus and no selection screen, then returned to the wheel. The carrying limit remains reported but undetailed."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-23-gta-6-weapon-wheel-returns"
-      }
-    },
-    {
-      "date": "2026-10-23",
-      "title": {
-        "zh": "GTA6 全球分级已集齐：韩国 19+、日本 CERO Z、欧美 M/18——以及一个常见误读",
-        "en": "GTA 6's Ratings Are In Worldwide — and One Common Misread"
-      },
-      "summary": {
-        "zh": "韩国 GCRB 于 10/16 给出 19+，日本 CERO 随后给出 Z，加上 ESRB M、PEGI 18、USK 18、澳洲 R18+ 全部集齐。需要厘清：北美是 M（17+），不是 ESRB 的 AO 级。",
-        "en": "Korea's GCRB ruled 19+ on Oct 16 and CERO followed with Z, completing the set with ESRB M, PEGI 18, USK 18 and Australia's R18+. Clarification: North America is M (17+), not ESRB Adults Only."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-23-gta-6-age-ratings-worldwide"
-      }
-    },
-    {
-      "date": "2026-10-23",
-      "title": {
-        "zh": "GTA6 上市预告上电视、快餐摊开进球馆：迈阿密正在被改造成罪恶都市",
-        "en": "GTA 6 Hits TV and Its Fast-Food Stands Open in an Arena"
-      },
-      "summary": {
-        "zh": "预告片出现两个电视版本；Burger Shot 与 Cluckin' Bell 实体餐摊进驻 Kaseya Center；Vice Beach 合作涉 30 万美元给城市、400 万美元给特许经营商，11/1 前未获批可能取消。",
-        "en": "Two TV cuts of the trailer aired; Burger Shot and Cluckin' Bell stands are serving inside Kaseya Center; the Vice Beach deal involves $300K to the city and $4M to the concessionaire, cancellable if permits miss Nov 1."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-23-gta-6-tv-spots-vice-beach-miami"
-      }
-    },
-    {
-      "date": "2026-10-17",
-      "title": {
-        "zh": "GTA6 营销占领美国街头：好莱坞壁画、布鲁克林墙绘、芝加哥巴士与时代广场大屏",
-        "en": "GTA 6 Marketing Takes the Streets: Hollywood, Brooklyn, Chicago, Times Square"
-      },
-      "summary": {
-        "zh": "户外广告同时在好莱坞大道、布鲁克林、芝加哥与时代广场铺开，含 Colossal Media 手绘墙绘与 Spotify 原声广告牌。同期 Xbox 一张宣传图因缺失「预购」字样被怀疑提前拿到游戏，双方均未回应。",
-        "en": "Outdoor ads landed at once on Hollywood Boulevard, in Brooklyn, across Chicago and in Times Square, including a hand-painted Colossal Media wall and Spotify billboards. An Xbox promo image missing the 'pre-order' label fuelled early-access talk; neither company has commented."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-17-gta-6-marketing-takes-over-us-cities"
       }
     }
   ]
