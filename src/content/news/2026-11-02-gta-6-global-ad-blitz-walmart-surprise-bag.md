@@ -2,7 +2,7 @@
 title: "发售前 17 天：GTA6 广告登上全球地标建筑，沃尔玛预购或送「神秘礼包」"
 title_en: "17 Days Out: GTA 6 Ads Take Over Landmark Buildings Worldwide, and Walmart Pre-Orders May Include a Mystery Bag"
 status: speculated
-last_updated: 2026-11-02
+last_updated: 2026-11-10
 date: 2026-11-02
 tags: [marketing, release]
 author: GTA6 Companion Editorial
@@ -32,8 +32,8 @@ faqs:
       zh: "11 月 12 日拿到礼包或盒装版，能提前玩吗？"
       en: "Does getting the bag or the boxed edition on November 12 let me play early?"
     answer:
-      zh: "不能。11 月 12 日只是预载开放日与盒装下载码的领取日。预载下载的是加密安装文件，不等于提前解锁；全球统一开放游玩时间是 11 月 19 日午夜。实体版盒内不含光盘，只有下载码。"
-      en: "No. November 12 is the preload date and when boxed download codes are handed over. Preloading fetches encrypted install files, not early access; play opens globally at midnight on November 19. The boxed edition contains a download code, not a disc."
+      zh: "不能。数字版预载已于 11 月 10 日开放，11 月 12 日是盒装下载码版在零售店开始提货的日子。预载下载的是加密安装文件，不等于提前解锁；各地开放游玩时间是 11 月 19 日零点。实体版盒内不含光盘，只有下载码。"
+      en: "No. Digital preload opened November 10; November 12 is when code-in-box copies start reaching retailers. Preloading fetches encrypted install files, not early access; play opens at local midnight on November 19. The boxed edition contains a download code, not a disc."
 ---
 
 ## 中文正文
@@ -57,17 +57,17 @@ Take-Two 与 Rockstar 的国际宣传已经铺开：GTA6 的**官方图像与标
 - 沃尔玛官网在 PS5 与 Xbox 版实体预购页面上**确实标注了「Surprise and Delight」字样**，并注明「送完即止」
 - 页面**同时明确写明礼包内不含实体光盘**
 - 礼包被描述为一只 GMD（日用百货配送）袋，内装「好东西」，**没有更多细节**
-- 领取时间为 **11 月 12 日起**，与预载窗口一致
+- 领取时间为 **11 月 12 日起**，与盒装下载码版提货日一致（数字版预载已于 11 月 10 日开放）
 
 尚不确定的部分：礼包内容、参与门店、库存规模、是否覆盖所有版本，**沃尔玛与 Rockstar 均未正式公布**。社区猜测从薯片汽水到独立地图、徽章、钥匙扣都有，但这些只是猜测。
 
 需要区分的是：这个礼包与售价 400 美元的**收藏版（Collector's Edition）**是两回事，后者才确实包含实体地图与罪恶都市主题收藏品。
 
-**别搞错 11 月 12 日**
+**别搞错 11 月 10 日与 11 月 12 日**
 
-再强调一次：11 月 12 日是**预载开放日**，不是提前开玩。预载下载的是加密安装文件；实体版盒内也只有下载码、没有光盘。全球统一开放游玩时间是 **11 月 19 日午夜**。
+Rockstar 11 月 3 日的官方公告把这两个日子分开了：**数字版预载 11 月 10 日开放**，**盒装下载码版 11 月 12 日起在零售店提货**。两者都不是提前开玩——预载下载的是加密安装文件，实体版盒内也只有下载码、没有光盘。各时区开放游玩时间是 **11 月 19 日零点**。详见[官方公告解读](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb)。
 
-相关阅读：[营销占领美国街头（10 月）](/zh/news/2026-10-17-gta-6-marketing-takes-over-us-cities) · [电视广告与迈阿密餐摊（10 月）](/zh/news/2026-10-23-gta-6-tv-spots-vice-beach-miami) · [最后 22 天日历](/zh/news/2026-10-28-gta-6-final-countdown-calendar) · [预载完整指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)
+相关阅读：[官方公告解读（11/10、212GB）](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb) · [营销占领美国街头（10 月）](/zh/news/2026-10-17-gta-6-marketing-takes-over-us-cities) · [电视广告与迈阿密餐摊（10 月）](/zh/news/2026-10-23-gta-6-tv-spots-vice-beach-miami) · [发售倒计时日历](/zh/news/2026-10-28-gta-6-final-countdown-calendar) · [预载完整指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)
 
 ---
 
@@ -92,17 +92,17 @@ Here is the boundary between what's established and what isn't:
 - Walmart's site **does list a "Surprise and Delight" tag** on physical pre-order pages for both PS5 and Xbox, marked "while stocks last"
 - The page **also states explicitly that the bag contains no physical disc**
 - The bonus is described as a GMD (General Merchandise Delivery) bag packed with "goodies", **with no further detail**
-- It ships from **November 12**, in line with the preload window
+- It ships from **November 12**, in line with code-in-box retail pickup (digital preload opened November 10)
 
 What remains unknown: contents, participating stores, stock levels and whether it covers every edition. **Neither Walmart nor Rockstar has announced it formally.** Community guesses run from crisps and soda to a standalone map, pins or keyrings — but those are guesses.
 
 One distinction worth drawing: this is separate from the **$400 Collector's Edition**, which genuinely does include a physical map and Vice City-themed collectibles.
 
-**Don't get November 12 wrong**
+**Keep November 10 and November 12 straight**
 
-Stated once more: November 12 is the **preload date**, not early access. Preloading fetches encrypted install files, and the boxed edition carries a download code rather than a disc. Play opens globally at **midnight on November 19**.
+Rockstar's November 3 announcement split the two: **digital preload opened November 10**, while **code-in-box copies reach retailers from November 12**. Neither is early access — preloading fetches encrypted install files, and the boxed edition carries a download code rather than a disc. Play opens at **local midnight on November 19**. See the [official announcement breakdown](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb).
 
-**Related**: [Marketing takes the streets (October)](/en/news/2026-10-17-gta-6-marketing-takes-over-us-cities) · [TV spots and Miami food stands (October)](/en/news/2026-10-23-gta-6-tv-spots-vice-beach-miami) · [Final countdown calendar](/en/news/2026-10-28-gta-6-final-countdown-calendar) · [Full preload guide](/en/news/2026-09-01-gta-6-preload-guide-file-size)
+**Related**: [Official announcement breakdown (Nov 10, 212GB)](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb) · [Marketing takes the streets (October)](/en/news/2026-10-17-gta-6-marketing-takes-over-us-cities) · [TV spots and Miami food stands (October)](/en/news/2026-10-23-gta-6-tv-spots-vice-beach-miami) · [Launch countdown calendar](/en/news/2026-10-28-gta-6-final-countdown-calendar) · [Full preload guide](/en/news/2026-09-01-gta-6-preload-guide-file-size)
 
 ## Source
 

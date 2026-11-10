@@ -1,76 +1,91 @@
 ---
-title: "GTA6 最后 22 天日历：从 11 月 5 日财报到 11 月 19 日解锁，一个不漏"
-title_en: "GTA 6 Final Countdown Calendar: Every Date Left Before the November 19 Unlock"
+title: "GTA6 发售倒计时日历：从 11/3 官方预载公告到 11/19 解锁，节点全记录（持续更新）"
+title_en: "GTA 6 Launch Countdown Calendar: Every Milestone From the November 3 Preload Announcement to the November 19 Unlock (Live)"
 status: confirmed
-last_updated: 2026-10-28
+last_updated: 2026-11-10
 date: 2026-10-28
 tags: [release, industry]
 author: GTA6 Companion Editorial
-summary: "距离 GTA6 发售还有 22 天。这一页把发售前所有确定节点收在一处：11 月 5 日索尼财报、11 月 9 日 Take-Two 财报、11 月 12 日预载开放、11 月 18 日迈阿密热火「罪恶都市之夜」与传闻中的评测解禁、11 月 19 日午夜解锁、11 月 20 日预购特典截止。"
-summary_en: "There are 22 days left until GTA 6. This page collects every confirmed date still ahead: Sony's results on Nov 5, Take-Two's on Nov 9, preload on Nov 12, the Miami Heat's 'A Night in Vice City' plus the rumoured review embargo on Nov 18, the midnight unlock on Nov 19, and the pre-order bonus deadline on Nov 20."
+summary: "距 11 月 19 日发售只剩 9 天。这一页按时间顺序记录发售前全部节点并标注状态：11/3 官方预载公告（11/10 开放、最多 212GB）、11/5 Launch Gallery 39 张新截图、11/9 Take-Two 财报确认开发完成、11/12 盒装下载码提货、11/18「罪恶都市之夜」与传闻中的评测解禁、11/19 午夜解锁、11/20 预购特典截止。"
+summary_en: "Nine days to the November 19 launch. This page tracks every pre-launch milestone in order and marks its status: the November 3 official preload announcement (opening Nov 10 at up to 212GB), the November 5 Launch Gallery with 39 new screenshots, Take-Two's November 9 results confirming development is complete, code-in-box retail pickup on Nov 12, the Nov 18 Vice City night and rumoured review embargo, the midnight unlock on Nov 19, and the pre-order bonus deadline on Nov 20."
 sources:
   - label:
-      zh: Rockstar Newswire
-      en: Rockstar Newswire
-    url: https://www.rockstargames.com/newswire
+      zh: Rockstar Newswire（11/3 预载公告）
+      en: Rockstar Newswire (Nov 3 preload announcement)
+    url: https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10
+  - label:
+      zh: Rockstar Newswire（11/5 发售图库）
+      en: Rockstar Newswire (Nov 5 Launch Gallery)
+    url: https://www.rockstargames.com/newswire/article/39ak81277255o9/explore-the-grand-theft-auto-vi-launch-gallery
+  - label:
+      zh: TwistedVoxel（11/9 Take-Two 财报）
+      en: TwistedVoxel (Nov 9 Take-Two results)
+    url: https://twistedvoxel.com/gta-vi-pre-orders-exceed-take-two-expectations/
   - label:
       zh: 迈阿密热火官方公告
       en: Miami HEAT Official Announcement
     url: http://stations.espn.go.com/nba/story/_/id/50085674/miami-heat-night-vice-city-game
-  - label:
-      zh: GTA 6 周报（10 月 23 日）
-      en: GTA 6 News Roundup (Oct 23)
-    url: https://gta6home.com/guides/gta-6-news-this-week-october-23
 ---
 
 ## 中文正文
 
-发售前的日程已经排满。下面这张表是**截至 10 月 28 日**仍在前方的节点，按时间顺序排列，标注各自的可信度。
+**最后 9 天。** 下面这张表按时间顺序收录发售前全部节点，标注状态与可信度；已发生的节点附对应报道。
 
 | 日期 | 事件 | 状态 |
 |---|---|---|
-| 11 月 5 日 | 索尼 FY2026 Q2 财报 | 官方排期 |
-| 11 月 9 日 | Take-Two 财报 | 官方排期 |
-| 11 月 12 日 | **预载开放**（数字版 + 实体兑换码，PS5 侧容量据报约 210GB） | 日期 confirmed，容量为传闻 |
-| 11 月 18 日 | 迈阿密热火「罪恶都市之夜」（19:00 ET 对雄鹿，ESPN 直播） | confirmed |
-| 11 月 18 日 | 媒体评测解禁（NateTheHate 爆料，Insider Gaming 附议） | **leaked，未经官方确认** |
-| 11 月 19 日 | **正式发售**，多数地区当地时间 00:00 解锁 | confirmed |
-| 11 月 20 日 | 预购特典「罪恶都市复古包」领取截止 | confirmed |
+| 11 月 3 日 | Rockstar 官方公告：数字预载 **11/10 开放**、最多 **212GB**；盒装码 11/12 提货 | ✅ confirmed，[公告解读](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb) |
+| 11 月 5 日 | 索尼 FY2026 Q2 财报 | ✅ 已过 |
+| 11 月 5 日 | **Launch Gallery** 上线：约 39 张全新 4K 官方截图 | ✅ confirmed，[图库解析](/zh/news/2026-11-05-gta-6-launch-gallery-39-new-screenshots) |
+| 11 月 9 日 | **Take-Two FY2027 Q2 财报**：开发完成、预购远超预期、「不会再延期」 | ✅ confirmed，[财报解读](/zh/news/2026-11-09-take-two-q2-earnings-gta-6-development-complete) |
+| **11 月 10 日** | **数字版预载开放**：PS5 各地零点 / Xbox 全球 GMT 零点 | ✅ 今日已开放 |
+| 11 月 12 日 | 盒装下载码版在零售店开始提货 | ⏳ confirmed |
+| 11 月 18 日 | 迈阿密热火「A Night in Vice City」（19:00 ET 对雄鹿，ESPN 直播） | ⏳ confirmed |
+| 11 月 18 日 | 媒体评测解禁（NateTheHate 爆料，Insider Gaming 附议） | ⚠️ **未确认**，[评分仍是空白](/zh/news/2026-11-08-gta-6-no-reviews-yet-fake-7-out-of-10-debunk) |
+| 11 月 19 日 | **正式发售**，各时区 00:00 解锁；官网免费放出封面海报与 Leonida 地图 | ⏳ confirmed |
+| 11 月 20 日 | 预购特典「罪恶都市复古包」领取截止 | ⏳ confirmed |
 
-**两个财报日值得盯。** 索尼与 Take-Two 的财报电话会历来是 GTA6 相关信息的释放口——Zelnick 的「主菜和甜点」就是在财报会上说的。这两场会议落在发售前两周内，多半会给出最终营销节奏与出货预期的官方口径。
+> **口径更正**：本页初版（10/28）写的是「11 月 12 日预载开放、PS5 侧容量据报约 210GB」。Rockstar 11 月 3 日的官方公告已把**数字版预载提前到 11 月 10 日**、容量定为**最多 212GB**；11 月 12 日现在专指盒装下载码版提货。
 
-**11 月 18 日这一晚信息密度最高。** 迈阿密热火将在 Kaseya Center 以「Vice City」之名迎战雄鹿，专用球场、从未穿过的球衣、ESPN 全国直播，热火官方把这次合作称为「首创的体育跨界」。同一天传闻中的评测解禁也指向这一天——如果爆料属实，玩家将在发售后最后 24 小时内才看到评分。
+**两场财报给出的东西不一样。** 索尼那场平淡；Take-Two 11/9 才是关键——Zelnick 确认 Rockstar 已完成开发、营销完全就绪，预购远超最初预期，并对 IGN 明说「不会再延期」。Q3 净预订指引 33.5–35 亿美元，接近去年同期 17.6 亿的两倍。
 
-**预载别等到 11 月 19 日。** 容量为传闻中的 210GB 时，100Mbps 带宽约需 4.7 小时，50Mbps 接近 10 小时。11 月 12 日就把下载挂上，是发售日当天唯一不用等的事。
+**11 月 18 日仍是信息密度最高的一晚。** 热火将在 Kaseya Center 以「Vice City Heat」之名迎战雄鹿，专属球场、特别球衣、ESPN 全国直播。同一天也是传闻中的评测解禁日——但要提醒：Rockstar 从未官宣解禁时间，Metacritic 页面至今仍是 `tbd`，网上已出现自称「玩了三天给 7 分」的玩笑帖。
 
-相关阅读：[预载指南（容量与准备清单）](/zh/news/2026-09-01-gta-6-preload-guide-file-size) · [上市预告片放出](/zh/news/2026-10-15-gta-6-launch-trailer-released) · [发售日确认](/zh/news/2026-06-25-release-date-confirmed) · [订阅发售日提醒](/zh/subscribe)
+**预载现在就该挂上。** 官方口径最多 212GB，100Mbps 约需 4.7 小时、50Mbps 接近 10 小时；发售周服务器压力大，提前下完是发售日当天唯一不用等的事。清空间、开自动下载、确认购买账号，见[预载指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)。
+
+相关阅读：[官方预载公告解读](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb) · [预载指南（容量与准备清单）](/zh/news/2026-09-01-gta-6-preload-guide-file-size) · [上市预告片放出](/zh/news/2026-10-15-gta-6-launch-trailer-released) · [订阅发售日提醒](/zh/subscribe)
 
 ---
 
 ## Overview
 
-The run-in to launch is now fully booked. Here is every milestone still ahead as of **October 28**, in order, with its confidence level attached.
+**Nine days left.** The table below lists every pre-launch milestone in order with its status and confidence level, linking to coverage for those already past.
 
 | Date | Event | Status |
 |---|---|---|
-| Nov 5 | Sony FY2026 Q2 results | Official scheduling |
-| Nov 9 | Take-Two earnings | Official scheduling |
-| Nov 12 | **Preload opens** (digital + code-in-box; ~210GB reported on PS5) | Date confirmed, size reported |
-| Nov 18 | Miami Heat's "A Night in Vice City" (7:00 PM ET vs the Bucks, on ESPN) | Confirmed |
-| Nov 18 | Review embargo lifts (per NateTheHate, corroborated by Insider Gaming) | **Leaked, unconfirmed** |
-| Nov 19 | **Launch**, with most regions unlocking at local midnight | Confirmed |
-| Nov 20 | Vintage Vice City Pack pre-order bonus deadline | Confirmed |
+| Nov 3 | Rockstar's official announcement: digital **preload Nov 10**, up to **212GB**; code-in-box from Nov 12 | ✅ Confirmed — [breakdown](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb) |
+| Nov 5 | Sony FY2026 Q2 results | ✅ Past |
+| Nov 5 | **Launch Gallery** goes live: roughly 39 new 4K official screenshots | ✅ Confirmed — [analysis](/en/news/2026-11-05-gta-6-launch-gallery-39-new-screenshots) |
+| Nov 9 | **Take-Two FY2027 Q2 results**: development complete, pre-orders far above forecast, no more delays | ✅ Confirmed — [analysis](/en/news/2026-11-09-take-two-q2-earnings-gta-6-development-complete) |
+| **Nov 10** | **Digital preload opens**: local midnight on PS5, 00:00 GMT globally on Xbox | ✅ Live today |
+| Nov 12 | Code-in-box copies reach retailers | ⏳ Confirmed |
+| Nov 18 | Miami Heat's "A Night in Vice City" (7:00 PM ET vs the Bucks, on ESPN) | ⏳ Confirmed |
+| Nov 18 | Review embargo lifts (per NateTheHate, corroborated by Insider Gaming) | ⚠️ **Unconfirmed** — [still no reviews](/en/news/2026-11-08-gta-6-no-reviews-yet-fake-7-out-of-10-debunk) |
+| Nov 19 | **Launch**, local midnight in every region; free cover poster and Leonida map on the official site | ⏳ Confirmed |
+| Nov 20 | Vintage Vice City Pack pre-order bonus deadline | ⏳ Confirmed |
 
-**The two earnings dates matter.** Sony and Take-Two calls are where GTA 6 messaging usually lands — Zelnick's "main course and dessert" line came from one. Both fall inside the final two weeks, so expect the official framing of the closing marketing push and shipping expectations.
+> **Correction**: the first version of this page (Oct 28) said preload opened November 12 with a reported ~210GB PS5 install. Rockstar's November 3 announcement moved the **digital preload to November 10** and set the size at **up to 212GB**; November 12 now refers only to code-in-box retail pickup.
 
-**November 18 is the densest night.** The Heat become "Vice City" at Kaseya Center against the Bucks with a bespoke court, a never-worn uniform and a national ESPN broadcast — the team calls it a first-of-its-kind sports crossover. The rumoured review embargo points at the same day: if it holds, players see scores only inside the last 24 hours before release.
+**The two earnings calls delivered very different things.** Sony's was quiet; Take-Two's on Nov 9 was the one that mattered — Zelnick confirmed Rockstar has finished development, marketing is fully ready, pre-orders are far above initial expectations, and told IGN plainly that it will not be delayed. Q3 net bookings are guided to 3.35–3.5 billion dollars, nearly double the 1.76 billion a year ago.
 
-**Don't wait until Nov 19 to preload.** At the reported 210GB, that is roughly 4.7 hours on a 100Mbps line and close to ten at 50Mbps. Starting on Nov 12 is the one thing that removes waiting from launch day.
+**November 18 is still the densest night.** The Heat become the "Vice City Heat" at Kaseya Center against the Bucks with a bespoke court, a special uniform and a national ESPN broadcast. It is also the rumoured review embargo date — but Rockstar has never announced an embargo, Metacritic still reads `tbd`, and a joke post claiming "played it for three days, 7/10" has already made the rounds.
 
-**Related**: [Preload guide (size & checklist)](/en/news/2026-09-01-gta-6-preload-guide-file-size) · [Launch trailer released](/en/news/2026-10-15-gta-6-launch-trailer-released) · [Release date confirmed](/en/news/2026-06-25-release-date-confirmed) · [Get launch reminders](/en/subscribe)
+**Start the preload now.** At up to 212GB, that is roughly 4.7 hours on a 100Mbps line and close to ten at 50Mbps. Launch-week servers will be strained; finishing early is the one thing that removes waiting from launch day. Clear space, enable auto-downloads and confirm your purchasing account — see the [preload guide](/en/news/2026-09-01-gta-6-preload-guide-file-size).
+
+**Related**: [Official preload announcement breakdown](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb) · [Preload guide (size & checklist)](/en/news/2026-09-01-gta-6-preload-guide-file-size) · [Launch trailer released](/en/news/2026-10-15-gta-6-launch-trailer-released) · [Get launch reminders](/en/subscribe)
 
 ## Source
 
-- Rockstar: [Newswire](https://www.rockstargames.com/newswire)
+- Rockstar Newswire: [Grand Theft Auto VI Pre-Load Begins on November 10](https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10)
+- Rockstar Newswire: [Explore the Grand Theft Auto VI Launch Gallery](https://www.rockstargames.com/newswire/article/39ak81277255o9/explore-the-grand-theft-auto-vi-launch-gallery)
+- TwistedVoxel: [Take-Two Says GTA VI Pre-Orders Have Surpassed Initial Forecasts](https://twistedvoxel.com/gta-vi-pre-orders-exceed-take-two-expectations/)
 - Miami HEAT: [A Night in Vice City announced](http://stations.espn.go.com/nba/story/_/id/50085674/miami-heat-night-vice-city-game)
-- Aggregated dates: [GTA 6 News This Week, October 23](https://gta6home.com/guides/gta-6-news-this-week-october-23)

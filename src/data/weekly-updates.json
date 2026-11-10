@@ -1,9 +1,69 @@
 {
   "weekLabel": {
-    "zh": "近期更新 · 10 月 29 日 – 11 月 2 日",
-    "en": "Latest · Oct 29 – Nov 2"
+    "zh": "近期更新 · 11 月 3 日 – 11 月 10 日",
+    "en": "Latest · Nov 3 – Nov 10"
   },
   "updates": [
+    {
+      "date": "2026-11-10",
+      "title": {
+        "zh": "官方确认：GTA6 预载 11 月 10 日开放、最多 212GB——此前的 11/12 与 210GB 口径作废",
+        "en": "Official: GTA 6 Preload Starts November 10 at Up to 212GB — the Earlier November 12 and 210GB Figures Are Superseded"
+      },
+      "summary": {
+        "zh": "Rockstar 11/3 公告：PS5 按各地零点、Xbox 按 GMT 零点于 11/10 开放数字预载，最多需 212GB；盒装下载码版 11/12 起提货，11/19 各时区零点解锁。全站沿用旧口径的常青页已同步回填。",
+        "en": "Rockstar's Nov 3 announcement: digital preload opened Nov 10 at local midnight on PS5 and 00:00 GMT on Xbox, needing up to 212GB. Code-in-box pickup starts Nov 12 and the unlock is local midnight on Nov 19. Evergreen pages carrying the old figures have been updated."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-11-10-gta-6-preload-official-november-10-212gb"
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "title": {
+        "zh": "Take-Two 财报：GTA6 开发已完成、预购「远超预期」，Q3 净预订预计接近翻倍",
+        "en": "Take-Two Q2 Results: GTA 6 Development Is Complete, Pre-Orders \"Far Above\" Forecast, Q3 Net Bookings Set to Nearly Double"
+      },
+      "summary": {
+        "zh": "Zelnick 确认 Rockstar 已完成开发、营销完全就绪，并对 IGN 明说「不会再延期」。全年净预订维持 80–82 亿美元，Q3 预计 33.5–35 亿（去年同期 17.6 亿），营业费用因营销增约 21%。仍未公布官方预购数字与 PC 版日期。",
+        "en": "Zelnick says Rockstar has finished development with marketing fully ready, and told IGN the game will not be delayed again. Full-year net bookings hold at 8.0–8.2 billion dollars, Q3 is guided to 3.35–3.5 billion against 1.76 billion, with operating expenses up about 21% on marketing. Still no official pre-order figure or PC date."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-11-09-take-two-q2-earnings-gta-6-development-complete"
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "title": {
+        "zh": "「玩了三天，给 7 分」是假的：发售前 9 天，GTA6 评分仍是完全空白",
+        "en": "The \"Played It for Three Days, 7/10\" Post Was a Joke: Nine Days Out, GTA 6 Still Has No Reviews At All"
+      },
+      "summary": {
+        "zh": "X 用户自称已玩三天并给 7 分，随后承认只是「假装玩上了」。Metacritic 页面至今显示 tbd，无任何媒体评分；Rockstar 从未官宣评测解禁时间，流传的 11/18 仅来自第三方爆料。",
+        "en": "An X user claiming three days of play and a 7/10 later admitted to just pretending. Metacritic still reads tbd with no critic reviews, and Rockstar has never announced an embargo time — the circulating Nov 18 date is third-party reporting only."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-11-08-gta-6-no-reviews-yet-fake-7-out-of-10-debunk"
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "title": {
+        "zh": "R 星上线「发售图库」：39 张全新 4K 截图，从 Fleeca 银行劫案到草河湿地鳄鱼",
+        "en": "Rockstar Opens the Launch Gallery: 39 New 4K Screenshots, From a Fleeca Heist to Grassrivers Gators"
+      },
+      "summary": {
+        "zh": "官方一次性放出约 39 张 4K 截图，覆盖 Vice City、Grassrivers、Leonida Keys 与 Port Gellhorn。Fleeca 劫案、雨中摩托追逐、加油站对峙、夜店共舞与卧推，逐一印证燃油、热度、健身房与双人关系等已确认系统。",
+        "en": "Roughly 39 new 4K stills span Vice City, the Grassrivers, the Leonida Keys and Port Gellhorn. A Fleeca robbery, a rain-soaked bike chase, a fuel-stop standoff, nightclub dancing and a bench press all corroborate already-confirmed fuel, heat, gym and relationship systems."
+      },
+      "link": {
+        "collection": "news",
+        "slug": "2026-11-05-gta-6-launch-gallery-39-new-screenshots"
+      }
+    },
     {
       "date": "2026-11-02",
       "title": {
@@ -11,8 +71,8 @@
         "en": "17 Days Out: GTA 6 Ads Take Over Landmark Buildings Worldwide, and Walmart Pre-Orders May Include a Mystery Bag"
       },
       "summary": {
-        "zh": "国际宣传升级：官方图像与标志铺上多国建筑外墙、巨型 LED 屏与体育场馆。另有传闻称沃尔玛门店自提预购可获「surprise and delight bag」，11 月 12 日起领取——沃尔玛与 Rockstar 均未确认，且 11/12 只开放预载、不能提前玩。",
-        "en": "The international push escalates: official artwork and logos are up on building facades, giant LED screens and stadiums across several countries. A rumoured Walmart \"surprise and delight bag\" would ship from Nov 12 — unconfirmed by Walmart and Rockstar, and Nov 12 is preload only, not early access."
+        "zh": "国际宣传升级：官方图像与标志铺上多国建筑外墙、巨型 LED 屏与体育场馆。另有传闻称沃尔玛门店自提预购可获「surprise and delight bag」，11 月 12 日起领取——沃尔玛与 Rockstar 均未确认。",
+        "en": "The international push escalates: official artwork and logos are up on building facades, giant LED screens and stadiums across several countries. A rumoured Walmart \"surprise and delight bag\" would ship from Nov 12 — unconfirmed by Walmart and Rockstar."
       },
       "link": {
         "collection": "news",
@@ -26,8 +86,8 @@
         "en": "GTA 6 Pre-Order Numbers: ~6.45M Copies and $630M Estimated, 29% of US Gamers Say They'll Buy — Still No Official Word"
       },
       "summary": {
-        "zh": "Sensor Tower 估算截至 10/20 数字版预购约 645 万份、6.3 亿美元（PS5 占 74%）；Circana 调查显示 29% 美国玩家计划购买，创其追踪史上最高。两项均非官方口径。下一个官方节点是 11/9 Take-Two 财报。",
-        "en": "Sensor Tower estimates 6.45M digital pre-orders worth ~$630M as of Oct 20, with PlayStation at 74%. Circana puts purchase intent at 29% of US players, its highest ever. Neither is official. The next checkpoint is Take-Two's results on Nov 9."
+        "zh": "Sensor Tower 估算截至 10/20 数字版预购约 645 万份、6.3 亿美元（PS5 占 74%）；Circana 调查显示 29% 美国玩家计划购买，创其追踪史上最高。两项均非官方口径，11/9 财报也未公布具体份数。",
+        "en": "Sensor Tower estimates 6.45M digital pre-orders worth ~$630M as of Oct 20, with PlayStation at 74%. Circana puts purchase intent at 29% of US players, its highest ever. Neither is official, and the Nov 9 results still gave no unit figure."
       },
       "link": {
         "collection": "news",
@@ -50,78 +110,18 @@
       }
     },
     {
-      "date": "2026-10-29",
-      "title": {
-        "zh": "R 星美术总监回应「会不会缩水」：我们在珠穆朗玛峰上建了一座金字塔",
-        "en": "Rockstar's Art Director on Whether GTA 6 Was Cut Down: \"We've Built a Pyramid on Everest\""
-      },
-      "summary": {
-        "zh": "Aaron Garbut 表示团队在规模、细节、互动性、剧情与开放世界上都没有妥协，全作约 60 万条独特动画，并有一支只为背景路人写作的团队。同场 Nelson 称游戏「已经准备好了」。PC 版仍无消息。",
-        "en": "Aaron Garbut says the studio did not compromise on scale, detail, interactivity, story or open world, citing ~600,000 unique animations and a team writing solely for background NPCs. Nelson says the game is \"ready\". Still no word on PC."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-29-gta-6-garbut-pyramid-on-everest-no-compromise"
-      }
-    },
-    {
       "date": "2026-10-28",
       "title": {
-        "zh": "《南方公园》播出官方 GTA6 实机片段：狗屎袋可以当武器，还能互抡",
-        "en": "South Park Aired Official GTA 6 Gameplay: You Can Swing a Bag of Dog Poo at People"
+        "zh": "GTA6 发售倒计时日历：从 11/3 官方预载公告到 11/19 解锁，节点全记录（持续更新）",
+        "en": "GTA 6 Launch Countdown Calendar: Every Milestone From the November 3 Preload Announcement to the November 19 Unlock (Live)"
       },
       "summary": {
-        "zh": "第 29 季第 4 集插入约 17–20 秒实机画面，片尾署名由 Rockstar 提供。片段显示海滩支持高密度会反应的 NPC 人群，环境物件可捡起当临时近战武器，被攻击者会还手。发售日与定价不变。",
-        "en": "Season 29 episode 4 carried roughly 17–20 seconds of gameplay, credited in the end titles to Rockstar. It shows beaches supporting dense, reactive NPC crowds and environmental objects usable as improvised melee weapons, with victims fighting back. Date and pricing unchanged."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-28-gta-6-south-park-official-gameplay-clip"
-      }
-    },
-    {
-      "date": "2026-10-28",
-      "title": {
-        "zh": "GTA6 最后 22 天日历：从 11 月 5 日财报到 11 月 19 日解锁，一个不漏",
-        "en": "GTA 6 Final Countdown Calendar: Every Date Left Before the November 19 Unlock"
-      },
-      "summary": {
-        "zh": "发售前日程已排满：11/5 索尼财报、11/9 Take-Two 财报、11/12 预载开放、11/18 热火「罪恶都市之夜」与传闻中的评测解禁、11/19 午夜解锁、11/20 预购特典截止。",
-        "en": "The run-in is fully booked: Sony's results Nov 5, Take-Two's Nov 9, preload Nov 12, the Heat's Vice City night plus the rumoured review embargo Nov 18, the midnight unlock Nov 19, and the pre-order bonus deadline Nov 20."
+        "zh": "按时间顺序记录全部节点并标注状态：11/3 预载公告、11/5 发售图库、11/9 财报、11/10 数字预载、11/12 盒装码提货、11/18「罪恶都市之夜」与传闻中的评测解禁、11/19 解锁、11/20 特典截止。",
+        "en": "Every milestone in order with its status: the Nov 3 preload announcement, Nov 5 Launch Gallery, Nov 9 results, Nov 10 digital preload, Nov 12 code-in-box pickup, the Nov 18 Vice City night and rumoured review embargo, the Nov 19 unlock, and the Nov 20 bonus deadline."
       },
       "link": {
         "collection": "news",
         "slug": "2026-10-28-gta-6-final-countdown-calendar"
-      }
-    },
-    {
-      "date": "2026-10-27",
-      "title": {
-        "zh": "消息称 R 星已向媒体发放 GTA6 评测码，11 月 18 日解禁——玩家只剩一天看评分",
-        "en": "GTA 6 Review Codes Are Reportedly Out With a November 18 Embargo"
-      },
-      "summary": {
-        "zh": "NateTheHate 称 Rockstar 已开始发放评测码、解禁定在 11 月 18 日发售前一天，Insider Gaming 表示独立验证。Rockstar 与 Take-Two 均未确认，也没有媒体公开承认持码。",
-        "en": "NateTheHate says review code is out with a Nov 18 embargo, one day before launch, and Insider Gaming says it verified the date. Neither Rockstar nor Take-Two has confirmed it and no outlet has admitted holding a copy."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-27-gta-6-review-codes-sent-embargo-november-18"
-      }
-    },
-    {
-      "date": "2026-10-27",
-      "title": {
-        "zh": "GTA6 容量曝光：PS5 版据报约 210GB，11 月 12 日开放预载",
-        "en": "GTA 6 Download Size Reported at ~210GB on PS5, Preload Opens November 12"
-      },
-      "summary": {
-        "zh": "PS 商店后台读数报出 PS5 版 210GB，Kotaku 等跟进转述；Xbox 商店仍是占位值，Rockstar 与索尼均未官宣。210GB 在 100Mbps 下约需 4.7 小时，Series S 用户压力最大。",
-        "en": "A PS Store backend reading puts the PS5 install at 210GB, picked up by Kotaku; the Xbox store still shows a placeholder and Rockstar has announced nothing. 210GB is ~4.7 hours at 100Mbps, with Series S owners squeezed hardest."
-      },
-      "link": {
-        "collection": "news",
-        "slug": "2026-10-27-gta-6-download-size-210gb-preload-november-12"
       }
     }
   ]

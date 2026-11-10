@@ -13,14 +13,14 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://gta6.sohou.xyz";
 // 双语邮件模板（预载日 / 发售日各一封，全站仅这两封唤醒邮件）
 const TEMPLATES = {
   preload: {
-    subject: "GTA6 预载今日开启 · 7 天后开玩 | GTA 6 preload is live",
+    subject: "GTA6 预载已开放 · 11 月 19 日开玩 | GTA 6 preload is live",
     html: (t: string) => `
       <div style="background:#0a0a0f;padding:32px;font-family:system-ui,sans-serif;color:#f4f4f5;">
         <div style="max-width:520px;margin:0 auto;background:#14141c;border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.08);">
           <p style="margin:0 0 8px;font-size:13px;color:#22d3ee;letter-spacing:.08em;">GTA6 COMPANION</p>
           <h1 style="margin:0 0 16px;font-size:24px;font-weight:700;">预载今日开启，11 月 19 日开玩</h1>
-          <p style="margin:0 0 16px;color:#d4d4d8;line-height:1.7;">你订阅的 GTA6 发售提醒到了：<strong>数字版预载已于今日（11 月 12 日）开放</strong>，现在预载，发售日凌晨即刻开玩。盒装实体版（Code in Box）同样今日起可兑换预载。</p>
-          <p style="margin:0 0 24px;color:#d4d4d8;line-height:1.7;">Your GTA 6 reminder is here: <strong>digital preload opens today (Nov 12)</strong>. Download now and play the moment the game unlocks on November 19.</p>
+          <p style="margin:0 0 16px;color:#d4d4d8;line-height:1.7;">你订阅的 GTA6 发售提醒到了：<strong>数字版预载已开放（11 月 10 日起，最多需 212GB 可用空间）</strong>，现在预载，11 月 19 日凌晨即刻开玩。盒装实体版（Code in Box）自 11 月 12 日起可在零售店提货兑换。</p>
+          <p style="margin:0 0 24px;color:#d4d4d8;line-height:1.7;">Your GTA 6 reminder is here: <strong>digital preload is live since November 10, and needs up to 212GB of free space</strong>. Download now and play the moment the game unlocks on November 19. Code-in-box copies reach retailers from November 12.</p>
           <a href="${SITE_URL}" style="display:inline-block;background:#ff2d78;color:#fff;text-decoration:none;padding:12px 24px;border-radius:10px;font-weight:600;">${t}</a>
           <p style="margin:24px 0 0;font-size:12px;color:#71717a;">这是发售前最后一封提醒，发售日还有一封。· One more email arrives on launch day.</p>
         </div>

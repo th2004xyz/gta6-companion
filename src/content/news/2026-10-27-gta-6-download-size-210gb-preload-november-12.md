@@ -1,13 +1,13 @@
 ---
-title: "GTA6 容量曝光：PS5 版据报约 210GB，11 月 12 日开放预载"
-title_en: "GTA 6 Download Size Reported at ~210GB on PS5, With Preload Opening November 12"
+title: "已更正｜10/27 旧闻：当时报 210GB、11 月 12 日预载；官方现确认 212GB、11 月 10 日"
+title_en: "Corrected | Oct 27 Report: 210GB and a November 12 Preload Then, Officially 212GB and November 10 Now"
 status: speculated
-last_updated: 2026-10-27
+last_updated: 2026-11-10
 date: 2026-10-27
 tags: [release]
 author: GTA6 Companion Editorial
-summary: "追踪 PS 商店后台数据的账号 PlayStation Game Size 报出 GTA6 在 PS5 上的下载容量为 210GB，预载自 11 月 12 日开始、11 月 19 日午夜解锁、标准版 79.99 美元。Xbox 商店尚未给出确切数字，Rockstar 与索尼均未在官方层面公布容量。"
-summary_en: "PS Store backend tracker PlayStation Game Size reports GTA 6 at 210GB on PS5, with preload from November 12 and a midnight unlock on November 19 at $79.99 for Standard. The Xbox store lists no firm figure, and neither Rockstar nor Sony has published an official size."
+summary: "本文为 10 月 27 日第三方读数的历史记录，现已更正：Rockstar 11 月 3 日官方公告确认数字预载 11 月 10 日开放、最多 212GB，盒装下载码版 11 月 12 日提货。当时的 210GB / 11 月 12 日口径已作废，请以官方公告解读为准。"
+summary_en: "A historical record of the October 27 third-party reading, now corrected: Rockstar's November 3 announcement confirms digital preload opened November 10 at up to 212GB, with code-in-box pickup from November 12. The 210GB and November 12 figures are superseded — see the official announcement breakdown."
 sources:
   - label:
       zh: ComicBook
@@ -25,6 +25,9 @@ sources:
 
 ## 中文正文
 
+> **⚠️ 本页已于 11 月 10 日更正，以下内容为历史记录。**
+> Rockstar 在 **11 月 3 日**发布官方公告：数字版预载 **11 月 10 日**开放（PS5 各地零点 / Xbox 全球 GMT 零点），预载文件**最多 212GB**；**11 月 12 日**专指盒装下载码版在零售店提货。本文当时依据的「210GB / 11 月 12 日」为第三方读数与报道口径，**两项均已作废**。请以[官方公告解读](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb)与[预载指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)为准。
+
 10 月 27 日，长期追踪 PS 商店后台数据的账号 **PlayStation Game Size** 报出了 GTA6 的容量信息：**PS5 版下载容量 210GB，预载 11 月 12 日开始，标准版 79.99 美元，11 月 19 日午夜解锁**。Kotaku 与 ComputerBase 等媒体跟进转述。
 
 **这是数据读取，不是官方公告。** Rockstar 与索尼均未公布任何容量数字，Xbox 商店目前只显示一个占位数值，Xbox 版实际容量仍不清楚。考虑到 PlayStation Game Size 过往记录相当可靠，这条情报参考价值很高，但**仍应视为「报道」而非「确认」**。
@@ -35,15 +38,18 @@ sources:
 - 对 Xbox Series S（约 512GB 固态）用户压力最大：可用容量本就有限，210GB 会吃掉将近三分之二。
 - 210GB 在 100Mbps 带宽下理论约 4.7 小时，50Mbps 接近 10 小时。
 
-**现在该做什么**：清出 250GB 左右空间（给首日补丁留余量），把不常玩的旧作挪到外接固态，开启主机自动下载 / 待机下载，让 11 月 12 日零点自动开始。
+**现在该做什么**：清出 250GB 左右空间（给首日补丁留余量），把不常玩的旧作挪到外接固态，开启主机自动下载 / 待机下载，让 11 月 10 日零点自动开始。
 
-这个数字也可能在发售前变动，且不含后续更新、DLC 与尚未公布的在线模式。本页将在官方公布确切容量后更新。
+~~这个数字也可能在发售前变动~~ —— 官方数字已于 11 月 3 日公布，为最多 212GB（视设备而定），且不含后续更新、DLC 与尚未公布的在线模式。
 
-相关阅读：[预载完整指南（准备清单）](/zh/news/2026-09-01-gta-6-preload-guide-file-size) · [最后 22 天日历](/zh/news/2026-10-28-gta-6-final-countdown-calendar) · [预购与版本对比](/zh/news/2026-08-31-gta-6-preorder-guide-editions-pricing)
+相关阅读：[官方公告解读（11/10、212GB）](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb) · [预载完整指南（已更新）](/zh/news/2026-09-01-gta-6-preload-guide-file-size) · [发售倒计时日历](/zh/news/2026-10-28-gta-6-final-countdown-calendar) · [预购与版本对比](/zh/news/2026-08-31-gta-6-preorder-guide-editions-pricing)
 
 ---
 
 ## Overview
+
+> **⚠️ Corrected on November 10; the following is a historical record.**
+> Rockstar's **November 3** announcement confirms digital preload opened **November 10** (local midnight on PS5, 00:00 GMT on Xbox), at **up to 212GB**; **November 12** refers only to code-in-box retail pickup. The 210GB and November 12 figures below came from a third-party reading and are **both superseded**. See the [official announcement breakdown](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb) and the [preload guide](/en/news/2026-09-01-gta-6-preload-guide-file-size).
 
 On October 27, **PlayStation Game Size** — an account that tracks PS Store backend data — reported GTA 6's numbers: **210GB on PS5, preload from November 12, a midnight unlock on November 19, $79.99 for Standard**. Kotaku and ComputerBase picked it up.
 
@@ -55,11 +61,11 @@ On October 27, **PlayStation Game Size** — an account that tracks PS Store bac
 - Xbox Series S owners feel it most: usable space on the ~512GB SSD is tight, and 210GB would take close to two-thirds of it.
 - At 100Mbps, 210GB is about 4.7 hours; at 50Mbps, close to ten.
 
-**What to do now**: clear roughly 250GB (headroom for the day-one patch), offload old installs to external storage, and enable auto / rest-mode downloads so November 12 starts on its own.
+**What to do now**: clear roughly 250GB (headroom for the day-one patch), offload old installs to external storage, and enable auto / rest-mode downloads so November 10 starts on its own.
 
-The number can still change before launch, and it excludes future updates, DLC and the unannounced online mode. We'll update this page when Rockstar publishes a figure.
+~~The number can still change before launch~~ — Rockstar published the official figure on November 3: up to 212GB depending on device, excluding future updates, DLC and the unannounced online mode.
 
-**Related**: [Full preload guide](/en/news/2026-09-01-gta-6-preload-guide-file-size) · [Final countdown calendar](/en/news/2026-10-28-gta-6-final-countdown-calendar) · [Pre-order & editions](/en/news/2026-08-31-gta-6-preorder-guide-editions-pricing)
+**Related**: [Official announcement breakdown (Nov 10, 212GB)](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb) · [Full preload guide (updated)](/en/news/2026-09-01-gta-6-preload-guide-file-size) · [Launch countdown calendar](/en/news/2026-10-28-gta-6-final-countdown-calendar) · [Pre-order & editions](/en/news/2026-08-31-gta-6-preorder-guide-editions-pricing)
 
 ## Source
 

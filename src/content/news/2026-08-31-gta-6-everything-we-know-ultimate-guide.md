@@ -2,7 +2,7 @@
 title: "GTA 6 终极汇总：发售日、地图、角色、玩法、价格与一切已知信息（持续更新）"
 title_en: "GTA 6 Ultimate Guide: Release Date, Map, Characters, Gameplay, Price, and Everything We Know (Live)"
 status: confirmed
-last_updated: 2026-10-28
+last_updated: 2026-11-10
 date: 2026-08-31
 tags: [release, gameplay, characters]
 author: GTA6 Companion Editorial
@@ -22,8 +22,8 @@ faqs:
       zh: "GTA6 什么时候发售？"
       en: "When does GTA 6 come out?"
     answer:
-      zh: "2026 年 11 月 19 日，登陆 PS5 与 Xbox Series X|S，首发不含 PC。数字版 11 月 12 日开放预载。"
-      en: "November 19, 2026 on PS5 and Xbox Series X|S — no PC at launch. Digital preload opens November 12."
+      zh: "2026 年 11 月 19 日，登陆 PS5 与 Xbox Series X|S，首发不含 PC。数字版预载已于 11 月 10 日开放，盒装下载码版 11 月 12 日起提货。更多细节见预载指南。"
+      en: "November 19, 2026 on PS5 and Xbox Series X|S — no PC at launch. Digital preload opened November 10, with code-in-box copies reaching retailers from November 12. See the preload guide for detail."
   - question:
       zh: "GTA6 卖多少钱？"
       en: "How much does GTA 6 cost?"
@@ -56,8 +56,8 @@ faqs:
 - **价格**：标准版 $79.99 / 终极版 $99.99
 - **预购**：已于 6 月 25 日开启，截至 8 月 28 日预购破 450 万份
 - **PC 版**：官方从未公布日期。有报道称 2027 年初，也有估算指向 2028 年初，均无官方确认（详见[PC 指南](/zh/news/2026-08-31-gta-6-pc-release-date-everything-we-know)）
-- **预载**：11 月 12 日（数字版）
-- **容量**：PS5 版据报约 210GB（商店后台读数，官方未公布，详见[容量报道](/zh/news/2026-10-27-gta-6-download-size-210gb-preload-november-12)）
+- **预载**：数字版 **11 月 10 日**已开放（PS5 各地零点 / Xbox 全球 GMT 零点）；盒装下载码版 11 月 12 日起提货（官方 11/3 公告，详见[公告解读](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb)）
+- **容量**：官方确认**最多 212GB**（视设备而定，详见[预载指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)）
 - **分级**：ESRB M（17+）/ PEGI 18 / 日本 CERO Z / 韩国 19+，均已确认（详见[全球分级页](/zh/news/2026-10-23-gta-6-age-ratings-worldwide)）
 
 ## 世界设定（confirmed）
@@ -104,7 +104,7 @@ faqs:
 
 ## Overview
 
-**The facts (confirmed)**: Launching November 19, 2026 on PS5 and Xbox Series X|S. Standard $79.99 / Ultimate $99.99. Pre-orders opened June 25 and passed 4.5M units by Aug 28. No PC date has ever been announced (October reporting pointed at early 2027; a history-based estimate points at early 2028 — neither is official). Digital preload begins November 12, with a reported ~210GB PS5 install (store-backend reading, unannounced). Ratings are settled: ESRB M, PEGI 18, CERO Z, Korea 19+.
+**The facts (confirmed)**: Launching November 19, 2026 on PS5 and Xbox Series X|S. Standard $79.99 / Ultimate $99.99. Pre-orders opened June 25 and passed 4.5M units by Aug 28. No PC date has ever been announced (October reporting pointed at early 2027; a history-based estimate points at early 2028 — neither is official). Digital preload opened November 10, with code-in-box retail pickup from November 12, and Rockstar confirms a preload of up to 212GB depending on device. Ratings are settled: ESRB M, PEGI 18, CERO Z, Korea 19+.
 
 **The world**: Leonida (Florida-inspired) and Vice City (Miami-inspired) — Rockstar's largest open world ever, with NPC ecosystems that shift by neighborhood and hour.
 

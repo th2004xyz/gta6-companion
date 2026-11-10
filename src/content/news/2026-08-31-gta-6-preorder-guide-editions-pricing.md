@@ -2,13 +2,13 @@
 title: "GTA 6 预购指南：标准版 vs 终极版、价格、预载时间与全部福利"
 title_en: "GTA 6 Pre-Order Guide: Standard vs Ultimate, Pricing, Preload Date, and Every Bonus"
 status: confirmed
-last_updated: 2026-09-03
+last_updated: 2026-11-10
 date: 2026-08-31
 tags: [release]
 purchaseLinks: true
 author: GTA6 Companion Editorial
-summary: "GTA 6 预购全攻略：标准版 $79.99、终极版 $99.99 怎么选？数字版 11 月 12 日开放预载，预购送「罪恶都市怀旧包」，数字预购额外送 1 个月 GTA+。附购买渠道对比与省钱建议。"
-summary_en: "The complete GTA 6 pre-order guide: Standard at $79.99 vs Ultimate at $99.99, digital preload from November 12, the Vice City Nostalgia Pack bonus, and an extra month of GTA+ for digital pre-orders. Includes channel comparison and money-saving tips."
+summary: "GTA 6 预购全攻略：标准版 $79.99、终极版 $99.99 怎么选？数字版预载已于 11 月 10 日开放，盒装下载码版 11 月 12 日起提货，预购送「罪恶都市怀旧包」，数字预购额外送 1 个月 GTA+。附购买渠道对比与省钱建议。"
+summary_en: "The complete GTA 6 pre-order guide: Standard at $79.99 vs Ultimate at $99.99, digital preload open since November 10, code-in-box copies from November 12, the Vice City Nostalgia Pack bonus, and an extra month of GTA+ for digital pre-orders. Includes channel comparison and money-saving tips."
 sources:
   - label:
       zh: Rockstar Newswire
@@ -41,8 +41,8 @@ faqs:
       zh: "实体版是光盘吗？"
       en: "Is the physical edition on a disc?"
     answer:
-      zh: "不是。实体版盒内是下载兑换码（Code in Box），无游戏数据光盘，同样 11 月 12 日起可兑换预载、19 日解锁。"
-      en: "No. Physical boxes contain a download code (code-in-box) — no game data on disc. Redeemable from Nov 12, locked until Nov 19."
+      zh: "不是。实体版盒内是下载兑换码（Code in Box），无游戏数据光盘，自 11 月 12 日起在零售店提货后可兑换预载、11 月 19 日解锁。数字版预载则已于 11 月 10 日开放。"
+      en: "No. Physical boxes contain a download code (code-in-box) — no game data on disc. Retail pickup and redemption start November 12, with the unlock on November 19. Digital preload opened earlier, on November 10."
 ---
 
 ## 核心信息速览
@@ -50,7 +50,7 @@ faqs:
 - **预购开启**：2026 年 6 月 25 日（全球同步）
 - **标准版**：$79.99 —— 完整单人剧情 + 线上模式基础内容
 - **终极版**：$99.99 —— 独家剧情支线、限定载具套装、双倍线上启动资金、专属角色外观
-- **数字版预载**：11 月 12 日开放，发售当天即玩
+- **数字版预载**：**11 月 10 日**已开放（官方 11/3 公告），发售当天即玩
 - **预购特典**：11 月 20 日前预购送「罪恶都市怀旧包」（复古载具、80 年代主题服装、经典武器皮肤）
 - **数字版加赠**：额外 1 个月 GTA+ 会员
 
@@ -67,11 +67,13 @@ faqs:
 
 **我们的建议**：单机剧情党买标准版即可；打算长期玩 GTA Online 的玩家，终极版的双倍启动资金 + 载具套装在前期能明显提速，差价 $20 属于「一次性省肝投资」。
 
-## 预载时间线（confirmed）
+## 预载时间线（confirmed，据 11/3 官方公告）
 
-- **11 月 12 日**：数字版预载开放 + 实体版（含下载兑换码）上架
-- **11 月 19 日**：正式解锁开玩
-- 注意：实体版包装盒内是**下载兑换码（Code in Box）**，不是数据光盘；实体版玩家同样 11 月 12 日起可兑换并预载，但内容锁定至 19 日
+- **11 月 10 日**：数字版预载开放 —— PS5 按各地零点、Xbox Series X|S 全球按 GMT 零点
+- **11 月 12 日**：实体版（含下载兑换码）在零售店开始提货
+- **11 月 19 日**：各时区零点正式解锁开玩
+- 注意：实体版包装盒内是**下载兑换码（Code in Box）**，不是数据光盘；实体版玩家 11 月 12 日起可兑换并预载，但内容锁定至 19 日
+- 预载文件最多需要 **212GB** 可用空间（官方口径），详见[预载指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)
 
 ## 购买渠道对比
 
@@ -85,7 +87,7 @@ faqs:
 
 ## Overview
 
-**Quick facts**: Pre-orders opened June 25, 2026. Standard is $79.99, Ultimate $99.99. Digital preload starts November 12, launch is November 19. Pre-order before Nov 20 for the Vice City Nostalgia Pack (retro vehicles, '80s apparel, classic weapon skins); digital pre-orders also get 1 month of GTA+.
+**Quick facts**: Pre-orders opened June 25, 2026. Standard is $79.99, Ultimate $99.99. Digital preload opened November 10 (local midnight on PS5, 00:00 GMT on Xbox), code-in-box retail pickup starts November 12, and launch is November 19 at local midnight. Rockstar confirms the preload needs up to 212GB. Pre-order before Nov 20 for the Vice City Nostalgia Pack (retro vehicles, '80s apparel, classic weapon skins); digital pre-orders also get 1 month of GTA+.
 
 ## Standard vs Ultimate
 

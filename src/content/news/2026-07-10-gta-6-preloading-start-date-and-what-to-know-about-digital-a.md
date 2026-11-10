@@ -2,7 +2,7 @@
 title: GTA 6 预载：开放时间及数字版、实体版购买前须知
 title_en: "GTA 6 Preloading: Start Date And What To Know About Digital And Physical Copies"
 status: speculated
-last_updated: 2026-07-10
+last_updated: 2026-11-10
 date: 2026-07-10
 tags: [release]
 author: Eddie Makuch
@@ -14,6 +14,8 @@ sources:
       en: GameSpot
     url: https://www.gamespot.com/articles/gta-6-preloading-start-date-and-what-to-know-about-digital-and-physical-copies/
 ---
+
+> **⚠️ 编者注（2026-11-10 更正）**：本文写于 7 月，依据当时的报道把数字版预载记为 **11 月 12 日**。Rockstar 11 月 3 日的官方公告已把数字版预载提前到 **11 月 10 日**、容量定为**最多 212GB**；11 月 12 日现在专指盒装下载码版在零售店提货。以下正文保留当时记录，实际安排请以[官方公告解读](/zh/news/2026-11-10-gta-6-preload-official-november-10-212gb)与[预载指南](/zh/news/2026-09-01-gta-6-preload-guide-file-size)为准。
 
 ## 概述
 
@@ -61,6 +63,8 @@ Rockstar 表示，此举是为了**确保玩家能够在游戏正式发售后第
 ---
 
 ## Overview
+
+> **⚠️ Editor's note (corrected November 10, 2026)**: this piece dates from July and recorded digital preload as **November 12** based on reporting at the time. Rockstar's November 3 announcement moved digital preload to **November 10** and set the size at **up to 212GB**; November 12 now refers only to code-in-box retail pickup. The text below is kept as a period record — see the [official announcement breakdown](/en/news/2026-11-10-gta-6-preload-official-november-10-212gb) and the [preload guide](/en/news/2026-09-01-gta-6-preload-guide-file-size) for current facts.
 
 After years of development and multiple delays, Rockstar's Grand Theft Auto 6 is finally launching on November 19, and you can now actually preorder the game . The $80 game arrives on November 19, but you can actually preload it a week earlier, which is nice for the countless people who no doubt want to begin playing the second they can. Here's everything you need to know about GTA 6 preloading. GTA 6 preload schedule GTA 6 players who preorder a digital copy of GTA 6 can begin preloading on November 12. This is to "ensure they are able to play at launch," Rockstar said. GTA 6 is not going to be released on a disc , but Rockstar is still selling physical copies of the game at retailers with a code in the box. The game's physical edition will be available to buy on November 12 "to support preloading," Rockstar said. So if you walk into a GameStop or Walmart on November 12 and see a copy of GTA 6 on the shelves to buy, you can do so, but the game itself won't unlock until November 19. GTA 6 will arrive in November. The file size GTA 6's file size has not been disclosed as of yet, but many are expecting it to be huge. GTA 5's file size varies by platform but can be more than 100 GB. Given that, we would expect GTA 6 to be at least 100 GB as well. Launch times GTA 6 launches on November 19, but when exactly? We don't know yet, as Rockstar has not yet shared that information. Keep checking back with GameSpot for the latest on GTA 6's launch times and more.
 
